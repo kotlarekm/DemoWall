@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="FontsConfiguration" Type="FONTSCFG">
+    <Property ID="FontFamily" Value="ABBvoice (ABBvoice_Bd.ttf)" />
+    <Property ID="FontName" Value="ABBvoiceBd" />
+  </Element>
+  <Element ID="FontsConfiguration_1" Type="FONTSCFG">
+    <Property ID="FontFamily" Value="ABBvoice Light (ABBvoice_Lt.ttf)" />
+    <Property ID="FontName" Value="ABBvoiceLight" />
+  </Element>
+  <Element ID="FontsConfiguration_2" Type="FONTSCFG">
+    <Property ID="FontFamily" Value="ABBvoice Medium (ABBvoice_Md.ttf)" />
+    <Property ID="FontName" Value="ABBvoiceMedium" />
+  </Element>
+  <Element ID="FontsConfiguration_3" Type="FONTSCFG">
+    <Property ID="FontFamily" Value="ABBvoice (ABBvoice_Rg.ttf)" />
+    <Property ID="FontName" Value="ABBvoiceRg" />
+  </Element>
+</Configuration>

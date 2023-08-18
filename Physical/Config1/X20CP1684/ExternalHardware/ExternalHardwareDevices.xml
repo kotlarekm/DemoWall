@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ExternalHardware>
+  <Modules>
+    <Module ModuleID="FBD.GSDDTM.DTMDev.X20BC0063" Version="1.44" OrderNumber="X20BC0063">
+      <SourceFile OriginalFile="B&amp;R_BC20.gsd" TranslationFile="3GHR32RX.ext" />
+    </Module>
+  </Modules>
+</ExternalHardware>
