@@ -1,8 +1,6 @@
-
 VAR
-
-END_VAR
-
-VAR CONSTANT
-
+	Start : BOOL;
+	Step : STEP_ENUM;
+	Stop : BOOL;
+	TON_0 : TON;
 END_VAR

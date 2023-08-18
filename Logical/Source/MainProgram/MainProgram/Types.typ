@@ -1,4 +1,11 @@
 
 TYPE
-
+	STEP_ENUM : 
+		(
+		START,
+		FILLING_TANKS_1_AND_2,
+		FILLING_TANK_3,
+		MIXING,
+		END
+		);
 END_TYPE

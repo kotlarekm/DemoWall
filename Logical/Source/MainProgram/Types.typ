@@ -1,8 +1,8 @@
 
 TYPE
 	CommadsType : 	STRUCT 
-		TurnOnMikser1 : BOOL := FALSE;
-		TurnOnMikser2 : BOOL := FALSE;
+		TurnOnMixer1 : BOOL := FALSE;
+		TurnOnMixer2 : BOOL := FALSE;
 		OpenTank1Valve : BOOL := FALSE;
 		OpenTank2Valve : BOOL := FALSE;
 		OpenTank3LeftValve : UINT := 0;
