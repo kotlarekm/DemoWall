@@ -7,6 +7,8 @@
 
 PROGRAM _INIT
 
+	gSelectedParameters;
+	 
 END_PROGRAM
 
 PROGRAM _CYCLIC

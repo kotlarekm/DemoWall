@@ -10,7 +10,8 @@
   <TechnologyPackages>
     <mapp Version="5.23.0" />
     <mappCockpit Version="5.23.0" />
-    <mappMotion McDriveLog="5.23.0" Version="5.23.0" />
+    <mappFramework Version="1.4.0" />
+    <mappMotion McDriveLog="5.23.0" McProfGen="5.23.0" Version="5.23.0" />
     <mappSafety Version="5.23.0" />
     <mappView Version="5.23.0" />
   </TechnologyPackages>
