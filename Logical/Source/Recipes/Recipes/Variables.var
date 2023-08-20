@@ -1,5 +1,11 @@
 VAR
 	MpRecipeXml_0 : MpRecipeXml;
 	MpRecipeRegPar_0 : MpRecipeRegPar;
-	FileName : STRING[80] := 'NewRecipe';
+	RecipeName : STRING[80] := 'NewRecipe';
+	WaitingForLoad : BOOL := FALSE;
+	WaitingForSave : BOOL := FALSE;
+	MpFileManagerUI_0 : MpFileManagerUI;
+	MpFileManagerUIConnect_0 : MpFileManagerUIConnectType := (DeviceList:=(DeviceNames:=['HDD',9('')],SelectedIndex:=0),File:=(Filter:='.xml'));
+	MpFileManagerUISetup_0 : MpFileManagerUISetupType;
+	RecipesList : ARRAY[0..49] OF STRING[255];
 END_VAR
