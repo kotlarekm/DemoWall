@@ -22,8 +22,8 @@ TYPE
 		Tank1TargetFluidLvl : UINT;
 	END_STRUCT;
 	StatusType : 	STRUCT 
-		IsMikser1On : BOOL;
-		IsMikser2On : BOOL;
+		IsMixer1On : BOOL;
+		IsMixer2On : BOOL;
 		Tank1FluidLvl : UINT;
 		Tank2FluidLvl : UINT;
 		Tank3FluidLvl : UINT;

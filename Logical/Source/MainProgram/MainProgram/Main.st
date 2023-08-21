@@ -16,6 +16,8 @@ PROGRAM _CYCLIC
 	gTanks.Status.Tank1Pressure := DENSITY_OF_LIQUID * GRAVITY * gTanks.Status.Tank1FluidLvl/1000;
 	gTanks.Status.Tank2Pressure := DENSITY_OF_LIQUID * GRAVITY * gTanks.Status.Tank2FluidLvl/1000;
 	gTanks.Status.Tank3Pressure := DENSITY_OF_LIQUID * GRAVITY * gTanks.Status.Tank3FluidLvl/1000;
+	gTanks.Status.IsMixer1On := gTanks.Commands.TurnOnMixer1;
+	gTanks.Status.IsMixer2On := gTanks.Commands.TurnOnMixer2;
 	
 	IF Stop THEN
 		Step := START;
