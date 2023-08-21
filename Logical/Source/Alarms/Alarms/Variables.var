@@ -1,8 +1,10 @@
-
 VAR
-
-END_VAR
-
-VAR CONSTANT
-
+	diEStopNotPressed : BOOL;
+	diDriveStop : BOOL;
+	diReset : BOOL;
+	diResetRedLED : BOOL;
+	diResetOrangeLED : BOOL;
+	diModuleOK : BOOL;
+	TON_LED_ON : TON;
+	TON_LED_OFF : TON;
 END_VAR

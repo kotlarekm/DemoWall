@@ -5,13 +5,23 @@
     <Connection Connector="ETH3" TargetModule="X20BC1083" TargetConnector="PLK1">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
+    <Connection Connector="ETH5" TargetModule="X67BC8321-1" TargetConnector="PLK1">
+      <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
+    </Connection>
     <Connection Connector="ETH7" TargetModule="X20SL8101" TargetConnector="PLK2">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
   </Module>
-  <Module Name="4XP0000.00-K21" Type="4XP0000.00-K21" Version="2.0.0.0" />
+  <Module Name="4XP0000.00-K21" Type="4XP0000.00-K21" Version="2.0.0.0">
+    <Connection Connector="X2X1" TargetModule="X67SI8103" TargetConnector="X2X2">
+      <Cable Type="X2XCable" Length="10" Version="1.0.0.3" />
+    </Connection>
+  </Module>
   <Module Name="5AP933.156B-00" Type="5AP933.156B-00" Version="2.0.0.0" />
   <Module Name="80SD100XD.C044-01" Type="80SD100XD.C044-01" Version="2.2.2.0">
+    <Connection Connector="X2X1" TargetModule="X20BT9400" TargetConnector="X2X1">
+      <Cable Type="X2XCable" Length="10" Version="1.0.0.3" />
+    </Connection>
     <Parameter ID="ActivateModuleSimulationOnPLC" Location="FunctionModel/DriveConfiguration/Module" Value="Off" />
     <Parameter ID="ModuleParameters" Location="FunctionModel/DriveConfiguration" Value="StepperParameters" />
     <Parameter ID="McStepperTypeID" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="AcoposMicroConfig" />
@@ -462,6 +472,9 @@
   <Module Name="X20CP1684" Type="X20CP1684" Version="1.5.0.0">
     <Connector Name="IF2">
       <Parameter ID="ActivateDevice" Value="1" />
+      <Parameter ID="Mode" Value="Manual" />
+      <Parameter ID="InternetAddress" Value="10.0.0.2" />
+      <Parameter ID="SubnetMask" Value="255.255.255.0" />
     </Connector>
     <Parameter ID="ConfigurationID" Value="DemoWallConfig1" />
     <Parameter ID="Simulation" Value="1" />
@@ -519,6 +532,9 @@
   <Module Name="X20SC2432" Type="X20SC2432" Version="2.5.0.0">
     <Connection Connector="SS1" TargetModule="X20TB52b" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM33a" TargetConnector="SL1" />
+    <Parameter ID="DigitalOutput01" Value="viaSafeLOGIC" />
+    <Parameter ID="DigitalOutput02" Value="viaSafeLOGIC" />
+    <Parameter ID="DigitalOutput0102" Value="viaSafeLOGIC" />
   </Module>
   <Module Name="X20SI2100" Type="X20SI2100" Version="2.4.0.0">
     <Connection Connector="SS1" TargetModule="X20TB52d" TargetConnector="SS" />
@@ -554,8 +570,15 @@
   <Module Name="X20TB52b" Type="X20TB52" Version="1.0.0.2" />
   <Module Name="X20TB52c" Type="X20TB52" Version="1.0.0.2" />
   <Module Name="X20TB52d" Type="X20TB52" Version="1.0.0.2" />
-  <Module Name="X67BC8321-1" Type="X67BC8321-1" Version="2.14.0.0" />
+  <Module Name="X67BC8321-1" Type="X67BC8321-1" Version="2.14.0.0">
+    <Connection Connector="PLK1" TargetModule="0AC808.9" TargetConnector="ETH5" NodeNumber="2">
+      <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
+    </Connection>
+  </Module>
   <Module Name="X67SI8103" Type="X67SI8103" Version="2.4.0.0">
-    <Parameter ID="SafeModuleID" Value="4" />
+    <Connection Connector="X2X1" TargetModule="X67BC8321-1" TargetConnector="IF1">
+      <Cable Type="X2XCable" Length="10" Version="1.0.0.3" />
+    </Connection>
+    <Parameter ID="SafeModuleID" Value="5" />
   </Module>
 </Hardware>
