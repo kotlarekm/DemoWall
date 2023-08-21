@@ -7,6 +7,7 @@
     <Page refId="AlarmsPage" />
     <Page refId="MotionPage" />
     <Page refId="SettingPage" />
+    <Page refId="IOPage" />
   </Pages>
   <Navigations />
   <BindingsSets />
@@ -19,6 +20,10 @@
   <SnippetsSets />
   <VariablesSets />
   <ExpressionsSets />
+  <StartTheme themeRefId="BuRTheme1" />
+  <Themes>
+    <Theme refId="BuRTheme1" />
+  </Themes>
   <Configurations>
     <Configuration key="activityCount" value="false" />
     <Gestures>

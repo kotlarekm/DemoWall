@@ -10,5 +10,8 @@
         <Property ID="TargetLanguage[2]" Value="pl" />
       </Group>
     </Group>
+    <Group ID="TargetFiles">
+      <Property ID="TargetFile[1]" Value="mappView.Visualization.Resources.Texts.LocalizableTexts.tmx" />
+    </Group>
   </Element>
 </Configuration>

@@ -8,5 +8,6 @@
     <Object Type="Package">AlarmsPage</Object>
     <Object Type="Package">MotionPage</Object>
     <Object Type="Package">SettingsPage</Object>
+    <Object Type="Package">IOPage</Object>
   </Objects>
 </Package>
