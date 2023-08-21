@@ -1,8 +1,11 @@
-
 VAR
-
-END_VAR
-
-VAR CONSTANT
-
+	MpAxisBasic_0 : MpAxisBasic;
+	MpAxisBasicParameters : MpAxisBasicParType;
+	StepMixer1 : StepEnum;
+	StepMixer2 : StepEnum;
+	MpAxisBasic_1 : MpAxisBasic;
+	MpAxisCoupling_0 : MpAxisCoupling;
+	MpAxisCouplingParameters : MpAxisCouplingParType;
+	MpAxisBasicParameters_1 : MpAxisBasicParType;
+	AxisCoupling : BOOL;
 END_VAR

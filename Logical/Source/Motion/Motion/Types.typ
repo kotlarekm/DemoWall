@@ -1,4 +1,9 @@
 
 TYPE
-
+	StepEnum : 
+		(
+		STEP_INIT,
+		STEP_POWER_ON,
+		STEP_MOVE
+		);
 END_TYPE
