@@ -1,8 +1,4 @@
-
 VAR
-
-END_VAR
-
-VAR CONSTANT
-
+	MpAlarmXCore_0 : MpAlarmXCore; (*Function block used for managing alarms*)
+	MpAlarmXHistory_0 : MpAlarmXHistory; (*Function block used for managing alarms history*)
 END_VAR

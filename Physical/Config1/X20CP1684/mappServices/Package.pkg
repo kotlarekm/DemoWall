@@ -4,5 +4,7 @@
   <Objects>
     <Object Type="File">RecipesCfg.mprecipexml</Object>
     <Object Type="File">FMUICfg.mpfilemanagerui</Object>
+    <Object Type="File">AlarmXCfg.mpalarmxcore</Object>
+    <Object Type="File">AlarmXHCfg.mpalarmxhistory</Object>
   </Objects>
 </Package>
