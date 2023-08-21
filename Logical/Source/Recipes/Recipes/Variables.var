@@ -1,11 +1,11 @@
 VAR
-	MpRecipeXml_0 : MpRecipeXml;
+	MpRecipeXml_0 : MpRecipeXml; (*Function block used for managing recipes*)
 	MpRecipeRegPar_0 : MpRecipeRegPar;
-	RecipeName : STRING[80] := 'NewRecipe';
-	WaitingForLoad : BOOL := FALSE;
-	WaitingForSave : BOOL := FALSE;
-	MpFileManagerUI_0 : MpFileManagerUI;
-	MpFileManagerUIConnect_0 : MpFileManagerUIConnectType := (DeviceList:=(DeviceNames:=['HDD',9('')],SelectedIndex:=0),File:=(Filter:='.xml'));
-	MpFileManagerUISetup_0 : MpFileManagerUISetupType;
-	RecipesList : ARRAY[0..49] OF STRING[255];
+	RecipeName : STRING[80] := 'NewRecipe'; (*String containing name of currently selected recipe*)
+	WaitingForLoad : BOOL := FALSE; (*Variable informing about the recipe waiting to be loaded *)
+	WaitingForSave : BOOL := FALSE; (*Variable informing about the recipe waiting to be saved*)
+	MpFileManagerUI_0 : MpFileManagerUI; (*Function block used for managing files*)
+	MpFileManagerUIConnect_0 : MpFileManagerUIConnectType := (DeviceList:=(DeviceNames:=['HDD',9('')],SelectedIndex:=0),File:=(Filter:='.xml')); (*Structure used in MpFileManagerUI setup. Contains information about files in directory.*)
+	MpFileManagerUISetup_0 : MpFileManagerUISetupType; (*Structure used in MpFileManagerUI setup.*)
+	RecipesList : ARRAY[0..49] OF STRING[255]; (*List of recipe names*)
 END_VAR

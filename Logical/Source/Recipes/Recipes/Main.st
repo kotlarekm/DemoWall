@@ -48,7 +48,7 @@ PROGRAM _CYCLIC
 		MpRecipeXml_0.Load := FALSE;
 	END_IF;
 	
-	// Recipes Saving
+	// Recipes saving
 	IF WaitingForSave THEN
 		IF NOT(MpRecipeXml_0.CommandBusy) THEN
 			MpRecipeXml_0.Save := TRUE;
@@ -58,7 +58,7 @@ PROGRAM _CYCLIC
 		MpRecipeXml_0.Save := FALSE;
 	END_IF;
 	
-	// FB updates
+	// Updates
 	MpRecipeXml_0();
 	MpRecipeRegPar_0();
 	MpFileManagerUIConnect_0.File.Refresh := TRUE;
