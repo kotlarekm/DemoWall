@@ -25,6 +25,8 @@ PROGRAM _INIT
 
 END_PROGRAM
 
+PROGRAM _CYCLIC
+	 
 	// Updates
 	MpAlarmXCore_0();
 	MpAlarmXHistory_0();
@@ -57,6 +59,7 @@ PROGRAM _CYCLIC
 		
 	TON_LED_ON();
 	TON_LED_OFF();
+	
 END_PROGRAM
 
 PROGRAM _EXIT
