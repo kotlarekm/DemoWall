@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">Default-Namespace</prop>
+  </header>
+  <body>
+    <tu tuid="Tank3TempHighMsg">
+      <tuv xml:lang="pl">
+        <seg>Temperatura w zbiorniku 3 za wysoka!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Temperature in tank 3 too high</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Servus Welt!</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3PressureHighMsg">
+      <tuv xml:lang="pl">
+        <seg>Ciśnienie w zbiorniku 3 za wysokie!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Pressure in tank 3 too high</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

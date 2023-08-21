@@ -1,5 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio FileVersion="4.9"?>
 <Configuration>
-  <Element ID="gAlarmXCore" Type="mpalarmxcore" />
+  <Element ID="gAlarmXCore" Type="mpalarmxcore">
+    <Group ID="mapp.AlarmX.Core.Configuration">
+      <Group ID="[0]">
+        <Property ID="Name" Value="Tank3PressureHigh" />
+        <Property ID="Message" Value="Resources:AlarmMessages:Tank3PressureHighMsg" />
+        <Property ID="Code" Value="10" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gTanks.ObjectParameters.Tank3Pressure" />
+            <Selector ID="HighLimitEnable" Value="Dynamic">
+              <Property ID="LimitPV" Value="::gSelectedParameters.Tank3MaxAllowedPressure" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[1]">
+        <Property ID="Name" Value="Tank3TempHigh" />
+        <Property ID="Message" Value="Resources:AlarmMessages:Tank3TempHighMsg" />
+        <Property ID="Code" Value="11" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gTanks.ObjectParameters.Tank3Temp" />
+            <Selector ID="HighLimitEnable" Value="Dynamic">
+              <Property ID="LimitPV" Value="::gSelectedParameters.Tank3MaxAllowedTemp" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+    </Group>
+  </Element>
 </Configuration>

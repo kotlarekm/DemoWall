@@ -20,12 +20,12 @@ PROGRAM _INIT
 	 
 END_PROGRAM
 
+PROGRAM _CYCLIC
+	 
 	// Updates
 	MpAlarmXCore_0();
 	MpAlarmXHistory_0();
-
-PROGRAM _CYCLIC
-	 
+	
 END_PROGRAM
 
 PROGRAM _EXIT
