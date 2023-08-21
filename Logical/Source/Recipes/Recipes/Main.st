@@ -7,7 +7,7 @@
 
 PROGRAM _INIT
 	
-	gSelectedParameters;
+	gTanks;
 	
 	// MpRecipeXml init
 	MpRecipeXml_0.MpLink := ADR(gRecipeXml);
@@ -18,7 +18,7 @@ PROGRAM _INIT
 	
 	// MpRecipeRegPar init
 	MpRecipeRegPar_0.MpLink := ADR(gRecipeXml);
-	MpRecipeRegPar_0.PVName := ADR('gSelectedParameters');
+	MpRecipeRegPar_0.PVName := ADR('gTanks');
 	MpRecipeRegPar_0.Enable := TRUE;
 	MpRecipeRegPar_0();
 	

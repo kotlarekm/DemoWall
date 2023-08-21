@@ -1,6 +1,3 @@
 VAR
 	gTanks : TanksType;
 END_VAR
-VAR RETAIN
-	gSelectedParameters : SelectedParametersType;
-END_VAR

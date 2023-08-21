@@ -10,17 +10,6 @@ TYPE
 		OpenTank3MainValve : BOOL := FALSE;
 	END_STRUCT;
 	ObjectParamteresType : 	STRUCT 
-		Tank1FluidLvl : UINT;
-		Tank2FluidLvl : UINT;
-		Tank3FluidLvl : UINT;
-		Tank1Pressure : INT;
-		Tank2Pressure : INT;
-		Tank3Pressure : INT;
-		Tank1Temp : INT;
-		Tank2Temp : INT;
-		Tank3Temp : INT;
-	END_STRUCT;
-	SelectedParametersType : 	STRUCT 
 		Tank3MaxAllowedPressure : INT;
 		Tank3MaxAllowedTemp : SINT;
 		Tank3LeftValveOpeningLvl : UINT := 0;
@@ -35,6 +24,15 @@ TYPE
 	StatusType : 	STRUCT 
 		IsMikser1On : BOOL;
 		IsMikser2On : BOOL;
+		Tank1FluidLvl : UINT;
+		Tank2FluidLvl : UINT;
+		Tank3FluidLvl : UINT;
+		Tank1Pressure : REAL;
+		Tank2Pressure : REAL;
+		Tank3Pressure : REAL;
+		Tank1Temp : INT;
+		Tank2Temp : INT;
+		Tank3Temp : INT;
 	END_STRUCT;
 	TanksType : 	STRUCT 
 		Commands : CommadsType;

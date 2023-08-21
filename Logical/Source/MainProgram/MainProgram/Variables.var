@@ -3,4 +3,6 @@ VAR
 	Step : STEP_ENUM;
 	Stop : BOOL;
 	TON_0 : TON;
+	DENSITY_OF_LIQUID : REAL := 997; (*[kg/m^3] Density of water*)
+	GRAVITY : REAL := 9.81; (*[m/s^2] Earth acceleration*)
 END_VAR
