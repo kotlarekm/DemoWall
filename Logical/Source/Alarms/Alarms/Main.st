@@ -1,18 +1,35 @@
 //*********************************************************************** 
-// Copyright:
-// Author:
-// Created:
-// Description:
+// Copyright: B&R Industrial Automation GmbH 
+// Author: B&R
+// Created: 21.08.2023
+// Description: Task resposible for handling alarms.
 //***********************************************************************
 
 PROGRAM _INIT
+
 	(* Insert code here *)
 	TON_LED_ON.PT := T#30ms;
 	TON_LED_OFF.PT := T#30ms;
+	
+	// MpAlarmXCore init
+	MpAlarmXCore_0.MpLink := ADR('gAlarmXCore');
+	MpAlarmXCore_0.Enable := TRUE;
+	MpAlarmXCore_0();
+	
+	// MpAlarmXHistory init
+	MpAlarmXHistory_0.MpLink := ADR('gAlarmXHistory');
+	MpAlarmXHistory_0.DeviceName := ADR('HDD');
+	MpAlarmXHistory_0.Enable := TRUE;
+	MpAlarmXHistory_0();
+	 
+
 END_PROGRAM
 
+	// Updates
+	MpAlarmXCore_0();
+	MpAlarmXHistory_0();
+
 PROGRAM _CYCLIC
-	(* Insert code here *)
 	 
 	IF NOT(diDriveStop) AND NOT(diEStopNotPressed) THEN
 		diResetRedLED := TRUE;
@@ -43,7 +60,12 @@ PROGRAM _CYCLIC
 END_PROGRAM
 
 PROGRAM _EXIT
-	(* Insert code here *)
+	
+	MpAlarmXCore_0.Enable := FALSE;
+	MpAlarmXCore_0();
+	
+	MpAlarmXHistory_0.Enable := FALSE;
+	MpAlarmXHistory_0();
 	 
 END_PROGRAM
 

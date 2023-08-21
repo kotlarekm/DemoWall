@@ -1,4 +1,9 @@
-// Function for updating the list of Recipe names based on file names in the Recipes folder
+//*********************************************************************** 
+// Copyright: B&R Industrial Automation GmbH 
+// Author: B&R
+// Created: 18.08.2023
+// Description: Function for updating the list of Recipe names based on file names in the Recipes folder.
+//***********************************************************************
 
 FUNCTION UpdateRecipesList
 	FOR Index := 0 TO 49 DO
