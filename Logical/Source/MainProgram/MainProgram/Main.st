@@ -13,9 +13,9 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 	
-	gTanks.Status.Tank1Pressure := DENSITY_OF_LIQUID * GRAVITY * gTanks.Status.Tank1FluidLvl/1000;
-	gTanks.Status.Tank2Pressure := DENSITY_OF_LIQUID * GRAVITY * gTanks.Status.Tank2FluidLvl/1000;
-	gTanks.Status.Tank3Pressure := DENSITY_OF_LIQUID * GRAVITY * gTanks.Status.Tank3FluidLvl/1000;
+	gTanks.Status.Tank1Pressure := DENSITY_OF_LIQUID * GRAVITY * gTanks.Status.Tank1FluidLvl/LITERS_TO_CUBIC_METERS_SCALLER;
+	gTanks.Status.Tank2Pressure := DENSITY_OF_LIQUID * GRAVITY * gTanks.Status.Tank2FluidLvl/LITERS_TO_CUBIC_METERS_SCALLER;
+	gTanks.Status.Tank3Pressure := DENSITY_OF_LIQUID * GRAVITY * gTanks.Status.Tank3FluidLvl/LITERS_TO_CUBIC_METERS_SCALLER;
 	gTanks.Status.IsMixer1On := gTanks.Commands.TurnOnMixer1;
 	gTanks.Status.IsMixer2On := gTanks.Commands.TurnOnMixer2;
 	

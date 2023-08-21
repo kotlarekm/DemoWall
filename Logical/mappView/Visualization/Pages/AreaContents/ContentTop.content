@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="ContentTop" height="160" width="1366" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Image" id="LogoImg" top="0" left="0" width="460" height="160" zIndex="0" image="Media/logo.png" />
+    <Widget xsi:type="widgets.brease.Image" id="LoginImg" top="0" left="1120" width="80" height="80" zIndex="1" image="Media/SymbolLib/User/User.svg" />
+    <Widget xsi:type="widgets.brease.Image" id="LogoutImg" top="0" left="1240" width="80" height="80" zIndex="2" image="Media/SymbolLib/User/Logout.svg" />
+    <Widget xsi:type="widgets.brease.DateTimeOutput" id="DateTimeOutput" top="0" left="480" width="540" height="60" zIndex="3" />
+    <Widget xsi:type="widgets.brease.Image" id="WarningImg" top="60" left="720" width="80" height="80" zIndex="4" image="Media/SymbolLib/Alarm/Alarm.svg" imageColor="rgba(255, 0, 0, 1)" />
+    <Widget xsi:type="widgets.brease.Label" id="UserLabel" top="120" left="1120" zIndex="5" text="Label1" />
+    <Widget xsi:type="widgets.brease.LoginInfo" id="LoginInfo" top="120" left="1200" zIndex="6" />
+    <Widget xsi:type="widgets.brease.Line" id="Line1" zIndex="7" x1="0" x2="1366" y1="160" y2="160" lineWidth="5px" />
+  </Widgets>
+</Content>
