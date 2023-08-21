@@ -17,16 +17,16 @@ TYPE
 		MixingTime : TIME := T#0s;
 		Mixer2On : BOOL := FALSE;
 		Mixer1On : BOOL := FALSE;
-		Tank3TargetFluidLvl : UINT;
-		Tank2TargetFluidLvl : UINT;
-		Tank1TargetFluidLvl : UINT;
+		Tank3TargetFluidLvl : REAL;
+		Tank2TargetFluidLvl : REAL;
+		Tank1TargetFluidLvl : REAL;
 	END_STRUCT;
 	StatusType : 	STRUCT 
 		IsMixer1On : BOOL;
 		IsMixer2On : BOOL;
-		Tank1FluidLvl : UINT;
-		Tank2FluidLvl : UINT;
-		Tank3FluidLvl : UINT;
+		Tank1FluidLvl : REAL;
+		Tank2FluidLvl : REAL;
+		Tank3FluidLvl : REAL;
 		Tank1Pressure : REAL;
 		Tank2Pressure : REAL;
 		Tank3Pressure : REAL;

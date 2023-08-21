@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="ContentMain" height="608" width="1206" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="58" left="75" width="161" zIndex="0" cornerRadius="8px" borderColor="rgba(255, 136, 0, 1)" textColor="rgba(0, 0, 0, 1)" textAlign="center" fontName="ABBvoiceLight" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput2" top="216" left="75" width="163" zIndex="1" cornerRadius="8px" borderColor="rgba(255, 136, 0, 1)" textColor="rgba(0, 0, 0, 1)" textAlign="center" fontName="ABBvoiceLight" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput3" top="130" left="75" width="163" zIndex="2" cornerRadius="8px" borderColor="rgba(255, 136, 0, 1)" textColor="rgba(0, 0, 0, 1)" textAlign="center" fontName="ABBvoiceLight" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput4" top="94" left="75" width="163" zIndex="3" cornerRadius="8px" borderColor="rgba(255, 136, 0, 1)" textColor="rgba(0, 0, 0, 1)" textAlign="center" fontName="ABBvoiceLight" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput5" top="252" left="75" width="163" zIndex="4" cornerRadius="8px" borderColor="rgba(255, 136, 0, 1)" textColor="rgba(0, 0, 0, 1)" textAlign="center" fontName="ABBvoiceLight" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput6" top="480" left="75" width="161" zIndex="5" cornerRadius="8px" borderColor="rgba(255, 136, 0, 1)" textColor="rgba(0, 0, 0, 1)" textAlign="center" fontName="ABBvoiceLight" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput7" top="344" left="75" width="163" zIndex="6" cornerRadius="8px" borderColor="rgba(255, 136, 0, 1)" textColor="rgba(0, 0, 0, 1)" textAlign="center" fontName="ABBvoiceLight" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput8" top="381" left="75" width="163" zIndex="7" cornerRadius="8px" borderColor="rgba(255, 136, 0, 1)" textColor="rgba(0, 0, 0, 1)" textAlign="center" fontName="ABBvoiceLight" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput3" top="58" left="1038" width="166" zIndex="8" borderWidth="2px 2px 1px 1px" cornerRadius="8px" backColor="rgba(192, 192, 192, 1)" borderColor="rgba(255, 136, 0, 1)" textColor="rgba(0, 0, 0, 1)" textAlign="center" opacity="1" fontName="ABBvoiceLight" shadow="4px 1px 3px rgba(255, 113, 0, 0.75)" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput4" top="94" left="1038" width="165" zIndex="9" borderWidth="2px 2px 1px 1px" cornerRadius="8px" backColor="rgba(192, 192, 192, 1)" borderColor="rgba(255, 136, 0, 1)" textColor="rgba(0, 0, 0, 1)" textAlign="center" opacity="1" fontName="ABBvoiceLight" shadow="4px 1px 3px rgba(255, 113, 0, 0.75)" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput5" top="130" left="1038" width="166" zIndex="10" borderWidth="2px 2px 1px 1px" cornerRadius="8px" backColor="rgba(192, 192, 192, 1)" borderColor="rgba(255, 136, 0, 1)" textColor="rgba(0, 0, 0, 1)" textAlign="center" opacity="1" fontName="ABBvoiceLight" shadow="4px 1px 3px rgba(255, 113, 0, 0.75)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label3" top="54" left="968" width="56" zIndex="11" text="Tank1" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label4" top="92" left="968" width="51" zIndex="12" text="Tank2" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label5" top="132" left="968" width="50" zIndex="13" text="Tank3" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label12" top="58" left="8" width="52" zIndex="14" text="Tank1" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label13" top="94" left="8" width="52" zIndex="15" text="Tank2" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label14" top="130" left="8" width="52" zIndex="16" text="Tank3" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label15" top="218" left="8" width="44" zIndex="17" text="Left" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label16" top="248" left="8" width="46" zIndex="18" text="Right" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label18" top="352" left="8" width="64" zIndex="19" text="Mixer 1" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label19" top="380" left="8" width="64" zIndex="20" text="Mixer 2" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label20" top="22" left="1082" width="90" zIndex="21" text="Fluid Level" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label22" top="180" left="1068" width="110" zIndex="22" text="Temperature" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label23" top="342" left="1082" width="72" zIndex="23" text="Pressure" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label21" top="220" left="970" width="56" zIndex="24" text="Tank1" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label24" top="380" left="970" width="56" zIndex="25" text="Tank1" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label6" top="260" left="970" width="56" zIndex="26" text="Tank2" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label9" top="416" left="969" width="56" zIndex="27" text="Tank2" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label7" top="457" left="969" width="56" zIndex="28" text="Tank3" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label10" top="296" left="970" width="56" zIndex="29" text="Tank3" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label25" top="22" left="86" width="145" zIndex="30" text="Target Fluid Level" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label26" top="180" left="56" width="216" zIndex="31" text="Tank 3 valve opening value" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label27" top="308" left="94" width="120" zIndex="32" text="Mixer ON/OFF" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label28" top="446" left="106" width="99" zIndex="33" text="Mixing time" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput12" top="220" left="1038" width="166" zIndex="34" borderWidth="2px 2px 1px 1px" cornerRadius="8px" backColor="rgba(192, 192, 192, 1)" borderColor="rgba(255, 136, 0, 1)" textColor="rgba(0, 0, 0, 1)" textAlign="center" opacity="1" fontName="ABBvoiceLight" shadow="4px 1px 3px rgba(255, 113, 0, 0.75)" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput13" top="256" left="1038" width="165" zIndex="35" borderWidth="2px 2px 1px 1px" cornerRadius="8px" backColor="rgba(192, 192, 192, 1)" borderColor="rgba(255, 136, 0, 1)" textColor="rgba(0, 0, 0, 1)" textAlign="center" opacity="1" fontName="ABBvoiceLight" shadow="4px 1px 3px rgba(255, 113, 0, 0.75)" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput14" top="292" left="1038" width="166" zIndex="36" borderWidth="2px 2px 1px 1px" cornerRadius="8px" backColor="rgba(192, 192, 192, 1)" borderColor="rgba(255, 136, 0, 1)" textColor="rgba(0, 0, 0, 1)" textAlign="center" opacity="1" fontName="ABBvoiceLight" shadow="4px 1px 3px rgba(255, 113, 0, 0.75)" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput15" top="378" left="1038" width="166" zIndex="37" borderWidth="2px 2px 1px 1px" cornerRadius="8px" backColor="rgba(192, 192, 192, 1)" borderColor="rgba(255, 136, 0, 1)" textColor="rgba(0, 0, 0, 1)" textAlign="center" opacity="1" fontName="ABBvoiceLight" shadow="4px 1px 3px rgba(255, 113, 0, 0.75)" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput16" top="414" left="1038" width="165" zIndex="38" borderWidth="2px 2px 1px 1px" cornerRadius="8px" backColor="rgba(192, 192, 192, 1)" borderColor="rgba(255, 136, 0, 1)" textColor="rgba(0, 0, 0, 1)" textAlign="center" opacity="1" fontName="ABBvoiceLight" shadow="4px 1px 3px rgba(255, 113, 0, 0.75)" />
+    <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput17" top="450" left="1038" width="166" zIndex="39" borderWidth="2px 2px 1px 1px" cornerRadius="8px" backColor="rgba(192, 192, 192, 1)" borderColor="rgba(255, 136, 0, 1)" textColor="rgba(0, 0, 0, 1)" textAlign="center" opacity="1" fontName="ABBvoiceLight" shadow="4px 1px 3px rgba(255, 113, 0, 0.75)" />
+  </Widgets>
+</Content>
