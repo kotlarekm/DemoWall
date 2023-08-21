@@ -46,14 +46,18 @@ PROGRAM _CYCLIC
 		STEP_POWER_ON:
 			MpAxisBasic_0.Power := TRUE;
 			IF MpAxisBasic_0.PowerOn THEN
-	  			StepMixer1 := STEP_MOVE;
+				StepMixer1 := STEP_MOVE;
 			END_IF;
 		STEP_MOVE:
 			MpAxisBasic_0.MoveVelocity := TRUE;
 			IF NOT gTanks.Commands.TurnOnMikser1 THEN
-				MpAxisBasic_0.MoveVelocity := FALSE;
-				MpAxisBasic_0.Power := FALSE;
-				StepMixer1 := STEP_INIT;
+				StepMixer1 := STEP_POWER_OFF;
+			END_IF;
+		STEP_POWER_OFF:
+			MpAxisBasic_0.MoveVelocity := FALSE;
+			MpAxisBasic_0.Power := FALSE;
+			IF NOT MpAxisBasic_0.InVelocity AND NOT MpAxisBasic_0.PowerOn THEN
+				StepMixer1:= STEP_INIT;
 			END_IF;
 	END_CASE;
 	 
@@ -70,14 +74,34 @@ PROGRAM _CYCLIC
 		STEP_MOVE:
 			MpAxisBasic_1.MoveVelocity := TRUE;
 			IF NOT gTanks.Commands.TurnOnMikser2 THEN
-				MpAxisBasic_1.MoveVelocity := FALSE;
-				MpAxisBasic_1.Power := TRUE;
-				StepMixer2 := STEP_INIT;
+				StepMixer2 := STEP_POWER_OFF;
+			END_IF;
+		STEP_POWER_OFF:
+			MpAxisBasic_1.MoveVelocity := FALSE;
+			MpAxisBasic_1.Power := FALSE;
+			IF NOT MpAxisBasic_1.InVelocity AND NOT MpAxisBasic_1.PowerOn THEN
+				StepMixer2:= STEP_INIT;
 			END_IF;
 	END_CASE;
 	
-	MpAxisCoupling_0.Gear := AxisCoupling;
-	
+	CASE CouplingType OF
+		NO_COUPLING:
+			IF GearCoupling THEN
+				MpAxisCoupling_0.Gear := TRUE;
+				IF MpAxisCoupling_0.InSync THEN
+					CouplingType := GEAR_COUPLING;
+				END_IF;
+			ELSIF CamCoupling THEN
+				CouplingType := CAM_COUPLING;
+			END_IF;	
+		GEAR_COUPLING:
+			IF NOT GearCoupling THEN
+				MpAxisCoupling_0.Gear := FALSE;
+				gTanks.Commands.TurnOnMikser2 := FALSE;
+				CouplingType := NO_COUPLING;
+			END_IF;
+		CAM_COUPLING:
+	END_CASE;
 END_PROGRAM
 
 PROGRAM _EXIT

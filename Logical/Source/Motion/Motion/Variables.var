@@ -7,5 +7,7 @@ VAR
 	MpAxisCoupling_0 : MpAxisCoupling;
 	MpAxisCouplingParameters : MpAxisCouplingParType;
 	MpAxisBasicParameters_1 : MpAxisBasicParType;
-	AxisCoupling : BOOL;
+	GearCoupling : BOOL;
+	CouplingType : CouplingEnum;
+	CamCoupling : BOOL;
 END_VAR

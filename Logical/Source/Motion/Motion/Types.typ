@@ -4,6 +4,13 @@ TYPE
 		(
 		STEP_INIT,
 		STEP_POWER_ON,
-		STEP_MOVE
+		STEP_MOVE,
+		STEP_POWER_OFF
+		);
+	CouplingEnum : 
+		(
+		NO_COUPLING,
+		GEAR_COUPLING,
+		CAM_COUPLING
 		);
 END_TYPE
