@@ -4,8 +4,9 @@ TYPE
 		(
 		STEP_INIT,
 		STEP_POWER_ON,
-		STEP_MOVE,
-		STEP_POWER_OFF
+		STEP_MOVE_VELOCITY,
+		STEP_POWER_OFF,
+		STEP_RUNNING
 		);
 	CouplingEnum : 
 		(

@@ -1,13 +1,14 @@
 VAR
 	MpAxisBasic_0 : MpAxisBasic;
-	MpAxisBasicParameters : MpAxisBasicParType;
-	StepMixer1 : StepEnum;
-	StepMixer2 : StepEnum;
+	MpAxisBasicParameters_0 : MpAxisBasicParType;
+	StepMixer1 : StepEnum := STEP_INIT;
+	StepMixer2 : StepEnum := STEP_INIT;
 	MpAxisBasic_1 : MpAxisBasic;
 	MpAxisCoupling_0 : MpAxisCoupling;
 	MpAxisCouplingParameters : MpAxisCouplingParType;
 	MpAxisBasicParameters_1 : MpAxisBasicParType;
-	GearCoupling : BOOL;
-	CouplingType : CouplingEnum;
-	CamCoupling : BOOL;
+	GearCoupling : BOOL := FALSE;
+	CouplingMode : CouplingEnum := NO_COUPLING;
+	CamCoupling : BOOL := FALSE;
+	CamID : USINT := 1;
 END_VAR

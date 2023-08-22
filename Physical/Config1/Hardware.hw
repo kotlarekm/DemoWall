@@ -2,14 +2,13 @@
 <?AutomationStudio Version=4.12.2.93 FileVersion="4.9"?>
 <Hardware xmlns="http://br-automation.co.at/AS/Hardware">
   <Module Name="0AC808.9" Type="0AC808.9" Version="1.0.0.0">
+    <Connection Connector="ETH1" TargetModule="80VD100PD.C000-01" TargetConnector="PLK1">
+      <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
+    </Connection>
     <Connection Connector="ETH3" TargetModule="X20BC1083" TargetConnector="PLK1">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
-
     <Connection Connector="ETH5" TargetModule="X67BC8321-1" TargetConnector="PLK1">
-
-    <Connection Connector="ETH6" TargetModule="80VD100PD.C000-01" TargetConnector="PLK1">
-
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
     <Connection Connector="ETH7" TargetModule="X20SL8101" TargetConnector="PLK2">
@@ -120,7 +119,7 @@
     <Parameter ID="LoadSimulationMode" Location="FunctionModel/DriveConfiguration/Channel[2]/RealAxis/Simulation" Value="NotUsed" />
   </Module>
   <Module Name="80VD100PD.C000-01" Type="80VD100PD.C000-01" Version="2.5.0.0">
-    <Connection Connector="PLK1" TargetModule="0AC808.9" TargetConnector="ETH5" NodeNumber="2">
+    <Connection Connector="PLK1" TargetModule="0AC808.9" TargetConnector="ETH1" NodeNumber="4">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
     </Connection>
     <Parameter ID="McAcoposTypeID" Location="DriveConfiguration/Module" Value="AcoposMicroDConfig" />
@@ -179,6 +178,7 @@
     <Parameter ID="Input" Location="DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Quickstop" Value="Trigger2" />
     <Parameter ID="SimulationModeOnPLC" Location="DriveConfiguration/Channel[1]/RealAxis/Simulation" Value="SetValueGeneration" />
     <Parameter ID="SimulationModeOnACOPOS" Location="DriveConfiguration/Channel[1]/RealAxis/Simulation" Value="NotUsed" />
+    <Parameter ID="FeatureRef[1]" Location="DriveConfiguration/Channel[1]/ChannelFeatures" Value="CamListFeature" />
     <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[2]/RealAxis" Value="" />
     <Parameter ID="MechanicalElementsIsInvisible" Location="DriveConfiguration/Channel[2]/RealAxis" Value="0" />
     <Parameter ID="InputIsReadOnly" Location="DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/Gearbox" Value="0" />
@@ -483,15 +483,8 @@
       <Parameter ID="InternetAddress" Value="10.0.0.2" />
       <Parameter ID="SubnetMask" Value="255.255.255.0" />
     </Connector>
-
     <Parameter ID="ConfigurationID" Value="DemoWallConfig1" />
     <Parameter ID="Simulation" Value="1" />
-    <Parameter ID="TimerDeviceType" Value="EPLX2X" />
-    <Parameter ID="TimerDevice" Value="X20CP1684.IF6" />
-    <Parameter ID="TaskClassIdleTime" Value="10000" />
-    <Parameter ID="Cyclic1Duration" Value="2000" />
-    <Parameter ID="Cyclic1Tolerance" Value="0" />
-
     <Group ID="FileDevice1" />
     <Parameter ID="FileDeviceName1" Value="HDD" />
     <Parameter ID="FileDevicePath1" Value="C:\Recipes" />
@@ -527,7 +520,6 @@
     </Connector>
     <Parameter ID="ConfigFile" Value="X20IF1061_1.dtm" />
     <Parameter ID="ConfigModule" Value="asnxdb1" />
-    <Parameter ID="CycleTime" Value="2000" />
   </Module>
   <Module Name="X20MK0211" Type="X20MK0211" Version="1.0.0.3">
     <Connection Connector="SL" TargetModule="X20SL8101" TargetConnector="SL1" />

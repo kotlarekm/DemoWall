@@ -59,7 +59,7 @@
     <Module Name="8I74xxxxxxx.01P-1" Type="8I74xxxxxxx.01P-1" X="656" Y="895" />
     <Module Name="8EI2X2HWT10.xxxx-1" Type="8EI2X2HWT10.xxxx-1" X="559" Y="895" />
     <Module Name="5AP933.156B-00" Type="5AP933.156B-00" X="100" Y="895" />
-    <Module Name="80VD100PD.C000-01" Type="80VD100PD.C000-01" X="452" Y="895" />
+    <Module Name="80VD100PD.C000-01" Type="80VD100PD.C000-01" X="442" Y="249" />
     <Module Name="80SD100XD.C044-01" Type="80SD100XD.C044-01" X="289" Y="249" />
     <Module Name="4XP0000.00-K21" Type="4XP0000.00-K21" X="1003" Y="607" />
     <Module Name="0AC808.9" Type="0AC808.9" X="557" Y="457" />
@@ -146,25 +146,14 @@
       <Point X="910" Y="619" />
       <Point X="910" Y="619" />
     </Link>
-    <Link From="80VD100PD.C000-01" To="0AC808.9" FromPort="PLK1" ToPort="ETH5" IsRoutedByUser="False">
-      <Point X="411" Y="691" />
-      <Point X="411" Y="676" />
-      <Point X="430" Y="676" />
-      <Point X="458" Y="676" />
-      <Point X="458" Y="495" />
-      <Point X="201" Y="495" />
-      <Point X="201" Y="459" />
-      <Point X="201" Y="439" />
-      <Point X="201" Y="439" />
-    </Link>
-    <Link From="80SD100XD.C044-01" To="X20BT9400" FromPort="X2X1" ToPort="X2X1" IsRoutedByUser="False">
-      <Point X="421" Y="866" />
-      <Point X="421" Y="851" />
-      <Point X="438" Y="851" />
-      <Point X="438" Y="144" />
-      <Point X="298" Y="144" />
-      <Point X="291" Y="144" />
-      <Point X="291" Y="144" />
+    <Link From="80VD100PD.C000-01" To="0AC808.9" FromPort="PLK1" ToPort="ETH1" IsRoutedByUser="False">
+      <Point X="481" Y="323" />
+      <Point X="481" Y="308" />
+      <Point X="500" Y="308" />
+      <Point X="583" Y="308" />
+      <Point X="583" Y="456" />
+      <Point X="583" Y="468" />
+      <Point X="583" Y="468" />
     </Link>
   </Links>
   <InfoElements />
