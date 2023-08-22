@@ -8,5 +8,7 @@ VAR
 	MpFileManagerUIConnect_0 : MpFileManagerUIConnectType := (DeviceList:=(DeviceNames:=['HDD',9('')],SelectedIndex:=0),File:=(Filter:='.xml')); (*Structure used in MpFileManagerUI setup. Contains information about files in directory.*)
 	MpFileManagerUISetup_0 : MpFileManagerUISetupType; (*Structure used in MpFileManagerUI setup.*)
 	RecipesList : ARRAY[0..49] OF STRING[255] := ['RandomRecipe',49('')]; (*List of recipe names*)
-	DropDownBoxNamesCollection : ARRAY[0..49] OF STRING[100];
+	DropDownBoxNamesCollection : ARRAY[0..49] OF STRING[100]; (*Item collection containing recipe names*)
+	SelectedRecipeIndex : USINT := 0; (*Index of recipe selected in dropdownbox on recipe page*)
+	NewRecipeSelected : BOOL; (*Information about new recipe being selected*)
 END_VAR

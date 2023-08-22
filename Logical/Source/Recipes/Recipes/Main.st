@@ -7,7 +7,7 @@
 
 PROGRAM _INIT
 	
-	gTanks;
+	gTanks.ObjectParameters;
 	
 	// MpRecipeXml init
 	MpRecipeXml_0.MpLink := ADR(gRecipeXml);
@@ -18,7 +18,7 @@ PROGRAM _INIT
 	
 	// MpRecipeRegPar init
 	MpRecipeRegPar_0.MpLink := ADR(gRecipeXml);
-	MpRecipeRegPar_0.PVName := ADR('gTanks');
+	MpRecipeRegPar_0.PVName := ADR('gTanks.ObjectParameters');
 	MpRecipeRegPar_0.Enable := TRUE;
 	MpRecipeRegPar_0();
 	
@@ -37,6 +37,14 @@ PROGRAM _INIT
 END_PROGRAM
 
 PROGRAM _CYCLIC
+	
+	// Checking if new recipe has been selected
+	IF NewRecipeSelected THEN
+		NewRecipeSelected := FALSE;
+		RecipeName := RecipesList[SelectedRecipeIndex];
+		WaitingForLoad := TRUE;
+	END_IF;
+	
 	
 	// Recipes loading
 	IF WaitingForLoad THEN

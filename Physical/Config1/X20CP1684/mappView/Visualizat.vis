@@ -17,6 +17,7 @@
     <EventBindingsSet refId="LoginDialogMainContent_eventbinding" />
     <EventBindingsSet refId="ContentTop_eventbinding" />
     <EventBindingsSet refId="LoginDialogTopContent_eventbinding" />
+    <EventBindingsSet refId="RecipesMainContent_eventbinding" />
   </EventBindingsSets>
   <Dialogs>
     <Dialog refId="LoginDialog" />
