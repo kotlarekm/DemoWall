@@ -14,9 +14,9 @@ TYPE
 		Tank3MaxAllowedTemp : SINT;
 		Tank3LeftValveOpeningLvl : UINT := 0;
 		Tank3RightValveOpeningLvl : UINT := 0;
-		MixingTime : TIME := T#0s;
-		Mixer2On : BOOL := FALSE;
-		Mixer1On : BOOL := FALSE;
+		MixingTime : UDINT;
+		Mixer2On : UINT := 0;
+		Mixer1On : UINT := 0;
 		Tank3TargetFluidLvl : REAL;
 		Tank2TargetFluidLvl : REAL;
 		Tank1TargetFluidLvl : REAL;
@@ -27,8 +27,8 @@ TYPE
 		Mixer2MaxAllowedVelocity : INT;
 	END_STRUCT;
 	StatusType : 	STRUCT 
-		IsMixer1On : BOOL;
-		IsMixer2On : BOOL;
+		IsMixer1On : UINT;
+		IsMixer2On : UINT;
 		Tank1FluidLvl : REAL;
 		Tank2FluidLvl : REAL;
 		Tank3FluidLvl : REAL;

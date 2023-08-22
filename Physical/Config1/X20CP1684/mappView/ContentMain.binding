@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="ContentMain_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.ObjectParameters.Tank1TargetFluidLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericInput17" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.ObjectParameters.Tank2TargetFluidLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericInput20" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.ObjectParameters.Tank3TargetFluidLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericInput19" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.ObjectParameters.Tank3LeftValveOpeningLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericInput18" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.ObjectParameters.Tank3RightValveOpeningLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericInput21" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.ObjectParameters.Mixer1On" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericInput23" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.ObjectParameters.Mixer2On" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericInput24" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.ObjectParameters.MixingTime" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericInput22" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank1FluidLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericOutput10" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank2FluidLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericOutput8" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank3FluidLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericOutput9" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.IsMixer1On" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericOutput6" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.IsMixer2On" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericOutput7" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank3Temp" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericOutput21" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank1Pressure" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericOutput13" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank2Pressure" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericOutput11" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank3Pressure" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericOutput12" attribute="node" />
+</Binding>
+</Bindings>
+</BindingsSet>

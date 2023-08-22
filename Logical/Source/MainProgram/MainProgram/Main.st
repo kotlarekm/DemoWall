@@ -55,14 +55,16 @@ PROGRAM _CYCLIC
 			gTanks.Commands.OpenTank3RightValve := gTanks.ObjectParameters.Tank3RightValveOpeningLvl;
 			
 			IF gTanks.Status.Tank3FluidLvl >= gTanks.ObjectParameters.Tank3TargetFluidLvl 
-				AND NOT(gTanks.ObjectParameters.Mixer1On) AND NOT(gTanks.ObjectParameters.Mixer2On) THEN
+				AND UINT_TO_BOOL(NOT(gTanks.ObjectParameters.Mixer1On)) 
+				AND UINT_TO_BOOL(NOT(gTanks.ObjectParameters.Mixer2On)) THEN
 				gTanks.Commands.OpenTank3LeftValve := 0;
 				gTanks.Commands.OpenTank3RightValve := 0;
 				Step := END;
 			END_IF;
 			
 			IF gTanks.Status.Tank3FluidLvl >= gTanks.ObjectParameters.Tank3TargetFluidLvl
-				AND gTanks.ObjectParameters.Mixer1On AND gTanks.ObjectParameters.Mixer2On THEN
+				AND UINT_TO_BOOL(gTanks.ObjectParameters.Mixer1On)
+				AND UINT_TO_BOOL(gTanks.ObjectParameters.Mixer2On) THEN
 				Step := MIXING;
 			END_IF
 			
@@ -70,7 +72,7 @@ PROGRAM _CYCLIC
 			gTanks.Commands.TurnOnMixer1 := TRUE;
 			gTanks.Commands.TurnOnMixer2 := TRUE;
 			TON_0.IN := TRUE;
-			TON_0(PT := gTanks.ObjectParameters.MixingTime);
+			TON_0(PT := UDINT_TO_TIME(gTanks.ObjectParameters.MixingTime)); 
 			
 			IF TON_0.Q THEN
 				gTanks.Commands.TurnOnMixer1 := FALSE;
