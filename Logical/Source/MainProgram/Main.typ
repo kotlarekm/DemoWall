@@ -20,6 +20,9 @@ TYPE
 		Tank3TargetFluidLvl : REAL;
 		Tank2TargetFluidLvl : REAL;
 		Tank1TargetFluidLvl : REAL;
+		Tank3MaxFluidLvl : REAL;
+		Tank2MaxFluidLvl : REAL;
+		Tank1MaxFluidLvl : REAL;
 	END_STRUCT;
 	StatusType : 	STRUCT 
 		IsMixer1On : BOOL;

@@ -9,9 +9,9 @@
         <Property ID="Code" Value="10" />
         <Selector ID="Behavior" Value="LevelMonitoring">
           <Group ID="Monitoring">
-            <Property ID="MonitoredPV" Value="::gTanks.ObjectParameters.Tank3Pressure" />
+            <Property ID="MonitoredPV" Value="::gTanks.Status.Tank3Pressure" />
             <Selector ID="HighLimitEnable" Value="Dynamic">
-              <Property ID="LimitPV" Value="::gSelectedParameters.Tank3MaxAllowedPressure" />
+              <Property ID="LimitPV" Value="::gTanks.ObjectParameters.Tank3MaxAllowedPressure" />
             </Selector>
           </Group>
         </Selector>
@@ -22,9 +22,52 @@
         <Property ID="Code" Value="11" />
         <Selector ID="Behavior" Value="LevelMonitoring">
           <Group ID="Monitoring">
-            <Property ID="MonitoredPV" Value="::gTanks.ObjectParameters.Tank3Temp" />
+            <Property ID="MonitoredPV" Value="::gTanks.Status.Tank3Temp" />
             <Selector ID="HighLimitEnable" Value="Dynamic">
-              <Property ID="LimitPV" Value="::gSelectedParameters.Tank3MaxAllowedTemp" />
+              <Property ID="LimitPV" Value="::gTanks.ObjectParameters.Tank3MaxAllowedTemp" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[2]">
+        <Property ID="Name" Value="E-stop" />
+        <Property ID="Message" Value="Resources:AlarmMessages:E-stop" />
+        <Property ID="Code" Value="12" />
+        <Selector ID="Behavior" Value="PersistentAlarm" />
+      </Group>
+      <Group ID="[3]">
+        <Property ID="Name" Value="Tank1FluidLvlHigh" />
+        <Property ID="Message" Value="Resources:AlarmMessages:Tank1FluidLvlHigh" />
+        <Property ID="Code" Value="13" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gTanks.Status.Tank1FluidLvl" />
+            <Selector ID="HighLimitEnable" Value="Dynamic">
+              <Property ID="LimitPV" Value="::gTanks.ObjectParameters.Tank1MaxFluidLvl" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[4]">
+        <Property ID="Name" Value="Tank2FluidLvlHigh" />
+        <Property ID="Message" Value="Resources:AlarmMessages:Tank2FluidLvlHigh" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gTanks.Status.Tank2FluidLvl" />
+            <Selector ID="HighLimitEnable" Value="Dynamic">
+              <Property ID="LimitPV" Value="::gTanks.ObjectParameters.Tank2MaxFluidLvl" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[5]">
+        <Property ID="Name" Value="Tank3FluidLvlHigh" />
+        <Property ID="Message" Value="Resources:AlarmMessages:Tank3FluidLvlHigh" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gTanks.Status.Tank3Temp" />
+            <Selector ID="HighLimitEnable" Value="Dynamic">
+              <Property ID="LimitPV" Value="::gTanks.ObjectParameters.Tank3MaxFluidLvl" />
             </Selector>
           </Group>
         </Selector>

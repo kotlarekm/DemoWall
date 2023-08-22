@@ -10,7 +10,7 @@
         <seg>Temperatura w zbiorniku 3 za wysoka!</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Temperature in tank 3 too high</seg>
+        <seg>Temperature in tank 3 is too high!</seg>
       </tuv>
       <tuv xml:lang="de">
         <seg>Servus Welt!</seg>
@@ -24,7 +24,39 @@
         <seg>Ciśnienie w zbiorniku 3 za wysokie!</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Pressure in tank 3 too high</seg>
+        <seg>Pressure in tank 3 is too high</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank1FluidLvlHigh">
+      <tuv xml:lang="pl">
+        <seg>Poziom cieczy w zbiorniku nr 1 jest za wysoki!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Fluid level in the tank 1  is too high!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank2FluidLvlHigh">
+      <tuv xml:lang="pl">
+        <seg>Poziom cieczy w zbiorniku nr 2 jest za wysoki!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Fluid level in the tank 2  is too high!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3FluidLvlHigh">
+      <tuv xml:lang="pl">
+        <seg>Poziom cieczy w zbiorniku nr 3 jest za wysoki!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Fluid level in the tank 3  is too high!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="E-stop">
+      <tuv xml:lang="pl">
+        <seg>Naciśnięto przycisk awaryjny!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Emergency button pressed!</seg>
       </tuv>
     </tu>
   </body>

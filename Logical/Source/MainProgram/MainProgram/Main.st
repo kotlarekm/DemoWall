@@ -91,6 +91,9 @@ PROGRAM _CYCLIC
 		
 	END_CASE;
 
+	gTanks.ObjectParameters.Tank3MaxAllowedPressure;
+	
+	
 END_PROGRAM
 
 PROGRAM _EXIT

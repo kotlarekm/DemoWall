@@ -12,12 +12,12 @@ PROGRAM _INIT
 	TON_LED_OFF.PT := T#30ms;
 	
 	// MpAlarmXCore init
-	MpAlarmXCore_0.MpLink := ADR('gAlarmXCore');
+	MpAlarmXCore_0.MpLink := ADR(gAlarmXCore);
 	MpAlarmXCore_0.Enable := TRUE;
 	MpAlarmXCore_0();
 	
 	// MpAlarmXHistory init
-	MpAlarmXHistory_0.MpLink := ADR('gAlarmXHistory');
+	MpAlarmXHistory_0.MpLink := ADR(gAlarmXHistory);
 	MpAlarmXHistory_0.DeviceName := ADR('HDD');
 	MpAlarmXHistory_0.Enable := TRUE;
 	MpAlarmXHistory_0();
@@ -30,8 +30,6 @@ PROGRAM _CYCLIC
 	// Updates
 	MpAlarmXCore_0();
 	MpAlarmXHistory_0();
-
-PROGRAM _CYCLIC
 	 
 	IF NOT(diDriveStop) AND NOT(diEStopNotPressed) THEN
 		diResetRedLED := TRUE;
@@ -59,6 +57,15 @@ PROGRAM _CYCLIC
 		
 	TON_LED_ON();
 	TON_LED_OFF();
+	
+	
+	IF diModuleOK THEN
+		MpAlarmXSet(gAlarmXCore, 'E-stop');
+	END_IF
+	
+	IF NOT(diModuleOK) THEN
+		MpAlarmXReset(gAlarmXCore, 'E-stop');
+	END_IF
 	
 END_PROGRAM
 

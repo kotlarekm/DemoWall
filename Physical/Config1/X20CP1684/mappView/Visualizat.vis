@@ -25,6 +25,13 @@
     <Dialog refId="LoginDialog" />
     <Dialog refId="DeleteFileDialog" />
   </Dialogs>
+  <BindingsSets>
+    <BindingsSet refId="ContentAlarms_binding" />
+  </BindingsSets>
+  <EventBindingsSets>
+    <EventBindingsSet refId="ContentAlarms_eventbinding" />
+  </EventBindingsSets>
+  <Dialogs />
   <Contents>
     <Content refId="ContentTop" />
     <Content refId="ContentNavigation" />
@@ -34,6 +41,7 @@
     <Content refId="RecipesMainContent" />
     <Content refId="DeleteFileDialogTopContent" />
     <Content refId="DeleteFileMainContent" />
+    <Content refId="ContentAlarms" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

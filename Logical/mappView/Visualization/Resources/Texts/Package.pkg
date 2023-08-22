@@ -6,5 +6,7 @@
     <Object Type="File">LoginDialogStrings.tmx</Object>
     <Object Type="File">RecipePageStrings.tmx</Object>
     <Object Type="File">WarningDialogStrings.tmx</Object>
+    <Object Type="File">LocalizableTexts.tmx</Object>
+    <Object Type="File">AlarmsPageText.tmx</Object>
   </Objects>
 </Package>

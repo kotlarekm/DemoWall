@@ -11,5 +11,7 @@
     <Object Type="File">RecipesMainContent.eventbinding</Object>
     <Object Type="File">DeleteFileMainContent.eventbinding</Object>
     <Object Type="File">DeleteFileDialogTopContent.eventbinding</Object>
+    <Object Type="File">ContentAlarms.eventbinding</Object>
+    <Object Type="File">ContentAlarms.binding</Object>
   </Objects>
 </Package>
