@@ -1,17 +1,16 @@
 
 TYPE
 	StepEnum : 
-		( (*Automatic mode step enumerator*)
-		STEP_INIT, (*Wait for power ON command*)
-		STEP_POWER_ON, (*Wait for power ON status*)
-		STEP_MOVE_VELOCITY, (*Wait for in  velocity status*)
-		STEP_POWER_OFF, (*Wait for power OFF status*)
-		STEP_RUNNING (*Wait for power OFF command*)
+		(
+		STEP_INIT,
+		STEP_POWER_ON,
+		STEP_MOVE,
+		STEP_POWER_OFF
 		);
 	CouplingEnum : 
-		( (*Manual mode coupling mode enumerator*)
-		NO_COUPLING, (*Wait for coupling mode select*)
-		GEAR_COUPLING, (*Wait for gear coupling OFF command*)
-		CAM_COUPLING (*Wait for cam coupling OFF command*)
+		(
+		NO_COUPLING,
+		GEAR_COUPLING,
+		CAM_COUPLING
 		);
 END_TYPE
