@@ -11,12 +11,20 @@
   </Pages>
   <Navigations />
   <BindingsSets />
-  <EventBindingsSets />
-  <Dialogs />
+  <EventBindingsSets>
+    <EventBindingsSet refId="LoginDialogMainContent_eventbinding" />
+    <EventBindingsSet refId="ContentTop_eventbinding" />
+    <EventBindingsSet refId="LoginDialogTopContent_eventbinding" />
+  </EventBindingsSets>
+  <Dialogs>
+    <Dialog refId="LoginDialog" />
+  </Dialogs>
   <Contents>
     <Content refId="ContentTop" />
     <Content refId="ContentNavigation" />
     <Content refId="ContentMain" />
+    <Content refId="LoginDialogTopContent" />
+    <Content refId="LoginDialogMainContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

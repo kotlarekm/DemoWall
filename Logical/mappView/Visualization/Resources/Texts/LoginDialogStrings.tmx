@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT</prop>
+  </header>
+  <body>
+    <tu tuid="UserName">
+      <tuv xml:lang="pl">
+        <seg>Użytkownik:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>User:</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Servus Welt!</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Password">
+      <tuv xml:lang="pl">
+        <seg>Hasło:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Password:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="WindowLabel">
+      <tuv xml:lang="pl">
+        <seg>Login</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Login</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AuthorizationFailedMsg">
+      <tuv xml:lang="pl">
+        <seg>Autoryzacja nie powiodła się.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Authorisation failed.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LoginBtnLabel">
+      <tuv xml:lang="pl">
+        <seg>Zaloguj</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Login</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SetUserFailedMsg">
+      <tuv xml:lang="pl">
+        <seg>Ustawienie użytkownika nie powiodło się.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Set user failed.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SetUserSuccessMsg">
+      <tuv xml:lang="pl">
+        <seg>Pomyślnie zalogowano.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Login successful.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="UserChangedMsg">
+      <tuv xml:lang="pl">
+        <seg>Użytkownik zmieniony na:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>User changed to: </seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

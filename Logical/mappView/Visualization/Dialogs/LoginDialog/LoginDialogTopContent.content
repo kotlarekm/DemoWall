@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="LoginDialogTopContent" height="80" width="600" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Button" id="LoginDialogExitBtn" top="5" left="520" width="70" height="70" zIndex="0" image="Media/SymbolLib/Edit/Close.svg" mouseDownImageColor="rgba(0, 0, 0, 1)" borderWidth="3px 3px 3px 3px" cornerRadius="200px" backGroundGradient="linear-gradient(to bottom, rgba(247,247,247,1) 0%,rgba(229,229,229,1) 100%)" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" fontName="Arial Unicode" />
+    <Widget xsi:type="widgets.brease.Label" id="TopBarWindowLabel" top="25" left="20" width="460" height="40" zIndex="1" text="$IAT/WindowLabel" fontName="ABBvoiceMedium" fontSize="32px" />
+    <Widget xsi:type="widgets.brease.Line" id="Line1" zIndex="2" x1="0" x2="600" y1="80" y2="80" lineWidth="5px" />
+  </Widgets>
+</Content>

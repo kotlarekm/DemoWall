@@ -2,6 +2,7 @@
 <?AutomationStudio FileVersion="4.9"?>
 <Package SubType="TextsPackage" PackageType="TextsPackage" xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
-    <Object Type="File">LocalizableTexts.tmx</Object>
+    <Object Type="File">TopContentStrings.tmx</Object>
+    <Object Type="File">LoginDialogStrings.tmx</Object>
   </Objects>
 </Package>

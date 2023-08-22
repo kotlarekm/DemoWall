@@ -4,5 +4,8 @@
   <Objects>
     <Object Type="File">Visualizat.vis</Object>
     <Object Type="File">Config.mappviewcfg</Object>
+    <Object Type="File">LoginDialogMainContent.eventbinding</Object>
+    <Object Type="File">ContentTop.eventbinding</Object>
+    <Object Type="File">LoginDialogTopContent.eventbinding</Object>
   </Objects>
 </Package>

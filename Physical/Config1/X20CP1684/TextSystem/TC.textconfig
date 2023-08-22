@@ -11,7 +11,8 @@
       </Group>
     </Group>
     <Group ID="TargetFiles">
-      <Property ID="TargetFile[1]" Value="mappView.Visualization.Resources.Texts.LocalizableTexts.tmx" />
+      <Property ID="TargetFile[1]" Value="mappView.Visualization.Resources.Texts.TopContentStrings.tmx" />
+      <Property ID="TargetFile[2]" Value="mappView.Visualization.Resources.Texts.LoginDialogStrings.tmx" />
     </Group>
   </Element>
 </Configuration>
