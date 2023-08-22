@@ -10,7 +10,9 @@
     <Page refId="IOPage" />
   </Pages>
   <Navigations />
-  <BindingsSets />
+  <BindingsSets>
+    <BindingsSet refId="RecipesMainContent_binding" />
+  </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="LoginDialogMainContent_eventbinding" />
     <EventBindingsSet refId="ContentTop_eventbinding" />
@@ -25,6 +27,7 @@
     <Content refId="ContentMain" />
     <Content refId="LoginDialogTopContent" />
     <Content refId="LoginDialogMainContent" />
+    <Content refId="RecipesMainContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

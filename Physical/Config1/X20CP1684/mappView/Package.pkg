@@ -7,5 +7,6 @@
     <Object Type="File">LoginDialogMainContent.eventbinding</Object>
     <Object Type="File">ContentTop.eventbinding</Object>
     <Object Type="File">LoginDialogTopContent.eventbinding</Object>
+    <Object Type="File">RecipesMainContent.binding</Object>
   </Objects>
 </Package>

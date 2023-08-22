@@ -62,7 +62,7 @@ PROGRAM _CYCLIC
 	MpRecipeXml_0();
 	MpRecipeRegPar_0();
 	MpFileManagerUIConnect_0.File.Refresh := TRUE;
-	UpdateRecipesList(ADR(MpFileManagerUIConnect_0), ADR(RecipesList));
+	UpdateRecipesList(ADR(MpFileManagerUIConnect_0), ADR(RecipesList), ADR(DropDownBoxNamesCollection));
 	MpFileManagerUI_0();
 	
 	 

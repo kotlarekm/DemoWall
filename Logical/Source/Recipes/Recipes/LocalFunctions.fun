@@ -5,7 +5,13 @@
 		RecipesListRef : REFERENCE TO ARRAY[0..49] OF STRING[255]; (*Reference to list of recipe names*)
 	END_VAR
 	VAR
-		Index : USINT := 0; (*Variable used in for loop to iterate through file and recipes names*)
+		Index : UINT := 0; (*Variable used in for loop to iterate through file and recipes names*)
 		FileName : STRING[255]; (*String containing name of single currently considered file*)
+	END_VAR
+	VAR_INPUT
+		DropDownBoxNamesCollectionRef : REFERENCE TO ARRAY[0..49] OF STRING[100]; (*Items collection containing names of recipes.*)
+	END_VAR
+	VAR
+		IndexStr : STRING[80];
 	END_VAR
 END_FUNCTION

@@ -2,11 +2,20 @@
 
 FUNCTION UpdateRecipesList
 	FOR Index := 0 TO 49 DO
-		// Reading file names list 
-		FileName := MpFileManagerUIConnectRef.File.List.Items[Index].Name;
-		// Deleting file extension
-		RecipesListRef[Index] := LEFT(FileName, FIND(FileName, '.') - 1);
+		IF Index >=  MpFileManagerUIConnectRef.File.PathInfo.FileCount THEN
+			RecipesListRef[Index] := '';
+			DropDownBoxNamesCollectionRef[Index] := '';
+		ELSE
+			// Reading file names list 
+			FileName := MpFileManagerUIConnectRef.File.List.Items[Index].Name;
+			// Deleting file extension
+			RecipesListRef[Index] := LEFT(FileName, FIND(FileName, '.') - 1);
+			brsitoa(Index, ADR(IndexStr));
+			DropDownBoxNamesCollectionRef[Index] := CONCAT('{"value":"', CONCAT(IndexStr, CONCAT('", "text":"', CONCAT(RecipesListRef[Index], '"}'))));
+		END_IF;
 	END_FOR;
 	
 	UpdateRecipesList := TRUE;
 END_FUNCTION
+
+// {'value':'a', 'text':'Monday'}
