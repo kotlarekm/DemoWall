@@ -11,6 +11,10 @@
     <Task Name="Simulation" Source="Source.Simulation.Simulation.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Motion" Source="Source.Motion.Motion.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
+  <NcDataObjects>
+    <NcDataObject Name="Cam1" Source="Source.Motion.Cam1.dob" Memory="UserROM" Language="Cam" />
+    <NcDataObject Name="Cam2" Source="Source.Motion.Cam2.dob" Memory="UserROM" Language="Cam" />
+  </NcDataObjects>
   <Libraries>
     <LibraryObject Name="SfDomain" Source="Libraries.SfDomain.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="MpBase" Source="Libraries.MpBase.lby" Memory="UserROM" Language="Binary" Debugging="true" />

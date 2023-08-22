@@ -1,13 +1,14 @@
 VAR
-	MpAxisBasic_0 : MpAxisBasic;
-	MpAxisBasicParameters : MpAxisBasicParType;
-	StepMixer1 : StepEnum;
-	StepMixer2 : StepEnum;
-	MpAxisBasic_1 : MpAxisBasic;
-	MpAxisCoupling_0 : MpAxisCoupling;
-	MpAxisCouplingParameters : MpAxisCouplingParType;
-	MpAxisBasicParameters_1 : MpAxisBasicParType;
-	GearCoupling : BOOL;
-	CouplingType : CouplingEnum;
-	CamCoupling : BOOL;
+	StepMixer2 : StepEnum := STEP_INIT; (*Mixer 2 automatic mode step enumerator*)
+	StepMixer1 : StepEnum := STEP_INIT; (*Mixer 1 automatic mode step enumerator*)
+	MpAxisCouplingParameters : MpAxisCouplingParType; (*Coupling parameters*)
+	MpAxisCoupling_0 : MpAxisCoupling; (*Coupling function block*)
+	MpAxisBasicParameters_1 : MpAxisBasicParType; (*Mixer 2 axis parameters*)
+	MpAxisBasicParameters_0 : MpAxisBasicParType; (*Mixer 1 axis parameters*)
+	MpAxisBasic_1 : MpAxisBasic; (*Mixer 2 axis function block*)
+	MpAxisBasic_0 : MpAxisBasic; (*Mixer 1 axis function block*)
+	CouplingMode : CouplingEnum; (*Coupling type enumerator*)
+	CamCoupling : BOOL := FALSE; (*Cam coupling*)
+	GearCoupling : BOOL := FALSE; (*Gear coupling*)
+	CamID : USINT := 1; (*ID of cam used in cam coupling*)
 END_VAR
