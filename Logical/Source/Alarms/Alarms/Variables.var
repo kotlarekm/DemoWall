@@ -1,13 +1,12 @@
 VAR
-	diEStopNotPressed : BOOL;
-	diDriveStop : BOOL;
-	diReset : BOOL;
-	diResetRedLED : BOOL;
-	diResetOrangeLED : BOOL;
-	diModuleOK : BOOL;
-	TON_LED_ON : TON;
-	TON_LED_OFF : TON;
+	diEStopNotPressed : BOOL; (*Variable that indicates whether the safety button is not pressed*)
+	diDriveStop : BOOL; (*Variable stopping of drives*)
+	diReset : BOOL; (*Variable used to pass the value from the reset button to the safety controller*)
+	diResetRedLED : BOOL; (*Variable that sets reset button to red*)
+	diResetOrangeLED : BOOL; (*Variable that sets reset button to orange*)
+	TON_LED_ON : TON; (*The counter for which the reset button is orange*)
+	TON_LED_OFF : TON; (*The counter for which the reset button is not orange*)
 	MpAlarmXCore_0 : MpAlarmXCore; (*Function block used for managing alarms*)
 	MpAlarmXHistory_0 : MpAlarmXHistory; (*Function block used for managing alarms history*)
-	TON_LED_OFF_FirstCounting : BOOL;
+	TON_LED_OFF_FirstCounting : BOOL; (*Variable that checks the first run of the counter off*)
 END_VAR
