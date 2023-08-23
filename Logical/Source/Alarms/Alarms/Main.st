@@ -31,24 +31,26 @@ PROGRAM _CYCLIC
 	MpAlarmXCore_0();
 	MpAlarmXHistory_0();
 	 
+	// Reset LED
 	IF NOT(diDriveStop) AND NOT(diEStopNotPressed) THEN
 		diResetRedLED := TRUE;
+		TON_LED_OFF_FirstCounting := FALSE;
 		
 	ELSIF NOT(diDriveStop) AND diEStopNotPressed THEN
 		diResetRedLED := FALSE;
-		IF NOT(TON_LED_ON_FirstCounting) THEN
-			TON_LED_ON_FirstCounting := TRUE;
-			TON_LED_ON.IN := 1;
-		END_IF
-		IF TON_LED_ON.Q THEN
-			TON_LED_ON.IN := 0;
+		IF NOT(TON_LED_OFF_FirstCounting) THEN
+			TON_LED_OFF_FirstCounting := TRUE;
 			TON_LED_OFF.IN := 1;
-			diResetOrangeLED := FALSE;
-		END_IF;
+		END_IF
 		IF TON_LED_OFF.Q THEN
 			TON_LED_ON.IN := 1;
 			TON_LED_OFF.IN := 0;
 			diResetOrangeLED := TRUE;
+		END_IF;
+		IF TON_LED_ON.Q THEN
+			TON_LED_ON.IN := 0;
+			TON_LED_OFF.IN := 1;
+			diResetOrangeLED := FALSE;
 		END_IF;
 		
 	ELSE 
@@ -62,6 +64,7 @@ PROGRAM _CYCLIC
 	TON_LED_OFF();
 	
 	
+	// Alarm E-stop
 	IF NOT(diEStopNotPressed) THEN
 		MpAlarmXSet(gAlarmXCore, 'E-stop');
 	END_IF
