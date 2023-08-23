@@ -17,4 +17,8 @@ VAR_GLOBAL {Group(0)}
     X20SC2432OK AT %IX4.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM2.SafeModuleOK')};
     {LINE(8)}
     X20SC2432_Output01 AT %QX1.0 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM2.SafeDigitalOutput01')};
+    {LINE(9)}
+    X20SC2432_Output02 AT %QX1.1 : SAFEBOOL {SafeAdr(true),Custom('SL1.SM2.SafeDigitalOutput02')};
+    {LINE(10)}
+    X20SC2432_ReleaseOutput AT %QX516.0 : BOOL {Custom('SL1.SM2.ReleaseOutput')};
 END_VAR

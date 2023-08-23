@@ -8,8 +8,8 @@
 PROGRAM _INIT
 
 	(* Insert code here *)
-	TON_LED_ON.PT := T#30ms;
-	TON_LED_OFF.PT := T#30ms;
+	TON_LED_ON.PT := T#500ms;
+	TON_LED_OFF.PT := T#500ms;
 	
 	// MpAlarmXCore init
 	MpAlarmXCore_0.MpLink := ADR(gAlarmXCore);
@@ -36,16 +36,19 @@ PROGRAM _CYCLIC
 		
 	ELSIF NOT(diDriveStop) AND diEStopNotPressed THEN
 		diResetRedLED := FALSE;
-		TON_LED_ON.IN := 1;
+		IF NOT(TON_LED_ON_FirstCounting) THEN
+			TON_LED_ON_FirstCounting := TRUE;
+			TON_LED_ON.IN := 1;
+		END_IF
 		IF TON_LED_ON.Q THEN
 			TON_LED_ON.IN := 0;
 			TON_LED_OFF.IN := 1;
-			diResetOrangeLED := TRUE;
+			diResetOrangeLED := FALSE;
 		END_IF;
 		IF TON_LED_OFF.Q THEN
 			TON_LED_ON.IN := 1;
 			TON_LED_OFF.IN := 0;
-			diResetOrangeLED := FALSE;
+			diResetOrangeLED := TRUE;
 		END_IF;
 		
 	ELSE 

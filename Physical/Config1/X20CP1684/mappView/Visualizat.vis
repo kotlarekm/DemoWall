@@ -12,6 +12,7 @@
   <Navigations />
   <BindingsSets>
     <BindingsSet refId="RecipesMainContent_binding" />
+	  <BindingsSet refId="ContentAlarms_binding" />
   </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="LoginDialogMainContent_eventbinding" />
@@ -20,18 +21,12 @@
     <EventBindingsSet refId="RecipesMainContent_eventbinding" />
     <EventBindingsSet refId="DeleteFileMainContent_eventbinding" />
     <EventBindingsSet refId="DeleteFileDialogTopContent_eventbinding" />
+	<EventBindingsSet refId="ContentAlarms_eventbinding" />
   </EventBindingsSets>
   <Dialogs>
     <Dialog refId="LoginDialog" />
     <Dialog refId="DeleteFileDialog" />
   </Dialogs>
-  <BindingsSets>
-    <BindingsSet refId="ContentAlarms_binding" />
-  </BindingsSets>
-  <EventBindingsSets>
-    <EventBindingsSet refId="ContentAlarms_eventbinding" />
-  </EventBindingsSets>
-  <Dialogs />
   <Contents>
     <Content refId="ContentTop" />
     <Content refId="ContentNavigation" />

@@ -114,6 +114,7 @@
         <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
         <Info Name="Description-de" Value="X20 Safe Digital In, 20xE, 24V" />
         <Info Name="Description-en" Value="X20 Safe Digital In, 20xI, 24V" />
+        <Info Name="AsVariable" Value="SafeTwoChannelInput0304,Alarms:diEStopNotPressed" />
       </NodeDescription>
       <ChannelConfiguration />
     </SafetyNode>

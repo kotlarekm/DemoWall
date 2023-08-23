@@ -19,6 +19,11 @@ END_VAR
     <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
       <line localId="30" beginX="64" beginY="63" endX="79" endY="63" />
       <line localId="32" beginX="91" beginY="59" endX="107" endY="59" />
+      <line localId="35" beginX="69" beginY="16" endX="79" endY="16" />
+      <line localId="36" beginX="79" beginY="16" endX="85" endY="16" />
+      <line localId="37" beginX="79" beginY="16" endX="79" endY="21" />
+      <line localId="38" beginX="79" beginY="21" endX="80" endY="21" />
+      <line localId="41" beginX="39" beginY="42" endX="50" endY="42" />
     </data>
   </addData>
   <block localId="9" height="48" width="52" typeName="SF_EmergencyStop_V1_00" instanceName="SF_EmergencyStop_V1_00_1">
@@ -149,7 +154,7 @@ END_VAR
     </connectionPointOut>
   </inVariable>
   <outVariable localId="14" height="4" width="14">
-    <position x="138" y="30" />
+    <position x="170" y="30" />
     <expression>Drive</expression>
     <connectionPointIn>
       <relPosition x="0" y="2" />
@@ -159,6 +164,9 @@ END_VAR
             <connectedFormalparameter refLocalId="6" />
           </data>
         </addData>
+        <position x="170" y="32" />
+        <position x="158" y="32" />
+        <position x="138" y="32" />
       </connection>
     </connectionPointIn>
   </outVariable>
@@ -352,6 +360,42 @@ END_VAR
             <connectedFormalparameter refLocalId="25" />
           </data>
         </addData>
+      </connection>
+    </connectionPointIn>
+  </outVariable>
+  <outVariable localId="34" height="4" width="44">
+    <position x="160" y="40" />
+    <expression>X20SC2432_Output02</expression>
+    <connectionPointIn>
+      <relPosition x="0" y="2" />
+      <connection refLocalId="9" formalParameter="S_EStopOut">
+        <addData>
+          <data name="http://www.phoenixcontact-software.com" handleUnknown="preserve">
+            <connectedFormalparameter refLocalId="6" />
+          </data>
+        </addData>
+        <position x="160" y="42" />
+        <position x="158" y="42" />
+        <position x="158" y="32" />
+        <position x="138" y="32" />
+      </connection>
+    </connectionPointIn>
+  </outVariable>
+  <inVariable localId="39" height="4" width="16">
+    <position x="62" y="82" />
+    <expression>Reset</expression>
+    <connectionPointOut>
+      <relPosition x="16" y="2" />
+    </connectionPointOut>
+  </inVariable>
+  <outVariable localId="40" height="4" width="54">
+    <position x="100" y="82" />
+    <expression>X20SC2432_ReleaseOutput</expression>
+    <connectionPointIn>
+      <relPosition x="0" y="2" />
+      <connection refLocalId="39">
+        <position x="100" y="84" />
+        <position x="78" y="84" />
       </connection>
     </connectionPointIn>
   </outVariable>

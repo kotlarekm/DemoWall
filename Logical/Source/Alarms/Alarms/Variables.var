@@ -1,5 +1,4 @@
 VAR
-
 	diEStopNotPressed : BOOL;
 	diDriveStop : BOOL;
 	diReset : BOOL;
@@ -10,5 +9,5 @@ VAR
 	TON_LED_OFF : TON;
 	MpAlarmXCore_0 : MpAlarmXCore; (*Function block used for managing alarms*)
 	MpAlarmXHistory_0 : MpAlarmXHistory; (*Function block used for managing alarms history*)
-
+	TON_LED_ON_FirstCounting : BOOL;
 END_VAR

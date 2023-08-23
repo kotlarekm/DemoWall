@@ -491,6 +491,7 @@
     </Connector>
     <Parameter ID="ConfigurationID" Value="DemoWallConfig1" />
     <Parameter ID="Simulation" Value="1" />
+    <Parameter ID="SimulationIPAddress" Value="127.0.0.1" />
     <Parameter ID="TimerDeviceType" Value="EPLX2X" />
     <Parameter ID="TimerDevice" Value="X20CP1684.IF6" />
     <Parameter ID="TaskClassIdleTime" Value="2000" />
@@ -502,8 +503,6 @@
     <Parameter ID="Cyclic4Output" Value="2" />
     <Parameter ID="Cyclic5Output" Value="2" />
     <Parameter ID="Cyclic6Output" Value="2" />
-    <Parameter ID="Simulation" Value="1" />
-    <Parameter ID="SimulationIPAddress" Value="127.0.0.1" />
     <Group ID="FileDevice1" />
     <Parameter ID="FileDeviceName1" Value="HDD" />
     <Parameter ID="FileDevicePath1" Value="C:\Recipes" />

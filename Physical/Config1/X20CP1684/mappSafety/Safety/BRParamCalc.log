@@ -1,4 +1,4 @@
-LOGStart created on Monday 2023/08/21  UTC 11:45:20:816
+LOGStart created on Wednesday 2023/08/23  UTC 10:01:49:388
 
 Reading "OSDD Data"...
 Reading Content "Start"
@@ -1000,7 +1000,7 @@ Content "name1" successfully read from "name2"
 
 
 
-LOGAppend on Monday 2023/08/21  UTC 11:45:20:826
+LOGAppend on Wednesday 2023/08/23  UTC 10:01:49:408
 
 Reading "C:\Users\Sylwia\Documents\GitHub\DemoWall\Physical\Config1\X20CP1684\mappSafety\Safety\BusNavigator.iom"...
 Reading Content "IOOffsets"
@@ -1012,15 +1012,17 @@ Module "SL1.SM1.SL1.SM1" has 2 items.
 Reading properties for module "SL1.SM2". Beginning at line 7
 Reading properties for channel "SafeModuleOK". Beginning at line 8
 Reading properties for channel "SafeDigitalOutput01". Beginning at line 9
-Module "SL1.SM2.SL1.SM2" has 2 items.
-Reading properties for module "SL1.SM3". Beginning at line 11
-Reading properties for channel "SafeModuleOK". Beginning at line 12
-Reading properties for channel "SafeTwoChannelInput0304". Beginning at line 13
+Reading properties for channel "SafeDigitalOutput02". Beginning at line 10
+Reading properties for channel "ReleaseOutput". Beginning at line 11
+Module "SL1.SM2.SL1.SM2" has 4 items.
+Reading properties for module "SL1.SM3". Beginning at line 13
+Reading properties for channel "SafeModuleOK". Beginning at line 14
+Reading properties for channel "SafeTwoChannelInput0304". Beginning at line 15
 Module "SL1.SM3.SL1.SM3" has 2 items.
-Reading properties for module "SL1.SM4". Beginning at line 15
-Reading properties for channel "SafeModuleOK". Beginning at line 16
+Reading properties for module "SL1.SM4". Beginning at line 17
+Reading properties for channel "SafeModuleOK". Beginning at line 18
 Module "SL1.SM4.SL1.SM4" has 1 items.
-Reading properties for module "SL1.SM5". Beginning at line 18
-Reading properties for channel "SafeModuleOK". Beginning at line 19
+Reading properties for module "SL1.SM5". Beginning at line 20
+Reading properties for channel "SafeModuleOK". Beginning at line 21
 Module "SL1.SM5.SL1.SM5" has 1 items.
 Content "IOOffsets" successfully read from "C:\Users\Sylwia\Documents\GitHub\DemoWall\Physical\Config1\X20CP1684\mappSafety\Safety\BusNavigator.iom"
