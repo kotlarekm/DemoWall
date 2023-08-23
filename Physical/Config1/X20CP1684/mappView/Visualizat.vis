@@ -18,9 +18,12 @@
     <EventBindingsSet refId="ContentTop_eventbinding" />
     <EventBindingsSet refId="LoginDialogTopContent_eventbinding" />
     <EventBindingsSet refId="RecipesMainContent_eventbinding" />
+    <EventBindingsSet refId="DeleteFileMainContent_eventbinding" />
+    <EventBindingsSet refId="DeleteFileDialogTopContent_eventbinding" />
   </EventBindingsSets>
   <Dialogs>
     <Dialog refId="LoginDialog" />
+    <Dialog refId="DeleteFileDialog" />
   </Dialogs>
   <Contents>
     <Content refId="ContentTop" />
@@ -29,6 +32,8 @@
     <Content refId="LoginDialogTopContent" />
     <Content refId="LoginDialogMainContent" />
     <Content refId="RecipesMainContent" />
+    <Content refId="DeleteFileDialogTopContent" />
+    <Content refId="DeleteFileMainContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

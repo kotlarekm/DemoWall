@@ -9,5 +9,7 @@
     <Object Type="File">LoginDialogTopContent.eventbinding</Object>
     <Object Type="File">RecipesMainContent.binding</Object>
     <Object Type="File">RecipesMainContent.eventbinding</Object>
+    <Object Type="File">DeleteFileMainContent.eventbinding</Object>
+    <Object Type="File">DeleteFileDialogTopContent.eventbinding</Object>
   </Objects>
 </Package>
