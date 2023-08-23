@@ -164,6 +164,17 @@
 		opacity="1" />
 	
 	<!--ellipse-->
+	<Style id="Red" xsi:type="widgets.brease.Ellipse" 
+		borderWidth="1px" 
+		backColor="#DC143C" 
+		lineColor="#474747" 
+		opacity="1" />
+	
+	<Style id="Green" xsi:type="widgets.brease.Ellipse" 
+		borderWidth="1px" 
+		backColor="#32CD32" 
+		lineColor="#474747" 
+		opacity="1" />
 	
 	<Style id="Solid_Orange" xsi:type="widgets.brease.Ellipse" 
 		borderWidth="2px" 

@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingSet id="ContentMotion_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+    <EventBinding id="EventBinding_1">
+      <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_0.PowerOn" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse1">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Green" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse1">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Red" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_4">
+      <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_0.MoveVelocity" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse2">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Green" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse2">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Red" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_2">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gTanks.Status.IsMixer1On" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse3">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Green" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse3">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Red" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_6">
+      <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_1.PowerOn" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse4">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Green" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse4">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Red" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_7">
+      <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_1.MoveVelocity" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse5">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Green" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse5">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Red" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_8">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gTanks.Status.IsMixer2On" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse6">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Green" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse6">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Red" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMotion.ButtonStartMixer1.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonStartMixer1" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.TurnOnMixer1">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_3">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonStopMixer1" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.TurnOnMixer1">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMotion.ButtonStartMixer2.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonStartMixer2" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.TurnOnMixer2">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_5">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonStopMixer2" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.TurnOnMixer2">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMotion.DropDownBoxCamSelect.SelectedIndexChanged">
+      <Source xsi:type="widgets.brease.DropDownBox.Event" contentRefId="ContentMotion" widgetRefId="DropDownBoxCamSelect" event="SelectedIndexChanged" />
+      <EventHandler condition="selectedIndex = 0">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisCouplingParameters.Cam.ID">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="selectedIndex = 1">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisCouplingParameters.Cam.ID">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="2" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_9">
+      <Source xsi:type="widgets.brease.ToggleSwitch.Event" contentRefId="ContentMotion" widgetRefId="ToggleSwitchGear" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchCam">
+                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.DropDownBox.Action" contentRefId="ContentMotion" widgetRefId="DropDownBoxCamSelect">
+                <Method xsi:type="widgets.brease.DropDownBox.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchCam">
+                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.DropDownBox.Action" contentRefId="ContentMotion" widgetRefId="DropDownBoxCamSelect">
+                <Method xsi:type="widgets.brease.DropDownBox.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_10">
+      <Source xsi:type="widgets.brease.ToggleSwitch.Event" contentRefId="ContentMotion" widgetRefId="ToggleSwitchCam" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchGear">
+                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.DropDownBox.Action" contentRefId="ContentMotion" widgetRefId="DropDownBoxCamSelect">
+                <Method xsi:type="widgets.brease.DropDownBox.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchGear">
+                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.DropDownBox.Action" contentRefId="ContentMotion" widgetRefId="DropDownBoxCamSelect">
+                <Method xsi:type="widgets.brease.DropDownBox.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_11">
+      <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisCoupling_0.InSync" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse7">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Green" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse7">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Red" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_12">
+      <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_0.PowerOn" event="ValueChanged" />
+      <Operand datatype="BOOL" name="Operand1">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisBasic_1.PowerOn">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="Operand1 = FALSE OR newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxCoupling">
+            <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="Operand1 = TRUE AND newValue = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxCoupling">
+            <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_13">
+      <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_1.PowerOn" event="ValueChanged" />
+      <Operand datatype="BOOL" name="Operand2">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisBasic_0.PowerOn">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="Operand2 = FALSE OR newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxCoupling">
+            <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="Operand2 = TRUE AND newValue = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxCoupling">
+            <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Bindings>
+</EventBindingSet>

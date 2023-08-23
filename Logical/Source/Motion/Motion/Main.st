@@ -43,8 +43,10 @@ PROGRAM _CYCLIC
 	MpAxisCoupling_0.MpLink := ADR(gMixer_1);
 	MpAxisCoupling_0.MpLinkMaster := ADR(gMixer_2);
 	MpAxisCoupling_0.Parameters := ADR(MpAxisCouplingParameters);
-	MpAxisCouplingParameters.Cam.ID := CamID;
 	MpAxisCoupling_0();
+	
+	gTanks.Status.IsMixer1On := MpAxisBasic_0.MoveActive;
+	gTanks.Status.IsMixer2On := MpAxisBasic_1.MoveActive;
 	
 	CASE StepMixer1 OF
 		STEP_INIT:
@@ -65,7 +67,6 @@ PROGRAM _CYCLIC
 			END_IF;
 			
 		STEP_RUNNING:
-			gTanks.Status.IsMixer1On := TRUE;
 			IF CamCoupling THEN
 				MpAxisBasic_0.MoveVelocity := FALSE;
 			END_IF;
@@ -75,9 +76,10 @@ PROGRAM _CYCLIC
 			
 		STEP_POWER_OFF:
 			MpAxisBasic_0.MoveVelocity := FALSE;
-			MpAxisBasic_0.Power := FALSE;
-			IF NOT MpAxisBasic_0.InVelocity AND NOT MpAxisBasic_0.PowerOn THEN
-				gTanks.Status.IsMixer1On := FALSE;
+			IF NOT MpAxisBasic_0.MoveActive THEN
+				MpAxisBasic_0.Power := FALSE;
+			END_IF;
+			IF NOT MpAxisBasic_0.PowerOn THEN
 				StepMixer1:= STEP_INIT;
 			END_IF;
 	END_CASE;
@@ -101,34 +103,33 @@ PROGRAM _CYCLIC
 			END_IF;
 			
 		STEP_RUNNING:
-			gTanks.Status.IsMixer2On := TRUE;
 			IF NOT gTanks.Commands.TurnOnMixer2 THEN
 				StepMixer2 := STEP_POWER_OFF;
 			END_IF;
 			
 		STEP_POWER_OFF:
 			MpAxisBasic_1.MoveVelocity := FALSE;
-			MpAxisBasic_1.Power := FALSE;
-			IF NOT MpAxisBasic_1.InVelocity AND NOT MpAxisBasic_1.PowerOn THEN
-				gTanks.Status.IsMixer2On := FALSE;
+			IF NOT MpAxisBasic_1.MoveActive THEN
+				MpAxisBasic_1.Power := FALSE;
+			END_IF;
+			IF NOT MpAxisBasic_1.PowerOn THEN
 				StepMixer2:= STEP_INIT;
 			END_IF;
 	END_CASE;
 	
 	CASE CouplingMode OF
 		NO_COUPLING:
-			IF GearCoupling AND StepMixer1 = STEP_RUNNING THEN
+			IF GearCoupling AND MpAxisBasic_0.PowerOn THEN
 				MpAxisCoupling_0.Gear := TRUE;
 				IF MpAxisCoupling_0.InSync THEN
 					CouplingMode := GEAR_COUPLING;
 				END_IF;
-			ELSIF CamCoupling AND StepMixer1 = STEP_RUNNING AND NOT MpAxisBasic_0.InVelocity THEN
+			ELSIF CamCoupling AND MpAxisBasic_0.PowerOn AND NOT MpAxisBasic_0.MoveActive THEN
 				MpAxisCoupling_0.Cam := TRUE;
-				IF MpAxisCoupling_0.InSync THEN
-					CouplingMode := CAM_COUPLING;
-				END_IF
 			END_IF;	
-			
+			IF MpAxisCoupling_0.InSync AND MpAxisCoupling_0.Cam THEN
+				CouplingMode := CAM_COUPLING;
+			END_IF
 		GEAR_COUPLING:
 			IF NOT GearCoupling THEN
 				MpAxisCoupling_0.Gear := FALSE;

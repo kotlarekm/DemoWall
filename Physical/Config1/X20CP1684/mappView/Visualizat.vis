@@ -14,6 +14,7 @@
     <BindingsSet refId="RecipesMainContent_binding" />
     <BindingsSet refId="ContentAlarms_binding" />
     <BindingsSet refId="ContentMain_binding" />
+    <BindingsSet refId="ContentMotion_binding" />
   </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="LoginDialogMainContent_eventbinding" />
@@ -27,6 +28,7 @@
     <EventBindingsSet refId="ContentMain_eventbinding" />
     <EventBindingsSet refId="ApplyRecipeTopContent_eventbinding" />
     <EventBindingsSet refId="ApplyRecipeMainContent_eventbinding" />
+    <EventBindingsSet refId="ContentMotion_eventbinding" />
   </EventBindingsSets>
   <Dialogs>
     <Dialog refId="LoginDialog" />
@@ -45,6 +47,7 @@
     <Content refId="ContentAlarms" />
     <Content refId="ApplyRecipeTopContent" />
     <Content refId="ApplyRecipeMainContent" />
+    <Content refId="ContentMotion" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />
