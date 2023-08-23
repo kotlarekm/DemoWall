@@ -21,7 +21,7 @@
     <EventBindingsSet refId="RecipesMainContent_eventbinding" />
     <EventBindingsSet refId="DeleteFileMainContent_eventbinding" />
     <EventBindingsSet refId="DeleteFileDialogTopContent_eventbinding" />
-	<EventBindingsSet refId="ContentAlarms_eventbinding" />
+	  <EventBindingsSet refId="ContentAlarms_eventbinding" />
   </EventBindingsSets>
   <Dialogs>
     <Dialog refId="LoginDialog" />

@@ -42,7 +42,7 @@
         <seg>Ciśnienie w zbiorniku 3 jest za wysokie!</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Pressure in tank 3 is too high</seg>
+        <seg>Pressure in tank 3 is too high!</seg>
       </tuv>
     </tu>
     <tu tuid="Tank3TempHigh">
@@ -57,6 +57,22 @@
       </tuv>
       <tuv xml:lang="fr">
         <seg>Bonjour tout le monde!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Mixer1VelocityHigh">
+      <tuv xml:lang="pl">
+        <seg>Prędkość mieszadła 1 jest za duża!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Velocity mixer 1 is too high!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Mixer2VelocityHigh">
+      <tuv xml:lang="pl">
+        <seg>Prędkość mieszadła 2 jest za duża!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Velocity mixer 2 is too high!</seg>
       </tuv>
     </tu>
   </body>
