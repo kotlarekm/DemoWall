@@ -22,5 +22,21 @@
         <seg>Acknowledge all</seg>
       </tuv>
     </tu>
+    <tu tuid="alarm">
+      <tuv xml:lang="pl">
+        <seg>Alarmy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Alarms</seg>
+      </tuv>
+    </tu>
+    <tu tuid="history">
+      <tuv xml:lang="pl">
+        <seg>Historia</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>History</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

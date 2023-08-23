@@ -11,14 +11,13 @@
       </Group>
     </Group>
     <Group ID="TargetFiles">
-
       <Property ID="TargetFile[1]" Value="mappView.Visualization.Resources.Texts.TopContentStrings.tmx" />
       <Property ID="TargetFile[2]" Value="mappView.Visualization.Resources.Texts.LoginDialogStrings.tmx" />
       <Property ID="TargetFile[3]" Value="mappView.Visualization.Resources.Texts.RecipePageStrings.tmx" />
       <Property ID="TargetFile[4]" Value="mappView.Visualization.Resources.Texts.WarningDialogStrings.tmx" />
       <Property ID="TargetFile[5]" Value="mappView.Visualization.Resources.Texts.LocalizableTexts.tmx" />
       <Property ID="TargetFile[6]" Value="Resources.AlarmsMessages.tmx" />
-
+      <Property ID="TargetFile[7]" Value="mappView.Visualization.Resources.Texts.AlarmsPageText.tmx" />
     </Group>
   </Element>
 </Configuration>

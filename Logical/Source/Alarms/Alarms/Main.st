@@ -59,11 +59,11 @@ PROGRAM _CYCLIC
 	TON_LED_OFF();
 	
 	
-	IF diModuleOK THEN
+	IF NOT(diEStopNotPressed) THEN
 		MpAlarmXSet(gAlarmXCore, 'E-stop');
 	END_IF
 	
-	IF NOT(diModuleOK) THEN
+	IF diEStopNotPressed THEN
 		MpAlarmXReset(gAlarmXCore, 'E-stop');
 	END_IF
 	
