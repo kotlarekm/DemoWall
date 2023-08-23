@@ -93,5 +93,21 @@
         <seg>Fluid level in tank 2:</seg>
       </tuv>
     </tu>
+    <tu tuid="EnterRecipeName">
+      <tuv xml:lang="pl">
+        <seg>Wprowadź nazwę receptury:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Enter recipe name:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Save">
+      <tuv xml:lang="pl">
+        <seg>Zapisz</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Save</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

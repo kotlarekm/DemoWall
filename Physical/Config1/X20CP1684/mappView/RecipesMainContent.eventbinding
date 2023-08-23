@@ -11,5 +11,15 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="RecipesMainContent.SaveRecipeBtn.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="RecipesMainContent" widgetRefId="SaveRecipeBtn" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Recipes:WaitingForSave">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

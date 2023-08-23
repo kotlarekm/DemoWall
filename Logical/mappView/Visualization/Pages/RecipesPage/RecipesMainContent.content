@@ -24,7 +24,7 @@
     <Widget xsi:type="widgets.brease.Label" id="LabelMixingTime" top="160" left="640" width="300" height="31" zIndex="20" text="$IAT/MixingTime" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontName="ABBvoiceMedium" fontSize="18px" bold="true" />
     <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputMixingTime" top="160" left="980" width="200" height="31" zIndex="21" unitAlign="right" unitTextAlign="right" borderWidth="3px 3px 3px 3px" activeBorderWidth="3px 3px 3px 3px" cornerRadius="5px" textAlign="right" fontName="ABBvoiceMedium" fontSize="18px" />
     <Widget xsi:type="widgets.brease.TextInput" id="TextInputRecipeName" top="440" left="980" width="200" height="31" zIndex="22" borderWidth="3px 3px 3px 3px" cornerRadius="5px" fontName="ABBvoiceMedium" fontSize="18px" />
-    <Widget xsi:type="widgets.brease.Label" id="LabelRecipeName" top="440" left="640" width="300" height="31" zIndex="23" text="$IAT/MixingTime" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontName="ABBvoiceMedium" fontSize="18px" bold="true" />
-    <Widget xsi:type="widgets.brease.Button" id="Button1" top="500" left="1040" width="140" height="60" zIndex="24" text="Button1" />
+    <Widget xsi:type="widgets.brease.Label" id="LabelRecipeName" top="440" left="640" width="300" height="31" zIndex="23" text="$IAT/EnterRecipeName" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontName="ABBvoiceMedium" fontSize="18px" bold="true" />
+    <Widget xsi:type="widgets.brease.Button" id="SaveRecipeBtn" top="500" left="1040" width="140" height="40" zIndex="24" text="$IAT/Save" imageHeight="70" imageWidth="70" disabledImageColor="rgba(0, 0, 0, 1)" borderWidth="3px 3px 3px 3px" cornerRadius="30px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="18px" fontName="ABBvoiceMedium" />
   </Widgets>
 </Content>
