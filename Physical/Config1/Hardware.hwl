@@ -71,6 +71,15 @@
     <Module Name="X20BC0063" Type="FBD.GSDDTM.DTMDev.X20BC0063" X="975" Y="895" />
   </Modules>
   <Links>
+    <Link From="0AC808.9" To="80VD100PD.C000-01" FromPort="ETH1" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="481" Y="323" />
+      <Point X="481" Y="308" />
+      <Point X="500" Y="308" />
+      <Point X="583" Y="308" />
+      <Point X="583" Y="456" />
+      <Point X="583" Y="468" />
+      <Point X="583" Y="468" />
+    </Link>
     <Link From="0AC808.9" To="X20BC1083" FromPort="ETH3" ToPort="PLK1" IsRoutedByUser="False">
       <Point X="609" Y="468" />
       <Point X="609" Y="468" />
@@ -145,15 +154,6 @@
       <Point X="910" Y="606" />
       <Point X="910" Y="619" />
       <Point X="910" Y="619" />
-    </Link>
-    <Link From="80VD100PD.C000-01" To="0AC808.9" FromPort="PLK1" ToPort="ETH1" IsRoutedByUser="False">
-      <Point X="481" Y="323" />
-      <Point X="481" Y="308" />
-      <Point X="500" Y="308" />
-      <Point X="583" Y="308" />
-      <Point X="583" Y="456" />
-      <Point X="583" Y="468" />
-      <Point X="583" Y="468" />
     </Link>
   </Links>
   <InfoElements />

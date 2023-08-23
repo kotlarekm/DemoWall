@@ -9,7 +9,7 @@
     </Group>
     <Group ID="Row[2]">
       <Property ID="CamName" Value="Cam2" />
-      <Property ID="CamID" Value="1" />
+      <Property ID="CamID" Value="2" />
       <Property ID="Description" />
     </Group>
   </Element>
