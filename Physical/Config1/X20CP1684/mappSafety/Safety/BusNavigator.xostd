@@ -5,14 +5,14 @@
       <Info Name="ARVersion" Value="49302" />
       <Info Name="SafetyRelease" Value="5.23.0" />
       <Info Name="Communication" Value="/IF=tcpip /LOPO=11159 /SA=1 /COMT=2500 /RT=1000 /AM=* /SDT=5 /DAIP=10.0.0.2 /REPO=11169 /ANSL=1 /PT=11169 /PORT=50000" />
-      <Info Name="mappSafetyPath" Value="C:\BrAutomation\AS412\AS\TechnologyPackages\mappSafety\5.23.0" />
+      <Info Name="mappSafetyPath" Value="C:\BRAutomation\AS412\AS\TechnologyPackages\mappSafety\5.23.0" />
     </GeneratorDescription>
     <SafetyConfigurationManager TransportSAddr="1">
-      <DeviceDescription Module="X20SL81XX_110.SCM" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS412\AS\Hardware\Modules\X20SL8101\2.4.2.0\OSDD\X20SL81XX_SCM_2_4_2_0.xosdd]]></DeviceDescription>
+      <DeviceDescription Module="X20SL81XX_110.SCM" minOpenSafetyRelease="1.5"><![CDATA[C:\BRAutomation\AS412\AS\Hardware\Modules\X20SL8101\2.4.2.0\OSDD\X20SL81XX_SCM_2_4_2_0.xosdd]]></DeviceDescription>
       <NodeDescription />
     </SafetyConfigurationManager>
     <SafetyNode SAddr="1">
-      <DeviceDescription Module="X20SL8101_110.MainSN" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS412\AS\Hardware\Modules\X20SL8101\2.4.2.0\OSDD\\X20SL8101_2_4_2_0.xosdd]]></DeviceDescription>
+      <DeviceDescription Module="X20SL8101_110.MainSN" minOpenSafetyRelease="1.5"><![CDATA[C:\BRAutomation\AS412\AS\Hardware\Modules\X20SL8101\2.4.2.0\OSDD\\X20SL8101_2_4_2_0.xosdd]]></DeviceDescription>
       <DesignConfiguration>
         <ModuleSettings>
           <SettingsGroup id="DataFromAs">
@@ -66,7 +66,7 @@
       </ChannelConfiguration>
     </SafetyNode>
     <SafetyNode SAddr="2">
-      <DeviceDescription Module="X20SC2432_110" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS412\AS\Hardware\Modules\X20SC2432\2.5.0.0\OSDD\\X20SC2432_2_5_0_0.xosdd]]></DeviceDescription>
+      <DeviceDescription Module="X20SC2432_110" minOpenSafetyRelease="1.5"><![CDATA[C:\BRAutomation\AS412\AS\Hardware\Modules\X20SC2432\2.5.0.0\OSDD\\X20SC2432_2_5_0_0.xosdd]]></DeviceDescription>
       <NodeDescription>
         <Classification Type="Digital" />
         <Classification Type="Input" />
@@ -101,7 +101,7 @@
       </ChannelConfiguration>
     </SafetyNode>
     <SafetyNode SAddr="3">
-      <DeviceDescription Module="X20SI9100_110" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS412\AS\Hardware\Modules\X20SI9100\2.4.0.0\OSDD\\X20SI9100_2_4_0_0.xosdd]]></DeviceDescription>
+      <DeviceDescription Module="X20SI9100_110" minOpenSafetyRelease="1.5"><![CDATA[C:\BRAutomation\AS412\AS\Hardware\Modules\X20SI9100\2.4.0.0\OSDD\\X20SI9100_2_4_0_0.xosdd]]></DeviceDescription>
       <NodeDescription>
         <Classification Type="Digital" />
         <Classification Type="Input" />
@@ -119,7 +119,7 @@
       <ChannelConfiguration />
     </SafetyNode>
     <SafetyNode SAddr="4">
-      <DeviceDescription Module="X20SI2100_110" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS412\AS\Hardware\Modules\X20SI2100\2.4.0.0\OSDD\\X20SI2100_2_4_0_0.xosdd]]></DeviceDescription>
+      <DeviceDescription Module="X20SI2100_110" minOpenSafetyRelease="1.5"><![CDATA[C:\BRAutomation\AS412\AS\Hardware\Modules\X20SI2100\2.4.0.0\OSDD\\X20SI2100_2_4_0_0.xosdd]]></DeviceDescription>
       <NodeDescription>
         <Classification Type="Digital" />
         <Classification Type="Input" />
@@ -136,7 +136,7 @@
       <ChannelConfiguration />
     </SafetyNode>
     <SafetyNode SAddr="5">
-      <DeviceDescription Module="X67SI8103_110" minOpenSafetyRelease="1.5"><![CDATA[C:\BrAutomation\AS412\AS\Hardware\Modules\X67SI8103\2.4.0.0\OSDD\\X67SI8103_2_4_0_0.xosdd]]></DeviceDescription>
+      <DeviceDescription Module="X67SI8103_110" minOpenSafetyRelease="1.5"><![CDATA[C:\BRAutomation\AS412\AS\Hardware\Modules\X67SI8103\2.4.0.0\OSDD\\X67SI8103_2_4_0_0.xosdd]]></DeviceDescription>
       <NodeDescription>
         <Classification Type="Digital" />
         <Classification Type="Input" />

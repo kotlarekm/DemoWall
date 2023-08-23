@@ -22,6 +22,13 @@
         <Variable Name="DropDownBoxNamesCollection" />
         <Variable Name="NewRecipeSelected" />
         <Variable Name="SelectedRecipeIndex" />
+        <Variable Name="WaitingForDelete" />
+        <Variable Name="MpFileManagerUIConnect_0">
+          <Variable Name="MessageBox">
+            <Variable Name="Confirm" />
+            <Variable Name="Cancel" />
+          </Variable>
+        </Variable>
       </Task>
     </Module>
   </DefaultView>

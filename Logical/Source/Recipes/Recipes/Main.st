@@ -29,6 +29,7 @@ PROGRAM _INIT
 	MpFileManagerUIConnect_0.DeviceList.DeviceNames[0] := 'HDD';
 	MpFileManagerUIConnect_0.DeviceList.SelectedIndex := 0;
 	MpFileManagerUIConnect_0.File.Filter := '*.xml';
+	MpFileManagerUIConnect_0.File.Refresh := TRUE;
 	
 	MpFileManagerUI_0.UIConnect := ADR(MpFileManagerUIConnect_0);
 	MpFileManagerUI_0.Enable := TRUE;
@@ -38,9 +39,12 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 	
+	MpFileManagerUIConnect_0.File.List.Items[SelectedRecipeIndex].IsSelected := TRUE;
+	
 	// Checking if new recipe has been selected
 	IF NewRecipeSelected THEN
 		NewRecipeSelected := FALSE;
+		MpFileManagerUIConnect_0.File.List.Items[SelectedRecipeIndex].IsSelected := TRUE;
 		RecipeName := RecipesList[SelectedRecipeIndex];
 		WaitingForLoad := TRUE;
 	END_IF;
@@ -66,11 +70,19 @@ PROGRAM _CYCLIC
 		MpRecipeXml_0.Save := FALSE;
 	END_IF;
 	
-	// Updates
+	// File deleting
+	IF WaitingForDelete AND MpFileManagerUIConnect_0.Status = mpFILE_UI_STATUS_IDLE THEN
+		MpFileManagerUIConnect_0.File.Delete := TRUE;
+		WaitingForDelete := FALSE;
+	// File list refresh
+	ELSIF MpFileManagerUIConnect_0.Status = mpFILE_UI_STATUS_IDLE THEN
+		MpFileManagerUIConnect_0.File.Refresh := TRUE;
+		UpdateRecipesList(ADR(MpFileManagerUIConnect_0), ADR(RecipesList), ADR(DropDownBoxNamesCollection));
+	END_IF;
+	
+	// FB Updates
 	MpRecipeXml_0();
 	MpRecipeRegPar_0();
-	MpFileManagerUIConnect_0.File.Refresh := TRUE;
-	UpdateRecipesList(ADR(MpFileManagerUIConnect_0), ADR(RecipesList), ADR(DropDownBoxNamesCollection));
 	MpFileManagerUI_0();
 	
 	 

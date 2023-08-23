@@ -25,6 +25,13 @@
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="RecipesMainContent" widgetRefId="DeleteRecipeBtn" event="Click" />
       <EventHandler>
         <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Recipes:WaitingForDelete">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
           <Target xsi:type="clientSystem.Action">
             <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="DeleteFileDialog" />
           </Target>

@@ -5,10 +5,38 @@
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="DeleteFileMainContent" widgetRefId="FileDeleteCancelBtn" event="Click" />
       <EventHandler>
         <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Recipes:MpFileManagerUIConnect_0.MessageBox.Cancel">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
           <Target xsi:type="clientSystem.Action">
             <Method xsi:type="clientSystem.Action.CloseDialog" dialogId="DeleteFileDialog" />
           </Target>
         </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="DeleteFileMainContent.FileDeleteConfirmBtn.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="DeleteFileMainContent" widgetRefId="FileDeleteConfirmBtn" event="Click" />
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Recipes:MpFileManagerUIConnect_0.MessageBox.Confirm">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="clientSystem.Action">
+                <Method xsi:type="clientSystem.Action.CloseDialog" dialogId="DeleteFileDialog" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
   </Bindings>
