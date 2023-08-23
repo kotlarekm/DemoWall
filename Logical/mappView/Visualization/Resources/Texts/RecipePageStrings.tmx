@@ -109,5 +109,13 @@
         <seg>Save</seg>
       </tuv>
     </tu>
+    <tu tuid="Restore">
+      <tuv xml:lang="pl">
+        <seg>Przywróć</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Restore</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

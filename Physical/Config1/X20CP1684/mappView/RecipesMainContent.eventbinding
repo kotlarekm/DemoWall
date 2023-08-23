@@ -38,5 +38,15 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="RecipesMainContent.RestoreBtn.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="RecipesMainContent" widgetRefId="RestoreBtn" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Recipes:NewRecipeSelected">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>
