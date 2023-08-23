@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT</prop>
+  </header>
+  <body>
+    <tu tuid="SelectRecipe">
+      <tuv xml:lang="pl">
+        <seg>Wybierz receptę:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Select recipe:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Mixer1">
+      <tuv xml:lang="pl">
+        <seg>Włącz mikser 1:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Turn on mixer 1: </seg>
+      </tuv>
+    </tu>
+    <tu tuid="Mixer2">
+      <tuv xml:lang="pl">
+        <seg>Włącz mikser 2:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Turn on mixer 2:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3MaxAllowedPressure">
+      <tuv xml:lang="pl">
+        <seg>Maksymalne dopuszczalne ciśnienie w zbiorniku 3:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Max allowed pressure in tank 3:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3MaxAllowedTemp">
+      <tuv xml:lang="pl">
+        <seg>Maksymalna dopuszczalna temperatura w zbiorniku 3:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Max allowed temperature in tank 3:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3LeftValveOpeningLvl">
+      <tuv xml:lang="pl">
+        <seg>Stopień otwarcia lewego zaworu:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Left valve opening level:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3RightValveOpeningLvl">
+      <tuv xml:lang="pl">
+        <seg>Stopień otwarcia prawego zaworu:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Right valve opening level:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="MixingTime">
+      <tuv xml:lang="pl">
+        <seg>Czas miksowania:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Mixing time:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3TargetFluidLvl">
+      <tuv xml:lang="pl">
+        <seg>Poziom płynu w zbiorniku 3:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Fluid level in tank 3:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank1TargetFluidLvl">
+      <tuv xml:lang="pl">
+        <seg>Poziom płynu w zbiorniku 1:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Fluid level in tank 1:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank2TargetFluidLvl">
+      <tuv xml:lang="pl">
+        <seg>Poziom płynu w zbiorniku 2:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Fluid level in tank 2:</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

@@ -9,6 +9,11 @@
   </Aliases>
   <DefaultView>
     <Module Name="&lt;Default&gt;">
+      <GlobalVariables Name="Global Variables">
+        <Variable Name="gTanks">
+          <Variable Name="ObjectParameters" RecursiveEnable="2" />
+        </Variable>
+      </GlobalVariables>
       <Task Name="Recipes">
         <Variable Name="RecipeName" />
         <Variable Name="RecipesList" />

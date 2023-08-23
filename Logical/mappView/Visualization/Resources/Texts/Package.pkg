@@ -4,5 +4,6 @@
   <Objects>
     <Object Type="File">TopContentStrings.tmx</Object>
     <Object Type="File">LoginDialogStrings.tmx</Object>
+    <Object Type="File">RecipePageStrings.tmx</Object>
   </Objects>
 </Package>

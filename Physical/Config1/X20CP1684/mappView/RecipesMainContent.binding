@@ -9,5 +9,45 @@
 <Source xsi:type="opcUa" refId="::Recipes:SelectedRecipeIndex" attribute="value" />
 <Target xsi:type="brease" contentRefId="RecipesMainContent" widgetRefId="DropDownBoxRecipesList" attribute="selectedIndex" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.ObjectParameters.Mixer1On" attribute="value" />
+<Target xsi:type="brease" contentRefId="RecipesMainContent" widgetRefId="ToggleSwitchMixer1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.ObjectParameters.Mixer2On" attribute="value" />
+<Target xsi:type="brease" contentRefId="RecipesMainContent" widgetRefId="ToggleSwitchMixer2" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.ObjectParameters.Tank3MaxAllowedPressure" attribute="node" />
+<Target xsi:type="brease" contentRefId="RecipesMainContent" widgetRefId="NumericInputTank3MaxAllowedPressure" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.ObjectParameters.Tank3MaxAllowedTemp" attribute="node" />
+<Target xsi:type="brease" contentRefId="RecipesMainContent" widgetRefId="NumericInputTank3MaxAllowedTemperature" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.ObjectParameters.Tank3LeftValveOpeningLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="RecipesMainContent" widgetRefId="NumericInputLeftValveOpeningLvl" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.ObjectParameters.Tank3RightValveOpeningLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="RecipesMainContent" widgetRefId="NumericInputRightValveOpeningLvl" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.ObjectParameters.Tank1TargetFluidLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="RecipesMainContent" widgetRefId="NumericInputTargetFluidLvlTank1" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.ObjectParameters.Tank2TargetFluidLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="RecipesMainContent" widgetRefId="NumericInputTargetFluidLvlTank2" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.ObjectParameters.Tank3TargetFluidLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="RecipesMainContent" widgetRefId="NumericInputTargetFluidLvlTank3" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.ObjectParameters.MixingTime" attribute="node" />
+<Target xsi:type="brease" contentRefId="RecipesMainContent" widgetRefId="NumericInputMixingTime" attribute="node" />
+</Binding>
 </Bindings>
 </BindingsSet>
