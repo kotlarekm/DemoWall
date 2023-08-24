@@ -178,6 +178,18 @@
 		bold="true" 
 		textColor="#474747" />
 	
+	<Style id="redStyle" xsi:type="widgets.brease.NavigationButton" 
+		imageColor="rgba(255, 0, 0, 1)"
+		checkedImageColor="rgba(255, 0, 0, 1)"
+		disabledCheckedImageColor="rgba(255, 0, 0, 1)"
+		disabledImageColor="rgba(255, 0, 0, 1)"/>
+	
+	<Style id="orangeStyle" xsi:type="widgets.brease.NavigationButton" 
+		imageColor="rgba(255, 128, 0, 1)"
+		checkedImageColor="rgba(255, 128, 0, 1)"
+		disabledCheckedImageColor="rgba(255, 128, 0, 1)"
+		disabledImageColor="rgba(255, 128, 0, 1)"/>
+	
 	<Style id="defaultSmall" xsi:type="widgets.brease.SystemNavButton" 
 		fontSize="14px" 
 		bold="true" 

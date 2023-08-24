@@ -422,6 +422,9 @@
   <Module Name="X20AT2222" Type="X20AT2222" Version="1.4.0.0">
     <Connection Connector="SS1" TargetModule="X20TB12g" TargetConnector="SS" />
     <Connection Connector="SL" TargetModule="X20BM11f" TargetConnector="SL1" />
+    <Parameter ID="FunctionModel" Value="FunctionModel001" />
+    <Parameter ID="SensorType01" Value="PT1000" />
+    <Parameter ID="SensorType02" Value="off" />
   </Module>
   <Module Name="X20BB80" Type="X20BB80" Version="1.1.0.0" />
   <Module Name="X20BB82" Type="X20BB82" Version="1.1.0.0" />

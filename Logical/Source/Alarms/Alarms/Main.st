@@ -73,6 +73,17 @@ PROGRAM _CYCLIC
 		MpAlarmXReset(gAlarmXCore, 'E-stop');
 	END_IF
 	
+	// Set style tu navigation button in top content
+	
+	IF MpAlarmXCore_0.ActiveAlarms >= 1 THEN
+		diAlarmIsActive := 1;//red style
+	ELSIF MpAlarmXCore_0.ActiveAlarms = 0 AND MpAlarmXCore_0.PendingAlarms >= 1 THEN
+		diAlarmIsActive := 2;//orange style
+	ELSE
+		diAlarmIsActive := 0;//anvisible
+	END_IF;
+	
+	
 END_PROGRAM
 
 PROGRAM _EXIT

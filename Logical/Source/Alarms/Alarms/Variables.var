@@ -9,4 +9,5 @@ VAR
 	MpAlarmXCore_0 : MpAlarmXCore; (*Function block used for managing alarms*)
 	MpAlarmXHistory_0 : MpAlarmXHistory; (*Function block used for managing alarms history*)
 	TON_LED_OFF_FirstCounting : BOOL; (*Variable that checks the first run of the counter off*)
+	diAlarmIsActive : INT; (*Variable used to set style navigation button in top content*)
 END_VAR

@@ -5,7 +5,7 @@
     <prop type="x-BR-TS:Namespace">IAT</prop>
   </header>
   <body>
-    <tu tuid="ack">
+    <tu tuid="Ack">
       <note>Invalid configuration, missing licenses, missing libriaries or modules or invalid changes of the configuration during runtime can cause initialization alarm.</note>
       <tuv xml:lang="pl">
         <seg>Zatwierdź</seg>
@@ -14,7 +14,7 @@
         <seg>Acknowledge</seg>
       </tuv>
     </tu>
-    <tu tuid="ack_all">
+    <tu tuid="Ack_all">
       <tuv xml:lang="pl">
         <seg>Zatwierdź wszystko</seg>
       </tuv>
@@ -22,7 +22,7 @@
         <seg>Acknowledge all</seg>
       </tuv>
     </tu>
-    <tu tuid="alarm">
+    <tu tuid="Alarm">
       <tuv xml:lang="pl">
         <seg>Alarmy</seg>
       </tuv>
@@ -30,12 +30,100 @@
         <seg>Alarms</seg>
       </tuv>
     </tu>
-    <tu tuid="history">
+    <tu tuid="History">
       <tuv xml:lang="pl">
         <seg>Historia</seg>
       </tuv>
       <tuv xml:lang="en">
         <seg>History</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Date">
+      <tuv xml:lang="pl">
+        <seg>Data</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Date</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Name">
+      <tuv xml:lang="pl">
+        <seg>Nazwa</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Name</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Message">
+      <tuv xml:lang="pl">
+        <seg>Wiadomość</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Message</seg>
+      </tuv>
+    </tu>
+    <tu tuid="State">
+      <tuv xml:lang="pl">
+        <seg>Stan</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>State</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Severity">
+      <tuv xml:lang="pl">
+        <seg>Powaga</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Severity</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Code">
+      <tuv xml:lang="pl">
+        <seg>Kod</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Code</seg>
+      </tuv>
+    </tu>
+    <tu tuid="List">
+      <tuv xml:lang="pl">
+        <seg>Lista</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>List</seg>
+      </tuv>
+    </tu>
+    <tu tuid="OldState">
+      <tuv xml:lang="pl">
+        <seg>Stary stan</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Old state</seg>
+      </tuv>
+    </tu>
+    <tu tuid="NewState">
+      <tuv xml:lang="pl">
+        <seg>Nowy stan</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>New state</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Previous">
+      <tuv xml:lang="pl">
+        <seg>Poprzedni</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Previous</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Next">
+      <tuv xml:lang="pl">
+        <seg>Następny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Next</seg>
       </tuv>
     </tu>
   </body>

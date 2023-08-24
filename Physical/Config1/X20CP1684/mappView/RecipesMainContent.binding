@@ -53,5 +53,10 @@
 <Source xsi:type="opcUa" refId="::Recipes:RecipeName" attribute="value" />
 <Target xsi:type="brease" contentRefId="RecipesMainContent" widgetRefId="TextInputRecipeName" attribute="value" />
 </Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="mapp" refId="gAlarmXHistory" attribute="link" />
+<Target xsi:type="brease" contentRefId="ContentAlarms" widgetRefId="AlarmHistory1" attribute="mpLink" />
+</Binding>
 </Bindings>
 </BindingsSet>

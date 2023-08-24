@@ -11,5 +11,51 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="EventBinding_1">
+      <Source xsi:type="opcUa.Event" refId="::Alarms:diAlarmIsActive" event="ValueChanged" />
+      <EventHandler condition="newValue=0">
+        <Action>
+          <Target xsi:type="widgets.brease.NavigationButton.Action" contentRefId="ContentTop" widgetRefId="TopAlarmsNavBtn">
+            <Method xsi:type="widgets.brease.NavigationButton.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=1">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.NavigationButton.Action" contentRefId="ContentTop" widgetRefId="TopAlarmsNavBtn">
+                <Method xsi:type="widgets.brease.NavigationButton.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.NavigationButton.Action" contentRefId="ContentTop" widgetRefId="TopAlarmsNavBtn">
+                <Method xsi:type="widgets.brease.NavigationButton.Action.SetStyle" value="redStyle" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue=2">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.NavigationButton.Action" contentRefId="ContentTop" widgetRefId="TopAlarmsNavBtn">
+                <Method xsi:type="widgets.brease.NavigationButton.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.NavigationButton.Action" contentRefId="ContentTop" widgetRefId="TopAlarmsNavBtn">
+                <Method xsi:type="widgets.brease.NavigationButton.Action.SetStyle" value="orangeStyle" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

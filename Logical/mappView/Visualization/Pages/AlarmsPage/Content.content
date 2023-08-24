@@ -1,29 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="ContentAlarms" height="608" width="1206" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.AlarmHistory" id="AlarmHistory1" top="360" left="60" width="1086" height="220" zIndex="0" fontName="ABBvoiceMedium">
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="20" left="0" width="1206" height="32" zIndex="0" text="$IAT/Alarm" textAlign="center" fontName="ABBvoiceMedium" fontSize="30px" bold="true" />
+    <Widget xsi:type="widgets.brease.TabControl" id="TabControl1" top="59" left="20" width="1166" height="522" zIndex="1">
       <Widgets>
-        <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemID" width="40" zIndex="0" columnType="instanceId" text="ID" />
-        <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemDate" width="220" zIndex="1" columnType="timestamp" text="Date" />
-        <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemName" zIndex="2" columnType="name" text="Name" />
-        <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemMessage" width="386" zIndex="3" text="Message" />
-        <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemOldState" width="120" zIndex="4" columnType="old state" text="Old state" />
-        <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemNewState" width="120" zIndex="5" columnType="new state" text="New state" />
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem1" left="0" zIndex="0" text="$IAT/List">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.AlarmList" id="AlarmList1" top="29" left="20" width="1126" height="351" zIndex="0" fontName="ABBvoiceMedium">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemID" width="40" zIndex="0" columnType="instanceId" text="ID" />
+                <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemDate" width="220" zIndex="1" columnType="timestamp" text="$IAT/Date" />
+                <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemName" width="180" zIndex="2" columnType="name" text="$IAT/Name" />
+                <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemMessage" width="376" zIndex="3" text="$IAT/Message" />
+                <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemState" width="110" zIndex="4" columnType="state" text="$IAT/State" />
+                <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemSeverity" width="110" zIndex="5" columnType="severity" text="$IAT/Severity" />
+                <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemCode" width="90" zIndex="6" columnType="code" text="$IAT/Code" />
+              </Widgets>
+            </Widget>
+            <Widget xsi:type="widgets.brease.Button" id="ButtonAcknowledge" top="411" left="640" width="240" height="31" zIndex="1" text="$IAT/Ack" fontName="ABBvoiceMedium" />
+            <Widget xsi:type="widgets.brease.Button" id="ButtonAcknowledgeAll" top="411" left="900" width="240" height="31" zIndex="2" text="$IAT/Ack_all" fontName="ABBvoiceMedium" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem2" left="0" zIndex="1" text="$IAT/History">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.AlarmHistory" id="AlarmHistory1" top="31" left="20" width="1126" height="349" zIndex="0" nextText="$IAT/Next" previousText="$IAT/Previous" fontName="ABBvoiceMedium">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemID" width="40" zIndex="0" columnType="instanceId" text="ID" />
+                <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemDate" width="220" zIndex="1" columnType="timestamp" text="$IAT/Date" />
+                <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemName" width="180" zIndex="2" columnType="name" text="$IAT/Name" />
+                <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemMessage" width="356" zIndex="3" text="$IAT/Message" />
+                <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemOldState" width="120" zIndex="4" columnType="old state" text="$IAT/OldState" />
+                <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemNewState" width="120" zIndex="5" columnType="new state" text="$IAT/NewState" />
+                <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemCode" width="90" zIndex="6" columnType="code" text="$IAT/Code" />
+              </Widgets>
+            </Widget>
+          </Widgets>
+        </Widget>
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.AlarmList" id="AlarmList1" top="60" left="60" width="1086" height="220" zIndex="1" fontName="ABBvoiceMedium">
-      <Widgets>
-        <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemID" width="40" zIndex="0" columnType="instanceId" text="ID" />
-        <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemDate" width="220" zIndex="1" columnType="timestamp" text="Date" />
-        <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemName" zIndex="2" columnType="name" text="Name" />
-        <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemMessage" width="386" zIndex="3" text="Message" />
-        <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemState" width="120" zIndex="4" columnType="state" text="State" />
-        <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemSeverity" width="120" zIndex="5" columnType="severity" text="Severity" />
-      </Widgets>
-    </Widget>
-    <Widget xsi:type="widgets.brease.Label" id="Label1" top="20" left="0" width="1220" height="31" zIndex="2" text="$IAT/alarm" textAlign="center" fontName="ABBvoiceMedium" fontSize="30px" bold="true" />
-    <Widget xsi:type="widgets.brease.Button" id="ButtonAcknowledge" top="300" left="640" width="240" height="31" zIndex="3" text="$IAT/ack" fontName="ABBvoiceMedium" />
-    <Widget xsi:type="widgets.brease.Button" id="ButtonAcknowledgeAll" top="300" left="900" width="240" height="31" zIndex="4" text="$IAT/ack_all" fontName="ABBvoiceMedium" />
-    <Widget xsi:type="widgets.brease.Label" id="Label2" top="320" left="60" zIndex="5" text="$IAT/history" fontName="ABBvoiceMedium" fontSize="20px" bold="true" />
   </Widgets>
 </Content>
