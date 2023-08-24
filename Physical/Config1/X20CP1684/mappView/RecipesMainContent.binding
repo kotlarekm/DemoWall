@@ -53,10 +53,13 @@
 <Source xsi:type="opcUa" refId="::Recipes:RecipeName" attribute="value" />
 <Target xsi:type="brease" contentRefId="RecipesMainContent" widgetRefId="TextInputRecipeName" attribute="value" />
 </Binding>
-
 <Binding mode="twoWay">
 <Source xsi:type="mapp" refId="gAlarmXHistory" attribute="link" />
 <Target xsi:type="brease" contentRefId="ContentAlarms" widgetRefId="AlarmHistory1" attribute="mpLink" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Recipes:MpFileManagerUIConnect_0.DeviceList.SelectedIndex" attribute="value" />
+<Target xsi:type="brease" contentRefId="RecipesMainContent" widgetRefId="SelectDeviceRadioGroup" attribute="selectedIndex" />
 </Binding>
 </Bindings>
 </BindingsSet>

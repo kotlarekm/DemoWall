@@ -28,6 +28,7 @@
             <Variable Name="Confirm" />
             <Variable Name="Cancel" />
           </Variable>
+          <Variable Name="DeviceList" RecursiveEnable="2" />
         </Variable>
       </Task>
       <Task Name="Alarms">

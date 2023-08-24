@@ -117,5 +117,13 @@
         <seg>Restore</seg>
       </tuv>
     </tu>
+    <tu tuid="SelectDevice">
+      <tuv xml:lang="pl">
+        <seg>Wybierz nośnik:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Select data device:</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>
