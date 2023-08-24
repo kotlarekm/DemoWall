@@ -75,5 +75,21 @@
         <seg>User changed to: </seg>
       </tuv>
     </tu>
+    <tu tuid="Logout">
+      <tuv xml:lang="pl">
+        <seg>Wyloguj</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Logout</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LogedOut">
+      <tuv xml:lang="pl">
+        <seg>Wylogowano</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Loged out</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>
