@@ -8,5 +8,6 @@
     <Object Type="Package">Simulation</Object>
     <Object Type="Package">Motion</Object>
     <Object Type="Package">TempControl</Object>
+    <Object Type="Package">IO</Object>
   </Objects>
 </Package>

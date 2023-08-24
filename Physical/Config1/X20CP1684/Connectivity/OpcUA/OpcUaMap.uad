@@ -167,6 +167,25 @@
         </Variable>
         <Variable Name="Manual" />
       </Task>
+      <Task Name="Simulation">
+        <Variable Name="AnimationForMixer1" />
+        <Variable Name="AnimationForMixer2" />
+        <Variable Name="TanksValvesCheck" />
+        <Variable Name="LeftValveCheck" />
+        <Variable Name="MixerCheck" />
+        <Variable Name="RightValveCheck" />
+      </Task>
+      <Task Name="IO">
+        <Variable Name="diLamp1" />
+        <Variable Name="diLamp2" />
+        <Variable Name="diLamp3" />
+        <Variable Name="diLamp4" />
+        <Variable Name="diLamp5" />
+        <Variable Name="diLamp6" />
+        <Variable Name="diLamp7" />
+        <Variable Name="diLamp8" />
+        <Variable Name="testowa" />
+      </Task>
     </Module>
   </DefaultView>
 </OpcUaSource>

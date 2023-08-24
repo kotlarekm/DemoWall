@@ -25,5 +25,6 @@
     <Object Type="File">InfoDialogTopContent.eventbinding</Object>
     <Object Type="File">GraphDialogMainContent.binding</Object>
     <Object Type="File">GraphDialogTopContent.eventbinding</Object>
+    <Object Type="File">ContentIO.eventbinding</Object>
   </Objects>
 </Package>

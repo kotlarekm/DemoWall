@@ -32,6 +32,7 @@
     <EventBindingsSet refId="ContentMotion_eventbinding" />
     <EventBindingsSet refId="InfoDialogTopContent_eventbinding" />
     <EventBindingsSet refId="GraphDialogTopContent_eventbinding" />
+    <EventBindingsSet refId="ContentIO_eventbinding" />
   </EventBindingsSets>
   <Dialogs>
     <Dialog refId="LoginDialog" />
@@ -57,6 +58,7 @@
     <Content refId="InfoDialogMainContent" />
     <Content refId="GraphDialogTopContent" />
     <Content refId="GraphDialogMainContent" />
+    <Content refId="ContentIO" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />
