@@ -51,5 +51,29 @@
 <Source xsi:type="opcUa" refId="::Motion:GearCoupling" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="ToggleSwitchGear" attribute="value" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_Primary.Power" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="ToggleButtonPower" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasicParameters_Primary.Distance" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericInputSetDistance" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasicParameters_Primary.Position" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericInputSetPosition" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasicParameters_Secondary.Distance" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericInputSetDistance1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_Secondary.Power" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="ToggleButtonPower1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasicParameters_Secondary.Position" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericInputSetPosition1" attribute="value" />
+</Binding>
 </Bindings>
 </BindingsSet>

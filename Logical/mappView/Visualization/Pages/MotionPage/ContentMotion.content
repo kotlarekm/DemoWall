@@ -1,57 +1,79 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="ContentMotion" height="608" width="1206" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxMixer1" top="60" left="60" width="310" height="505" zIndex="0" text="Mixer 1" cornerRadius="16px 16px 0px 0px" fontName="ABBvoiceMedium" fontSize="18px">
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxMixer1" top="55" left="10" width="440" height="535" zIndex="0" text="Mixer 1" cornerRadius="16px 16px 0px 0px" fontName="ABBvoiceMedium" fontSize="18px">
       <Widgets>
-        <Widget xsi:type="widgets.brease.Button" id="ButtonStopMixer1" top="63" left="174" zIndex="0" text="Stop" fontName="ABBvoiceMedium" />
-        <Widget xsi:type="widgets.brease.Button" id="ButtonStartMixer1" top="63" left="24" zIndex="1" text="Start" fontName="ABBvoiceMedium" />
-        <Widget xsi:type="widgets.brease.Label" id="LabelControls1" top="18" left="114" zIndex="2" text="Controls" fontName="ABBvoiceMedium" fontSize="18px" />
-        <Widget xsi:type="widgets.brease.Label" id="LabelVelocity1" top="116" left="14" width="106" zIndex="3" text="Set velocity" fontName="ABBvoiceMedium" />
-        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetVelocity1" top="116" left="169" zIndex="4" fontName="ABBvoiceMedium" />
-        <Widget xsi:type="widgets.brease.Label" id="LabelStatus1" top="226" left="114" zIndex="5" text="Status" fontName="ABBvoiceMedium" fontSize="18px" />
-        <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse1" top="272" left="139" width="27" height="27" zIndex="6" />
-        <Widget xsi:type="widgets.brease.Label" id="LabelStatus2" top="270" left="14" width="116" zIndex="7" text="Power ON" fontName="ABBvoiceMedium" />
-        <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse2" top="309" left="139" width="27" height="27" zIndex="8" />
-        <Widget xsi:type="widgets.brease.Label" id="LabelStatus3" top="307" left="14" width="116" zIndex="9" text="Move Velocity" fontName="ABBvoiceMedium" />
-        <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse3" top="346" left="139" width="27" height="27" zIndex="10" />
-        <Widget xsi:type="widgets.brease.Label" id="LabelStatus4" top="344" left="14" width="116" zIndex="11" text="Running" fontName="ABBvoiceMedium" />
-        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputActualVelocity1" top="376" left="122" width="76" height="35" zIndex="12" textAlign="center" fontName="ABBvoiceMedium" padding="0px 25px 0px 0px" />
-        <Widget xsi:type="widgets.brease.Label" id="LabelStatus5" top="380" left="14" width="116" zIndex="13" text="Velocity" fontName="ABBvoiceMedium" />
-        <Widget xsi:type="widgets.brease.Label" id="LabelStatus6" top="416" left="14" width="116" zIndex="14" text="Position" fontName="ABBvoiceMedium" />
-        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputActualVelocity2" top="416" left="122" width="76" zIndex="15" textAlign="center" fontName="ABBvoiceMedium" padding="0px 25px 0px 0px" />
-        <Widget xsi:type="widgets.brease.Label" id="LabelAcceleration1" top="151" left="14" width="136" zIndex="16" text="Set acceleration" fontName="ABBvoiceMedium" />
-        <Widget xsi:type="widgets.brease.Label" id="LabelDeceleration1" top="186" left="14" width="136" zIndex="17" text="Set deceleration" fontName="ABBvoiceMedium" />
-        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetAcceleration1" top="151" left="169" zIndex="18" fontName="ABBvoiceMedium" />
-        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetDeceleration1" top="186" left="169" zIndex="19" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelControls1" top="1" left="179" zIndex="0" text="Controls" fontName="ABBvoiceMedium" fontSize="18px" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelVelocity1" top="186" left="19" width="106" zIndex="1" text="Set velocity" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetVelocity1" top="216" left="22" zIndex="2" unit="{'metric':'E96','imperial':'E96','imperial-us':'E96'}" unitAlign="right" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse1" top="358" left="141" width="27" height="27" zIndex="3" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelStatus2" top="356" left="14" width="116" zIndex="4" text="Power ON" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse3" top="393" left="141" width="27" height="27" zIndex="5" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelStatus4" top="391" left="14" width="116" zIndex="6" text="Running" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputActualVelocity1" top="353" left="329" width="90" height="35" zIndex="7" unit="{'metric':'E96','imperial':'E96','imperial-us':'E96'}" unitAlign="right" textAlign="left" fontName="ABBvoiceMedium" padding="0px 20px 0px 0px" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelStatus5" top="356" left="204" width="116" zIndex="8" text="Velocity" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelStatus6" top="392" left="204" width="116" zIndex="9" text="Position" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputActualVelocity2" top="389" left="329" width="90" height="35" zIndex="10" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" textAlign="left" fontName="ABBvoiceMedium" padding="0px 20px 0px 0px" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelAcceleration1" top="261" left="4" width="136" zIndex="11" text="Set acceleration" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelDeceleration1" top="261" left="152" width="136" zIndex="12" text="Set deceleration" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetAcceleration1" top="291" left="22" zIndex="13" unit="{'metric':'M45','imperial':'M45','imperial-us':'M45'}" unitAlign="right" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetDeceleration1" top="291" left="170" zIndex="14" unit="{'metric':'M45','imperial':'M45','imperial-us':'M45'}" unitAlign="right" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse8" top="429" left="141" width="27" height="27" zIndex="15" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelStatus13" top="427" left="14" width="116" zIndex="16" text="Error" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelDistance" top="186" left="167" width="106" zIndex="17" text="Set distance" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetDistance" top="216" left="170" zIndex="18" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelPosition" top="186" left="314" width="106" zIndex="19" text="Set position" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetPosition" top="216" left="317" zIndex="20" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.Button" id="ButtonErrorReset" top="429" left="204" width="95" height="26" zIndex="21" text="Error Reset" fontSize="14px" fontName="ABBvoiceLight" />
+        <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxManual" top="31" left="-1" width="436" height="115" zIndex="22" borderWidth="0px" headerGradient="linear-gradient(to bottom,#FFFFFF 0%,#FFFFFF 100%)" borderStyle="none" shadow="0px 0px rgba(62, 79, 92, 0.75)">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButtonPower" top="10" left="95" zIndex="0" text="Power" fontSize="15px" fontName="ABBvoiceMedium" />
+            <Widget xsi:type="widgets.brease.Button" id="ButtonStop" top="10" left="235" zIndex="1" text="Stop" fontSize="15px" fontName="ABBvoiceMedium" />
+            <Widget xsi:type="widgets.brease.Button" id="ButtonMoveVelocity" top="65" left="5" width="125" zIndex="2" text="Move velocity" fontSize="15px" fontName="ABBvoiceMedium" />
+            <Widget xsi:type="widgets.brease.Button" id="ButtonMoveAbsolute" top="65" left="295" width="135" zIndex="3" text="Move Absolute" fontSize="15px" fontName="ABBvoiceMedium" />
+            <Widget xsi:type="widgets.brease.Button" id="ButtonMoveAdditive" top="65" left="150" width="130" zIndex="4" text="Move additive" fontSize="15px" fontName="ABBvoiceMedium" />
+          </Widgets>
+        </Widget>
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxMixer2" top="60" left="428" width="310" height="505" zIndex="1" text="Mixer 2" cornerRadius="16px 16px 0px 0px" fontName="ABBvoiceMedium" fontSize="18px">
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxMixer2" top="55" left="475" width="440" height="535" zIndex="1" text="Mixer 2" cornerRadius="16px 16px 0px 0px" fontName="ABBvoiceMedium" fontSize="18px">
       <Widgets>
-        <Widget xsi:type="widgets.brease.Button" id="ButtonStopMixer2" top="63" left="174" zIndex="0" text="Stop" fontName="ABBvoiceMedium" />
-        <Widget xsi:type="widgets.brease.Button" id="ButtonStartMixer2" top="63" left="24" zIndex="1" text="Start" fontName="ABBvoiceMedium" />
-        <Widget xsi:type="widgets.brease.Label" id="LabelControls2" top="18" left="114" zIndex="2" text="Controls" fontName="ABBvoiceMedium" fontSize="18px" />
-        <Widget xsi:type="widgets.brease.Label" id="LabelVelocity2" top="116" left="14" width="106" zIndex="3" text="Set velocity" fontName="ABBvoiceMedium" />
-        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetVelocity2" top="116" left="169" zIndex="4" fontName="ABBvoiceMedium" />
-        <Widget xsi:type="widgets.brease.Label" id="LabelStatus7" top="226" left="114" zIndex="5" text="Status" fontName="ABBvoiceMedium" fontSize="18px" />
-        <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse4" top="272" left="139" width="27" height="27" zIndex="6" />
-        <Widget xsi:type="widgets.brease.Label" id="LabelStatus8" top="270" left="14" width="121" zIndex="7" text="Power ON" fontName="ABBvoiceMedium" />
-        <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse5" top="306" left="139" width="27" height="27" zIndex="8" />
-        <Widget xsi:type="widgets.brease.Label" id="LabelStatus9" top="307" left="14" width="116" zIndex="9" text="Move Velocity" fontName="ABBvoiceMedium" />
-        <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse6" top="340" left="139" width="27" height="27" zIndex="10" />
-        <Widget xsi:type="widgets.brease.Label" id="LabelStatus10" top="344" left="14" width="116" zIndex="11" text="Running" fontName="ABBvoiceMedium" />
-        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputActualVelocity3" top="374" left="122" width="76" height="35" zIndex="12" textAlign="center" fontName="ABBvoiceMedium" padding="0px 25px 0px 0px" />
-        <Widget xsi:type="widgets.brease.Label" id="LabelStatus11" top="380" left="14" width="116" zIndex="13" text="Velocity" fontName="ABBvoiceMedium" />
-        <Widget xsi:type="widgets.brease.Label" id="LabelStatus12" top="416" left="14" width="116" zIndex="14" text="Position" fontName="ABBvoiceMedium" />
-        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputActualVelocity4" top="416" left="122" width="76" zIndex="15" textAlign="center" fontName="ABBvoiceMedium" padding="0px 25px 0px 0px" />
-        <Widget xsi:type="widgets.brease.Label" id="LabelAcceleration2" top="151" left="14" width="136" zIndex="16" text="Set acceleration" fontName="ABBvoiceMedium" />
-        <Widget xsi:type="widgets.brease.Label" id="LabelDeceleration2" top="186" left="14" width="136" zIndex="17" text="Set deceleration" fontName="ABBvoiceMedium" />
-        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetAcceleration2" top="151" left="169" zIndex="18" fontName="ABBvoiceMedium" />
-        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetDeceleration2" top="186" left="169" zIndex="19" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelControls2" top="1" left="179" zIndex="0" text="Controls" fontName="ABBvoiceMedium" fontSize="18px" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelVelocity2" top="186" left="19" width="106" zIndex="1" text="Set velocity" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetVelocity2" top="216" left="22" zIndex="2" unit="{'metric':'E96','imperial':'E96','imperial-us':'E96'}" unitAlign="right" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse4" top="358" left="141" width="27" height="27" zIndex="3" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelStatus8" top="356" left="14" width="121" zIndex="4" text="Power ON" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse6" top="393" left="141" width="27" height="27" zIndex="5" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelStatus10" top="392" left="14" width="116" zIndex="6" text="Running" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputActualVelocity3" top="353" left="329" width="90" height="35" zIndex="7" unit="{'metric':'E96','imperial':'E96','imperial-us':'E96'}" unitAlign="right" textAlign="left" fontName="ABBvoiceMedium" padding="0px 20px 0px 0px" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelStatus11" top="356" left="204" width="116" zIndex="8" text="Velocity" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelStatus12" top="392" left="204" width="116" zIndex="9" text="Position" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputActualVelocity4" top="389" left="329" width="90" height="35" zIndex="10" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" textAlign="left" fontName="ABBvoiceMedium" padding="0px 20px 0px 0px" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelAcceleration2" top="261" left="4" width="136" zIndex="11" text="Set acceleration" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelDeceleration2" top="261" left="152" width="136" zIndex="12" text="Set deceleration" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetAcceleration2" top="291" left="22" zIndex="13" unit="{'metric':'M45','imperial':'M45','imperial-us':'M45'}" unitAlign="right" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetDeceleration2" top="291" left="170" zIndex="14" unit="{'metric':'M45','imperial':'M45','imperial-us':'M45'}" unitAlign="right" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse9" top="429" left="141" width="27" height="27" zIndex="15" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelStatus14" top="427" left="14" width="116" zIndex="16" text="Error" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxManual1" top="31" left="1" width="436" height="115" zIndex="17" borderWidth="0px" headerGradient="linear-gradient(to bottom,#FFFFFF 0%,#FFFFFF 100%)" borderStyle="none" shadow="0px 0px rgba(62, 79, 92, 0.75)">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButtonPower1" top="10" left="95" zIndex="0" text="Power" fontSize="15px" fontName="ABBvoiceMedium" />
+            <Widget xsi:type="widgets.brease.Button" id="ButtonStop1" top="10" left="235" zIndex="1" text="Stop" fontSize="15px" fontName="ABBvoiceMedium" />
+            <Widget xsi:type="widgets.brease.Button" id="ButtonMoveVelocity1" top="65" left="5" width="125" zIndex="2" text="Move velocity" fontSize="15px" fontName="ABBvoiceMedium" />
+            <Widget xsi:type="widgets.brease.Button" id="ButtonMoveAbsolute1" top="65" left="295" width="135" zIndex="3" text="Move Absolute" fontSize="15px" fontName="ABBvoiceMedium" />
+            <Widget xsi:type="widgets.brease.Button" id="ButtonMoveAdditive1" top="65" left="150" width="130" zIndex="4" text="Move additive" fontSize="15px" fontName="ABBvoiceMedium" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.Label" id="LabelDistance1" top="186" left="167" width="106" zIndex="18" text="Set distance" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetDistance1" top="216" left="170" zIndex="19" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.Label" id="LabelPosition1" top="186" left="314" width="106" zIndex="20" text="Set position" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetPosition1" top="216" left="317" zIndex="21" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.Button" id="ButtonErrorReset1" top="429" left="204" width="95" height="26" zIndex="22" text="Error Reset" fontSize="14px" fontName="ABBvoiceLight" />
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxCoupling" top="60" left="795" width="310" height="505" zIndex="2" text="Coupling" cornerRadius="16px 16px 0px 0px" fontName="ABBvoiceMedium" fontSize="18px" enable="false">
+    <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxCoupling" top="55" left="930" width="265" height="535" zIndex="2" text="Coupling" cornerRadius="16px 16px 0px 0px" fontName="ABBvoiceMedium" fontSize="18px" enable="false">
       <Widgets>
-        <Widget xsi:type="widgets.brease.Label" id="Label1" top="26" left="59" width="191" zIndex="0" text="Select coupling mode" fontName="ABBvoiceMedium" fontSize="18px" />
+        <Widget xsi:type="widgets.brease.Label" id="Label1" top="27" left="39" width="191" zIndex="0" text="Select coupling mode" fontName="ABBvoiceMedium" fontSize="18px" />
         <Widget xsi:type="widgets.brease.DropDownBox" id="DropDownBoxCamSelect" top="171" left="134" zIndex="1" dataProvider="[{'value':'0','text':'Cam 1'},{'value':'1','text':'Cam 2'}]" selectedValue="0" />
         <Widget xsi:type="widgets.brease.Label" id="Label2" top="171" left="24" width="96" zIndex="2" text="Cam select" fontName="ABBvoiceMedium" />
         <Widget xsi:type="widgets.brease.Label" id="Label3" top="86" left="24" width="81" zIndex="3" text="Gear" fontName="ABBvoiceMedium" />

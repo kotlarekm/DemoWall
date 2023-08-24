@@ -18,23 +18,6 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_4">
-      <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_Primary.MoveVelocity" event="ValueChanged" />
-      <EventHandler condition="newValue = TRUE">
-        <Action>
-          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse2">
-            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Green" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler condition="newValue = FALSE">
-        <Action>
-          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse2">
-            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Red" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
     <EventBinding id="EventBinding_2">
       <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gTanks.Status.IsMixer1On" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
@@ -69,23 +52,6 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_7">
-      <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_Secondary.MoveVelocity" event="ValueChanged" />
-      <EventHandler condition="newValue = TRUE">
-        <Action>
-          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse5">
-            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Green" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler condition="newValue = FALSE">
-        <Action>
-          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse5">
-            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Red" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
     <EventBinding id="EventBinding_8">
       <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gTanks.Status.IsMixer2On" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
@@ -99,46 +65,6 @@
         <Action>
           <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse6">
             <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Red" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="ContentMotion.ButtonStartMixer1.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonStartMixer1" event="Click" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.TurnOnMixer1">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="EventBinding_3">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonStopMixer1" event="Click" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.TurnOnMixer1">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="ContentMotion.ButtonStartMixer2.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonStartMixer2" event="Click" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.TurnOnMixer2">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="EventBinding_5">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonStopMixer2" event="Click" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.TurnOnMixer2">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
           </Target>
         </Action>
       </EventHandler>
@@ -295,6 +221,140 @@
         <Action>
           <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxCoupling">
             <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_14">
+      <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_Primary.Error" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse8">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Green" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse8">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Red" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_15">
+      <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_Secondary.Error" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse9">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Green" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse9">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Red" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMotion.ButtonMoveAdditive.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonMoveAdditive" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_Primary.MoveAdditive">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMotion.ButtonMoveAbsolute.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonMoveAbsolute" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_Primary.MoveAbsolute">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMotion.ButtonMoveVelocity.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonMoveVelocity" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_Primary.MoveVelocity">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMotion.ButtonStop.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonStop" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_Primary.Stop">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMotion.ButtonStop1.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonStop1" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_Secondary.Stop">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMotion.ButtonMoveVelocity1.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonMoveVelocity1" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_Secondary.MoveVelocity">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMotion.ButtonMoveAdditive1.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonMoveAdditive1" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_Secondary.MoveAdditive">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMotion.ButtonMoveAbsolute1.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonMoveAbsolute1" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_Secondary.MoveAbsolute">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMotion.ButtonErrorReset.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonErrorReset" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_Primary.ErrorReset">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMotion.ButtonErrorReset1.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonErrorReset1" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_Secondary.ErrorReset">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
       </EventHandler>
