@@ -53,6 +53,15 @@
             <Variable Name="Tank2Temp" />
             <Variable Name="Tank3Temp" />
           </Variable>
+          <Variable Name="Commands">
+            <Variable Name="OpenTank1Valve" />
+            <Variable Name="OpenTank2Valve" />
+            <Variable Name="OpenTank3LeftValve" />
+            <Variable Name="OpenTank3RightValve" />
+            <Variable Name="OpenTank3MainValve" />
+            <Variable Name="TurnOnMixer2" />
+            <Variable Name="TurnOnMixer1" />
+          </Variable>
         </Variable>
 		</Task>
       </GlobalVariables>
