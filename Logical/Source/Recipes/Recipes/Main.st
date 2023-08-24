@@ -27,6 +27,8 @@ PROGRAM _INIT
 	MpFileManagerUI_0.UISetup := MpFileManagerUISetup_0;
 	
 	MpFileManagerUIConnect_0.DeviceList.DeviceNames[0] := 'HDD';
+	MpFileManagerUIConnect_0.DeviceList.DeviceNames[1] := 'USB1';
+	MpFileManagerUIConnect_0.DeviceList.DeviceNames[2] := 'USB2';
 	MpFileManagerUIConnect_0.DeviceList.SelectedIndex := 0;
 	MpFileManagerUIConnect_0.File.Filter := '*.xml';
 	MpFileManagerUIConnect_0.File.Refresh := TRUE;
@@ -34,6 +36,14 @@ PROGRAM _INIT
 	MpFileManagerUI_0.UIConnect := ADR(MpFileManagerUIConnect_0);
 	MpFileManagerUI_0.Enable := TRUE;
 	MpFileManagerUI_0();
+	
+	// USB
+	UsbNodeListGet_0.enable := TRUE;
+	UsbNodeListGet_0.bufferSize := SIZEOF(NodeIdList);
+	UsbNodeListGet_0.pBuffer := ADR(NodeIdList);
+	UsbNodeListGet_0.filterInterfaceClass := 0;
+	UsbNodeListGet_0.filterInterfaceSubClass := 0;
+	UsbNodeListGet_0();
 	
 END_PROGRAM
 
@@ -84,6 +94,7 @@ PROGRAM _CYCLIC
 	MpRecipeXml_0();
 	MpRecipeRegPar_0();
 	MpFileManagerUI_0();
+	UsbNodeListGet_0();
 	
 	 
 END_PROGRAM
@@ -98,6 +109,9 @@ PROGRAM _EXIT
 	
 	MpFileManagerUI_0.Enable := FALSE;
 	MpFileManagerUI_0();
+	
+	UsbNodeListGet_0.enable := FALSE;
+	UsbNodeListGet_0();
 	
 END_PROGRAM
 
