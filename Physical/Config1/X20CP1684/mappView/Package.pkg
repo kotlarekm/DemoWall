@@ -13,5 +13,6 @@
     <Object Type="File">DeleteFileDialogTopContent.eventbinding</Object>
     <Object Type="File">ContentAlarms.eventbinding</Object>
     <Object Type="File">ContentAlarms.binding</Object>
+    <Object Type="File">LoginDialogMainContent.binding</Object>
   </Objects>
 </Package>
