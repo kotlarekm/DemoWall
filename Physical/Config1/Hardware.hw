@@ -490,7 +490,6 @@
       <Parameter ID="ChannelType1" Value="OCTET[12]" />
     </Connector>
     <Parameter ID="ConfigurationID" Value="DemoWallConfig1" />
-    <Parameter ID="Simulation" Value="1" />
     <Parameter ID="TimerDeviceType" Value="EPLX2X" />
     <Parameter ID="TimerDevice" Value="X20CP1684.IF6" />
     <Parameter ID="TaskClassIdleTime" Value="2000" />
@@ -505,6 +504,12 @@
     <Group ID="FileDevice1" />
     <Parameter ID="FileDeviceName1" Value="HDD" />
     <Parameter ID="FileDevicePath1" Value="C:\Recipes" />
+    <Group ID="FileDevice2" />
+    <Parameter ID="FileDeviceName2" Value="USB1" />
+    <Parameter ID="FileDevicePath2" Value="\bd0" />
+    <Group ID="FileDevice3" />
+    <Parameter ID="FileDeviceName3" Value="USB2" />
+    <Parameter ID="FileDevicePath3" Value="\bd16" />
     <Parameter ID="ActivateOpcUa" Value="1" />
     <Parameter ID="OpcUaInformationModels_PV_Version" Value="1" />
   </Module>

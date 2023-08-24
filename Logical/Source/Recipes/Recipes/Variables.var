@@ -12,4 +12,6 @@ VAR
 	SelectedRecipeIndex : USINT := 0; (*Index of recipe selected in dropdownbox on recipe page*)
 	NewRecipeSelected : BOOL; (*Information about new recipe being selected*)
 	WaitingForDelete : BOOL := FALSE; (*Variable informing about the recipe waiting to be deleted*)
+	NodeIdList : ARRAY[0..2] OF UDINT; (*Contains Id of usb devices*)
+	UsbNodeListGet_0 : UsbNodeListGet;
 END_VAR
