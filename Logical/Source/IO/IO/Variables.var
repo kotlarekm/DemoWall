@@ -1,0 +1,11 @@
+VAR
+	diLamp1 : BOOL;
+	diLamp2 : BOOL;
+	diLamp3 : BOOL;
+	diLamp4 : BOOL;
+	diLamp5 : BOOL;
+	diLamp6 : BOOL;
+	diLamp7 : BOOL;
+	diLamp8 : BOOL;
+	testowa : BOOL;
+END_VAR

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingSet id="ContentIO_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+    <EventBinding id="EventBinding_2">
+      <Source xsi:type="opcUa.Event" refId="::IO:testowa" event="ValueChanged" />
+      <EventHandler condition="newValue=TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="Ellipse1">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_red" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="Ellipse1">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_gray" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Bindings>
+</EventBindingSet>

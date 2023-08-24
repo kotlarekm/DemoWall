@@ -20,5 +20,6 @@
     <Object Type="File">OpcUaServer.uaserver</Object>
     <Object Type="File">ApplyRecipeTopContent.eventbinding</Object>
     <Object Type="File">ApplyRecipeMainContent.eventbinding</Object>
+    <Object Type="File">ContentIO.eventbinding</Object>
   </Objects>
 </Package>

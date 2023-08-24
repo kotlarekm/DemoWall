@@ -5,4 +5,20 @@ VAR_CONFIG
 	::Alarms:diReset AT %IX."4XP0000.00-K21".DigitalInput04;
 	::Alarms:diResetOrangeLED AT %QX."4XP0000.00-K21".DigitalOutput11;
 	::Alarms:diEStopNotPressed AT %IX."X20SI9100".SafeTwoChannelInput0304;
+	::IO:diLamp1 AT %IX."X20DI9371".DigitalInput01;
+	::IO:diLamp2 AT %IX."X20DI9371".DigitalInput02;
+	::IO:diLamp3 AT %IX."X20DI9371".DigitalInput03;
+	::IO:diLamp4 AT %IX."X20DI9371".DigitalInput04;
+	::IO:diLamp5 AT %IX."X20DI9371".DigitalInput05;
+	::IO:diLamp6 AT %IX."X20DI9371".DigitalInput06;
+	::IO:diLamp7 AT %IX."X20DI9371".DigitalInput07;
+	::IO:diLamp8 AT %IX."X20DI9371".DigitalInput08;
+	::IO:diLamp1 AT %QX."X20DO9322".DigitalOutput01;
+	::IO:diLamp2 AT %QX."X20DO9322".DigitalOutput02;
+	::IO:diLamp3 AT %QX."X20DO9322".DigitalOutput03;
+	::IO:diLamp4 AT %QX."X20DO9322".DigitalOutput04;
+	::IO:diLamp5 AT %QX."X20DO9322".DigitalOutput05;
+	::IO:diLamp6 AT %QX."X20DO9322".DigitalOutput06;
+	::IO:diLamp7 AT %QX."X20DO9322".DigitalOutput07;
+	::IO:diLamp8 AT %QX."X20DO9322".DigitalOutput08;
 END_VAR

@@ -3,5 +3,6 @@
   <Assignments>
     <Assignment type="Content" baseContentRefId="ContentTop" areaRefId="AreaTop" />
     <Assignment type="Content" baseContentRefId="ContentNavigation" areaRefId="AreaNavigation" backColor="rgba(255, 136, 0, 1)" backGroundGradient="linear-gradient(to bottom, rgba(255, 136, 0, 1) 0%, rgba(255, 170, 68, 1) 50%, rgba(255, 204, 119, 1) 100%)" />
+    <Assignment type="Content" baseContentRefId="ContentIO" areaRefId="AreaMain" />
   </Assignments>
 </pdef:Page>

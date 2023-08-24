@@ -27,6 +27,7 @@
     <EventBindingsSet refId="ContentMain_eventbinding" />
     <EventBindingsSet refId="ApplyRecipeTopContent_eventbinding" />
     <EventBindingsSet refId="ApplyRecipeMainContent_eventbinding" />
+    <EventBindingsSet refId="ContentIO_eventbinding" />
   </EventBindingsSets>
   <Dialogs>
     <Dialog refId="LoginDialog" />
@@ -45,6 +46,7 @@
     <Content refId="ContentAlarms" />
     <Content refId="ApplyRecipeTopContent" />
     <Content refId="ApplyRecipeMainContent" />
+    <Content refId="ContentIO" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />
