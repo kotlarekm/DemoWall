@@ -2,45 +2,45 @@
 <BindingsSet id="ContentMotion_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Bindings>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Motion:MpAxisBasicParameters_0.Velocity" attribute="node" />
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasicParameters_Primary.Velocity" attribute="node" />
 			<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericInputSetVelocity1" attribute="node" />
 </Binding>
 <Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_0.Velocity" attribute="node" />
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_Primary.Velocity" attribute="node" />
 <Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericOutputActualVelocity1" attribute="node" />
 </Binding>
 <Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_0.Position" attribute="node" />
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_Primary.Position" attribute="node" />
 <Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericOutputActualVelocity2" attribute="node" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Motion:MpAxisBasicParameters_0.Deceleration" attribute="node" />
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasicParameters_Primary.Deceleration" attribute="node" />
 <Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericInputSetDeceleration1" attribute="node" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Motion:MpAxisBasicParameters_0.Acceleration" attribute="node" />
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasicParameters_Primary.Acceleration" attribute="node" />
 <Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericInputSetAcceleration1" attribute="node" />
 </Binding>
 
 
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Motion:MpAxisBasicParameters_1.Velocity" attribute="node" />
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasicParameters_Secondary.Velocity" attribute="node" />
 <Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericInputSetVelocity2" attribute="node" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Motion:MpAxisBasicParameters_1.Acceleration" attribute="node" />
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasicParameters_Secondary.Acceleration" attribute="node" />
 <Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericInputSetAcceleration2" attribute="node" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Motion:MpAxisBasicParameters_1.Deceleration" attribute="node" />
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasicParameters_Secondary.Deceleration" attribute="node" />
 <Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericInputSetDeceleration2" attribute="node" />
 </Binding>
 <Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_1.Position" attribute="node" />
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_Secondary.Position" attribute="node" />
 <Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericOutputActualVelocity4" attribute="node" />
 </Binding>
 <Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_1.Velocity" attribute="node" />
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_Secondary.Velocity" attribute="node" />
 <Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericOutputActualVelocity3" attribute="node" />
 </Binding>
 <Binding mode="twoWay">

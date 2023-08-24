@@ -55,6 +55,7 @@
       </Task>
       <Task Name="Alarms">
         <Variable Name="diAlarmIsActive" />
+	  </Task>
     </Module>
   </DefaultView>
 </OpcUaSource>
