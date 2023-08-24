@@ -64,5 +64,6 @@
         </Widget>
       </Widgets>
     </Widget>
+    <Widget xsi:type="widgets.brease.ProgressBar" id="ProgressBar1" top="55" left="547" width="179" height="185" zIndex="1" orientation="BottomToTop" />
   </Widgets>
 </Content>
