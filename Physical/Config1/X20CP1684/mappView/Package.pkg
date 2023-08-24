@@ -16,5 +16,6 @@
     <Object Type="File">LoginDialogMainContent.binding</Object>
     <Object Type="File">ContentNavigation.eventbinding</Object>
     <Object Type="File">ContentMain.binding</Object>
+    <Object Type="File">ContentMain.eventbinding</Object>
   </Objects>
 </Package>

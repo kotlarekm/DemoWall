@@ -24,6 +24,7 @@
 	 <EventBindingsSet refId="DeleteFileDialogTopContent_eventbinding" />
 	 <EventBindingsSet refId="ContentAlarms_eventbinding" />
 	 <EventBindingsSet refId="ContentNavigation_eventbinding" />
+    <EventBindingsSet refId="ContentMain_eventbinding" />
   </EventBindingsSets>
   <Dialogs>
 	<Dialog refId="LoginDialog" />
