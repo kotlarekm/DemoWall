@@ -60,5 +60,64 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="EventBinding_2">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gTanks.Commands.OpenTank2Valve" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine1Valve2">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine1Valve2">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine1Valve2">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine1Valve2">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine2Valve2">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine2Valve2">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine2Valve2">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine2Valve2">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>
