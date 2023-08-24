@@ -14,4 +14,21 @@
       <Property ID="Role[1]" Value="SafeDEV" />
     </Group>
   </Element>
+  <Element ID="admin" Type="User">
+    <Property ID="UserID" Value="3" />
+    <Property ID="Password" Value="9oWn7dqvv8zt8yBAEsR9RznL0eyG3aETq3/UIOoEu1FHgqP1Yu8=" Description="admin" />
+    <Group ID="Roles">
+      <Property ID="Role[1]" Value="Administrators" />
+      <Property ID="Role[2]" Value="Everyone" />
+      <Property ID="Role[3]" Value="Operator" />
+    </Group>
+  </Element>
+  <Element ID="operator" Type="User">
+    <Property ID="UserID" Value="4" />
+    <Property ID="Password" Value="XZKFglpg2V0orAGu2PqB4fs8q5ERxBGgKQZQ0EkndPyhzQe8GIY=" Description="1234" />
+    <Group ID="Roles">
+      <Property ID="Role[1]" Value="Operator" />
+      <Property ID="Role[2]" Value="Everyone" />
+    </Group>
+  </Element>
 </Configuration>
