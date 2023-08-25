@@ -48,5 +48,15 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="RecipesMainContent.SelectDeviceRadioGroup.SelectedIndexChanged">
+      <Source xsi:type="widgets.brease.RadioButtonGroup.Event" contentRefId="RecipesMainContent" widgetRefId="SelectDeviceRadioGroup" event="SelectedIndexChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Recipes:DeviceChenged">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>
