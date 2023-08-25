@@ -38,7 +38,7 @@
         <Info Name="Description-de" Value="X20 SafeLOGIC, POWERLINK V2, X2X Link, 24V, univ." />
         <Info Name="Description-en" Value="X20 SafeLOGIC, POWERLINK V2, X2X Link, 24V, univ." />
         <Info Name="AsVariable" Value="BOOL00001,Alarms:diDriveStop" />
-        <Info Name="AsVariable" Value="BOOL10001,Alarms:diReset" />
+        <Info Name="AsVariable" Value="BOOL10001,Alarms:doReset" />
       </NodeDescription>
       <ChannelConfiguration>
         <DataTransport>

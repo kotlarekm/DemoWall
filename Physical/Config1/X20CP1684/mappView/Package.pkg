@@ -26,5 +26,8 @@
     <Object Type="File">GraphDialogMainContent.binding</Object>
     <Object Type="File">GraphDialogTopContent.eventbinding</Object>
     <Object Type="File">ContentIO.eventbinding</Object>
+    <Object Type="File">OpcUaServer.uaserver</Object>
+    <Object Type="File">ContentTop.binding</Object>
+    <Object Type="File">ContentIO.binding</Object>
   </Objects>
 </Package>

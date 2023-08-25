@@ -104,6 +104,7 @@
         </Variable>
       </Task>
       <Task Name="Alarms">
+        <Variable Name="diAlarmButtonVisible" />
         <Variable Name="diAlarmIsActive" />
 	  </Task>
       <Task Name="Motion">
@@ -176,15 +177,34 @@
         <Variable Name="RightValveCheck" />
       </Task>
       <Task Name="IO">
-        <Variable Name="diLamp1" />
-        <Variable Name="diLamp2" />
-        <Variable Name="diLamp3" />
-        <Variable Name="diLamp4" />
-        <Variable Name="diLamp5" />
-        <Variable Name="diLamp6" />
-        <Variable Name="diLamp7" />
-        <Variable Name="diLamp8" />
-        <Variable Name="testowa" />
+        <Variable Name="diSwitch1" />
+        <Variable Name="diSwitch2" />
+        <Variable Name="diSwitch3" />
+        <Variable Name="diSwitch4" />
+        <Variable Name="diSwitch5" />
+        <Variable Name="diSwitch6" />
+        <Variable Name="diSwitch7" />
+        <Variable Name="diSwitch8" />
+        <Variable Name="diSwitch1Down" />
+        <Variable Name="diSwitch2Down" />
+        <Variable Name="diSwitch3Down" />
+        <Variable Name="diSwitch4Down" />
+        <Variable Name="diSwitch5Down" />
+        <Variable Name="diSwitch6Down" />
+        <Variable Name="diSwitch7Down" />
+        <Variable Name="diSwitch8Down" />
+        <Variable Name="doLamp1" />
+        <Variable Name="doLamp2" />
+        <Variable Name="doLamp3" />
+        <Variable Name="doLamp4" />
+        <Variable Name="doLamp5" />
+        <Variable Name="doLamp6" />
+        <Variable Name="doLamp7" />
+        <Variable Name="doLamp8" />
+        <Variable Name="aiKnob1" />
+        <Variable Name="aiKnob2" />
+        <Variable Name="aoDisplay1" />
+        <Variable Name="aoDisplay2" />
       </Task>
     </Module>
   </DefaultView>
