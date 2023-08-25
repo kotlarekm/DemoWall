@@ -5,7 +5,9 @@
     <Task Name="Motion" Source="Source.Motion.Motion.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Simulation" Source="Source.Simulation.Simulation.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
-  <TaskClass Name="Cyclic#2" />
+  <TaskClass Name="Cyclic#2">
+    <Task Name="TempContro" Source="Source.TempControl.TempControl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+  </TaskClass>
   <TaskClass Name="Cyclic#3" />
   <TaskClass Name="Cyclic#4">
     <Task Name="MainProgra" Source="Source.MainProgram.MainProgram.prg" Memory="UserROM" Language="IEC" Debugging="true" />
@@ -22,8 +24,8 @@
   <NcDataObjects>
     <NcDataObject Name="Cam2" Source="Source.Motion.Cam2.dob" Memory="UserROM" Language="Cam" />
     <NcDataObject Name="Cam1" Source="Source.Motion.Cam1.dob" Memory="UserROM" Language="Cam" />
-    <NcDataObject Name="McDriveLog" Source="" Memory="UserROM" Language="Binary" />
     <NcDataObject Name="Cam3" Source="Source.Motion.Cam2.dob" Memory="UserROM" Language="Cam" />
+    <NcDataObject Name="McDriveLog" Source="" Memory="UserROM" Language="Binary" />
   </NcDataObjects>
   <Binaries>
     <BinaryObject Name="mvLoader" Source="" Memory="UserROM" Language="Binary" />
@@ -56,6 +58,8 @@
     <BinaryObject Name="FMUICfg" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="Mixer" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="asnxdb1" Source="" Memory="SystemROM" Language="Binary" />
+    <BinaryObject Name="AlarmXCfg" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="AlarmXHCfg" Source="" Memory="UserROM" Language="Binary" />
   </Binaries>
   <Libraries>
     <LibraryObject Name="SfDomain" Source="Libraries.SfDomain.lby" Memory="UserROM" Language="Binary" Debugging="true" />
@@ -76,6 +80,11 @@
     <LibraryObject Name="McAxis" Source="Libraries.McAxis.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="McAcpAx" Source="Libraries.McAcpAx.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="McStpAx" Source="Libraries.McStpAx.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="astime" Source="Libraries.astime.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="AsBrStr" Source="Libraries.AsBrStr.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="MpAlarmX" Source="Libraries.MpAlarmX.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="AsUSB" Source="Libraries.AsUSB.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="MpTemp" Source="Libraries.MpTemp.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asepl" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="powerlnk" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="MpSfDomMgr" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
@@ -85,12 +94,9 @@
     <LibraryObject Name="SfDomVis" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asiodiag" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="aruser" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="astime" Source="Libraries.astime.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="arssl" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asioacc" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="astcp" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="AsBrStr" Source="Libraries.AsBrStr.lby" Memory="UserROM" Language="binary" Debugging="true" />
-    <LibraryObject Name="MpAlarmX" Source="Libraries.MpAlarmX.lby" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="AsUSB" Source="Libraries.AsUSB.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="dataobj" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>

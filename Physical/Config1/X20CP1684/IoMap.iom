@@ -5,4 +5,7 @@ VAR_CONFIG
 	::Alarms:diReset AT %IX."4XP0000.00-K21".DigitalInput04;
 	::Alarms:diResetOrangeLED AT %QX."4XP0000.00-K21".DigitalOutput11;
 	::Alarms:diEStopNotPressed AT %IX."X20SI9100".SafeTwoChannelInput0304;
+	::gTanks.Commands.TurnOnHeater AT %QX."X20DO9322".DigitalOutput11;
+	::gTanks.Commands.TurnOnFan AT %QX."X20DO9322".DigitalOutput12;
+	::gTanks.Status.Tank3Temp AT %IW."X20AT2222".Temperature01;
 END_VAR

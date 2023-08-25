@@ -10,6 +10,8 @@ TYPE
 		OpenTank3MainValve : BOOL := FALSE;
 		Start : BOOL;
 		Stop : BOOL;
+		TurnOnHeater : BOOL;
+		TurnOnFan : BOOL;
 	END_STRUCT;
 	ParametersType : 	STRUCT 
 		ObjectType : ObjectType;
@@ -28,6 +30,7 @@ TYPE
 		Tank1MaxAllowedFluidLvl : INT;
 		Mixer1MaxAllowedVelocity : INT;
 		Mixer2MaxAllowedVelocity : INT;
+		Tank3TargetTemp : REAL := 33.3;
 	END_STRUCT;
 	ObjectType : 	STRUCT 
 		Mode : UINT;

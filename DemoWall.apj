@@ -11,6 +11,7 @@
   <TechnologyPackages>
     <mapp Version="5.23.0" />
     <mappCockpit Version="5.23.0" />
+    <mappControl Version="5.23.0" />
     <mappMotion McAcpDrv="5.23.0" McAcpSim="5.23.0" McAcpSys="5.23.0" McDriveLog="5.23.0" McProfGen="5.23.0" Version="5.23.0" />
     <mappSafety Version="5.23.0" />
     <mappView Version="5.23.0" />

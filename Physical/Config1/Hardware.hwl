@@ -2,7 +2,7 @@
 <?AutomationStudio FileVersion="4.9"?>
 <BR.AS.HardwareTopology>
   <TimeStamps>
-    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="08/24/2023 08:31:34" />
+    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="08/25/2023 10:14:10" />
   </TimeStamps>
   <Modules>
     <Module Name="X20CP1684" Type="X20CP1684" X="100" Y="100" />
@@ -58,7 +58,7 @@
     <Module Name="X67BC8321-1" Type="X67BC8321-1" X="847" Y="457" />
     <Module Name="8I74xxxxxxx.01P-1" Type="8I74xxxxxxx.01P-1" X="656" Y="895" />
     <Module Name="8EI2X2HWT10.xxxx-1" Type="8EI2X2HWT10.xxxx-1" X="559" Y="895" />
-    <Module Name="5AP933.156B-00" Type="5AP933.156B-00" X="100" Y="895" />
+    <Module Name="5AP933.156B-00" Type="5AP933.156B-00" X="164" Y="764.4" />
     <Module Name="80VD100PD.C000-01" Type="80VD100PD.C000-01" X="442" Y="249" />
     <Module Name="80SD100XD.C044-01" Type="80SD100XD.C044-01" X="289" Y="249" />
     <Module Name="4XP0000.00-K21" Type="4XP0000.00-K21" X="1003" Y="607" />

@@ -1,0 +1,7 @@
+VAR
+	MpTempController_0 : MpTempController;
+	MpTempControllerParType_0 : MpTempControllerParType;
+END_VAR
+VAR CONSTANT
+	IntToRealScaller : REAL := 10.0;
+END_VAR
