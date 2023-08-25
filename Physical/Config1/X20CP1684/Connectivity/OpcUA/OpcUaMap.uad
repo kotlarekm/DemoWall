@@ -30,16 +30,7 @@
     <Module Name="&lt;Default&gt;">
       <GlobalVariables Name="Global Variables">
 	  	  <Task Name="MainProgra">
-          <Variable Name="ObjectParameters">
-            <Variable Name="MixingTime" EURangesId="2" />
-            <Variable Name="Mixer2On" EURangesId="3" />
-            <Variable Name="Mixer1On" EURangesId="3" />
-            <Variable Name="Tank3TargetFluidLvl" EURangesId="1" />
-            <Variable Name="Tank2TargetFluidLvl" EURangesId="1" />
-            <Variable Name="Tank1TargetFluidLvl" EURangesId="1" />
-            <Variable Name="Tank3RightValveOpeningLvl" />
-            <Variable Name="Tank3LeftValveOpeningLvl" />
-          </Variable>
+        <Variable Name="gTanks">
           <Variable Name="Status">
             <Variable Name="IsMixer1On" EURangesId="3" />
             <Variable Name="IsMixer2On" EURangesId="3" />
@@ -62,6 +53,19 @@
             <Variable Name="TurnOnMixer2" />
             <Variable Name="TurnOnMixer1" />
           </Variable>
+          <Variable Name="Parameters">
+            <Variable Name="Tank1TargetFluidLvl" />
+            <Variable Name="Tank2TargetFluidLvl" />
+            <Variable Name="Tank3TargetFluidLvl" />
+            <Variable Name="Mixer1On" />
+            <Variable Name="Mixer2On" />
+            <Variable Name="MixingTime" />
+            <Variable Name="Tank3RightValveOpeningLvl" />
+            <Variable Name="Tank3LeftValveOpeningLvl" />
+            <Variable Name="Tank3MaxAllowedTemp" />
+            <Variable Name="Tank3MaxAllowedPressure" />
+          </Variable>
+        </Variable>
 		</Task>
       </GlobalVariables>
       <Task Name="Recipes">

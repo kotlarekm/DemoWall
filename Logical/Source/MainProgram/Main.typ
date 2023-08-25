@@ -11,11 +11,12 @@ TYPE
 		Start : BOOL;
 		Stop : BOOL;
 	END_STRUCT;
-	ObjectParamteresType : 	STRUCT 
+	ParametersType : 	STRUCT 
+		ObjectType : ObjectType;
 		Tank3MaxAllowedPressure : INT;
 		Tank3MaxAllowedTemp : SINT;
 		Tank3LeftValveOpeningLvl : UINT := 0;
-		Tank3RightValveOpeningLvl : UINT := 0;
+		Tank3RightValveOpeningLvl : UINT;
 		MixingTime : UDINT;
 		Mixer2On : UINT;
 		Mixer1On : UINT;
@@ -27,6 +28,9 @@ TYPE
 		Tank1MaxAllowedFluidLvl : INT;
 		Mixer1MaxAllowedVelocity : INT;
 		Mixer2MaxAllowedVelocity : INT;
+	END_STRUCT;
+	ObjectType : 	STRUCT 
+		Mode : UINT;
 	END_STRUCT;
 	StatusType : 	STRUCT 
 		IsMixer1On : UINT;
@@ -44,7 +48,7 @@ TYPE
 	END_STRUCT;
 	TanksType : 	STRUCT 
 		Commands : CommadsType;
-		ObjectParameters : ObjectParamteresType;
+		Parameters : ParametersType;
 		Status : StatusType;
 	END_STRUCT;
 	STEP_ENUM : 
