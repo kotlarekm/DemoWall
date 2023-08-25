@@ -2,12 +2,11 @@
 // Copyright: B&R Industrial Automation GmbH 
 // Author: B&R
 // Created: 21.08.2023
-// Description: Task resposible for handling alarms.
+// Description: Task responsible for handling alarms.
 //***********************************************************************
 
 PROGRAM _INIT
 
-	(* Insert code here *)
 	TON_LED_ON.PT := T#500ms;
 	TON_LED_OFF.PT := T#500ms;
 	
@@ -31,6 +30,9 @@ PROGRAM _CYCLIC
 	MpAlarmXCore_0();
 	MpAlarmXHistory_0();
 	 
+	// Reset button
+	doReset := diReset;
+	
 	// Reset LED
 	IF NOT(diDriveStop) AND NOT(diEStopNotPressed) THEN
 		diResetRedLED := TRUE;
@@ -73,12 +75,13 @@ PROGRAM _CYCLIC
 		MpAlarmXReset(gAlarmXCore, 'E-stop');
 	END_IF
 	
-	// Set style tu navigation button in top content
-	
+	// Set style to navigation button in top content
 	IF MpAlarmXCore_0.ActiveAlarms >= 1 THEN
 		diAlarmIsActive := 1;//red style
+		diAlarmButtonVisible := 1;
 	ELSIF MpAlarmXCore_0.ActiveAlarms = 0 AND MpAlarmXCore_0.PendingAlarms >= 1 THEN
 		diAlarmIsActive := 2;//orange style
+		diAlarmButtonVisible := 1;
 	ELSE
 		diAlarmIsActive := 0;//anvisible
 	END_IF;

@@ -14,6 +14,8 @@
     <BindingsSet refId="RecipesMainContent_binding" />
     <BindingsSet refId="ContentAlarms_binding" />
     <BindingsSet refId="ContentMain_binding" />
+    <BindingsSet refId="ContentTop_binding" />
+    <BindingsSet refId="ContentIO_binding" />
   </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="LoginDialogMainContent_eventbinding" />
