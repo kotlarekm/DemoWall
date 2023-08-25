@@ -30,6 +30,12 @@
           </Variable>
           <Variable Name="DeviceList" RecursiveEnable="2" />
         </Variable>
+        <Variable Name="DeviceChenged" />
+        <Variable Name="USB1Aveliable" />
+        <Variable Name="USB2Aveliable" />
+        <Variable Name="UsbNodeListGet_0">
+          <Variable Name="allNodes" />
+        </Variable>
       </Task>
     </Module>
   </DefaultView>

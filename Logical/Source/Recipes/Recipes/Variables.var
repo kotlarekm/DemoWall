@@ -13,5 +13,9 @@ VAR
 	NewRecipeSelected : BOOL; (*Information about new recipe being selected*)
 	WaitingForDelete : BOOL := FALSE; (*Variable informing about the recipe waiting to be deleted*)
 	NodeIdList : ARRAY[0..2] OF UDINT; (*Contains Id of usb devices*)
-	UsbNodeListGet_0 : UsbNodeListGet;
+	UsbNodeListGet_0 : UsbNodeListGet; (*Function block resposble for reading and saving recipes on usb drive*)
+	DeviceChenged : BOOL := FALSE; (*Variable informing about change of data device*)
+	USB1Aveliable : BOOL := FALSE; (*True if usb in port 1 is detected*)
+	USB2Aveliable : BOOL := FALSE; (*True if usb in port 2 is detected*)
+	PreviousNumberOfUSBDevices : UDINT := 0; (*Stores information about number of devices before plug/unplug*)
 END_VAR
