@@ -8,6 +8,8 @@ TYPE
 		OpenTank3LeftValve : UINT := 0;
 		OpenTank3RightValve : UINT := 0;
 		OpenTank3MainValve : BOOL := FALSE;
+		Start : BOOL;
+		Stop : BOOL;
 	END_STRUCT;
 	ObjectParamteresType : 	STRUCT 
 		Tank3MaxAllowedPressure : INT;
@@ -38,10 +40,19 @@ TYPE
 		Tank1Temp : INT;
 		Tank2Temp : INT;
 		Tank3Temp : INT;
+		Step : STEP_ENUM;
 	END_STRUCT;
 	TanksType : 	STRUCT 
 		Commands : CommadsType;
 		ObjectParameters : ObjectParamteresType;
 		Status : StatusType;
 	END_STRUCT;
+	STEP_ENUM : 
+		(
+		START,
+		FILLING_TANKS_1_AND_2,
+		FILLING_TANK_3,
+		MIXING,
+		END
+		);
 END_TYPE
