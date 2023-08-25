@@ -119,5 +119,227 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="EventBinding_3">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gTanks.Commands.OpenTank3LeftValve" event="ValueChanged" />
+      <EventHandler condition="newValue &gt; 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine1LeftValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine1LeftValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &gt; 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine2LeftValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine2LeftValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &gt; 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine1LeftValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine1LeftValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &gt; 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine2LeftValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine2LeftValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_4">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gTanks.Commands.OpenTank3RightValve" event="ValueChanged" />
+      <EventHandler condition="newValue &gt; 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine1RightValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine1RightValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &gt; 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine1RightValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine1RightValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &gt; 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine2RightValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine2RightValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &gt; 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine2RightValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition=" newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine2RightValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_5">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gTanks.Commands.OpenTank3MainValve" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine1MainValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine1MainValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine2MainValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine2MainValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue ">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine1MainValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine1MainValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine2MainValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine2MainValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_6">
+      <Source xsi:type="opcUa.Event" refId="::Simulation:AnimationForMixer1" event="ValueChanged" />
+      <EventHandler condition="newValue = 1 OR newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer1Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 2 OR newValue = 3">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer1Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 2">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer2Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 0 OR newValue = 1 OR newValue = 3">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer2Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 3">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer3Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 0 OR newValue = 1 OR newValue = 2">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer3Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

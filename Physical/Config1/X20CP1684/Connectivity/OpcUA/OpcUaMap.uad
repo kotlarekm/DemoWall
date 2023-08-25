@@ -62,7 +62,6 @@
             <Variable Name="TurnOnMixer2" />
             <Variable Name="TurnOnMixer1" />
           </Variable>
-        </Variable>
 		</Task>
       </GlobalVariables>
       <Task Name="Recipes">
@@ -90,6 +89,10 @@
       </Task>
       <Task Name="Alarms">
         <Variable Name="diAlarmIsActive" />
+	  </Task>
+      <Task Name="Simulation">
+        <Variable Name="AnimationForMixer1" />
+        <Variable Name="AnimationForMixer2" />
       </Task>
     </Module>
   </DefaultView>

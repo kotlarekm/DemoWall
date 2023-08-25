@@ -143,6 +143,28 @@ PROGRAM _CYCLIC
  
 	TON_5();
  
+	IF UINT_TO_BOOL(gTanks.Status.IsMixer1On) THEN
+		AnimationForMixer1 := AnimationForMixer1 + 1;
+		IF AnimationForMixer1 = 4 THEN
+			AnimationForMixer1 := 1;
+		END_IF
+	END_IF
+	
+	IF NOT(UINT_TO_BOOL(gTanks.Status.IsMixer1On)) THEN
+		AnimationForMixer1 := 0;
+	END_IF
+	
+	IF UINT_TO_BOOL(gTanks.Status.IsMixer2On) THEN
+		AnimationForMixer2 := AnimationForMixer2 + 1;
+		IF AnimationForMixer2 = 4 THEN
+			AnimationForMixer2 := 1;
+		END_IF
+	END_IF
+	
+	IF NOT(UINT_TO_BOOL(gTanks.Status.IsMixer2On)) THEN
+		AnimationForMixer2 := 0;
+	END_IF
+	
 END_PROGRAM
  
 PROGRAM _EXIT

@@ -78,7 +78,7 @@
     <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse13" top="32" left="999" width="40" height="40" zIndex="12" backColor="rgba(211, 211, 211, 1)" shadow="7px 0px 10px rgba(0, 0, 0, 0.75)" />
     <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse14" top="37" left="1004" width="30" height="30" zIndex="13" backColor="rgba(0, 0, 0, 1)" shadow="none" />
     <Widget xsi:type="widgets.brease.Rectangle" id="HorizontalLine1Valve2" top="36" left="1017" width="3" height="32" zIndex="14" borderStyle="none" backColor="rgba(211, 211, 211, 1)" rotation="90deg" shadow="none" />
-    <Widget xsi:type="widgets.brease.Rectangle" id="VerticalLine1Valve2" top="36" left="1017" width="3" height="32" zIndex="15" borderStyle="none" backColor="rgba(211, 211, 211, 1)" rotation="0deg" shadow="none" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="VerticalLine1Valve2" top="36" left="1018" width="3" height="32" zIndex="15" borderStyle="none" backColor="rgba(211, 211, 211, 1)" rotation="0deg" shadow="none" />
     <Widget xsi:type="widgets.brease.ProgressBar" id="ProgressBar10" top="0" left="1006" width="26" height="28" zIndex="16" maxValue="1" orientation="BottomToTop" showLabel="false" transitionTime="1" value="100" shadow="7px 2px 12px rgba(0, 0, 0, 0.5)" barCornerRadius="0px" barColor="rgba(128, 128, 255, 1)" cornerRadius="0px" />
     <Widget xsi:type="widgets.brease.ProgressBar" id="ProgressBar11" top="315" left="955" width="73" height="26" zIndex="17" maxValue="1" orientation="BottomToTop" showLabel="false" transitionTime="1" value="100" shadow="5px 8px 10px rgba(0, 0, 0, 0.5)" barCornerRadius="0px" barColor="rgba(128, 128, 255, 1)" cornerRadius="0px" />
     <Widget xsi:type="widgets.brease.ProgressBar" id="ProgressBar12" top="314" left="600" width="75" height="26" zIndex="18" maxValue="1" orientation="BottomToTop" showLabel="false" transitionTime="1" value="100" shadow="5px 8px 10px rgba(0, 0, 0, 0.5)" barCornerRadius="0px" barColor="rgba(128, 128, 255, 1)" borderStyle="hidden" cornerRadius="0px" />
@@ -140,10 +140,16 @@
     <Widget xsi:type="widgets.brease.Rectangle" id="HorizontalLine2Valve2" top="36" left="1018" width="3" height="32" zIndex="74" borderStyle="none" backColor="rgba(211, 211, 211, 1)" rotation="-45deg" />
     <Widget xsi:type="widgets.brease.Rectangle" id="VerticalLine2Valve2" top="36" left="1017" width="3" height="32" zIndex="75" borderStyle="none" backColor="rgba(211, 211, 211, 1)" rotation="45deg" />
     <Widget xsi:type="widgets.brease.Rectangle" id="HorizontalLine2LeftValve" top="310" left="699" width="3" height="32" zIndex="76" borderStyle="none" backColor="rgba(211, 211, 211, 1)" rotation="-45deg" />
-    <Widget xsi:type="widgets.brease.Rectangle" id="VerticalLine2LeftValve" top="310" left="698" width="3" height="32" zIndex="77" borderStyle="none" backColor="rgba(211, 211, 211, 1)" rotation="45deg" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="VerticalLine2LeftValve" top="310" left="699" width="3" height="32" zIndex="77" borderStyle="none" backColor="rgba(211, 211, 211, 1)" rotation="45deg" />
     <Widget xsi:type="widgets.brease.Rectangle" id="HorizontalLine2RightValve" top="310" left="932" width="3" height="32" zIndex="78" borderStyle="none" backColor="rgba(211, 211, 211, 1)" rotation="-45deg" />
     <Widget xsi:type="widgets.brease.Rectangle" id="VerticalLine2RightValve" top="310" left="931" width="3" height="32" zIndex="79" borderStyle="none" backColor="rgba(211, 211, 211, 1)" rotation="45deg" />
-    <Widget xsi:type="widgets.brease.Rectangle" id="HorizontalLine2MainValve" top="558" left="814" width="3" height="32" zIndex="80" borderStyle="none" backColor="rgba(211, 211, 211, 1)" rotation="-45deg" />
-    <Widget xsi:type="widgets.brease.Rectangle" id="VerticalLine2MainValve" top="558" left="813" width="3" height="32" zIndex="81" borderStyle="none" backColor="rgba(211, 211, 211, 1)" rotation="45deg" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="HorizontalLine2MainValve" top="557" left="813" width="3" height="32" zIndex="80" borderStyle="none" backColor="rgba(211, 211, 211, 1)" rotation="-45deg" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="VerticalLine2MainValve" top="558" left="814" width="3" height="32" zIndex="81" borderStyle="none" backColor="rgba(211, 211, 211, 1)" rotation="45deg" />
+    <Widget xsi:type="widgets.brease.Image" id="Mixer1Right" top="456" left="818" width="80" height="80" zIndex="82" image="Media/wiatrak0stopni.png" />
+    <Widget xsi:type="widgets.brease.Image" id="Mixer2Right" top="456" left="818" width="80" height="80" zIndex="83" image="Media/wiatrak30stopni.png" />
+    <Widget xsi:type="widgets.brease.Image" id="Mixer3Right" top="456" left="818" width="80" height="80" zIndex="84" image="Media/wiatrak60stopni.png" />
+    <Widget xsi:type="widgets.brease.Image" id="Mixer1Left" top="456" left="733" width="80" height="80" zIndex="85" image="Media/wiatrak0stopni.png" />
+    <Widget xsi:type="widgets.brease.Image" id="Mixer2Left" top="456" left="733" width="80" height="80" zIndex="86" image="Media/wiatrak30stopni.png" />
+    <Widget xsi:type="widgets.brease.Image" id="Mixer3Left" top="456" left="733" width="80" height="80" zIndex="87" image="Media/wiatrak60stopni.png" />
   </Widgets>
 </Content>

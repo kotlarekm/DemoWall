@@ -68,20 +68,39 @@ PROGRAM _CYCLIC
 				Step := MIXING;
 			END_IF
 			
+			IF gTanks.ObjectParameters.Tank1TargetFluidLvl + gTanks.ObjectParameters.Tank2TargetFluidLvl < gTanks.ObjectParameters.Tank3TargetFluidLvl
+				AND gTanks.Status.Tank1FluidLvl = 0 
+				AND gTanks.Status.Tank2FluidLvl = 0 
+				AND UINT_TO_BOOL(gTanks.ObjectParameters.Mixer1On) 
+				AND UINT_TO_BOOL(gTanks.ObjectParameters.Mixer2On) THEN
+				Step := MIXING;
+			END_IF
+			
+			IF gTanks.ObjectParameters.Tank1TargetFluidLvl + gTanks.ObjectParameters.Tank2TargetFluidLvl < gTanks.ObjectParameters.Tank3TargetFluidLvl
+				AND gTanks.Status.Tank1FluidLvl = 0
+				AND gTanks.Status.Tank2FluidLvl = 0
+				AND NOT(UINT_TO_BOOL(gTanks.ObjectParameters.Mixer1On))
+				AND NOT(UINT_TO_BOOL(gTanks.ObjectParameters.Mixer2On)) THEN
+				Step := END;
+			END_IF
+			
 		MIXING:
 			gTanks.Commands.TurnOnMixer1 := TRUE;
 			gTanks.Commands.TurnOnMixer2 := TRUE;
-			TON_0.IN := TRUE;
-			TON_0(PT := UDINT_TO_TIME(gTanks.ObjectParameters.MixingTime)); 
-			
+
+			IF NOT TON_0.IN THEN 
+				TON_0.PT := UDINT_TO_TIME(gTanks.ObjectParameters.MixingTime);
+				TON_0.IN := TRUE; 
+			END_IF
+
 			IF TON_0.Q THEN
 				gTanks.Commands.TurnOnMixer1 := FALSE;
 				gTanks.Commands.TurnOnMixer2 := FALSE;
-				gTanks.ObjectParameters.Mixer1On := FALSE;
-				gTanks.ObjectParameters.Mixer2On := FALSE;
-				TON_0.IN := FALSE;
+				TON_0(IN := FALSE);  
 				Step := END;
 			END_IF
+			
+			TON_0();
 			
 		END:
 			gTanks.Commands.OpenTank3MainValve := TRUE;
@@ -94,7 +113,6 @@ PROGRAM _CYCLIC
 	END_CASE;
 
 	gTanks.ObjectParameters.Tank3MaxAllowedPressure;
-	
 	
 END_PROGRAM
 

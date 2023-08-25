@@ -8,4 +8,6 @@ VAR
 	VALVE_CALCULATION_INPUT : UINT := 100;
 	TON_4 : TON;
 	TON_5 : TON;
+	AnimationForMixer2 : UINT;
+	AnimationForMixer1 : UINT;
 END_VAR

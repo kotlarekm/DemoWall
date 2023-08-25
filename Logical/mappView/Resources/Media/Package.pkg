@@ -4,6 +4,8 @@
   <Objects>
     <Object Type="Package">SymbolLib</Object>
     <Object Type="File">logo.png</Object>
-    <Object Type="File">logo2.png</Object>
+    <Object Type="File">wiatrak0stopni.png</Object>
+    <Object Type="File">wiatrak30stopni.png</Object>
+    <Object Type="File">wiatrak60stopni.png</Object>
   </Objects>
 </Package>

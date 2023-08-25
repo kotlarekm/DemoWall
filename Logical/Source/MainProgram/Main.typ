@@ -1,8 +1,8 @@
 
 TYPE
 	CommadsType : 	STRUCT 
-		TurnOnMixer1 : BOOL := FALSE;
-		TurnOnMixer2 : BOOL := FALSE;
+		TurnOnMixer1 : BOOL;
+		TurnOnMixer2 : BOOL;
 		OpenTank1Valve : BOOL := FALSE;
 		OpenTank2Valve : BOOL := FALSE;
 		OpenTank3LeftValve : UINT := 0;
@@ -15,8 +15,8 @@ TYPE
 		Tank3LeftValveOpeningLvl : UINT := 0;
 		Tank3RightValveOpeningLvl : UINT := 0;
 		MixingTime : UDINT;
-		Mixer2On : UINT := 0;
-		Mixer1On : UINT := 0;
+		Mixer2On : UINT;
+		Mixer1On : UINT;
 		Tank3TargetFluidLvl : REAL;
 		Tank2TargetFluidLvl : REAL;
 		Tank1TargetFluidLvl : REAL;
