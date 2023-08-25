@@ -298,44 +298,173 @@
     </EventBinding>
     <EventBinding id="EventBinding_6">
       <Source xsi:type="opcUa.Event" refId="::Simulation:AnimationForMixer1" event="ValueChanged" />
-      <EventHandler condition="newValue = 1 OR newValue = 0">
-        <Action>
-          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer1Left">
-            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler condition="newValue = 2 OR newValue = 3">
+      <EventHandler condition="newValue &lt;= 5 OR newValue &gt;= 7">
         <Action>
           <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer1Left">
             <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="newValue = 2">
+      <EventHandler condition="newValue = 6">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer1Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &lt;= 4 OR newValue &gt;=6">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer2Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 5">
         <Action>
           <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer2Left">
             <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="newValue = 0 OR newValue = 1 OR newValue = 3">
+      <EventHandler condition="newValue &lt;= 3 OR newValue &gt;= 5">
         <Action>
-          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer2Left">
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer3Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 4">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer3Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &lt;= 2 OR newValue &gt;= 4">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer4Left">
             <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
           </Target>
         </Action>
       </EventHandler>
       <EventHandler condition="newValue = 3">
         <Action>
-          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer3Left">
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer4Left">
             <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="newValue = 0 OR newValue = 1 OR newValue = 2">
+      <EventHandler condition="newValue &lt;= 1 OR newValue &gt;= 3">
         <Action>
-          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer3Left">
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer5Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 2">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer5Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &gt;= 2">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer6Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 1 OR newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer6Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_7">
+      <Source xsi:type="opcUa.Event" refId="::Simulation:AnimationForMixer2" event="ValueChanged" />
+      <EventHandler condition="newValue = 1 OR newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer1Right">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &gt;= 2">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer1Right">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 2">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer2Right">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &lt;= 1 OR newValue &gt;= 3">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer2Right">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 3">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer3Right">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &lt;= 2 OR newValue &gt;= 4">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer3Right">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 4">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer4Right">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &lt;= 3 OR newValue &gt;= 5">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer4Right">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 5">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer5Right">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &lt;= 4 OR newValue &gt;=6">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer5Right">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 6 ">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer6Right">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &lt;= 5 OR newValue = 7">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer6Right">
             <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
           </Target>
         </Action>

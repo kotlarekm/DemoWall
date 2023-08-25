@@ -10,4 +10,5 @@ VAR
 	TON_5 : TON;
 	AnimationForMixer2 : UINT;
 	AnimationForMixer1 : UINT;
+	TON_6 : TON;
 END_VAR

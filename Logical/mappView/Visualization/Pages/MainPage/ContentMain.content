@@ -145,11 +145,17 @@
     <Widget xsi:type="widgets.brease.Rectangle" id="VerticalLine2RightValve" top="310" left="931" width="3" height="32" zIndex="79" borderStyle="none" backColor="rgba(211, 211, 211, 1)" rotation="45deg" />
     <Widget xsi:type="widgets.brease.Rectangle" id="HorizontalLine2MainValve" top="557" left="813" width="3" height="32" zIndex="80" borderStyle="none" backColor="rgba(211, 211, 211, 1)" rotation="-45deg" />
     <Widget xsi:type="widgets.brease.Rectangle" id="VerticalLine2MainValve" top="558" left="814" width="3" height="32" zIndex="81" borderStyle="none" backColor="rgba(211, 211, 211, 1)" rotation="45deg" />
-    <Widget xsi:type="widgets.brease.Image" id="Mixer1Right" top="456" left="818" width="80" height="80" zIndex="82" image="Media/wiatrak0stopni.png" />
-    <Widget xsi:type="widgets.brease.Image" id="Mixer2Right" top="456" left="818" width="80" height="80" zIndex="83" image="Media/wiatrak30stopni.png" />
-    <Widget xsi:type="widgets.brease.Image" id="Mixer3Right" top="456" left="818" width="80" height="80" zIndex="84" image="Media/wiatrak60stopni.png" />
-    <Widget xsi:type="widgets.brease.Image" id="Mixer1Left" top="456" left="733" width="80" height="80" zIndex="85" image="Media/wiatrak0stopni.png" />
-    <Widget xsi:type="widgets.brease.Image" id="Mixer2Left" top="456" left="733" width="80" height="80" zIndex="86" image="Media/wiatrak30stopni.png" />
-    <Widget xsi:type="widgets.brease.Image" id="Mixer3Left" top="456" left="733" width="80" height="80" zIndex="87" image="Media/wiatrak60stopni.png" />
+    <Widget xsi:type="widgets.brease.Image" id="Mixer1Left" top="455" left="727" width="80" height="80" zIndex="82" image="Media/wiatrak0stopni.png" />
+    <Widget xsi:type="widgets.brease.Image" id="Mixer3Left" top="455" left="727" width="80" height="80" zIndex="83" image="Media/wiatrak30stopni.png" />
+    <Widget xsi:type="widgets.brease.Image" id="Mixer5Left" top="455" left="727" width="80" height="80" zIndex="84" image="Media/wiatrak60stopni.png" />
+    <Widget xsi:type="widgets.brease.Image" id="Mixer2Left" top="455" left="727" width="80" height="80" zIndex="85" image="Media/wiatrak60stopni.png" rotation="15deg" />
+    <Widget xsi:type="widgets.brease.Image" id="Mixer4Left" top="455" left="727" width="80" height="80" zIndex="86" image="Media/wiatrak60stopni.png" rotation="45deg" />
+    <Widget xsi:type="widgets.brease.Image" id="Mixer6Left" top="455" left="727" width="80" height="80" zIndex="87" image="Media/wiatrak60stopni.png" rotation="75deg" />
+    <Widget xsi:type="widgets.brease.Image" id="Mixer1Right" top="455" left="818" width="80" height="80" zIndex="88" image="Media/wiatrak0stopni.png" rotation="15deg" />
+    <Widget xsi:type="widgets.brease.Image" id="Mixer3Right" top="455" left="818" width="80" height="80" zIndex="89" image="Media/wiatrak30stopni.png" rotation="15deg" />
+    <Widget xsi:type="widgets.brease.Image" id="Mixer5Right" top="455" left="818" width="80" height="80" zIndex="90" image="Media/wiatrak60stopni.png" rotation="15deg" />
+    <Widget xsi:type="widgets.brease.Image" id="Mixer2Right" top="455" left="818" width="80" height="80" zIndex="91" image="Media/wiatrak60stopni.png" rotation="30deg" />
+    <Widget xsi:type="widgets.brease.Image" id="Mixer4Right" top="455" left="818" width="80" height="80" zIndex="92" image="Media/wiatrak60stopni.png" rotation="60deg" />
+    <Widget xsi:type="widgets.brease.Image" id="Mixer6Right" top="455" left="818" width="80" height="80" zIndex="93" image="Media/wiatrak60stopni.png" rotation="90deg" />
   </Widgets>
 </Content>
