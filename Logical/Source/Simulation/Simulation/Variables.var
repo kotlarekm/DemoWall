@@ -11,4 +11,8 @@ VAR
 	AnimationForMixer2 : UINT;
 	AnimationForMixer1 : UINT;
 	TON_6 : TON;
+	TanksValvesCheck : BOOL; (*Variable used to check if two valves are open, triggering a progress bar display in simulation if they are*)
+	LeftValveCheck : BOOL; (*Variable used to check if left valve is open then triggering a progress bar display in simulation if it is*)
+	RightValveCheck : BOOL; (*Variable used to check if right valve is open then triggering a progress bar display in simulation if it is*)
+	MixerCheck : BOOL := FALSE; (*Variable used to check if right mixers are working then triggering a progress bar display in simulation if they are*)
 END_VAR

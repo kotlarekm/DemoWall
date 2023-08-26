@@ -153,7 +153,7 @@ PROGRAM _CYCLIC
 			TON_6.IN := FALSE;
 			
 			IF AnimationForMixer1 = 7 THEN
-			AnimationForMixer1 := 1;
+				AnimationForMixer1 := 1;
 			END_IF
 		END_IF
 	ELSE
@@ -177,11 +177,43 @@ PROGRAM _CYCLIC
 		AnimationForMixer2 := 0;
 	END_IF
 	
-
 	TON_6();
+	
+	IF UINT_TO_BOOL(gTanks.Commands.OpenTank3LeftValve) AND UINT_TO_BOOL(gTanks.Commands.OpenTank3RightValve) THEN
+		TanksValvesCheck := TRUE;
+	ELSE
+		TanksValvesCheck := FALSE;
+	END_IF
+	
+	LeftValveCheck := FALSE;
+	RightValveCheck := FALSE;
+	
+	IF gTanks.Parameters.Tank2TargetFluidLvl > 0 AND gTanks.Parameters.Tank1TargetFluidLvl = 0 THEN
+		LeftValveCheck := TRUE;
+	END_IF
+	
+	IF gTanks.Parameters.Tank1TargetFluidLvl > 0 AND gTanks.Parameters.Tank2TargetFluidLvl = 0 THEN
+		RightValveCheck := TRUE;
+	END_IF
+	
+	IF UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND UINT_TO_BOOL(gTanks.Status.IsMixer2On) THEN
+		MixerCheck := TRUE;
+	END_IF
+	
+	IF gTanks.Commands.Start THEN
+		MixerCheck := FALSE;
+	END_IF
+	
+	IF UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND UINT_TO_BOOL(gTanks.Status.IsMixer2On) AND RightValveCheck THEN
+		MixerCheck := FALSE;
+	END_IF
+	
+	IF UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND UINT_TO_BOOL(gTanks.Status.IsMixer2On) AND LeftValveCheck THEN	
+		MixerCheck := FALSE;
+	END_IF
 	
 END_PROGRAM
  
 PROGRAM _EXIT
  
-END_PROGRAM
+		END_PROGRAM

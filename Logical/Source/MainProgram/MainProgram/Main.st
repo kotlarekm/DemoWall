@@ -31,8 +31,14 @@ PROGRAM _CYCLIC
 		
 		START:
 			IF gTanks.Commands.Start THEN
-				gTanks.Commands.OpenTank1Valve := TRUE;
-				gTanks.Commands.OpenTank2Valve := TRUE;
+				IF gTanks.Parameters.Tank1TargetFluidLvl > 0 THEN
+					gTanks.Commands.OpenTank1Valve := TRUE;
+				END_IF
+				
+				IF gTanks.Parameters.Tank2TargetFluidLvl > 0 THEN
+					gTanks.Commands.OpenTank2Valve := TRUE;
+				END_IF
+				
 				gTanks.Commands.Start := FALSE;
 				gTanks.Status.Step := FILLING_TANKS_1_AND_2;
 			END_IF;

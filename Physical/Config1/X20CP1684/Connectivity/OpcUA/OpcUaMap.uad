@@ -11,16 +11,22 @@
           <High ValueProvider="Const">10000</High>
         </EURange>
       </EURanges>
-      <EURanges Id="2">
-        <EURange>
-          <Low ValueProvider="Const">0</Low>
-          <High ValueProvider="Const">100000</High>
-        </EURange>
-      </EURanges>
       <EURanges Id="3">
         <EURange>
           <Low ValueProvider="Const">0</Low>
           <High ValueProvider="Const">1</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="4">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">100</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="5">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">100000</High>
         </EURange>
       </EURanges>
     </EURangesAliases>
@@ -47,21 +53,21 @@
           <Variable Name="Commands">
             <Variable Name="OpenTank1Valve" />
             <Variable Name="OpenTank2Valve" />
-            <Variable Name="OpenTank3LeftValve" />
-            <Variable Name="OpenTank3RightValve" />
+            <Variable Name="OpenTank3LeftValve" EURangesId="4" />
+            <Variable Name="OpenTank3RightValve" EURangesId="4" />
             <Variable Name="OpenTank3MainValve" />
             <Variable Name="TurnOnMixer2" />
             <Variable Name="TurnOnMixer1" />
           </Variable>
           <Variable Name="Parameters">
-            <Variable Name="Tank1TargetFluidLvl" />
-            <Variable Name="Tank2TargetFluidLvl" />
-            <Variable Name="Tank3TargetFluidLvl" />
-            <Variable Name="Mixer1On" />
-            <Variable Name="Mixer2On" />
-            <Variable Name="MixingTime" />
-            <Variable Name="Tank3RightValveOpeningLvl" />
-            <Variable Name="Tank3LeftValveOpeningLvl" />
+            <Variable Name="Tank1TargetFluidLvl" EURangesId="1" />
+            <Variable Name="Tank2TargetFluidLvl" EURangesId="1" />
+            <Variable Name="Tank3TargetFluidLvl" EURangesId="1" />
+            <Variable Name="Mixer1On" EURangesId="3" />
+            <Variable Name="Mixer2On" EURangesId="3" />
+            <Variable Name="MixingTime" EURangesId="5" />
+            <Variable Name="Tank3RightValveOpeningLvl" EURangesId="4" />
+            <Variable Name="Tank3LeftValveOpeningLvl" EURangesId="4" />
             <Variable Name="Tank3MaxAllowedTemp" />
             <Variable Name="Tank3MaxAllowedPressure" />
           </Variable>
@@ -97,6 +103,10 @@
       <Task Name="Simulation">
         <Variable Name="AnimationForMixer1" />
         <Variable Name="AnimationForMixer2" />
+        <Variable Name="TanksValvesCheck" />
+        <Variable Name="LeftValveCheck" />
+        <Variable Name="MixerCheck" />
+        <Variable Name="RightValveCheck" />
       </Task>
     </Module>
   </DefaultView>

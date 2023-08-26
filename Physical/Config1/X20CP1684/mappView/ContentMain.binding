@@ -70,16 +70,28 @@
 <Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericOutput12" attribute="node" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank3FluidLvl" attribute="node" />
-<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="ProgressBar22" attribute="node" />
-</Binding>
-<Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank2FluidLvl" attribute="node" />
 <Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="ProgressBar20" attribute="node" />
 </Binding>
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank1FluidLvl" attribute="node" />
 <Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="ProgressBar21" attribute="node" />
+</Binding>		
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank3FluidLvl" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="MixedProgressBar" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank3FluidLvl" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="WaterProgressBar" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank3FluidLvl" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NotMixedProgressBar" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank3FluidLvl" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="PaintProgressBar" attribute="value" />
 </Binding>
 </Bindings>
 </BindingsSet>
