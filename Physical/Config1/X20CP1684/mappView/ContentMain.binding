@@ -54,10 +54,6 @@
 <Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericOutput7" attribute="node" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank3Temp" attribute="node" />
-<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericOutput21" attribute="node" />
-</Binding>
-<Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank1Pressure" attribute="node" />
 <Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericOutput13" attribute="node" />
 </Binding>
@@ -93,5 +89,7 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank3FluidLvl" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="PaintProgressBar" attribute="value" />
 </Binding>
+
+
 </Bindings>
 </BindingsSet>

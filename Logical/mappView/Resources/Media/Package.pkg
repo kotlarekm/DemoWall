@@ -7,5 +7,6 @@
     <Object Type="File">wiatrak0stopni.png</Object>
     <Object Type="File">wiatrak30stopni.png</Object>
     <Object Type="File">wiatrak60stopni.png</Object>
+    <Object Type="File">Termometr.png</Object>
   </Objects>
 </Package>
