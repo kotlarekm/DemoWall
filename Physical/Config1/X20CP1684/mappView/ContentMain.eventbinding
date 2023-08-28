@@ -752,6 +752,13 @@
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::TempContro:UpdateHeaterPWM">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+    </EventBinding>
+    <EventBinding id="ContentMain.Ellipse12.Click">
+      <Source xsi:type="widgets.brease.Ellipse.Event" contentRefId="ContentMain" widgetRefId="Ellipse7" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.OpenTank1Valve">
+            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
           </Target>
         </Action>
       </EventHandler>
@@ -762,8 +769,160 @@
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::TempContro:UpdateFanPWM">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+    </EventBinding>
+    <EventBinding id="ContentMain.Ellipse8.Click">
+      <Source xsi:type="widgets.brease.Ellipse.Event" contentRefId="ContentMain" widgetRefId="Ellipse8" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.OpenTank2Valve">
+            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
           </Target>
         </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMain.Ellipse27.Click">
+      <Source xsi:type="widgets.brease.Ellipse.Event" contentRefId="ContentMain" widgetRefId="Ellipse27" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.TurnOnMixer1">
+            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.TurnOnMixer2">
+            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMain.Ellipse26.Click">
+      <Source xsi:type="widgets.brease.Ellipse.Event" contentRefId="ContentMain" widgetRefId="Ellipse26" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.OpenTank3MainValve">
+            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMain.ToggleButton1.Click">
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="ContentMain" widgetRefId="ToggleButton1" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Simulation:Manual">
+            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_18">
+      <Source xsi:type="opcUa.Event" refId="::Simulation:Auto" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Ellipse8">
+                <Method xsi:type="widgets.brease.Ellipse.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Ellipse27">
+                <Method xsi:type="widgets.brease.Ellipse.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Ellipse26">
+                <Method xsi:type="widgets.brease.Ellipse.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="3">
+            <Action>
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Ellipse7">
+                <Method xsi:type="widgets.brease.Ellipse.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="4">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="NumericInput1">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="5">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="NumericInput2">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMain.ToggleButton2.Click">
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="ContentMain" widgetRefId="ToggleButton2" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Simulation:Auto">
+            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_10">
+      <Source xsi:type="opcUa.Event" refId="::Simulation:Manual" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Ellipse8">
+                <Method xsi:type="widgets.brease.Ellipse.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Ellipse7">
+                <Method xsi:type="widgets.brease.Ellipse.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Ellipse26">
+                <Method xsi:type="widgets.brease.Ellipse.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="3">
+            <Action>
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Ellipse27">
+                <Method xsi:type="widgets.brease.Ellipse.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="4">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="NumericInput1">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="5">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="NumericInput2">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
   </Bindings>
