@@ -40,8 +40,8 @@ PROGRAM _CYCLIC
 	MpAxisCoupling_0();
 	
 	//Mixer 1,2 status update
-	gTanks.Status.IsMixer1On := MpAxisBasic_Primary.MoveActive;
-	gTanks.Status.IsMixer2On := MpAxisBasic_Secondary.MoveActive;
+	gTanks.Status.IsMixer1On := BOOL_TO_UINT(MpAxisBasic_Primary.MoveActive);
+	gTanks.Status.IsMixer2On := BOOL_TO_UINT(MpAxisBasic_Secondary.MoveActive);
 	
 	//Power_on negative edge detection
 	F_TRIG_0(CLK:=MpAxisBasic_Primary.PowerOn);

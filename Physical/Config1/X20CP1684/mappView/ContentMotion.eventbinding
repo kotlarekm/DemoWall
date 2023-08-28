@@ -36,7 +36,7 @@
       </EventHandler>
     </EventBinding>
     <EventBinding id="EventBindingMotion3">
-      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gTanks.Status.IsMixer1On" event="ValueChanged" />
+      <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_Primary.MoveActive" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
         <Action>
           <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse3">
@@ -53,7 +53,7 @@
       </EventHandler>
     </EventBinding>
     <EventBinding id="EventBindingMotion4">
-      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gTanks.Status.IsMixer2On" event="ValueChanged" />
+      <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_Secondary.MoveActive" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
         <Action>
           <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse6">
