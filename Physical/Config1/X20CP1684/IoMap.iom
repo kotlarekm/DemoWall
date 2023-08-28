@@ -1,9 +1,9 @@
 VAR_CONFIG
 	::Alarms:doReset AT %QX."X20SL8101".BOOL10001;
 	::Alarms:diDriveStop AT %IX."X20SL8101".BOOL00001;
-	::Alarms:diResetRedLED AT %QX."4XP0000.00-K21".DigitalOutput12;
+	::Alarms:doResetRedLED AT %QX."4XP0000.00-K21".DigitalOutput12;
 	::Alarms:diReset AT %IX."4XP0000.00-K21".DigitalInput04;
-	::Alarms:diResetOrangeLED AT %QX."4XP0000.00-K21".DigitalOutput11;
+	::Alarms:doResetOrangeLED AT %QX."4XP0000.00-K21".DigitalOutput11;
 	::Alarms:diEStopNotPressed AT %IX."X20SI9100".SafeTwoChannelInput0304;
 	Cyclic#2.::gTanks.Commands.TurnOnHeater AT %QX."X20DO9322".DigitalOutput11;
 	Cyclic#2.::gTanks.Commands.TurnOnFan AT %QX."X20DO9322".DigitalOutput12;

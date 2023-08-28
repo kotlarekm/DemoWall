@@ -11,8 +11,8 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_17">
-      <Source xsi:type="opcUa.Event" refId="::Alarms:diAlarmIsActive" event="ValueChanged" />
+    <EventBinding id="EventBinding_1">
+      <Source xsi:type="opcUa.Event" refId="::Alarms:AlarmIsActive" event="ValueChanged" />
       <EventHandler condition="newValue=0">
         <Action>
           <Target xsi:type="widgets.brease.NavigationButton.Action" contentRefId="ContentTop" widgetRefId="TopAlarmsNavBtn">

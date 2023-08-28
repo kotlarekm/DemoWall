@@ -106,7 +106,7 @@
       <Task Name="Alarms">
         <Variable Name="diAlarmButtonVisible" />
         <Variable Name="diAlarmIsActive" />
-	  </Task>
+      </Task>
       <Task Name="Motion">
         <Variable Name="CamCoupling" />
         <Variable Name="GearCoupling" />
@@ -205,6 +205,8 @@
         <Variable Name="aiKnob2" />
         <Variable Name="aoDisplay1" />
         <Variable Name="aoDisplay2" />
+        <Variable Name="aoValueToDisplay1" />
+        <Variable Name="aoValueToDisplay2" />
       </Task>
     </Module>
   </DefaultView>
