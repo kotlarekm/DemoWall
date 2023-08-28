@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EventBindingSet id="ContentMotion_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Bindings>
-    <EventBinding id="EventBinding_1">
+    <EventBinding id="EventBindingMotion1">
       <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_Primary.PowerOn" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
         <Action>
@@ -18,7 +18,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_6">
+    <EventBinding id="EventBindingMotion2">
       <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_Secondary.PowerOn" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
         <Action>
@@ -35,7 +35,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_2">
+    <EventBinding id="EventBindingMotion3">
       <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gTanks.Status.IsMixer1On" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
         <Action>
@@ -52,7 +52,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_8">
+    <EventBinding id="EventBindingMotion4">
       <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gTanks.Status.IsMixer2On" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
         <Action>
@@ -69,7 +69,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_14">
+    <EventBinding id="EventBindingMotion5">
       <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_Primary.Error" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
         <Action>
@@ -86,7 +86,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_15">
+    <EventBinding id="EventBindingMotion6">
       <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_Secondary.Error" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
         <Action>
@@ -120,7 +120,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_9">
+    <EventBinding id="EventBindingMotion7">
       <Source xsi:type="opcUa.Event" refId="::Motion:Manual" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
         <Sequence>
@@ -345,7 +345,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_5">
+    <EventBinding id="EventBindingMotion8">
       <Source xsi:type="opcUa.Event" refId="::Motion:GearCoupling" event="ValueChanged" />
       <Operand datatype="ANY_INT" name="direction">
         <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisBasicParameters_Secondary.Direction">
@@ -401,7 +401,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_4">
+    <EventBinding id="EventBindingMotion9">
       <Source xsi:type="opcUa.Event" refId="::Motion:CamCoupling" event="ValueChanged" />
       <Operand datatype="BOOL" name="InSync">
         <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisCoupling_0.InSync">
@@ -480,7 +480,7 @@
         </Sequence>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_11">
+    <EventBinding id="EventBindingMotion10">
       <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisCoupling_0.InSync" event="ValueChanged" />
       <Operand datatype="BOOL" name="CamCoupling">
         <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:CamCoupling">
@@ -537,7 +537,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_7">
+    <EventBinding id="EventBindingMotion11">
       <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_Secondary.MoveActive" event="ValueChanged" />
       <Operand datatype="ANY_INT" name="direction">
         <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisBasicParameters_Secondary.Direction">
