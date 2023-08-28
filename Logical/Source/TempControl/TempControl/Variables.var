@@ -1,6 +1,6 @@
 VAR
 	MpTempController_0 : MpTempController;
-	MpTempControllerParType_0 : MpTempControllerParType := (PID:=(Heat:=(ProportionalGain:=3.0,IntegrationTime:=5.0,DerivativeTime:=2.0)),Tuning:=(Mode:=mpTEMP_TUNING_MODE_OSC_HEAT_COOL,SetPointHeat:=45.0,SetPointCool:=30.0),Profile:=(Heat:=(SlewRate:=2.0),Cool:=(QuickStart:=TRUE)),ToleranceBand:=(Lower:=1.0,Upper:=1.0),Hysteresis:=(Band:=(HeatToCool:=1.0)));
+	MpTempControllerParType_0 : MpTempControllerParType := (PID:=(Heat:=(ProportionalGain:=14.60092,IntegrationTime:=77.89253,DerivativeTime:=8.178716,FilterTime:=0.8178716),Cool:=(ProportionalGain:=66.39392,IntegrationTime:=48.72809,DerivativeTime:=5.11644936,FilterTime:=0.511644959),IntegratorPreloading:=0.0),Tuning:=(Mode:=mpTEMP_TUNING_MODE_OSC_HEAT_COOL,SetPointHeat:=60.0,SetPointCool:=35.0),Profile:=(Heat:=(SlewRate:=0.354523033,FilterTime:=84.8989,DelayTime:=6.5,QuickStart:=FALSE),Cool:=(SlewRate:=0.273072,FilterTime:=91.55094,DelayTime:=2.5,QuickStart:=FALSE)));
 END_VAR
 VAR CONSTANT
 	IntToRealScaller : REAL := 10.0;
