@@ -115,8 +115,8 @@
         <Variable Name="ApplyParameters" />
       </Task>
       <Task Name="Alarms">
-        <Variable Name="diAlarmButtonVisible" />
-        <Variable Name="diAlarmIsActive" />
+        <Variable Name="AlarmButtonVisible" />
+        <Variable Name="AlarmIsActive" />
       </Task>
       <Task Name="Simulation">
         <Variable Name="AnimationForMixer1" />
@@ -154,6 +154,8 @@
         <Variable Name="aiKnob2" />
         <Variable Name="aoDisplay1" />
         <Variable Name="aoDisplay2" />
+        <Variable Name="aoValueToDisplay1" />
+        <Variable Name="aoValueToDisplay2" />
       </Task>
     </Module>
   </DefaultView>

@@ -1,9 +1,9 @@
 VAR_CONFIG
 	::Alarms:doReset AT %QX."X20SL8101".BOOL10001;
 	::Alarms:diDriveStop AT %IX."X20SL8101".BOOL00001;
-	::Alarms:diResetRedLED AT %QX."4XP0000.00-K21".DigitalOutput12;
+	::Alarms:doResetRedLED AT %QX."4XP0000.00-K21".DigitalOutput12;
 	::Alarms:diReset AT %IX."4XP0000.00-K21".DigitalInput04;
-	::Alarms:diResetOrangeLED AT %QX."4XP0000.00-K21".DigitalOutput11;
+	::Alarms:doResetOrangeLED AT %QX."4XP0000.00-K21".DigitalOutput11;
 	::Alarms:diEStopNotPressed AT %IX."X20SI9100".SafeTwoChannelInput0304;
 	::IO:diSwitch1 AT %IX."X20DI9371".DigitalInput01;
 	::IO:diSwitch2 AT %IX."X20DI9371".DigitalInput02;

@@ -35,11 +35,11 @@ PROGRAM _CYCLIC
 	
 	// Reset LED
 	IF NOT(diDriveStop) AND NOT(diEStopNotPressed) THEN
-		diResetRedLED := TRUE;
+		doResetRedLED := TRUE;
 		TON_LED_OFF_FirstCounting := FALSE;
 		
 	ELSIF NOT(diDriveStop) AND diEStopNotPressed THEN
-		diResetRedLED := FALSE;
+		doResetRedLED := FALSE;
 		IF NOT(TON_LED_OFF_FirstCounting) THEN
 			TON_LED_OFF_FirstCounting := TRUE;
 			TON_LED_OFF.IN := 1;
@@ -47,19 +47,19 @@ PROGRAM _CYCLIC
 		IF TON_LED_OFF.Q THEN
 			TON_LED_ON.IN := 1;
 			TON_LED_OFF.IN := 0;
-			diResetOrangeLED := TRUE;
+			doResetOrangeLED := TRUE;
 		END_IF;
 		IF TON_LED_ON.Q THEN
 			TON_LED_ON.IN := 0;
 			TON_LED_OFF.IN := 1;
-			diResetOrangeLED := FALSE;
+			doResetOrangeLED := FALSE;
 		END_IF;
 		
 	ELSE 
 		TON_LED_ON.IN := 0;
 		TON_LED_OFF.IN := 0;
-		diResetRedLED := FALSE;
-		diResetOrangeLED := FALSE;
+		doResetRedLED := FALSE;
+		doResetOrangeLED := FALSE;
 	END_IF
 		
 	TON_LED_ON();
@@ -77,13 +77,13 @@ PROGRAM _CYCLIC
 	
 	// Set style to navigation button in top content
 	IF MpAlarmXCore_0.ActiveAlarms >= 1 THEN
-		diAlarmIsActive := 1;//red style
-		diAlarmButtonVisible := 1;
+		AlarmIsActive := 1;//red style
+		AlarmButtonVisible := 1;
 	ELSIF MpAlarmXCore_0.ActiveAlarms = 0 AND MpAlarmXCore_0.PendingAlarms >= 1 THEN
-		diAlarmIsActive := 2;//orange style
-		diAlarmButtonVisible := 1;
+		AlarmIsActive := 2;//orange style
+		AlarmButtonVisible := 1;
 	ELSE
-		diAlarmIsActive := 0;//anvisible
+		AlarmIsActive := 0;//anvisible
 	END_IF;
 	
 	

@@ -37,7 +37,15 @@ PROGRAM _CYCLIC
 	
 	//
 	aoValueToDisplay1 := aiKnob1 * 9.8 / 32767;
-	aoValueToDisplay2 := aiKnob2 * 10 / 32767;
+	aoValueToDisplay2 := aiKnob2 * 9.8 / 32767;
+	
+	//
+	//FOR i := 1 TO 5 BY 1 DO
+	//	IF RoundButton[i].diButton THEN
+	//		RoundButton[i].Counter := RoundButton[i].Counter + 1;
+	//		IF RoundButton[i].Counter = 4 THEN
+				
+		
 END_PROGRAM
 
 PROGRAM _EXIT
