@@ -105,19 +105,21 @@
 </Binding>
 <Binding mode="oneWay">
 <Source xsi:type="opcUa" refId="::TempContro:ManualON" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="BasicSlider1" attribute="enable" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="FanPWMSlider" attribute="enable" />
 </Binding>
 <Binding mode="oneWay">
 <Source xsi:type="opcUa" refId="::TempContro:ManualON" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="BasicSlider2" attribute="enable" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="HeaterPWMSlider" attribute="enable" />
+</Binding>
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::TempContro:FanPWMDuty" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="FanPWMSlider" attribute="value" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::TempContro:FanPWMDuty" attribute="node" />
-<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="FanPWMSlider" attribute="node" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::TempContro:HeaterPWMDuty" attribute="node" />
-<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="HeaterPWMSlider" attribute="node" />
+<Source xsi:type="opcUa" refId="::TempContro:HeaterPWMDuty" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="HeaterPWMSlider" attribute="value" />
 </Binding>
 </Bindings>
 </BindingsSet>
