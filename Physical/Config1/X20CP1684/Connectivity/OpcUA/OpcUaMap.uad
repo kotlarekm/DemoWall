@@ -81,8 +81,8 @@
             <Variable Name="TurnOnMixer2" />
             <Variable Name="OpenTank1Valve" />
             <Variable Name="OpenTank2Valve" />
-            <Variable Name="OpenTank3LeftValve" />
-            <Variable Name="OpenTank3RightValve" />
+            <Variable Name="OpenTank3LeftValve" EURangesId="4" />
+            <Variable Name="OpenTank3RightValve" EURangesId="4" />
             <Variable Name="OpenTank3MainValve" />
             <Variable Name="Start" />
             <Variable Name="Stop" />
@@ -122,6 +122,8 @@
         <Variable Name="LeftValveCheck" />
         <Variable Name="MixerCheck" />
         <Variable Name="RightValveCheck" />
+        <Variable Name="Auto" />
+        <Variable Name="Manual" />
       </Task>
     </Module>
   </DefaultView>

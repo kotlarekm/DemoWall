@@ -20,7 +20,7 @@
             <Widget xsi:type="widgets.brease.Label" id="Label28" top="268" left="85" width="64" zIndex="12" text="Right" fontName="ABBvoiceMedium" />
             <Widget xsi:type="widgets.brease.Label" id="Label37" top="360" left="87" width="64" zIndex="13" text="Mixer 1" fontName="ABBvoiceMedium" />
             <Widget xsi:type="widgets.brease.Label" id="Label38" top="397" left="87" width="64" zIndex="14" text="Mixer 2" fontName="ABBvoiceMedium" />
-            <Widget xsi:type="widgets.brease.Label" id="Label39" top="36" left="167" width="145" zIndex="15" text="Target Fluid Level" fontName="ABBvoiceMedium" />
+            <Widget xsi:type="widgets.brease.Label" id="Label39" top="36" left="167" width="145" zIndex="15" text="Target fluid level" fontName="ABBvoiceMedium" />
             <Widget xsi:type="widgets.brease.Label" id="Label40" top="194" left="137" width="216" zIndex="16" text="Tank 3 valve opening value" fontName="ABBvoiceMedium" />
             <Widget xsi:type="widgets.brease.Label" id="Label41" top="322" left="175" width="120" zIndex="17" text="Mixer ON/OFF" fontName="ABBvoiceMedium" />
             <Widget xsi:type="widgets.brease.Label" id="Label42" top="446" left="187" width="99" zIndex="18" text="Mixing time" fontName="ABBvoiceMedium" />
@@ -203,5 +203,13 @@
     <Widget xsi:type="widgets.brease.ProgressBar" id="PaintProgressBar" top="353" left="726" width="179" height="188" zIndex="771" maxValue="10000" orientation="BottomToTop" showLabel="false" transitionTime="600" value="5000" shadow="none" barCornerRadius="0px" barBackColor="rgba(255, 255, 255, 0)" barColor="rgba(255, 136, 0, 1)" cornerRadius="60px" backColor="rgba(255, 255, 255, 0)" />
     <Widget xsi:type="widgets.brease.Line" id="Line3" zIndex="913" x1="455" x2="455" y1="0" y2="608" lineColor="rgba(0, 0, 0, 1)" lineWidth="2px" />
     <Widget xsi:type="widgets.brease.Line" id="Line11" zIndex="914" x1="455" x2="-16" y1="30" y2="30" lineColor="rgba(0, 0, 0, 1)" lineWidth="2px" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse7" top="9" left="588" width="51" height="54" zIndex="915" borderStyle="none" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse8" top="9" left="989" width="51" height="54" zIndex="916" borderStyle="none" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse27" top="445" left="728" width="177" height="96" zIndex="917" borderStyle="none" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse26" top="552" left="791" width="51" height="54" zIndex="918" borderStyle="none" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton1" top="163" left="724" width="80" height="80" zIndex="919" text="AUTO" mouseDownImageColor="rgba(255, 255, 255, 1)" borderWidth="3px 3px 3px 3px" cornerRadius="200px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" mouseDownTextColor="rgba(255, 255, 255, 1)" fontSize="13px" fontName="ABBvoiceMedium" margin="5px 5px 5px 5px" checkedTextColor="rgba(255, 136, 0, 1)" />
+    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButton2" top="163" left="812" width="80" height="80" zIndex="920" text="MANUAL" mouseDownImageColor="rgba(255, 255, 255, 1)" borderWidth="3px 3px 3px 3px" cornerRadius="200px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" mouseDownTextColor="rgba(255, 255, 255, 1)" fontSize="13px" fontName="ABBvoiceMedium" margin="5px 5px 5px 5px" checkedTextColor="rgba(255, 136, 0, 1)" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput1" top="308" left="913" width="40" height="37" zIndex="921" borderWidth="0px" disabledBorderWidth="0px" backColor="rgba(255, 255, 255, 0)" disabledBackColor="rgba(255, 255, 255, 0)" activeBackColor="rgba(255, 255, 255, 0)" activeTextColor="rgba(255, 255, 255, 0)" textColor="rgba(255, 255, 255, 0)" disabledTextColor="rgba(255, 255, 255, 0)" shadow="none" />
+    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInput2" top="308" left="679" width="40" height="37" zIndex="922" borderWidth="0px" disabledBorderWidth="0px" backColor="rgba(255, 255, 255, 0)" disabledBackColor="rgba(255, 255, 255, 0)" activeBackColor="rgba(255, 255, 255, 0)" activeTextColor="rgba(255, 255, 255, 0)" textColor="rgba(255, 255, 255, 0)" disabledTextColor="rgba(255, 255, 255, 0)" shadow="none" />
   </Widgets>
 </Content>

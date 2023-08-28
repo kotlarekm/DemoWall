@@ -15,4 +15,7 @@ VAR
 	LeftValveCheck : BOOL; (*Variable used to check if left valve is open then triggering a progress bar display in simulation if it is*)
 	RightValveCheck : BOOL; (*Variable used to check if right valve is open then triggering a progress bar display in simulation if it is*)
 	MixerCheck : BOOL := FALSE; (*Variable used to check if right mixers are working then triggering a progress bar display in simulation if they are*)
+	Manual : BOOL := FALSE;
+	Auto : BOOL := TRUE;
+	MAX_TANK_CAPACITY : REAL := 10000;
 END_VAR

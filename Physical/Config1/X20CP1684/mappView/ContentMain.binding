@@ -91,5 +91,21 @@
 </Binding>
 
 
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Simulation:Manual" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="ToggleButton2" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Simulation:Auto" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="ToggleButton1" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Commands.OpenTank3RightValve" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericInput1" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Commands.OpenTank3LeftValve" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericInput2" attribute="node" />
+</Binding>
 </Bindings>
 </BindingsSet>
