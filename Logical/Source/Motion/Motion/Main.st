@@ -50,6 +50,12 @@ PROGRAM _CYCLIC
 		//Primary axis (Mixer1) state machine
 		CASE StepMixer1 OF
 			STEP_INIT:
+				MpAxisBasic_Primary.Power := FALSE;
+				GearCoupling := FALSE;
+				CamCoupling := FALSE;
+				MpAxisBasic_Primary.MoveAdditive := FALSE;
+				MpAxisBasic_Primary.MoveAbsolute := FALSE;
+				MpAxisBasic_Primary.MoveVelocity := FALSE;
 				IF gTanks.Commands.TurnOnMixer1 THEN
 					StepMixer1 := STEP_POWER_ON;
 				END_IF
@@ -87,6 +93,12 @@ PROGRAM _CYCLIC
 		//Secondary axis (Mixer2) state machine
 		CASE StepMixer2 OF
 			STEP_INIT:
+				MpAxisBasic_Secondary.Power := FALSE;
+				GearCoupling := FALSE;
+				CamCoupling := FALSE;
+				MpAxisBasic_Secondary.MoveVelocity := FALSE;
+				MpAxisBasic_Secondary.MoveAbsolute := FALSE;
+				MpAxisBasic_Secondary.MoveAdditive := FALSE;
 				IF gTanks.Commands.TurnOnMixer2 THEN
 					StepMixer2 := STEP_POWER_ON;
 				END_IF
@@ -163,6 +175,7 @@ PROGRAM _CYCLIC
 				IF MpAxisCoupling_0.InSync THEN
 					CouplingMode := GEAR_COUPLING;
 				END_IF;
+			//Enabling Cam coupling only if primary axis is at standstill
 			ELSIF CamCoupling AND MpAxisBasic_Primary.PowerOn AND NOT MpAxisBasic_Primary.MoveActive THEN
 				MpAxisCoupling_0.Cam := TRUE;
 			ELSIF NOT MpAxisCoupling_0.InSync AND NOT CamCoupling THEN
