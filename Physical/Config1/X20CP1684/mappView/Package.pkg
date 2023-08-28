@@ -17,5 +17,6 @@
     <Object Type="File">ContentNavigation.eventbinding</Object>
     <Object Type="File">ContentMain.binding</Object>
     <Object Type="File">ContentMain.eventbinding</Object>
+    <Object Type="File">OpcUaServer.uaserver</Object>
   </Objects>
 </Package>

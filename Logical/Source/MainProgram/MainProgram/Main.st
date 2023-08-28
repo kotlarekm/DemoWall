@@ -118,7 +118,7 @@ PROGRAM _CYCLIC
 		
 	END_CASE;
 
-	gTanks.ObjectParameters.Tank3MaxAllowedPressure;
+	gTanks.Parameters.Tank3MaxAllowedPressure;
 	
 END_PROGRAM
 

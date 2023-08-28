@@ -7,7 +7,7 @@
 
 PROGRAM _INIT
 	
-	gTanks.ObjectParameters;
+	gTanks.Parameters;
 	
 	// USB
 	UsbNodeListGet_0.enable := TRUE;
@@ -41,7 +41,7 @@ PROGRAM _INIT
 	
 	// MpRecipeRegPar init
 	MpRecipeRegPar_0.MpLink := ADR(gRecipeXml);
-	MpRecipeRegPar_0.PVName := ADR('gTanks.ObjectParameters');
+	MpRecipeRegPar_0.PVName := ADR('gTanks.Parameters');
 	MpRecipeRegPar_0.Enable := TRUE;
 	MpRecipeRegPar_0();
 	
