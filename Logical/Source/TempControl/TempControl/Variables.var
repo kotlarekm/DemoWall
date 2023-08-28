@@ -1,7 +1,17 @@
 VAR
 	MpTempController_0 : MpTempController;
-	MpTempControllerParType_0 : MpTempControllerParType;
+	MpTempControllerParType_0 : MpTempControllerParType := (PID:=(Heat:=(ProportionalGain:=3.0,IntegrationTime:=5.0,DerivativeTime:=2.0)),Tuning:=(Mode:=mpTEMP_TUNING_MODE_OSC_HEAT_COOL,SetPointHeat:=45.0,SetPointCool:=30.0),Profile:=(Heat:=(SlewRate:=2.0),Cool:=(QuickStart:=TRUE)),ToleranceBand:=(Lower:=1.0,Upper:=1.0),Hysteresis:=(Band:=(HeatToCool:=1.0)));
 END_VAR
 VAR CONSTANT
 	IntToRealScaller : REAL := 10.0;
+END_VAR
+VAR
+	ManualON : BOOL := FALSE;
+	TempInReal : REAL;
+	MTBasicsPWMHeater : MTBasicsPWM := (Enable:=FALSE,Period:=0.1,DutyCycle:=0.0);
+	MTBasicsPWMFan : MTBasicsPWM := (Enable:=FALSE,Period:=0.1,DutyCycle:=0.0);
+	UpdateHeaterPWM : BOOL := FALSE;
+	UpdateFanPWM : BOOL := FALSE;
+	FanPWMDuty : REAL := 0.0;
+	HeaterPWMDuty : REAL := 0.0;
 END_VAR

@@ -133,5 +133,13 @@
         <seg>Apply</seg>
       </tuv>
     </tu>
+    <tu tuid="Tank3TargetTempLvl">
+      <tuv xml:lang="pl">
+        <seg>Temperatura w zbiorniku 3:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Temperature in tank 3:</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

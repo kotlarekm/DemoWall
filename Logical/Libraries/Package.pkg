@@ -27,5 +27,8 @@
     <Object Type="Library" Language="binary" Description="The AsBrStr Library contains FBKs for memory and character string handling.">AsBrStr</Object>
     <Object Type="Library" Language="binary" Description="This library contains function blocks to handle USB devices on the target.">AsUSB</Object>
     <Object Type="Library" Language="Binary" Description="Temperature control">MpTemp</Object>
+    <Object Type="Library" Language="Binary" Description="This mechatronics library contains basic control function blocks.">MTBasics</Object>
+    <Object Type="Library" Language="binary" Description="The BRSystem library provides the user with a number of system functions for e.g. handling permanent memory, accessing exception information, etc.">brsystem</Object>
+    <Object Type="Library" Language="binary" Description="This mechatronics library contains different system datatypes and general error numbers.">MTTypes</Object>
   </Objects>
 </Package>

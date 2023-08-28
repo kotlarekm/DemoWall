@@ -10,8 +10,8 @@ TYPE
 		OpenTank3MainValve : BOOL := FALSE;
 		Start : BOOL;
 		Stop : BOOL;
-		TurnOnHeater : BOOL;
-		TurnOnFan : BOOL;
+		TurnOnHeater : BOOL := FALSE;
+		TurnOnFan : BOOL := FALSE;
 	END_STRUCT;
 	ParametersType : 	STRUCT 
 		ObjectType : ObjectType;
