@@ -7,8 +7,8 @@
 
 PROGRAM _INIT
 
-	TON_LED_ON.PT := T#500ms;
-	TON_LED_OFF.PT := T#500ms;
+	TON_LED_ON.PT := TON_PT;
+	TON_LED_OFF.PT := TON_PT;
 	
 	// MpAlarmXCore init
 	MpAlarmXCore_0.MpLink := ADR(gAlarmXCore);

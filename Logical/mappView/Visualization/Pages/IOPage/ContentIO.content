@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="ContentIO" height="608" width="1206" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse1" top="80" left="120" width="60" height="60" zIndex="0" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" backGroundGradient="radial-gradient(ellipse at center, #FF0000 0%,#CCCCCC 95%,#1F1F1F 100%)" />
-    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse2" top="80" left="220" width="60" height="60" zIndex="1" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
-    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse3" top="80" left="320" width="60" height="60" zIndex="2" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
-    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse4" top="80" left="420" width="60" height="60" zIndex="3" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
-    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse5" top="160" left="120" width="60" height="60" zIndex="4" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
-    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse6" top="160" left="220" width="60" height="60" zIndex="5" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
-    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse7" top="160" left="320" width="60" height="60" zIndex="6" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
-    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse8" top="160" left="420" width="60" height="60" zIndex="7" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse1" top="80" left="120" width="60" height="60" zIndex="0" backColor="rgba(255, 255, 255, 1)" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse2" top="80" left="220" width="60" height="60" zIndex="1" backColor="rgba(255, 255, 255, 1)" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse3" top="80" left="320" width="60" height="60" zIndex="2" backColor="rgba(255, 255, 255, 1)" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse4" top="80" left="420" width="60" height="60" zIndex="3" backColor="rgba(255, 255, 255, 1)" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse5" top="160" left="120" width="60" height="60" zIndex="4" backColor="rgba(255, 255, 255, 1)" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse6" top="160" left="220" width="60" height="60" zIndex="5" backColor="rgba(255, 255, 255, 1)" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse7" top="160" left="320" width="60" height="60" zIndex="6" backColor="rgba(255, 255, 255, 1)" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse8" top="160" left="420" width="60" height="60" zIndex="7" backColor="rgba(255, 255, 255, 1)" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
     <Widget xsi:type="widgets.brease.Rectangle" id="RectangleSwitch1" top="300" left="120" width="60" height="20" zIndex="8" backColor="rgba(204, 204, 204, 1)" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" backGroundGradient="linear-gradient(to bottom,#F7F7F7 0%,#C6C6C6 100%)" style="Solid_LightGray" />
     <Widget xsi:type="widgets.brease.Ellipse" id="EllipseSwitch1Down" top="300" left="140" width="20" height="80" zIndex="9" backColor="rgba(255, 136, 0, 1)" backGroundGradient="radial-gradient(ellipse at center, #FF8500 0%,#CCCCCC 95%,#1F1F1F 100%)" style="Solid_LightGray" />
     <Widget xsi:type="widgets.brease.Rectangle" id="RectangleSwitch2" top="300" left="220" width="60" height="20" zIndex="10" backColor="rgba(204, 204, 204, 1)" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" backGroundGradient="linear-gradient(to bottom,#F7F7F7 0%,#C6C6C6 100%)" style="Solid_LightGray" />
@@ -37,17 +37,21 @@
     <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput2" top="180" left="940" width="160" height="60" zIndex="33" borderWidth="3px" fontName="ABBvoiceMedium" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" style="OutputLarge" />
     <Widget xsi:type="widgets.brease.RadialGauge" id="RadialGaugeKnob1" top="100" left="620" width="120" height="120" zIndex="34" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" maxValue="10" backColor="rgba(64, 64, 64, 1)" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" pointerBackColor="rgba(255, 255, 255, 1)" pointerPathColor="rgba(255, 255, 255, 1)" pointerPathWidth="1px" textColor="rgba(192, 192, 192, 1)" fontName="ABBvoiceMedium" />
     <Widget xsi:type="widgets.brease.RadialGauge" id="RadialGaugeKnob2" top="100" left="780" width="120" height="120" zIndex="35" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" maxValue="10" backColor="rgba(64, 64, 64, 1)" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" pointerBackColor="rgba(255, 255, 255, 1)" pointerPathColor="rgba(255, 255, 255, 1)" pointerPathWidth="1px" textColor="rgba(192, 192, 192, 1)" fontName="ABBvoiceMedium" />
-    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse9" top="280" left="620" width="120" height="120" zIndex="36" backColor="rgba(211, 211, 211, 1)" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" backGroundGradient="radial-gradient(ellipse at center, #FF0000 40%,#CCCCCC 95%,#1F1F1F 100%)" />
-    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse10" top="300" left="640" width="80" height="80" zIndex="37" backColor="rgba(255, 255, 255, 1)" />
-    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse11" top="280" left="780" width="120" height="120" zIndex="38" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" backGroundGradient="radial-gradient(ellipse at center, #7CFC00 40%,#CCCCCC 95%,#1F1F1F 100%)" />
-    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse12" top="300" left="800" width="80" height="80" zIndex="39" backColor="rgba(255, 255, 255, 1)" />
-    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse13" top="280" left="940" width="120" height="120" zIndex="40" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
-    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse14" top="300" left="960" width="80" height="80" zIndex="41" />
-    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse15" top="420" left="620" width="120" height="120" zIndex="42" backColor="rgba(211, 211, 211, 1)" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" backGroundGradient="radial-gradient(ellipse at center, #FF8C00 40%,#CCCCCC 95%,#1F1F1F 100%)" />
-    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse16" top="440" left="640" width="80" height="80" zIndex="43" backColor="rgba(255, 255, 255, 1)" />
-    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse17" top="420" left="780" width="120" height="120" zIndex="44" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
-    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse18" top="440" left="800" width="80" height="80" zIndex="45" backColor="rgba(255, 255, 255, 1)" />
-    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse19" top="420" left="940" width="120" height="120" zIndex="46" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
-    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse20" top="440" left="960" width="80" height="80" zIndex="47" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="EllipseRoundButton1" top="280" left="640" width="120" height="120" zIndex="36" backColor="rgba(211, 211, 211, 1)" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse10" top="300" left="660" width="80" height="80" zIndex="37" backColor="rgba(255, 255, 255, 1)" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="EllipseRoundButton2" top="280" left="800" width="120" height="120" zIndex="38" backColor="rgba(211, 211, 211, 1)" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse12" top="300" left="820" width="80" height="80" zIndex="39" backColor="rgba(255, 255, 255, 1)" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="EllipseRoundButtonReset" top="280" left="960" width="120" height="120" zIndex="40" backColor="rgba(211, 211, 211, 1)" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse14" top="300" left="980" width="80" height="80" zIndex="41" backColor="rgba(255, 255, 255, 1)" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="EllipseRoundButton3" top="420" left="640" width="120" height="120" zIndex="42" backColor="rgba(211, 211, 211, 1)" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse16" top="440" left="660" width="80" height="80" zIndex="43" backColor="rgba(255, 255, 255, 1)" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="EllipseRoundButton4" top="420" left="800" width="120" height="120" zIndex="44" backColor="rgba(211, 211, 211, 1)" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse18" top="440" left="820" width="80" height="80" zIndex="45" backColor="rgba(255, 255, 255, 1)" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="EllipseRoundButton5" top="420" left="960" width="120" height="120" zIndex="46" backColor="rgba(211, 211, 211, 1)" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
+    <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse20" top="440" left="980" width="80" height="80" zIndex="47" backColor="rgba(255, 255, 255, 1)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="60" left="40" width="1120" height="500" zIndex="48" backColor="rgba(255, 255, 255, 0)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle2" top="60" left="560" width="600" height="200" zIndex="49" backColor="rgba(255, 255, 255, 0)" />
+    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle3" top="60" left="560" width="600" height="500" zIndex="50" backColor="rgba(255, 255, 255, 0)" />
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="20" left="0" width="1206" height="32" zIndex="51" text="I/O" textAlign="center" fontName="ABBvoiceMedium" fontSize="30px" bold="true" />
   </Widgets>
 </Content>

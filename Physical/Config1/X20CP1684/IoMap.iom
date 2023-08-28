@@ -25,4 +25,24 @@ VAR_CONFIG
 	::IO:aoDisplay1 AT %QW."X20AO2632".AnalogOutput01;
 	::IO:aiKnob2 AT %IW."X20AI2632".AnalogInput02;
 	::IO:aoDisplay2 AT %QW."X20AO2632".AnalogOutput02;
+	::IO:ChangeButtonColor_0.RoundButton[1].doRedLED AT %QX."4XP0000.00-K21".DigitalOutput18;
+	::IO:ChangeButtonColor_0.RoundButton[1].doYellowLED AT %QX."4XP0000.00-K21".DigitalOutput17;
+	::IO:ChangeButtonColor_0.RoundButton[1].doGreenLED AT %QX."4XP0000.00-K21".DigitalOutput16;
+	::IO:ChangeButtonColor_0.RoundButton[2].doRedLED AT %QX."4XP0000.00-K21".DigitalOutput15;
+	::IO:ChangeButtonColor_0.RoundButton[2].doYellowLED AT %QX."4XP0000.00-K21".DigitalOutput14;
+	::IO:ChangeButtonColor_0.RoundButton[2].doGreenLED AT %QX."4XP0000.00-K21".DigitalOutput13;
+	::IO:ChangeButtonColor_0.RoundButton[3].doRedLED AT %QX."4XP0000.00-K21".DigitalOutput09;
+	::IO:ChangeButtonColor_0.RoundButton[3].doYellowLED AT %QX."4XP0000.00-K21".DigitalOutput08;
+	::IO:ChangeButtonColor_0.RoundButton[3].doGreenLED AT %QX."4XP0000.00-K21".DigitalOutput07;
+	::IO:ChangeButtonColor_0.RoundButton[4].doRedLED AT %QX."4XP0000.00-K21".DigitalOutput06;
+	::IO:ChangeButtonColor_0.RoundButton[4].doYellowLED AT %QX."4XP0000.00-K21".DigitalOutput05;
+	::IO:ChangeButtonColor_0.RoundButton[4].doGreenLED AT %QX."4XP0000.00-K21".DigitalOutput04;
+	::IO:ChangeButtonColor_0.RoundButton[5].doRedLED AT %QX."4XP0000.00-K21".DigitalOutput03;
+	::IO:ChangeButtonColor_0.RoundButton[5].doYellowLED AT %QX."4XP0000.00-K21".DigitalOutput02;
+	::IO:ChangeButtonColor_0.RoundButton[5].doGreenLED AT %QX."4XP0000.00-K21".DigitalOutput01;
+	::IO:diRoundButton1 AT %IX."4XP0000.00-K21".DigitalInput06;
+	::IO:diRoundButton2 AT %IX."4XP0000.00-K21".DigitalInput05;
+	::IO:diRoundButton3 AT %IX."4XP0000.00-K21".DigitalInput03;
+	::IO:diRoundButton4 AT %IX."4XP0000.00-K21".DigitalInput02;
+	::IO:diRoundButton5 AT %IX."4XP0000.00-K21".DigitalInput01;
 END_VAR

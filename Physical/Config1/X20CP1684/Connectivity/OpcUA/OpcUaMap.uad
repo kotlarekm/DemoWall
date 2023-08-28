@@ -117,6 +117,8 @@
       <Task Name="Alarms">
         <Variable Name="AlarmButtonVisible" />
         <Variable Name="AlarmIsActive" />
+        <Variable Name="doResetRedLED" />
+        <Variable Name="doResetOrangeLED" />
       </Task>
       <Task Name="Simulation">
         <Variable Name="AnimationForMixer1" />
@@ -156,6 +158,9 @@
         <Variable Name="aoDisplay2" />
         <Variable Name="aoValueToDisplay1" />
         <Variable Name="aoValueToDisplay2" />
+        <Variable Name="ChangeButtonColor_0">
+          <Variable Name="RoundButton" RecursiveEnable="2" />
+        </Variable>
       </Task>
     </Module>
   </DefaultView>
