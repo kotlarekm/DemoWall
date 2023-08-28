@@ -8,5 +8,8 @@
     <Object Type="File">WarningDialogStrings.tmx</Object>
     <Object Type="File">AlarmsPageText.tmx</Object>
     <Object Type="File">MainPageStrings.tmx</Object>
+    <Object Type="File">MotionContentStrings.tmx</Object>
+    <Object Type="File">InfoDialogContentStrings.tmx</Object>
+    <Object Type="File">GraphDialogContentStrings.tmx</Object>
   </Objects>
 </Package>

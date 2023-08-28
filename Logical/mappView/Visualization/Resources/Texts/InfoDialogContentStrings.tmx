@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT</prop>
+  </header>
+  <body>
+    <tu tuid="LabelCouplingInformation">
+      <tuv xml:lang="pl">
+        <seg>Informacje o sprzęganiu</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Coupling information</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Servus Welt!</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelGearCoupling">
+      <tuv xml:lang="pl">
+        <seg>Przekładnia</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Gear coupling</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelCamCoupling">
+      <tuv xml:lang="pl">
+        <seg>Krzywka</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Cam coupling</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelMixer1">
+      <tuv xml:lang="pl">
+        <seg>Mixer 1 - oś podrzędna</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Mixer 1 - slave axis</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelMixer2">
+      <tuv xml:lang="pl">
+        <seg>Mixer 2 - oś główna</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Mixer 2 - master axis</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelText1">
+      <tuv xml:lang="pl">
+        <seg>Ta funkcja ustala oś podrzędną w określonym stosunku prędkości (1:1) do osi głównej.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>This function brings the slave axis in the specified (1:1) velocity ratio to the master axis.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelText2">
+      <tuv xml:lang="pl">
+        <seg>Dopóki nie jest ustawione wyjście „Sprzęganie ustalone”, oś główna może poruszać się tylko w kierunku dodatnim (Prawo). Po tym jak zostanie ustawione oś główna może poruszać się w dowolnym kierunku.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>As long as the "Coupling Established" output is not set, the master axis is only allowed to move in the positive direction (Right). Once it has been set, the master can move in any direction.  </seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelText3">
+      <tuv xml:lang="pl">
+        <seg>Ta funkcja uruchamia sprzężenie krzywkowe pomiędzy osią główną i podrzędną.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>This function starts a cam coupling between the master and slave axes.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelText4">
+      <tuv xml:lang="pl">
+        <seg>Włączenie lub wyłączenie sprzężenia krzywkowego jest możliwe tylko wtedy, gdy oś główna osiągnie pozycję „MasterOffset” (0°). Aby osiągnąć „MasterOffset”, oś główna może poruszać się tylko w kierunku dodatnim (Prawo).</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Enabling or disabling cam coupling is only possible when the master reaches the "MasterOffset" position (0°). To reach "MasterOffset", the master axis is only permitted to move in a positive direction (Right). </seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelCouplingInfo">
+      <tuv xml:lang="pl">
+        <seg>Informacje o sprzęganiu</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Coupling information</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

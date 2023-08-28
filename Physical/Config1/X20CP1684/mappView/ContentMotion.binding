@@ -75,5 +75,58 @@
 <Source xsi:type="opcUa" refId="::Motion:MpAxisBasicParameters_Secondary.Position" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericInputSetPosition1" attribute="value" />
 </Binding>
+
+
+
+
+
+
+
+
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_Secondary.PowerOn" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="ButtonMoveAdditive1" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_Secondary.PowerOn" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="ButtonStop1" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_Secondary.PowerOn" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="ButtonMoveAbsolute1" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_Secondary.PowerOn" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="ButtonMoveVelocity1" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_Primary.PowerOn" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="ButtonMoveAdditive" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_Primary.PowerOn" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="ButtonMoveAbsolute" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_Primary.PowerOn" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="ButtonStop" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_Primary.PowerOn" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="ButtonMoveVelocity" attribute="enable" />
+</Binding>
+
+
+
+
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Motion:Manual" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="ToggleSwitchManual" attribute="value" />
+</Binding>
+
+
+
 </Bindings>
 </BindingsSet>

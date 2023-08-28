@@ -6,5 +6,7 @@
     <Object Type="Package">LoginDialog</Object>
     <Object Type="Package">DeleteFileDialog</Object>
     <Object Type="Package">ApplyRecipeDialog</Object>
+    <Object Type="Package">InfoDialog</Object>
+    <Object Type="Package">GraphDialog</Object>
   </Objects>
 </Package>

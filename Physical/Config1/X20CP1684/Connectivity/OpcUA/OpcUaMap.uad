@@ -117,7 +117,7 @@
           <Variable Name="PowerOn" />
           <Variable Name="MoveActive" />
           <Variable Name="MoveVelocity" />
-          <Variable Name="Velocity" />
+          <Variable Name="Velocity" MinimumSamplingInterval="Timer1" Historizing="True" HistoryBufferSize="3000" HistorySamplingInterval="Timer4" />
           <Variable Name="Position" />
           <Variable Name="Error" />
           <Variable Name="MoveAbsolute" />
@@ -157,6 +157,7 @@
           <Variable Name="Position" EURangesId="10" />
           <Variable Name="Distance" EURangesId="12" />
         </Variable>
+        <Variable Name="Manual" />
       </Task>
     </Module>
   </DefaultView>

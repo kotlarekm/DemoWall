@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="InfoDialogMainContent" height="370" width="600" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Label" id="Label1" top="20" left="5" width="170" zIndex="0" text="$IAT/LabelGearCoupling" fontName="ABBvoiceMedium" fontSize="22px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label2" top="175" left="5" width="170" zIndex="1" text="$IAT/LabelCamCoupling" fontName="ABBvoiceMedium" fontSize="22px" bold="true" />
+    <Widget xsi:type="widgets.brease.Label" id="Label3" top="50" left="5" width="575" height="45" zIndex="2" multiLine="true" text="$IAT/LabelText1" wordWrap="true" textAlign="left top" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label4" top="100" left="5" width="555" height="70" zIndex="3" multiLine="true" text="$IAT/LabelText2" wordWrap="true" textAlign="left top" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label5" top="205" left="5" width="575" height="45" zIndex="4" multiLine="true" text="$IAT/LabelText3" wordWrap="true" textAlign="left top" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label6" top="235" left="5" width="555" height="70" zIndex="5" multiLine="true" text="$IAT/LabelText4" wordWrap="true" textAlign="left top" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.Label" id="Label7" top="330" left="10" width="170" zIndex="6" text="$IAT/LabelMixer1" fontName="ABBvoiceMedium" fontSize="17px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label8" top="330" left="190" width="190" zIndex="7" text="$IAT/LabelMixer2" fontName="ABBvoiceMedium" fontSize="17px" />
+  </Widgets>
+</Content>

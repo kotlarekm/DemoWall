@@ -15,6 +15,7 @@
     <BindingsSet refId="ContentAlarms_binding" />
     <BindingsSet refId="ContentMain_binding" />
     <BindingsSet refId="ContentMotion_binding" />
+    <BindingsSet refId="GraphDialogMainContent_binding" />
   </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="LoginDialogMainContent_eventbinding" />
@@ -29,11 +30,15 @@
     <EventBindingsSet refId="ApplyRecipeTopContent_eventbinding" />
     <EventBindingsSet refId="ApplyRecipeMainContent_eventbinding" />
     <EventBindingsSet refId="ContentMotion_eventbinding" />
+    <EventBindingsSet refId="InfoDialogTopContent_eventbinding" />
+    <EventBindingsSet refId="GraphDialogTopContent_eventbinding" />
   </EventBindingsSets>
   <Dialogs>
     <Dialog refId="LoginDialog" />
     <Dialog refId="DeleteFileDialog" />
     <Dialog refId="ApplyRecipeDialog" />
+    <Dialog refId="InfoDialog" />
+    <Dialog refId="GraphDialog" />
   </Dialogs>
   <Contents>
     <Content refId="ContentTop" />
@@ -48,6 +53,10 @@
     <Content refId="ApplyRecipeTopContent" />
     <Content refId="ApplyRecipeMainContent" />
     <Content refId="ContentMotion" />
+    <Content refId="InfoDialogTopContent" />
+    <Content refId="InfoDialogMainContent" />
+    <Content refId="GraphDialogTopContent" />
+    <Content refId="GraphDialogMainContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

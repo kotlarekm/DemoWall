@@ -18,6 +18,9 @@
       <Property ID="TargetFile[5]" Value="Resources.AlarmsMessages.tmx" />
       <Property ID="TargetFile[6]" Value="mappView.Visualization.Resources.Texts.AlarmsPageText.tmx" />
       <Property ID="TargetFile[7]" Value="mappView.Visualization.Resources.Texts.MainPageStrings.tmx" />
+      <Property ID="TargetFile[8]" Value="mappView.Visualization.Resources.Texts.MotionContentStrings.tmx" />
+      <Property ID="TargetFile[9]" Value="mappView.Visualization.Resources.Texts.InfoDialogContentStrings.tmx" />
+      <Property ID="TargetFile[10]" Value="mappView.Visualization.Resources.Texts.GraphDialogContentStrings.tmx" />
     </Group>
   </Element>
 </Configuration>

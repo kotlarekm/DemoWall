@@ -18,23 +18,6 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_2">
-      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gTanks.Status.IsMixer1On" event="ValueChanged" />
-      <EventHandler condition="newValue = TRUE">
-        <Action>
-          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse3">
-            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Green" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler condition="newValue = FALSE">
-        <Action>
-          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse3">
-            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Red" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
     <EventBinding id="EventBinding_6">
       <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_Secondary.PowerOn" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
@@ -47,6 +30,23 @@
       <EventHandler condition="newValue = FALSE">
         <Action>
           <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse4">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Red" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_2">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gTanks.Status.IsMixer1On" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse3">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Green" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse3">
             <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Red" />
           </Target>
         </Action>
@@ -65,162 +65,6 @@
         <Action>
           <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse6">
             <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Red" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="ContentMotion.DropDownBoxCamSelect.SelectedIndexChanged">
-      <Source xsi:type="widgets.brease.DropDownBox.Event" contentRefId="ContentMotion" widgetRefId="DropDownBoxCamSelect" event="SelectedIndexChanged" />
-      <EventHandler condition="selectedIndex = 0">
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisCouplingParameters.Cam.ID">
-            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler condition="selectedIndex = 1">
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisCouplingParameters.Cam.ID">
-            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="2" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="EventBinding_9">
-      <Source xsi:type="widgets.brease.ToggleSwitch.Event" contentRefId="ContentMotion" widgetRefId="ToggleSwitchGear" event="ValueChanged" />
-      <EventHandler condition="newValue = TRUE">
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchCam">
-                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="widgets.brease.DropDownBox.Action" contentRefId="ContentMotion" widgetRefId="DropDownBoxCamSelect">
-                <Method xsi:type="widgets.brease.DropDownBox.Action.SetEnable" value="false" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
-      </EventHandler>
-      <EventHandler condition="newValue = FALSE">
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchCam">
-                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="widgets.brease.DropDownBox.Action" contentRefId="ContentMotion" widgetRefId="DropDownBoxCamSelect">
-                <Method xsi:type="widgets.brease.DropDownBox.Action.SetEnable" value="true" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="EventBinding_10">
-      <Source xsi:type="widgets.brease.ToggleSwitch.Event" contentRefId="ContentMotion" widgetRefId="ToggleSwitchCam" event="ValueChanged" />
-      <EventHandler condition="newValue = TRUE">
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchGear">
-                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="widgets.brease.DropDownBox.Action" contentRefId="ContentMotion" widgetRefId="DropDownBoxCamSelect">
-                <Method xsi:type="widgets.brease.DropDownBox.Action.SetEnable" value="false" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
-      </EventHandler>
-      <EventHandler condition="newValue = FALSE">
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchGear">
-                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="widgets.brease.DropDownBox.Action" contentRefId="ContentMotion" widgetRefId="DropDownBoxCamSelect">
-                <Method xsi:type="widgets.brease.DropDownBox.Action.SetEnable" value="true" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="EventBinding_11">
-      <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisCoupling_0.InSync" event="ValueChanged" />
-      <EventHandler condition="newValue = TRUE">
-        <Action>
-          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse7">
-            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Green" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler condition="newValue = FALSE">
-        <Action>
-          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse7">
-            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Red" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="EventBinding_12">
-      <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_Primary.PowerOn" event="ValueChanged" />
-      <Operand datatype="BOOL" name="Operand1">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisBasic_Secondary.PowerOn">
-          <Method xsi:type="opcUa.NodeAction.GetValue" />
-        </ReadTarget>
-      </Operand>
-      <EventHandler condition="Operand1 = FALSE OR newValue = FALSE">
-        <Action>
-          <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxCoupling">
-            <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="false" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler condition="Operand1 = TRUE AND newValue = TRUE">
-        <Action>
-          <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxCoupling">
-            <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="true" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="EventBinding_13">
-      <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_Secondary.PowerOn" event="ValueChanged" />
-      <Operand datatype="BOOL" name="Operand2">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisBasic_Primary.PowerOn">
-          <Method xsi:type="opcUa.NodeAction.GetValue" />
-        </ReadTarget>
-      </Operand>
-      <EventHandler condition="Operand2 = FALSE OR newValue = FALSE">
-        <Action>
-          <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxCoupling">
-            <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="false" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler condition="Operand2 = TRUE AND newValue = TRUE">
-        <Action>
-          <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxCoupling">
-            <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="true" />
           </Target>
         </Action>
       </EventHandler>
@@ -259,6 +103,76 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="ContentMotion.DropDownBoxCamSelect.SelectedIndexChanged">
+      <Source xsi:type="widgets.brease.DropDownBox.Event" contentRefId="ContentMotion" widgetRefId="DropDownBoxCamSelect" event="SelectedIndexChanged" />
+      <EventHandler condition="selectedIndex = 0">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisCouplingParameters.Cam.ID">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="selectedIndex = 1">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisCouplingParameters.Cam.ID">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="2" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_9">
+      <Source xsi:type="opcUa.Event" refId="::Motion:Manual" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxMixer1">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxMixer2">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxCoupling">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxMixer1">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxMixer2">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxCoupling">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
     <EventBinding id="ContentMotion.ButtonMoveAdditive.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonMoveAdditive" event="Click" />
       <EventHandler>
@@ -292,11 +206,29 @@
     <EventBinding id="ContentMotion.ButtonStop.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonStop" event="Click" />
       <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_Primary.Stop">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_Primary.Stop">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Motion:GearCoupling">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Motion:CamCoupling">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="ContentMotion.ButtonStop1.Click">
@@ -357,6 +289,304 @@
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMotion.DropDownBoxDirSelect.SelectedIndexChanged">
+      <Source xsi:type="widgets.brease.DropDownBox.Event" contentRefId="ContentMotion" widgetRefId="DropDownBoxDirSelect" event="SelectedIndexChanged" />
+      <EventHandler condition="selectedIndex = 0">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasicParameters_Primary.Direction">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="selectedIndex = 1">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasicParameters_Primary.Direction">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMotion.DropDownBoxDirSelect1.SelectedIndexChanged">
+      <Source xsi:type="widgets.brease.DropDownBox.Event" contentRefId="ContentMotion" widgetRefId="DropDownBoxDirSelect1" event="SelectedIndexChanged" />
+      <EventHandler condition="selectedIndex = 0">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasicParameters_Secondary.Direction">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="selectedIndex = 1">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasicParameters_Secondary.Direction">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMotion.Image1.Click">
+      <Source xsi:type="widgets.brease.Image.Event" contentRefId="ContentMotion" widgetRefId="Image1" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="InfoDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMotion.Image2.Click">
+      <Source xsi:type="widgets.brease.Image.Event" contentRefId="ContentMotion" widgetRefId="Image2" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="GraphDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_5">
+      <Source xsi:type="opcUa.Event" refId="::Motion:GearCoupling" event="ValueChanged" />
+      <Operand datatype="ANY_INT" name="direction">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisBasicParameters_Secondary.Direction">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="moveActive">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisBasic_Secondary.MoveActive">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchCam">
+                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.DropDownBox.Action" contentRefId="ContentMotion" widgetRefId="DropDownBoxCamSelect">
+                <Method xsi:type="widgets.brease.DropDownBox.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE AND NOT(moveActive AND direction = 1)">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchCam">
+                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.DropDownBox.Action" contentRefId="ContentMotion" widgetRefId="DropDownBoxCamSelect">
+                <Method xsi:type="widgets.brease.DropDownBox.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE AND moveActive = TRUE AND direction = 1">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchGear">
+            <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_4">
+      <Source xsi:type="opcUa.Event" refId="::Motion:CamCoupling" event="ValueChanged" />
+      <Operand datatype="BOOL" name="InSync">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisCoupling_0.InSync">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="ANY_INT" name="direction">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisBasicParameters_Secondary.Direction">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="moveActive">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisBasic_Secondary.MoveActive">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchGear">
+                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.DropDownBox.Action" contentRefId="ContentMotion" widgetRefId="DropDownBoxCamSelect">
+                <Method xsi:type="widgets.brease.DropDownBox.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Sequence>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.DropDownBox.Action" contentRefId="ContentMotion" widgetRefId="DropDownBoxCamSelect">
+                <Method xsi:type="widgets.brease.DropDownBox.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.DropDownBox.Action" contentRefId="ContentMotion" widgetRefId="DropDownBoxDirSelect1">
+                <Method xsi:type="widgets.brease.DropDownBox.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE AND NOT(moveActive AND direction = 1)">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchGear">
+            <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = TRUE AND InSync = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.DropDownBox.Action" contentRefId="ContentMotion" widgetRefId="DropDownBoxDirSelect1">
+                <Method xsi:type="widgets.brease.DropDownBox.Action.SetSelectedIndex" index="0" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.DropDownBox.Action" contentRefId="ContentMotion" widgetRefId="DropDownBoxDirSelect1">
+                <Method xsi:type="widgets.brease.DropDownBox.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_11">
+      <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisCoupling_0.InSync" event="ValueChanged" />
+      <Operand datatype="BOOL" name="CamCoupling">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:CamCoupling">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="ANY_INT" name="direction">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisBasicParameters_Secondary.Direction">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="moveActive">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisBasic_Secondary.MoveActive">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="newValue = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse7">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Green" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse7">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Red" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE AND NOT(moveActive AND direction = 1)">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchCam">
+                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchGear">
+                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue = TRUE AND CamCoupling = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.DropDownBox.Action" contentRefId="ContentMotion" widgetRefId="DropDownBoxDirSelect1">
+            <Method xsi:type="widgets.brease.DropDownBox.Action.SetEnable" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_7">
+      <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_Secondary.MoveActive" event="ValueChanged" />
+      <Operand datatype="ANY_INT" name="direction">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisBasicParameters_Secondary.Direction">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <Operand datatype="BOOL" name="InSync">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisCoupling_0.InSync">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="newValue = TRUE AND direction = 0 AND InSync = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxCoupling">
+            <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = TRUE AND direction = 1 AND InSync = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxCoupling">
+            <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE AND InSync = FALSE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxCoupling">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchGear">
+                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchCam">
+                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
   </Bindings>

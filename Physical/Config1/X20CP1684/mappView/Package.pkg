@@ -22,5 +22,8 @@
     <Object Type="File">ApplyRecipeMainContent.eventbinding</Object>
     <Object Type="File">ContentMotion.binding</Object>
     <Object Type="File">ContentMotion.eventbinding</Object>
+    <Object Type="File">InfoDialogTopContent.eventbinding</Object>
+    <Object Type="File">GraphDialogMainContent.binding</Object>
+    <Object Type="File">GraphDialogTopContent.eventbinding</Object>
   </Objects>
 </Package>
