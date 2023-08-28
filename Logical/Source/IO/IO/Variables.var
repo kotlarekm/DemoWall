@@ -1,59 +1,47 @@
 VAR
-	doLamp1 : BOOL;
-	doLamp2 : BOOL;
-	doLamp3 : BOOL;
-	doLamp4 : BOOL;
-	doLamp5 : BOOL;
-	doLamp6 : BOOL;
-	doLamp7 : BOOL;
-	doLamp8 : BOOL;
-	diSwitch1 : BOOL;
-	diSwitch2 : BOOL;
-	diSwitch3 : BOOL;
-	diSwitch4 : BOOL;
-	diSwitch5 : BOOL;
-	diSwitch6 : BOOL;
-	diSwitch7 : BOOL;
-	diSwitch8 : BOOL;
-	diSwitch1Down : BOOL;
-	diSwitch2Down : BOOL;
-	diSwitch3Down : BOOL;
-	diSwitch4Down : BOOL;
-	diSwitch5Down : BOOL;
-	diSwitch6Down : BOOL;
-	diSwitch7Down : BOOL;
-	diSwitch8Down : BOOL;
-	aiKnob1 : INT;
-	aiKnob2 : INT;
-	aoDisplay1 : INT;
-	aoDisplay2 : INT;
-	aoValueToDisplay1 : REAL;
-	aoValueToDisplay2 : REAL;
-	diButton1 : BOOL;
-	diButton2 : BOOL;
-	diButton4 : BOOL;
-	diButton5 : BOOL;
-	diButton6 : BOOL;
-	Button1Counter : SINT;
-	Button2Counter : SINT;
-	Button4Counter : SINT;
-	Button5Counter : SINT;
-	Button6Counter : SINT;
-	doButton1RedLED : BOOL;
-	doButton2RedLED : BOOL;
-	doButton4RedLED : BOOL;
-	doButton5RedLED : BOOL;
-	doButton6RedLED : BOOL;
-	doButton1YellowLED : BOOL;
-	doButton2YellowLED : BOOL;
-	doButton4YellowLED : BOOL;
-	doButton5YellowLED : BOOL;
-	doButton6YellowLED : BOOL;
-	doButton1GreenLED : BOOL;
-	doButton2GreenLED : BOOL;
-	doButton4GreenLED : BOOL;
-	doButton5GreenLED : BOOL;
-	doButton6GreenLED : BOOL;
-	i : SINT;
-	RoundButton : ARRAY[1..5] OF RoundButton_Type;
+	doLamp1 : BOOL; (*Digital output Lamp1*)
+	doLamp2 : BOOL; (*Digital output Lamp2*)
+	doLamp3 : BOOL; (*Digital output Lamp3*)
+	doLamp4 : BOOL; (*Digital output Lamp4*)
+	doLamp5 : BOOL; (*Digital output Lamp5*)
+	doLamp6 : BOOL; (*Digital output Lamp6*)
+	doLamp7 : BOOL; (*Digital output Lamp7*)
+	doLamp8 : BOOL; (*Digital output Lamp8*)
+	diSwitch1 : BOOL; (*Digital input Switch1*)
+	diSwitch2 : BOOL; (*Digital input Switch2*)
+	diSwitch3 : BOOL; (*Digital input Switch3*)
+	diSwitch4 : BOOL; (*Digital input Switch4*)
+	diSwitch5 : BOOL; (*Digital input Switch5*)
+	diSwitch6 : BOOL; (*Digital input Switch6*)
+	diSwitch7 : BOOL; (*Digital input Switch7*)
+	diSwitch8 : BOOL; (*Digital input Switch8*)
+	diSwitch1Down : BOOL; (*NOT Digital input Switch1*)
+	diSwitch2Down : BOOL; (*NOT Digital input Switch2*)
+	diSwitch3Down : BOOL; (*NOT Digital input Switch3*)
+	diSwitch4Down : BOOL; (*NOT Digital input Switch4*)
+	diSwitch5Down : BOOL; (*NOT Digital input Switch5*)
+	diSwitch6Down : BOOL; (*NOT Digital input Switch6*)
+	diSwitch7Down : BOOL; (*NOT Digital input Switch7*)
+	diSwitch8Down : BOOL; (*NOT Digital input Switch8*)
+	aiKnob1 : INT; (*Analog input Knob1*)
+	aiKnob2 : INT; (*Analog input Knob2*)
+	aoDisplay1 : INT; (*Analog output Display1*)
+	aoDisplay2 : INT; (*Analog output Display2*)
+	aoValueToDisplay1 : REAL; (*Variable used to converting aoDisplay1 value to display in visualization*)
+	aoValueToDisplay2 : REAL; (*Variable used to converting aoDisplay2 value to display in visualization*)
+	diRoundButton1 : BOOL; (*Digital input RoundButton1*)
+	diRoundButton2 : BOOL; (*Digital input RoundButton2*)
+	diRoundButton3 : BOOL; (*Digital input RoundButton3*)
+	diRoundButton4 : BOOL; (*Digital input RoundButton4*)
+	diRoundButton5 : BOOL; (*Digital input RoundButton5*)
+	ChangeButtonColor_0 : ChangeButtonColor; (*Function block used to change the color of the button*)
+	R_TRIG_RoundButton1 : R_TRIG; (*Function block used to detect rising edge when button1 is clicked*)
+	R_TRIG_RoundButton2 : R_TRIG; (*Function block used to detect rising edge when button2 is clicked*)
+	R_TRIG_RoundButton3 : R_TRIG; (*Function block used to detect rising edge when button3 is clicked*)
+	R_TRIG_RoundButton4 : R_TRIG; (*Function block used to detect rising edge when button4 is clicked*)
+	R_TRIG_RoundButton5 : R_TRIG; (*Function block used to detect rising edge when button5 is clicked*)
+END_VAR
+VAR CONSTANT
+	DisplayMaxValue : REAL := 9.8; (*Maximum display value*)
+	KnobMaxValue : INT := 32767; (*Maximum knob value *)
 END_VAR

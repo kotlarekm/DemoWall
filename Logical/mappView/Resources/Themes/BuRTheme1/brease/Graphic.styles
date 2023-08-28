@@ -262,41 +262,41 @@
 	
 	<Style id="Solid_Gray_LightGray_gradient_gray" xsi:type="widgets.brease.Ellipse" 
 		backGroundGradient="radial-gradient(ellipse at center, #808080 0%,#CCCCCC 95%,#1F1F1F 100%)"
-		borderWidth="2px" 
+		borderWidth="1px" 
 		backColor="#F1F1F1" 
-		lineColor="#D9D9D9" 
+		lineColor="rgba(71, 71, 71, 1)" 
 		borderStyle="solid" 
 		opacity="1" />
 	
 	<Style id="Solid_Gray_LightGray_gradient_red" xsi:type="widgets.brease.Ellipse"
 		backGroundGradient="radial-gradient(ellipse at center, #FF0000 0%,#CCCCCC 95%,#1F1F1F 100%)"
-		borderWidth="2px" 
+		borderWidth="1px" 
 		backColor="#F1F1F1" 
-		lineColor="#D9D9D9" 
+		lineColor="rgba(71, 71, 71, 1)" 
 		borderStyle="solid" 
 	opacity="1" />
 	
 	<Style id="Solid_Gray_LightGray_gradient_red_button" xsi:type="widgets.brease.Ellipse"
 		backGroundGradient="radial-gradient(ellipse at center, #FF0000 40%,#CCCCCC 95%,#1F1F1F 100%)"
-		borderWidth="2px" 
+		borderWidth="1px" 
 		backColor="#F1F1F1" 
-		lineColor="#D9D9D9" 
+		lineColor="rgba(71, 71, 71, 1)" 
 		borderStyle="solid" 
 		opacity="1" />
 	
 	<Style id="Solid_Gray_LightGray_gradient_yellow_button" xsi:type="widgets.brease.Ellipse"
 		backGroundGradient="radial-gradient(ellipse at center, #FFD700 40%,#CCCCCC 95%,#1F1F1F 100%)"
-		borderWidth="2px" 
+		borderWidth="1px" 
 		backColor="#F1F1F1" 
-		lineColor="#D9D9D9" 
+		lineColor="rgba(71, 71, 71, 1)" 
 		borderStyle="solid" 
 		opacity="1" />
 	
 	<Style id="Solid_Gray_LightGray_gradient_green_button" xsi:type="widgets.brease.Ellipse"
 		backGroundGradient="radial-gradient(ellipse at center, #7CFC00 40%,#CCCCCC 95%,#1F1F1F 100%)"
-		borderWidth="2px" 
+		borderWidth="1px" 
 		backColor="#F1F1F1" 
-		lineColor="#D9D9D9" 
+		lineColor="rgba(71, 71, 71, 1)" 
 		borderStyle="solid" 
 		opacity="1" />
 		

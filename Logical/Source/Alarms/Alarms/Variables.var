@@ -13,3 +13,6 @@ VAR
 	diReset : BOOL; (*Reset button input*)
 	doReset : BOOL; (*Reset button output*)
 END_VAR
+VAR CONSTANT
+	TON_PT : TIME := T#500ms; (*Preset timer value*)
+END_VAR

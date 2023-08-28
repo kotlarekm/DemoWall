@@ -137,5 +137,194 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="EventBinding_10">
+      <Source xsi:type="opcUa.Event" refId="::IO:ChangeButtonColor_0.RoundButton[1].Counter" event="ValueChanged" />
+      <EventHandler condition="newValue=0">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="EllipseRoundButton1">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_gray" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=1">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="EllipseRoundButton1">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_red_button" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=2">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="EllipseRoundButton1">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_yellow_button" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=3">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="EllipseRoundButton1">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_green_button" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_11">
+      <Source xsi:type="opcUa.Event" refId="::IO:ChangeButtonColor_0.RoundButton[2].Counter" event="ValueChanged" />
+      <EventHandler condition="newValue=0">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="EllipseRoundButton2">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_gray" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=1">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="EllipseRoundButton2">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_red_button" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=2">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="EllipseRoundButton2">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_yellow_button" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=3">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="EllipseRoundButton2">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_green_button" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_12">
+      <Source xsi:type="opcUa.Event" refId="::IO:ChangeButtonColor_0.RoundButton[3].Counter" event="ValueChanged" />
+      <EventHandler condition="newValue=0">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="EllipseRoundButton3">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_gray" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=1">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="EllipseRoundButton3">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_red_button" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=2">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="EllipseRoundButton3">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_yellow_button" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=3">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="EllipseRoundButton3">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_green_button" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_13">
+      <Source xsi:type="opcUa.Event" refId="::IO:ChangeButtonColor_0.RoundButton[4].Counter" event="ValueChanged" />
+      <EventHandler condition="newValue=0">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="EllipseRoundButton4">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_gray" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=1">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="EllipseRoundButton4">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_red_button" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=2">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="EllipseRoundButton4">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_yellow_button" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=3">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="EllipseRoundButton4">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_green_button" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_14">
+      <Source xsi:type="opcUa.Event" refId="::IO:ChangeButtonColor_0.RoundButton[5].Counter" event="ValueChanged" />
+      <EventHandler condition="newValue=0">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="EllipseRoundButton5">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_gray" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=1">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="EllipseRoundButton5">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_red_button" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=2">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="EllipseRoundButton5">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_yellow_button" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=3">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="EllipseRoundButton5">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_green_button" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_15">
+      <Source xsi:type="opcUa.Event" refId="::Alarms:doResetOrangeLED" event="ValueChanged" />
+      <EventHandler condition="newValue=FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="EllipseRoundButtonReset">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_gray" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="EllipseRoundButtonReset">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_yellow_button" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_16">
+      <Source xsi:type="opcUa.Event" refId="::Alarms:doResetRedLED" event="ValueChanged" />
+      <EventHandler condition="newValue=FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="EllipseRoundButtonReset">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_gray" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="EllipseRoundButtonReset">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_red_button" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

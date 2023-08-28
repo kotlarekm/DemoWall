@@ -7,7 +7,6 @@
 
 PROGRAM _INIT
 	
-	 
 END_PROGRAM
 
 PROGRAM _CYCLIC
@@ -31,21 +30,35 @@ PROGRAM _CYCLIC
 	diSwitch7Down := NOT(diSwitch7);
 	diSwitch8Down := NOT(diSwitch8);
 	
-	// 
+	// Giving a value to the output
 	aoDisplay1 := aiKnob1;
 	aoDisplay2 := aiKnob2;
 	
-	//
-	aoValueToDisplay1 := aiKnob1 * 9.8 / 32767;
-	aoValueToDisplay2 := aiKnob2 * 9.8 / 32767;
+	// Converting values to display
+	aoValueToDisplay1 := aiKnob1 * DisplayMaxValue / KnobMaxValue;
+	aoValueToDisplay2 := aiKnob2 * DisplayMaxValue / KnobMaxValue;
 	
-	//
-	//FOR i := 1 TO 5 BY 1 DO
-	//	IF RoundButton[i].diButton THEN
-	//		RoundButton[i].Counter := RoundButton[i].Counter + 1;
-	//		IF RoundButton[i].Counter = 4 THEN
-				
-		
+	
+	// Initialization of the edge detecting block
+	R_TRIG_RoundButton1(CLK := diRoundButton1);
+	R_TRIG_RoundButton2(CLK := diRoundButton2);
+	R_TRIG_RoundButton3(CLK := diRoundButton3);
+	R_TRIG_RoundButton4(CLK := diRoundButton4);
+	R_TRIG_RoundButton5(CLK := diRoundButton5);
+	
+	// Activation of the function block depending on the pressed button
+	IF R_TRIG_RoundButton1.Q THEN
+		ChangeButtonColor_0(ButtonNumber := 1);
+	ELSIF R_TRIG_RoundButton2.Q THEN
+		ChangeButtonColor_0(ButtonNumber := 2);
+	ELSIF R_TRIG_RoundButton3.Q THEN
+		ChangeButtonColor_0(ButtonNumber := 3);
+	ELSIF R_TRIG_RoundButton4.Q THEN
+		ChangeButtonColor_0(ButtonNumber := 4);
+	ELSIF R_TRIG_RoundButton5.Q THEN
+		ChangeButtonColor_0(ButtonNumber := 5);
+	END_IF
+	
 END_PROGRAM
 
 PROGRAM _EXIT
