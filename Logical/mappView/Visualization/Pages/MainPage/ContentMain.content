@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Content id="ContentMain" height="608" width="1206" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Content id="ContentMain" height="608" width="1206" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2">
   <Widgets>
     <Widget xsi:type="widgets.brease.TabControl" id="TabControl1" top="0" left="0" width="455" height="606" zIndex="0" borderStyle="solid" borderWidth="5px" cornerRadius="0px" borderColor="rgba(71, 71, 71, 0)">
       <Widgets>
@@ -44,13 +44,29 @@
         </Widget>
         <Widget xsi:type="widgets.brease.TabItem" id="Temperature" left="0" width="131" zIndex="2" text="Temperature" borderWidth="0px 0px 0px 0px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" textColor="rgba(0, 0, 0, 1)" activeBorderWidth="5px" activeCornerRadius="0px" fontName="ABBvoiceBd">
           <Widgets>
-            <Widget xsi:type="widgets.brease.Image" id="Image1" top="6" left="137" height="554" zIndex="0" image="Media/Termometr.png" />
-            <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle4" top="436" left="189" width="46" height="32" zIndex="1" borderStyle="solid" borderWidth="0px 2px 0px 2px" lineColor="rgba(0, 0, 0, 1)" backColor="rgba(255, 136, 0, 1)" />
-            <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse5" top="435" left="162" height="106" zIndex="2" borderWidth="2px" lineColor="rgba(0, 0, 0, 1)" backColor="rgba(255, 136, 0, 1)" shadow="none" />
-            <Widget xsi:type="widgets.brease.Label" id="Label35" top="474" left="170" width="88" height="33" zIndex="3" text="Tank 3" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" fontSize="24px" bold="true" />
-            <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse6" top="42" left="188" width="48" height="48" zIndex="4" borderStyle="solid" borderWidth="2px" lineColor="rgba(0, 0, 0, 1)" backColor="rgba(211, 211, 211, 1)" />
-            <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle2" top="66" left="191" width="42" height="15" zIndex="5" borderStyle="none" backColor="rgba(211, 211, 211, 1)" />
-            <Widget xsi:type="widgets.brease.ProgressBar" id="ProgressBar5" top="74" left="189" width="46" height="365" zIndex="6" labelPosition="middle" orientation="BottomToTop" showLabel="false" value="25" shadow="none" barBorderStyle="solid" barBorderWidth="0px 2px 0px 2px" barCornerRadius="0px" barBackColor="rgba(211, 211, 211, 1)" barColor="rgba(255, 136, 0, 1)" borderWidth="2px" cornerRadius="0px" fontName="ABBvoiceMedium" />
+            <Widget xsi:type="widgets.brease.OnlineChartHDA" id="TempChart" top="260" left="14" width="410" height="285" zIndex="0" borderWidth="3px" borderColor="rgba(0, 0, 0, 1)">
+              <Properties>
+                <yAxis>
+                  <Element id="yAxis1" textColor="rgba(0, 0, 0, 1)" color="rgba(0, 0, 0, 1)" fontSize="16px" fontName="ABBvoiceMedium" titleTextColor="rgba(0, 0, 0, 1)" titleFontSize="18px" titleFontName="ABBvoiceMedium" />
+                </yAxis>
+                <xAxis>
+                  <Element id="xAxis1" timeFormat="hh:mm" timeSpan="480" color="rgba(0, 0, 0, 1)" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" fontSize="16px" />
+                </xAxis>
+                <graph>
+                  <Element id="graph1" yAxisReference="yAxis1" />
+                </graph>
+                <cursor>
+                  <Element id="cursor1" fontName="ABBvoiceMedium" fontSize="18px" />
+                </cursor>
+              </Properties>
+            </Widget>
+            <Widget xsi:type="widgets.brease.ToggleSwitch" id="TempManualToggleBtn" top="25" left="355" width="60" height="31" zIndex="1" borderWidth="3px 3px 3px 3px" backGroundGradient="linear-gradient(to bottom, rgba(153, 0, 0, 1) 0%, rgba(255, 0, 0, 1) 100%)" mouseDownBackGroundGradient="linear-gradient(to bottom, rgba(0, 102, 0, 1) 0%, rgba(0, 204, 0, 1) 100%)" disabledCheckedBackGroundGradient="linear-gradient(to bottom, rgba(0, 102, 0, 1) 0%, rgba(0, 204, 0, 1) 100%)" />
+            <Widget xsi:type="widgets.brease.Label" id="TempManualLabel" top="25" left="15" width="300" height="31" zIndex="2" text="$IAT/ManualControl" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontName="ABBvoiceMedium" fontSize="18px" bold="true" />
+            <Widget xsi:type="widgets.brease.Button" id="RegulatorSettingsBtn" top="185" left="235" width="180" height="40" zIndex="3" image="Media/SymbolLib/Symbols/Service.svg" text="$IAT/PIDSettings" imageHeight="25" imageWidth="25" disabledImageColor="rgba(0, 0, 0, 1)" borderWidth="3px 3px 3px 3px" cornerRadius="30px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="18px" fontName="ABBvoiceMedium" />
+            <Widget xsi:type="widgets.brease.Label" id="HeaterPWMLabel" top="85" left="-5" width="205" height="32" zIndex="4" text="$IAT/HeaterPWM" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontName="ABBvoiceMedium" fontSize="18px" bold="true" />
+            <Widget xsi:type="widgets.brease.Label" id="FanPWMLabel" top="124" left="-5" width="205" height="32" zIndex="5" text="$IAT/FanPWM" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontName="ABBvoiceMedium" fontSize="18px" bold="true" />
+            <Widget xsi:type="widgets.brease.BasicSlider" id="HeaterPWMSlider" top="80" left="195" width="205" height="20" zIndex="6" enable="false" />
+            <Widget xsi:type="widgets.brease.BasicSlider" id="FanPWMSlider" top="125" left="195" width="205" height="20" zIndex="7" enable="false" />
           </Widgets>
         </Widget>
         <Widget xsi:type="widgets.brease.TabItem" id="TabItem3" left="0" width="110" zIndex="3" text="Pressure" borderStyle="solid" borderWidth="0px 0px 0px 0px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" textColor="rgba(0, 0, 0, 1)" activeBorderWidth="5px" activeCornerRadius="0px" fontName="ABBvoiceBd">
@@ -62,6 +78,17 @@
             <Widget xsi:type="widgets.brease.Label" id="Label21" top="74" left="85" width="64" zIndex="4" text="Tank 1" fontName="ABBvoiceMedium" />
             <Widget xsi:type="widgets.brease.Label" id="Label36" top="110" left="85" width="64" zIndex="5" text="Tank 2" fontName="ABBvoiceMedium" />
             <Widget xsi:type="widgets.brease.Label" id="Label45" top="146" left="85" width="64" height="31" zIndex="6" text="Tank 3" fontName="ABBvoiceMedium" />
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.TabItem" id="TabItem4" left="0" zIndex="4" text="TabItem4">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.Image" id="Image1" top="7" left="148" height="554" zIndex="0" image="Media/Termometr.png" />
+            <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle4" top="437" left="200" width="46" height="32" zIndex="1" borderStyle="solid" borderWidth="0px 2px 0px 2px" lineColor="rgba(0, 0, 0, 1)" backColor="rgba(255, 136, 0, 1)" />
+            <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse5" top="436" left="173" height="106" zIndex="2" borderWidth="2px" lineColor="rgba(0, 0, 0, 1)" backColor="rgba(255, 136, 0, 1)" shadow="none" />
+            <Widget xsi:type="widgets.brease.Label" id="Label35" top="475" left="181" width="88" height="33" zIndex="3" text="Tank 3" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" fontSize="24px" bold="true" />
+            <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse6" top="43" left="199" width="48" height="48" zIndex="4" borderStyle="solid" borderWidth="2px" lineColor="rgba(0, 0, 0, 1)" backColor="rgba(211, 211, 211, 1)" />
+            <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle2" top="67" left="202" width="42" height="15" zIndex="5" borderStyle="none" backColor="rgba(211, 211, 211, 1)" />
+            <Widget xsi:type="widgets.brease.ProgressBar" id="ProgressBar5" top="75" left="200" width="46" height="365" zIndex="6" labelPosition="middle" orientation="BottomToTop" showLabel="false" value="25" shadow="none" barBorderStyle="solid" barBorderWidth="0px 2px 0px 2px" barCornerRadius="0px" barBackColor="rgba(211, 211, 211, 1)" barColor="rgba(255, 136, 0, 1)" borderWidth="2px" cornerRadius="0px" fontName="ABBvoiceMedium" />
           </Widgets>
         </Widget>
       </Widgets>

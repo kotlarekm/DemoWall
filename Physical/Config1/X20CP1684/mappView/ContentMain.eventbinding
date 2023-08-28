@@ -746,5 +746,25 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="ContentMain.HeaterPWMSlider.ValueChanged">
+      <Source xsi:type="widgets.brease.BasicSlider.Event" contentRefId="ContentMain" widgetRefId="HeaterPWMSlider" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::TempContro:UpdateHeaterPWM">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMain.FanPWMSlider.ValueChanged">
+      <Source xsi:type="widgets.brease.BasicSlider.Event" contentRefId="ContentMain" widgetRefId="FanPWMSlider" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::TempContro:UpdateFanPWM">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

@@ -7,5 +7,6 @@
     <Object Type="File">RecipePageStrings.tmx</Object>
     <Object Type="File">WarningDialogStrings.tmx</Object>
     <Object Type="File">AlarmsPageText.tmx</Object>
+    <Object Type="File">MainPageStrings.tmx</Object>
   </Objects>
 </Package>

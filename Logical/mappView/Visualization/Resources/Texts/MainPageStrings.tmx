@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT</prop>
+  </header>
+  <body>
+    <tu tuid="ManualControl">
+      <tuv xml:lang="pl">
+        <seg>Sterowanie ręczne:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Manual control:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="PIDSettings">
+      <tuv xml:lang="pl">
+        <seg>Ustawienia PID</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>PID settings</seg>
+      </tuv>
+    </tu>
+    <tu tuid="HeaterPWM">
+      <tuv xml:lang="pl">
+        <seg>PWM grzałki:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Heater PWM:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="FanPWM">
+      <tuv xml:lang="pl">
+        <seg>PWM wentylatora:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Fan PWM:</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

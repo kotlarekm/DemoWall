@@ -4,126 +4,57 @@
   <Aliases>
     <ACLAliases />
     <EURangeViolationAliases />
-    <EURangesAliases>
-      <EURanges Id="1">
-        <EURange>
-          <Low ValueProvider="Const">0</Low>
-          <High ValueProvider="Const">10000</High>
-        </EURange>
-      </EURanges>
-      <EURanges Id="3">
-        <EURange>
-          <Low ValueProvider="Const">0</Low>
-          <High ValueProvider="Const">1</High>
-        </EURange>
-      </EURanges>
-      <EURanges Id="4">
-        <EURange>
-          <Low ValueProvider="Const">0</Low>
-          <High ValueProvider="Const">100</High>
-        </EURange>
-      </EURanges>
-      <EURanges Id="5">
-        <EURange>
-          <Low ValueProvider="Const">0</Low>
-          <High ValueProvider="Const">100000</High>
-        </EURange>
-      </EURanges>
-      <EURanges Id="6">
-        <EURange>
-          <Low ValueProvider="Const">0</Low>
-          <High ValueProvider="Const" />
-        </EURange>
-      </EURanges>
-    </EURangesAliases>
+    <EURangesAliases />
     <EngineeringUnitAliases />
   </Aliases>
   <DefaultView>
     <Module Name="&lt;Default&gt;">
       <GlobalVariables Name="Global Variables">
-        <Variable Name="gTanks">
-          <Variable Name="Parameters">
-            <Variable Name="ObjectType">
-              <Variable Name="Mode" />
-            </Variable>
-            <Variable Name="Tank3MaxAllowedPressure" />
-            <Variable Name="Tank3MaxAllowedTemp" />
-            <Variable Name="Tank3LeftValveOpeningLvl" EURangesId="4" />
-            <Variable Name="Tank3RightValveOpeningLvl" EURangesId="4" />
-            <Variable Name="MixingTime" EURangesId="5" />
-            <Variable Name="Mixer2On" EURangesId="3" />
-            <Variable Name="Mixer1On" EURangesId="3" />
-            <Variable Name="Tank3TargetFluidLvl" EURangesId="1" />
-            <Variable Name="Tank2TargetFluidLvl" EURangesId="1" />
-            <Variable Name="Tank1TargetFluidLvl" EURangesId="1" />
-            <Variable Name="Tank3MaxAllowedFluidLvl" />
-            <Variable Name="Tank2MaxAllowedFluidLvl" />
-            <Variable Name="Tank1MaxAllowedFluidLvl" />
-            <Variable Name="Mixer1MaxAllowedVelocity" />
-            <Variable Name="Mixer2MaxAllowedVelocity" />
-          </Variable>
-          <Variable Name="Status">
-            <Variable Name="IsMixer1On" EURangesId="3" />
-            <Variable Name="IsMixer2On" EURangesId="3" />
-            <Variable Name="Tank1FluidLvl" EURangesId="1" />
-            <Variable Name="Tank2FluidLvl" EURangesId="1" />
-            <Variable Name="Tank3FluidLvl" EURangesId="1" />
-            <Variable Name="Tank1Pressure" EURangesId="6" />
-            <Variable Name="Tank2Pressure" EURangesId="6" />
-            <Variable Name="Tank3Pressure" EURangesId="6" />
-            <Variable Name="Tank1Temp" />
-            <Variable Name="Tank2Temp" />
-            <Variable Name="Tank3Temp" />
-            <Variable Name="Step" />
-          </Variable>
-          <Variable Name="Commands">
-            <Variable Name="TurnOnMixer1" />
-            <Variable Name="TurnOnMixer2" />
-            <Variable Name="OpenTank1Valve" />
-            <Variable Name="OpenTank2Valve" />
-            <Variable Name="OpenTank3LeftValve" />
-            <Variable Name="OpenTank3RightValve" />
-            <Variable Name="OpenTank3MainValve" />
-            <Variable Name="Start" />
-            <Variable Name="Stop" />
-          </Variable>
-        </Variable>
+        <Variable Name="gTanks" RecursiveEnable="2" />
       </GlobalVariables>
+      <Task Name="Simulation">
+        <Variable Name="AnimationForMixer1" />
+        <Variable Name="AnimationForMixer2" />
+        <Variable Name="LeftValveCheck" />
+        <Variable Name="MixerCheck" />
+        <Variable Name="RightValveCheck" />
+        <Variable Name="TanksValvesCheck" />
+      </Task>
+      <Task Name="TempContro">
+        <Variable Name="FanPWMDuty" />
+        <Variable Name="HeaterPWMDuty" />
+        <Variable Name="ManualON" />
+        <Variable Name="TempInReal" />
+        <Variable Name="UpdateFanPWM" />
+        <Variable Name="UpdateHeaterPWM" />
+      </Task>
       <Task Name="Recipes">
-        <Variable Name="RecipeName" />
-        <Variable Name="RecipesList" />
-        <Variable Name="WaitingForLoad" />
-        <Variable Name="WaitingForSave" />
+        <Variable Name="ApplyParameters" />
+        <Variable Name="DeviceChenged" />
         <Variable Name="DropDownBoxNamesCollection" />
-        <Variable Name="NewRecipeSelected" />
-        <Variable Name="SelectedRecipeIndex" />
-        <Variable Name="WaitingForDelete" />
         <Variable Name="MpFileManagerUIConnect_0">
+          <Variable Name="DeviceList" RecursiveEnable="2" />
           <Variable Name="MessageBox">
             <Variable Name="Confirm" />
             <Variable Name="Cancel" />
           </Variable>
-          <Variable Name="DeviceList" RecursiveEnable="2" />
         </Variable>
-        <Variable Name="DeviceChenged" />
+        <Variable Name="NewRecipeSelected" />
+        <Variable Name="ParametersToLoad" RecursiveEnable="2" />
+        <Variable Name="RecipeName" />
+        <Variable Name="RecipesList" />
+        <Variable Name="SelectedRecipeIndex" />
         <Variable Name="USB1Aveliable" />
         <Variable Name="USB2Aveliable" />
+        <Variable Name="WaitingForDelete" />
+        <Variable Name="WaitingForLoad" />
+        <Variable Name="WaitingForSave" />
         <Variable Name="UsbNodeListGet_0">
           <Variable Name="allNodes" />
         </Variable>
-        <Variable Name="ParametersToLoad" RecursiveEnable="2" />
-        <Variable Name="ApplyParameters" />
       </Task>
       <Task Name="Alarms">
         <Variable Name="diAlarmIsActive" />
-      </Task>
-      <Task Name="Simulation">
-        <Variable Name="AnimationForMixer1" />
-        <Variable Name="AnimationForMixer2" />
-        <Variable Name="TanksValvesCheck" />
-        <Variable Name="LeftValveCheck" />
-        <Variable Name="MixerCheck" />
-        <Variable Name="RightValveCheck" />
       </Task>
     </Module>
   </DefaultView>

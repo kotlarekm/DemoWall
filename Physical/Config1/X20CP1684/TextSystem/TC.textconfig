@@ -17,6 +17,7 @@
       <Property ID="TargetFile[4]" Value="mappView.Visualization.Resources.Texts.WarningDialogStrings.tmx" />
       <Property ID="TargetFile[5]" Value="Resources.AlarmsMessages.tmx" />
       <Property ID="TargetFile[6]" Value="mappView.Visualization.Resources.Texts.AlarmsPageText.tmx" />
+      <Property ID="TargetFile[7]" Value="mappView.Visualization.Resources.Texts.MainPageStrings.tmx" />
     </Group>
   </Element>
 </Configuration>

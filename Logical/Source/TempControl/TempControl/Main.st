@@ -66,16 +66,11 @@ PROGRAM _CYCLIC
 		
 		// Prameters and outputs update
 		MpTempController_0.ActualTemperature := TempInReal;
-		MpTempController_0.SetTemperature := gTanks.ObjectParameters.Tank3TargetTemp;
+		MpTempController_0.SetTemperature := gTanks.Parameters.Tank3TargetTemp;
 		gTanks.Commands.TurnOnHeater := MpTempController_0.Heat;
 		gTanks.Commands.TurnOnFan := MpTempController_0.Cool;
 		
 	END_IF;
-	
-	MpTempController_0.ActualTemperature := TempInReal;
-	MpTempController_0.SetTemperature := gTanks.ObjectParameters.Tank3TargetTemp;
-	gTanks.Commands.TurnOnHeater := MpTempController_0.Heat;
-	gTanks.Commands.TurnOnFan := MpTempController_0.Cool;
 	
 	// FB updates
 	MpTempController_0();
