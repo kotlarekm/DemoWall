@@ -58,5 +58,15 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="RecipesMainContent.ApplyRecipeBtn.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="RecipesMainContent" widgetRefId="ApplyRecipeBtn" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="ApplyRecipeDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

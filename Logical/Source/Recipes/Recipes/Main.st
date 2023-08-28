@@ -41,13 +41,19 @@ PROGRAM _INIT
 	
 	// MpRecipeRegPar init
 	MpRecipeRegPar_0.MpLink := ADR(gRecipeXml);
-	MpRecipeRegPar_0.PVName := ADR('gTanks.Parameters');
+	MpRecipeRegPar_0.PVName := ADR('Recipes:ParametersToLoad');
 	MpRecipeRegPar_0.Enable := TRUE;
 	MpRecipeRegPar_0();
 	
 END_PROGRAM
 
 PROGRAM _CYCLIC
+	
+	// Applying parameters to real object
+	IF ApplyParameters THEN
+		gTanks.Parameters := ParametersToLoad;
+	  ApplyParameters := FALSE;
+	END_IF;
 	
 	// Checking if usb devices are aveliable
 	IF UsbNodeListGet_0.allNodes >= 1 THEN

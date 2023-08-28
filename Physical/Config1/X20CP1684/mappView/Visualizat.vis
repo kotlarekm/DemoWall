@@ -12,34 +12,39 @@
   <Navigations />
   <BindingsSets>
     <BindingsSet refId="RecipesMainContent_binding" />
-	<BindingsSet refId="ContentAlarms_binding" />
-	<BindingsSet refId="ContentMain_binding" />
+    <BindingsSet refId="ContentAlarms_binding" />
+    <BindingsSet refId="ContentMain_binding" />
   </BindingsSets>
   <EventBindingsSets>
-	 <EventBindingsSet refId="LoginDialogMainContent_eventbinding" />
-	 <EventBindingsSet refId="ContentTop_eventbinding" />
-	 <EventBindingsSet refId="LoginDialogTopContent_eventbinding" />
-	 <EventBindingsSet refId="RecipesMainContent_eventbinding" />
-	 <EventBindingsSet refId="DeleteFileMainContent_eventbinding" />
-	 <EventBindingsSet refId="DeleteFileDialogTopContent_eventbinding" />
-	 <EventBindingsSet refId="ContentAlarms_eventbinding" />
-	 <EventBindingsSet refId="ContentNavigation_eventbinding" />
+    <EventBindingsSet refId="LoginDialogMainContent_eventbinding" />
+    <EventBindingsSet refId="ContentTop_eventbinding" />
+    <EventBindingsSet refId="LoginDialogTopContent_eventbinding" />
+    <EventBindingsSet refId="RecipesMainContent_eventbinding" />
+    <EventBindingsSet refId="DeleteFileMainContent_eventbinding" />
+    <EventBindingsSet refId="DeleteFileDialogTopContent_eventbinding" />
+    <EventBindingsSet refId="ContentAlarms_eventbinding" />
+    <EventBindingsSet refId="ContentNavigation_eventbinding" />
     <EventBindingsSet refId="ContentMain_eventbinding" />
+    <EventBindingsSet refId="ApplyRecipeTopContent_eventbinding" />
+    <EventBindingsSet refId="ApplyRecipeMainContent_eventbinding" />
   </EventBindingsSets>
   <Dialogs>
-	<Dialog refId="LoginDialog" />
-	<Dialog refId="DeleteFileDialog" />
+    <Dialog refId="LoginDialog" />
+    <Dialog refId="DeleteFileDialog" />
+    <Dialog refId="ApplyRecipeDialog" />
   </Dialogs>
   <Contents>
     <Content refId="ContentTop" />
     <Content refId="ContentNavigation" />
-	<Content refId="ContentMain" />
-	<Content refId="LoginDialogTopContent" />
-	<Content refId="LoginDialogMainContent" />
-	<Content refId="RecipesMainContent" />
-	<Content refId="DeleteFileDialogTopContent" />
-	<Content refId="DeleteFileMainContent" />
-	<Content refId="ContentAlarms" />
+    <Content refId="ContentMain" />
+    <Content refId="LoginDialogTopContent" />
+    <Content refId="LoginDialogMainContent" />
+    <Content refId="RecipesMainContent" />
+    <Content refId="DeleteFileDialogTopContent" />
+    <Content refId="DeleteFileMainContent" />
+    <Content refId="ContentAlarms" />
+    <Content refId="ApplyRecipeTopContent" />
+    <Content refId="ApplyRecipeMainContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />
@@ -49,8 +54,8 @@
     <Theme refId="BuRTheme1" />
   </Themes>
   <Configurations>
-	<Configuration key="activityCount" value="false" />
-	<Configuration key="zoom" value="true" />
+    <Configuration key="activityCount" value="false" />
+    <Configuration key="zoom" value="true" />
     <Gestures>
       <!--<SystemGesture1 touchPoints="2" />
 		  <SystemGesture2 touchPoints="2" />

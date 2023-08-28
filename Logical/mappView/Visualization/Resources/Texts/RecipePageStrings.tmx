@@ -125,5 +125,13 @@
         <seg>Select data device:</seg>
       </tuv>
     </tu>
+    <tu tuid="Apply">
+      <tuv xml:lang="pl">
+        <seg>Zastosuj</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Apply</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

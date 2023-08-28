@@ -37,5 +37,13 @@
         <seg>Cancel</seg>
       </tuv>
     </tu>
+    <tu tuid="ApplyRecipeInfo">
+      <tuv xml:lang="pl">
+        <seg>Wybrane parametry zostaną zastosowane dla rzeczywistego obiektu.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Selected parameters will be applied to the real object.</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>
