@@ -8,5 +8,6 @@
     <Object Type="Package">ApplyRecipeDialog</Object>
     <Object Type="Package">InfoDialog</Object>
     <Object Type="Package">GraphDialog</Object>
+    <Object Type="Package">PIDSettingsDialog</Object>
   </Objects>
 </Package>

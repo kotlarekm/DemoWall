@@ -1026,6 +1026,12 @@
         <Action>
           <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentMain" widgetRefId="Button1">
             <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
+    <EventBinding id="ContentMain.RegulatorSettingsBtn.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMain" widgetRefId="RegulatorSettingsBtn" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="PIDSettingsDialog" />
           </Target>
         </Action>
       </EventHandler>

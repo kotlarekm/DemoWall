@@ -11,5 +11,6 @@
     <Object Type="File">MotionContentStrings.tmx</Object>
     <Object Type="File">InfoDialogContentStrings.tmx</Object>
     <Object Type="File">GraphDialogContentStrings.tmx</Object>
+    <Object Type="File">PIDSettingsStrings.tmx</Object>
   </Objects>
 </Package>

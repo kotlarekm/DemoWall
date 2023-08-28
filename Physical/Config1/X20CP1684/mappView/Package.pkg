@@ -28,5 +28,6 @@
     <Object Type="File">ContentTop.binding</Object>
     <Object Type="File">ContentIO.binding</Object>
     <Object Type="File">OpcUaServer.uaserver</Object>
+    <Object Type="File">PIDSettingsTopContent.eventbinding</Object>
   </Objects>
 </Package>

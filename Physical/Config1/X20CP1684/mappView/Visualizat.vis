@@ -35,6 +35,7 @@
     <EventBindingsSet refId="InfoDialogTopContent_eventbinding" />
     <EventBindingsSet refId="GraphDialogTopContent_eventbinding" />
     <EventBindingsSet refId="ContentIO_eventbinding" />
+    <EventBindingsSet refId="PIDSettingsTopContent_eventbinding" />
   </EventBindingsSets>
   <Dialogs>
     <Dialog refId="LoginDialog" />
@@ -42,6 +43,7 @@
     <Dialog refId="ApplyRecipeDialog" />
     <Dialog refId="InfoDialog" />
     <Dialog refId="GraphDialog" />
+    <Dialog refId="PIDSettingsDialog" />
   </Dialogs>
   <Contents>
     <Content refId="ContentTop" />
@@ -61,6 +63,8 @@
     <Content refId="GraphDialogTopContent" />
     <Content refId="GraphDialogMainContent" />
     <Content refId="ContentIO" />
+    <Content refId="PIDSettingsMainContent" />
+    <Content refId="PIDSettingsTopContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />
