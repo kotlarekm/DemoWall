@@ -31,6 +31,9 @@ TYPE
 		Mixer1MaxAllowedVelocity : INT;
 		Mixer2MaxAllowedVelocity : INT;
 		Tank3TargetTemp : REAL := 33.3;
+		Tank3TargetPressure : REAL;
+		InertialTermTimeConstant : REAL;
+		InertialTermGain : REAL;
 	END_STRUCT;
 	ObjectType : 	STRUCT 
 		Mode : UINT;

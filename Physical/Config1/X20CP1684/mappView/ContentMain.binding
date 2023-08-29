@@ -54,14 +54,6 @@
 <Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericOutput7" attribute="node" />
 </Binding>
 <Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank1Pressure" attribute="node" />
-<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericOutput13" attribute="node" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank3Pressure" attribute="node" />
-<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericOutput12" attribute="node" />
-</Binding>
-<Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank2FluidLvl" attribute="node" />
 <Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="ProgressBar20" attribute="node" />
 </Binding>
@@ -130,6 +122,14 @@
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank3FluidLvl" attribute="node" />
 <Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NotMixedProgressBarAuto" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Parameters.Tank3TargetPressure" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="MixingTimeAutoInput1" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank3Pressure" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="TempChart1" attribute="graph[graph1].node" />
 </Binding>
 </Bindings>
 </BindingsSet>

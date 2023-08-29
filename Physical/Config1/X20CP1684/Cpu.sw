@@ -13,8 +13,8 @@
     <Task Name="MainProgra" Source="Source.MainProgram.MainProgram.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Recipes" Source="Source.Recipes.Recipes.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Alarms" Source="Source.Alarms.Alarms.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="Simulation" Source="Source.Simulation.Simulation.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="IO" Source="Source.IO.IO.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+    <Task Name="PressureCo" Source="Source.PressureControl.PressureControl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#5" />
   <TaskClass Name="Cyclic#6" />
