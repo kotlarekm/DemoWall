@@ -131,6 +131,7 @@
         <Variable Name="TempInReal" />
         <Variable Name="UpdateFanPWM" />
         <Variable Name="UpdateHeaterPWM" />
+        <Variable Name="MpTempControllerParType_1" RecursiveEnable="2" />
       </Task>
       <Task Name="Recipes">
         <Variable Name="ApplyParameters" />

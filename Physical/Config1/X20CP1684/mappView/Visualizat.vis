@@ -18,6 +18,7 @@
     <BindingsSet refId="GraphDialogMainContent_binding" />
     <BindingsSet refId="ContentTop_binding" />
     <BindingsSet refId="ContentIO_binding" />
+    <BindingsSet refId="PIDSettingsMainContent_binding" />
   </BindingsSets>
   <EventBindingsSets>
     <EventBindingsSet refId="LoginDialogMainContent_eventbinding" />

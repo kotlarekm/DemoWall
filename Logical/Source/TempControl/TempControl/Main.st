@@ -22,6 +22,8 @@ PROGRAM _INIT
 	MpTempController_0.Parameters := ADR(MpTempControllerParType_0);
 	MpTempController_0.Enable := TRUE;
 	MpTempController_0();
+	
+	MpTempControllerParType_1 := MpTempControllerParType_0;
 	 
 END_PROGRAM
 

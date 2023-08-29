@@ -30,5 +30,6 @@
     <Object Type="File">OpcUaServer.uaserver</Object>
     <Object Type="File">PIDSettingsTopContent.eventbinding</Object>
     <Object Type="File">PIDSettingsMainContent.eventbinding</Object>
+    <Object Type="File">PIDSettingsMainContent.binding</Object>
   </Objects>
 </Package>
