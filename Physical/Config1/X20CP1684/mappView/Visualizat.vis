@@ -67,6 +67,7 @@
     <Content refId="ContentIO" />
     <Content refId="PIDSettingsMainContent" />
     <Content refId="PIDSettingsTopContent" />
+    <Content refId="ContentSettings" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

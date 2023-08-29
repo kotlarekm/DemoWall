@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="ContentAlarms" height="608" width="1206" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.Label" id="Label1" top="20" left="0" width="1206" height="32" zIndex="0" text="$IAT/Alarm" textAlign="center" fontName="ABBvoiceMedium" fontSize="30px" bold="true" />
-    <Widget xsi:type="widgets.brease.TabControl" id="TabControl1" top="59" left="20" width="1166" height="522" zIndex="1">
+    <Widget xsi:type="widgets.brease.TabControl" id="TabControl1" top="20" left="20" width="1166" height="561" zIndex="0">
       <Widgets>
         <Widget xsi:type="widgets.brease.TabItem" id="TabItem1" left="0" zIndex="0" text="$IAT/List">
           <Widgets>

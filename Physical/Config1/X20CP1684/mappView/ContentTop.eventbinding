@@ -57,5 +57,50 @@
         </Sequence>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="EventBinding_24">
+      <Source xsi:type="clientSystem.Event" event="ContentLoaded" />
+      <EventHandler condition="contentId=&quot;ContentMain&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentTop" widgetRefId="TopContentPageLabel">
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="contentId=&quot;ContentMotion&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentTop" widgetRefId="TopContentPageLabel">
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Motion" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="contentId=&quot;RecipesMainContent&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentTop" widgetRefId="TopContentPageLabel">
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Recipes" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="contentId=&quot;ContentIO&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentTop" widgetRefId="TopContentPageLabel">
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/IO" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="contentId=&quot;ContentSettings&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentTop" widgetRefId="TopContentPageLabel">
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Settings" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="contentId=&quot;ContentAlarms&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentTop" widgetRefId="TopContentPageLabel">
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Alarms" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>
