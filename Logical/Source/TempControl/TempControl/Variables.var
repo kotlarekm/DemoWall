@@ -15,4 +15,7 @@ VAR
 	FanPWMDuty : REAL := 0.0;
 	HeaterPWMDuty : REAL := 0.0;
 	MpTempControllerParType_1 : MpTempControllerParType;
+	RestoreSettings : BOOL := FALSE;
+	ApplySettings : BOOL := FALSE;
+	AutoTune : BOOL := FALSE;
 END_VAR

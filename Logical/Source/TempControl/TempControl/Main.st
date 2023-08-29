@@ -5,14 +5,6 @@
 // Description: Task resposible for temperature control.
 //***********************************************************************
 
-// OSC PID parameters
-// Heat / Cool
-// ProportionalGain 32.50824
-// Integrationtime 85.1532
-// DerivativeTime 10.2183838
-// FilterTime 1.02183843
-// IntegratorPreloading -0.07599998
-
 PROGRAM _INIT
 	
 	gTanks;
@@ -72,6 +64,24 @@ PROGRAM _CYCLIC
 		gTanks.Commands.TurnOnHeater := MpTempController_0.Heat;
 		gTanks.Commands.TurnOnFan := MpTempController_0.Cool;
 		
+	END_IF;
+	
+	// Apply settings
+	IF ApplySettings THEN
+		ApplySettings := FALSE;
+		MpTempControllerParType_0 := MpTempControllerParType_1;
+		MpTempController_0.Update := TRUE;
+	END_IF;
+	
+	// Restore settings
+	IF RestoreSettings THEN
+		RestoreSettings := FALSE;
+		MpTempControllerParType_1 := MpTempControllerParType_0;
+		MpTempController_0.Update := TRUE;
+	END_IF;
+	
+	IF MpTempController_0.UpdateDone THEN
+	  MpTempController_0.Update := FALSE;
 	END_IF;
 	
 	// FB updates

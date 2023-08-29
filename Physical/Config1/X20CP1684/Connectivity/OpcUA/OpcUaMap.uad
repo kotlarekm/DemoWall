@@ -132,6 +132,9 @@
         <Variable Name="UpdateFanPWM" />
         <Variable Name="UpdateHeaterPWM" />
         <Variable Name="MpTempControllerParType_1" RecursiveEnable="2" />
+        <Variable Name="ApplySettings" />
+        <Variable Name="AutoTune" />
+        <Variable Name="RestoreSettings" />
       </Task>
       <Task Name="Recipes">
         <Variable Name="ApplyParameters" />

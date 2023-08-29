@@ -5,8 +5,52 @@
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="PIDSettingsMainContent" widgetRefId="PIDSettingsCancelBtn" event="Click" />
       <EventHandler>
         <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::TempContro:RestoreSettings">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
           <Target xsi:type="clientSystem.Action">
             <Method xsi:type="clientSystem.Action.CloseDialog" dialogId="PIDSettingsDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="PIDSettingsMainContent.PIDSettingsApplyBtn.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="PIDSettingsMainContent" widgetRefId="PIDSettingsApplyBtn" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::TempContro:ApplySettings">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="PIDSettingsMainContent.PIDSettingsRestoreBtn.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="PIDSettingsMainContent" widgetRefId="PIDSettingsRestoreBtn" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::TempContro:RestoreSettings">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="PIDSettingsMainContent.PIDSettingsAutotuneBtn1.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="PIDSettingsMainContent" widgetRefId="PIDSettingsAutotuneBtn1" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::TempContro:RestoreSettings">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::TempContro:AutoTune">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
       </EventHandler>
