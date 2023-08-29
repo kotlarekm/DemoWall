@@ -14,6 +14,7 @@ END_PROGRAM
 PROGRAM _CYCLIC
 
 	IF Manual THEN
+		gTanks.Commands.Start := FALSE;
 		IF gTanks.Commands.OpenTank1Valve AND gTanks.Status.Tank1FluidLvl < MAX_TANK_CAPACITY THEN
 			IF NOT TON_1.IN THEN 
 				TON_1(IN := TRUE, PT := T#50ms);

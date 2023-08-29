@@ -4,7 +4,6 @@
   <Aliases>
     <ACLAliases />
     <EURangeViolationAliases />
-    <EURangesAliases />
     <EURangesAliases>
       <EURanges Id="1">
         <EURange>
@@ -22,7 +21,7 @@
         <EURange>
           <Low ValueProvider="Const">0</Low>
           <High ValueProvider="Const">100</High>
-		</EURange>
+        </EURange>
       </EURanges>
       <EURanges Id="11">
         <EURange>
@@ -40,19 +39,19 @@
         <EURange>
           <Low ValueProvider="Const">0</Low>
           <High ValueProvider="Const" />
-		</EURange>
+        </EURange>
       </EURanges>
-	  <EURanges Id="12">
+      <EURanges Id="12">
         <EURange>
-		  <Low ValueProvider="Const">0</Low>
+          <Low ValueProvider="Const">0</Low>
           <High ValueProvider="Const">1440</High>
         </EURange>
       </EURanges>
-	  <EURanges Id="10">
+      <EURanges Id="10">
         <EURange>
           <Low ValueProvider="Const">0</Low>
           <High ValueProvider="Const">360</High>
-		</EURange>
+        </EURange>
       </EURanges>
     </EURangesAliases>
     <EngineeringUnitAliases />
@@ -111,10 +110,19 @@
       <Task Name="Simulation">
         <Variable Name="AnimationForMixer1" />
         <Variable Name="AnimationForMixer2" />
-        <Variable Name="LeftValveCheck" />
         <Variable Name="MixerCheck" />
-        <Variable Name="RightValveCheck" />
         <Variable Name="TanksValvesCheck" />
+        <Variable Name="RValveCheck" />
+        <Variable Name="LValveCheck" />
+        <Variable Name="Auto" />
+        <Variable Name="Manual" />
+        <Variable Name="ProgressBarNotMixedManual" />
+        <Variable Name="ProgressBarPaintManual" />
+        <Variable Name="ProgressBarWaterManual" />
+        <Variable Name="Tank1Save" />
+        <Variable Name="Tank2Save" />
+        <Variable Name="Tank3LeftValveSave" />
+        <Variable Name="Tank3RightValveSave" />
       </Task>
       <Task Name="TempContro">
         <Variable Name="FanPWMDuty" />
@@ -250,21 +258,6 @@
         <Variable Name="ChangeButtonColor_0">
           <Variable Name="RoundButton" RecursiveEnable="2" />
         </Variable>
-		</Task>
-      <Task Name="Simulation">
-        <Variable Name="AnimationForMixer1" />
-        <Variable Name="AnimationForMixer2" />
-        <Variable Name="TanksValvesCheck" />
-        <Variable Name="MixerCheck" />
-        <Variable Name="Auto" />
-        <Variable Name="Manual" />
-        <Variable Name="RValveCheck" />
-        <Variable Name="LValveCheck" />
-        <Variable Name="ProgressBarPaintManual" />
-        <Variable Name="ProgressBarWaterManual" />
-        <Variable Name="Tank1Save" />
-        <Variable Name="Tank2Save" />
-        <Variable Name="ProgressBarNotMixedManual" />
       </Task>
     </Module>
   </DefaultView>

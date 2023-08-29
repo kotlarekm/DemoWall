@@ -752,6 +752,9 @@
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::TempContro:UpdateHeaterPWM">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
     </EventBinding>
     <EventBinding id="ContentMain.Ellipse12.Click">
       <Source xsi:type="widgets.brease.Ellipse.Event" contentRefId="ContentMain" widgetRefId="Ellipse7" event="Click" />
@@ -769,6 +772,9 @@
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::TempContro:UpdateFanPWM">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
     </EventBinding>
     <EventBinding id="ContentMain.Ellipse8.Click">
       <Source xsi:type="widgets.brease.Ellipse.Event" contentRefId="ContentMain" widgetRefId="Ellipse8" event="Click" />
@@ -990,6 +996,36 @@
         <Action>
           <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="NotMixedProgressBar">
             <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMain.Button1.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMain" widgetRefId="Button1" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.Start">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_22">
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="ContentMain" widgetRefId="ManualToggleButton" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentMain" widgetRefId="Button1">
+            <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_23">
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="ContentMain" widgetRefId="AutoToggleButton" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentMain" widgetRefId="Button1">
+            <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
           </Target>
         </Action>
       </EventHandler>
