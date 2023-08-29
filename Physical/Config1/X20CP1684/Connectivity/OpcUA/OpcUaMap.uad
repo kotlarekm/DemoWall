@@ -170,14 +170,6 @@
         </Variable>
         <Variable Name="Manual" />
       </Task>
-      <Task Name="Simulation">
-        <Variable Name="AnimationForMixer1" />
-        <Variable Name="AnimationForMixer2" />
-        <Variable Name="TanksValvesCheck" />
-        <Variable Name="LeftValveCheck" />
-        <Variable Name="MixerCheck" />
-        <Variable Name="RightValveCheck" />
-      </Task>
       <Task Name="IO">
         <Variable Name="diSwitch1" />
         <Variable Name="diSwitch2" />
