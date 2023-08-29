@@ -260,6 +260,11 @@
         <Variable Name="Manual" />
         <Variable Name="RValveCheck" />
         <Variable Name="LValveCheck" />
+        <Variable Name="ProgressBarPaintManual" />
+        <Variable Name="ProgressBarWaterManual" />
+        <Variable Name="Tank1Save" />
+        <Variable Name="Tank2Save" />
+        <Variable Name="ProgressBarNotMixedManual" />
       </Task>
     </Module>
   </DefaultView>

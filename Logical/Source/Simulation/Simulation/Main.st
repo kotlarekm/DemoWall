@@ -12,9 +12,8 @@ PROGRAM _INIT
 END_PROGRAM
  
 PROGRAM _CYCLIC
-	
+
 	IF Manual THEN
-		
 		IF gTanks.Commands.OpenTank1Valve AND gTanks.Status.Tank1FluidLvl < MAX_TANK_CAPACITY THEN
 			IF NOT TON_1.IN THEN 
 				TON_1(IN := TRUE, PT := T#50ms);
@@ -22,6 +21,7 @@ PROGRAM _CYCLIC
  
 			IF TON_1.Q THEN
 				gTanks.Status.Tank1FluidLvl := gTanks.Status.Tank1FluidLvl + POURED_WATER_TO_TANK;
+				Tank1Save := gTanks.Status.Tank1FluidLvl + POURED_WATER_TO_TANK;
 				TON_1(IN := FALSE);  
 			END_IF
 		END_IF
@@ -35,6 +35,7 @@ PROGRAM _CYCLIC
  
 			IF TON_2.Q THEN
 				gTanks.Status.Tank2FluidLvl := gTanks.Status.Tank2FluidLvl + POURED_WATER_TO_TANK;
+				Tank2Save := gTanks.Status.Tank2FluidLvl + POURED_WATER_TO_TANK;
 				TON_2(IN := FALSE);  
 			END_IF
 		END_IF
@@ -97,7 +98,7 @@ PROGRAM _CYCLIC
 		END_IF
  
 		TON_5();
- 
+
 		IF UINT_TO_BOOL(gTanks.Status.IsMixer1On) THEN
 			IF NOT TON_6.IN THEN
 				TON_6(IN := TRUE, PT := T#175ms);
@@ -131,44 +132,88 @@ PROGRAM _CYCLIC
 		ELSE
 			AnimationForMixer2 := 0;
 		END_IF
-	
+			
 		TON_6();
-	
+
+		IF Tank1Save > 0 AND Tank3LeftValveSave THEN
+			ProgressBarWaterManual := TRUE;
+		END_IF
+		
+		IF Tank2Save > 0 AND Tank3RightValveSave THEN
+			ProgressBarPaintManual := TRUE;
+		END_IF
+		
+		IF gTanks.Commands.OpenTank3LeftValve > 0 THEN
+			Tank3LeftValveSave := TRUE;
+		END_IF
+		
+		IF gTanks.Commands.OpenTank3RightValve > 0 THEN
+			Tank3RightValveSave := TRUE;
+		END_IF
+		
+		IF Tank1Save > 0 
+			AND Tank2Save > 0
+			AND Tank3LeftValveSave 
+			AND Tank3RightValveSave THEN
+			ProgressBarNotMixedManual := TRUE;
+			ProgressBarPaintManual := FALSE;
+			ProgressBarWaterManual := FALSE;
+		ELSE
+			ProgressBarNotMixedManual := FALSE;
+		END_IF
+		
+		IF gTanks.Status.Tank1FluidLvl = 0 AND gTanks.Status.Tank3FluidLvl = 0 THEN
+			Tank1Save := 0;
+			ProgressBarWaterManual := FALSE;
+			ProgressBarNotMixedManual := FALSE;
+			Tank3LeftValveSave := FALSE;
+			MixerCheck := FALSE;
+		END_IF
+		
+		IF gTanks.Status.Tank2FluidLvl = 0 AND gTanks.Status.Tank3FluidLvl = 0 THEN
+			Tank2Save := 0;
+			ProgressBarPaintManual := FALSE;
+			ProgressBarNotMixedManual := FALSE;
+			Tank3RightValveSave := FALSE;
+			MixerCheck := FALSE;
+		END_IF
+		
+		IF gTanks.Status.Tank1FluidLvl = 0 AND gTanks.Status.Tank2FluidLvl = 0 AND gTanks.Status.Tank3FluidLvl = 0 THEN
+			Tank1Save := 0;
+			Tank2Save := 0;
+			ProgressBarNotMixedManual := FALSE;
+			ProgressBarPaintManual := FALSE;
+			ProgressBarWaterManual := FALSE;
+			Tank3LeftValveSave := FALSE;
+			Tank3RightValveSave := FALSE;
+			MixerCheck := FALSE;
+		END_IF
+		
+		IF gTanks.Status.Tank3FluidLvl = 0 THEN
+			gTanks.Commands.OpenTank3MainValve := FALSE;
+			Tank3LeftValveSave := FALSE;
+			Tank3RightValveSave := FALSE;
+		END_IF
+		
+		IF gTanks.Status.Tank1FluidLvl = 0 THEN
+			gTanks.Commands.OpenTank3LeftValve := 0;
+		END_IF
+		
+		IF gTanks.Status.Tank2FluidLvl = 0 THEN
+			gTanks.Commands.OpenTank3RightValve := 0;
+		END_IF
+
 		IF UINT_TO_BOOL(gTanks.Commands.OpenTank3LeftValve) AND UINT_TO_BOOL(gTanks.Commands.OpenTank3RightValve) THEN
 			TanksValvesCheck := TRUE;
 		ELSE
 			TanksValvesCheck := FALSE;
 		END_IF
-	
-		LValveCheck := FALSE;
-		RValveCheck := FALSE;
-	
-		IF gTanks.Parameters.Tank2TargetFluidLvl > 0 AND gTanks.Parameters.Tank1TargetFluidLvl = 0 THEN
-			LValveCheck := TRUE;
-		END_IF
-	
-		IF gTanks.Parameters.Tank1TargetFluidLvl > 0 AND gTanks.Parameters.Tank2TargetFluidLvl = 0 THEN
-			RValveCheck := TRUE;
-		END_IF
-		
-		IF UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND UINT_TO_BOOL(gTanks.Status.IsMixer2On) THEN
+
+		IF UINT_TO_BOOL(gTanks.Status.IsMixer1On) 
+			AND UINT_TO_BOOL(gTanks.Status.IsMixer2On) 
+			AND Tank3RightValveSave
+			AND Tank3LeftValveSave  THEN
 			MixerCheck := TRUE;
-		END_IF
-		
-		IF gTanks.Status.Tank3FluidLvl = 0 THEN
-			MixerCheck := FALSE;
-		END_IF
-		
-		IF gTanks.Commands.Start THEN
-			MixerCheck := FALSE;
-		END_IF
-	
-		IF UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND UINT_TO_BOOL(gTanks.Status.IsMixer2On) AND RValveCheck THEN
-			MixerCheck := FALSE;
-		END_IF
-	
-		IF UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND UINT_TO_BOOL(gTanks.Status.IsMixer2On) AND LValveCheck THEN	
-			MixerCheck := FALSE;
 		END_IF
 	END_IF
 	
@@ -360,16 +405,11 @@ PROGRAM _CYCLIC
 		IF UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND UINT_TO_BOOL(gTanks.Status.IsMixer2On) THEN
 			MixerCheck := TRUE;
 		END_IF
-	
-		IF gTanks.Commands.Start THEN
-			MixerCheck := FALSE;
-		END_IF
-	
-		IF UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND UINT_TO_BOOL(gTanks.Status.IsMixer2On) AND RValveCheck THEN
-			MixerCheck := FALSE;
-		END_IF
-	
-		IF UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND UINT_TO_BOOL(gTanks.Status.IsMixer2On) AND LValveCheck THEN	
+		
+		IF gTanks.Status.Tank3FluidLvl = 0 
+			OR gTanks.Commands.Start 
+			OR UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND UINT_TO_BOOL(gTanks.Status.IsMixer2On) AND RValveCheck
+			OR UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND UINT_TO_BOOL(gTanks.Status.IsMixer2On) AND LValveCheck THEN
 			MixerCheck := FALSE;
 		END_IF
 	END_IF

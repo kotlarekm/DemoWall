@@ -808,7 +808,7 @@
       </EventHandler>
     </EventBinding>
     <EventBinding id="ContentMain.ToggleButton1.Click">
-      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="ContentMain" widgetRefId="ToggleButton1" event="Click" />
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="ContentMain" widgetRefId="AutoToggleButton" event="Click" />
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Simulation:Manual">
@@ -851,14 +851,14 @@
           </Step>
           <Step order="4">
             <Action>
-              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="NumericInput1">
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="LeftValveManualInput">
                 <Method xsi:type="widgets.brease.NumericInput.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
           <Step order="5">
             <Action>
-              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="NumericInput2">
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="RightValveManualInput">
                 <Method xsi:type="widgets.brease.NumericInput.Action.SetVisible" value="false" />
               </Target>
             </Action>
@@ -867,7 +867,7 @@
       </EventHandler>
     </EventBinding>
     <EventBinding id="ContentMain.ToggleButton2.Click">
-      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="ContentMain" widgetRefId="ToggleButton2" event="Click" />
+      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="ContentMain" widgetRefId="ManualToggleButton" event="Click" />
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Simulation:Auto">
@@ -910,19 +910,88 @@
           </Step>
           <Step order="4">
             <Action>
-              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="NumericInput1">
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="LeftValveManualInput">
                 <Method xsi:type="widgets.brease.NumericInput.Action.SetVisible" value="true" />
               </Target>
             </Action>
           </Step>
           <Step order="5">
             <Action>
-              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="NumericInput2">
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="RightValveManualInput">
                 <Method xsi:type="widgets.brease.NumericInput.Action.SetVisible" value="true" />
               </Target>
             </Action>
           </Step>
         </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_19">
+      <Source xsi:type="opcUa.Event" refId="::Simulation:ProgressBarPaintManual" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="PaintProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="PaintProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_20">
+      <Source xsi:type="opcUa.Event" refId="::Simulation:ProgressBarWaterManual" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="WaterProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="WaterProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_21">
+      <Source xsi:type="opcUa.Event" refId="::Simulation:ProgressBarNotMixedManual" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="NotMixedProgressBar">
+                <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="PaintProgressBar">
+                <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="WaterProgressBar">
+                <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="NotMixedProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
       </EventHandler>
     </EventBinding>
   </Bindings>
