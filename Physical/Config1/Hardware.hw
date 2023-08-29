@@ -493,7 +493,7 @@
       <Parameter ID="ChannelType1" Value="OCTET[12]" />
     </Connector>
     <Parameter ID="ConfigurationID" Value="DemoWallConfig1" />
-    <Parameter ID="SimulationIPAddress" Value="127.0.0.3" />
+    <Parameter ID="Simulation" Value="1" />
     <Parameter ID="TimerDeviceType" Value="EPLX2X" />
     <Parameter ID="TimerDevice" Value="X20CP1684.IF6" />
     <Parameter ID="TaskClassIdleTime" Value="2000" />
