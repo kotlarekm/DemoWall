@@ -9,5 +9,7 @@
     <Object Type="Package">MotionPage</Object>
     <Object Type="Package">SettingsPage</Object>
     <Object Type="Package">IOPage</Object>
+    <Object Type="Package">PDFViewer</Object>
+    <Object Type="Package">SDMPage</Object>
   </Objects>
 </Package>

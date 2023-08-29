@@ -6,5 +6,6 @@
     <Object Type="File">LoginDialogLayout.layout</Object>
     <Object Type="File">WarningDialogLayout.layout</Object>
     <Object Type="File">PIDSettingsLayout.layout</Object>
+    <Object Type="File">PDFViewer.layout</Object>
   </Objects>
 </Package>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="ContentPDFViewer" height="770" width="1370" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.PDFViewer" id="PDFViewer1" top="10" left="160" width="1203" height="755" zIndex="0" src="Media/Zadanie_DemoWall.pdf" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="NavigationButton1" top="15" left="10" width="135" height="745" zIndex="1" image="Media/SymbolLib/Arrow/Back.svg" pageId="SettingPage" text="Back" backGroundGradient="linear-gradient(to bottom,#F7F7F7 0%,#C6C6C6 100%)" />
+  </Widgets>
+</Content>
