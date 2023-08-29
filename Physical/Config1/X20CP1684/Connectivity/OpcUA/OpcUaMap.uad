@@ -135,6 +135,9 @@
         <Variable Name="ApplySettings" />
         <Variable Name="AutoTune" />
         <Variable Name="RestoreSettings" />
+        <Variable Name="MpTempController_0">
+          <Variable Name="TuningActive" />
+        </Variable>
       </Task>
       <Task Name="Recipes">
         <Variable Name="ApplyParameters" />

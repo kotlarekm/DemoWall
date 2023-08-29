@@ -107,5 +107,13 @@
         <seg>Set point cool:</seg>
       </tuv>
     </tu>
+    <tu tuid="CancelTuning">
+      <tuv xml:lang="pl">
+        <seg>Anuluj tuning</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Cancel tuning</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

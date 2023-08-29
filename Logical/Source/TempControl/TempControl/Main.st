@@ -24,7 +24,28 @@ PROGRAM _CYCLIC
 	// Temp measurement
 	TempInReal := INT_TO_REAL(gTanks.Status.Tank3Temp) / IntToRealScaller;
 	
-	IF ManualON THEN
+	// Auto-tuning
+	IF AutoTune THEN
+		
+		MpTempController_0.Control := FALSE;
+		MpTempController_0.ActualTemperature := TempInReal;
+		MpTempController_0.SetTemperature := gTanks.Parameters.Tank3TargetTemp;
+		gTanks.Commands.TurnOnFan := MpTempController_0.Cool;
+		gTanks.Commands.TurnOnHeater := MpTempController_0.Heat;
+		MpTempController_0.Tune := TRUE;
+	
+		IF MpTempController_0.TuningDone THEN
+			MpTempController_0.Tune := FALSE;
+			AutoTune := FALSE;
+			MpTempControllerParType_0.PID := MpTempController_0.Info.Tuning.PIDParameters;
+			MpTempControllerParType_0.Profile.Cool := MpTempController_0.Info.Tuning.ProfileParameters.Cool;
+			MpTempControllerParType_0.Profile.Heat := MpTempController_0.Info.Tuning.ProfileParameters.Heat;
+			MpTempControllerParType_1 := MpTempControllerParType_0;
+			MpTempController_0.Update := TRUE;
+		END_IF;
+	
+	// Manual mode
+	ELSIF ManualON THEN
 		
 		MpTempController_0.Control := FALSE;
 		
@@ -51,7 +72,8 @@ PROGRAM _CYCLIC
 			END_IF;
 		END_IF
 		gTanks.Commands.TurnOnHeater := MTBasicsPWMHeater.Out;
-		
+	
+	// Auto mode
 	ELSE
 		
 		MTBasicsPWMFan.Enable := FALSE;
@@ -82,6 +104,18 @@ PROGRAM _CYCLIC
 	
 	IF MpTempController_0.UpdateDone THEN
 	  MpTempController_0.Update := FALSE;
+	END_IF;
+	
+	// Checking errors
+	IF MpTempController_0.Error THEN
+		MpTempController_0.Control := FALSE;
+		MpTempController_0.Tune := FALSE;
+		
+		// some actions
+		
+		MpTempController_0.ErrorReset := TRUE;
+	ELSE
+		MpTempController_0.ErrorReset := FALSE;
 	END_IF;
 	
 	// FB updates
