@@ -1,21 +1,23 @@
 VAR
-	TON_1 : TON;
-	TON_2 : TON;
-	TON_3 : TON;
-	POURED_WATER_TO_TANK : UINT := 50;
-	WaterFixTank2 : REAL;
-	WaterFixTank1 : REAL;
-	VALVE_CALCULATION_INPUT : UINT := 100;
-	TON_4 : TON;
-	TON_5 : TON;
-	AnimationForMixer2 : UINT;
-	AnimationForMixer1 : UINT;
-	TON_6 : TON;
+	TON_1 : TON; (*Timer used to add value to tank 1*)
+	TON_2 : TON; (*Timer used to add value to tank 2*)
+	TON_3 : TON; (*Timer used to add value to tank 3 with left valve*)
+	POURED_WATER_TO_TANK : UINT := 50; (*Poured water to tank; default :50*)
+	WaterFixTank2 : REAL; (*Variable used to fix water in tank 1*)
+	WaterFixTank1 : REAL; (*Variable used to fix water in tank 2*)
+	VALVE_CALCULATION_INPUT : UINT := 100; (*Timer used to add value to tank 3 with right valve*)
+	TON_4 : TON; (*Variable used to calculate % of valve right and left opening to add water based on that*)
+	TON_5 : TON; (*Timer used to empty tank 3 *)
+	AnimationForMixer2 : UINT; (*Variable used to animate mixer 2 in simulaition*)
+	AnimationForMixer1 : UINT; (*Variable used to animate mixer 1 in simulation*)
+	TON_6 : TON; (*Timer used to animate mixers in simulation*)
 	TanksValvesCheck : BOOL; (*Variable used to check if two valves are open, triggering a progress bar display in simulation if they are*)
-	LeftValveCheck : BOOL; (*Variable used to check if left valve is open then triggering a progress bar display in simulation if it is*)
-	RightValveCheck : BOOL; (*Variable used to check if right valve is open then triggering a progress bar display in simulation if it is*)
+	LValveCheck : BOOL; (*Variable used to check if left valve is open then triggering a progress bar display in simulation if it is*)
+	RValveCheck : BOOL; (*Variable used to check if right valve is open then triggering a progress bar display in simulation if it is*)
 	MixerCheck : BOOL := FALSE; (*Variable used to check if right mixers are working then triggering a progress bar display in simulation if they are*)
-	Manual : BOOL := FALSE;
-	Auto : BOOL := TRUE;
-	MAX_TANK_CAPACITY : REAL := 10000;
+	Manual : BOOL := FALSE; (*Variable used to let user control simulation in manual mode*)
+	Auto : BOOL := TRUE; (*Variable used to let user control simulation in auto mode*)
+	MAX_TANK_CAPACITY : REAL := 10000; (*Variable used to set max capacity of tanks*)
+	Tank1Save : USINT; (*Variable used to remember value of tank 1 in order to correctly working simulation*)
+	Tank2Save : USINT; (*Variable used to remember value of tank 2 in order to correctly working simulation*)
 END_VAR

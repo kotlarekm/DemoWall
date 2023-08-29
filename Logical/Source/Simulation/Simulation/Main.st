@@ -140,15 +140,15 @@ PROGRAM _CYCLIC
 			TanksValvesCheck := FALSE;
 		END_IF
 	
-		LeftValveCheck := FALSE;
-		RightValveCheck := FALSE;
+		LValveCheck := FALSE;
+		RValveCheck := FALSE;
 	
 		IF gTanks.Parameters.Tank2TargetFluidLvl > 0 AND gTanks.Parameters.Tank1TargetFluidLvl = 0 THEN
-			LeftValveCheck := TRUE;
+			LValveCheck := TRUE;
 		END_IF
 	
 		IF gTanks.Parameters.Tank1TargetFluidLvl > 0 AND gTanks.Parameters.Tank2TargetFluidLvl = 0 THEN
-			RightValveCheck := TRUE;
+			RValveCheck := TRUE;
 		END_IF
 		
 		IF UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND UINT_TO_BOOL(gTanks.Status.IsMixer2On) THEN
@@ -163,11 +163,11 @@ PROGRAM _CYCLIC
 			MixerCheck := FALSE;
 		END_IF
 	
-		IF UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND UINT_TO_BOOL(gTanks.Status.IsMixer2On) AND RightValveCheck THEN
+		IF UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND UINT_TO_BOOL(gTanks.Status.IsMixer2On) AND RValveCheck THEN
 			MixerCheck := FALSE;
 		END_IF
 	
-		IF UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND UINT_TO_BOOL(gTanks.Status.IsMixer2On) AND LeftValveCheck THEN	
+		IF UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND UINT_TO_BOOL(gTanks.Status.IsMixer2On) AND LValveCheck THEN	
 			MixerCheck := FALSE;
 		END_IF
 	END_IF
@@ -346,15 +346,15 @@ PROGRAM _CYCLIC
 			TanksValvesCheck := FALSE;
 		END_IF
 	
-		LeftValveCheck := FALSE;
-		RightValveCheck := FALSE;
+		LValveCheck := FALSE;
+		RValveCheck := FALSE;
 	
 		IF gTanks.Parameters.Tank2TargetFluidLvl > 0 AND gTanks.Parameters.Tank1TargetFluidLvl = 0 THEN
-			LeftValveCheck := TRUE;
+			LValveCheck := TRUE;
 		END_IF
 	
 		IF gTanks.Parameters.Tank1TargetFluidLvl > 0 AND gTanks.Parameters.Tank2TargetFluidLvl = 0 THEN
-			RightValveCheck := TRUE;
+			RValveCheck := TRUE;
 		END_IF
 	
 		IF UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND UINT_TO_BOOL(gTanks.Status.IsMixer2On) THEN
@@ -365,11 +365,11 @@ PROGRAM _CYCLIC
 			MixerCheck := FALSE;
 		END_IF
 	
-		IF UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND UINT_TO_BOOL(gTanks.Status.IsMixer2On) AND RightValveCheck THEN
+		IF UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND UINT_TO_BOOL(gTanks.Status.IsMixer2On) AND RValveCheck THEN
 			MixerCheck := FALSE;
 		END_IF
 	
-		IF UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND UINT_TO_BOOL(gTanks.Status.IsMixer2On) AND LeftValveCheck THEN	
+		IF UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND UINT_TO_BOOL(gTanks.Status.IsMixer2On) AND LValveCheck THEN	
 			MixerCheck := FALSE;
 		END_IF
 	END_IF
