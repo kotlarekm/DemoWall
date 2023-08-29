@@ -696,7 +696,7 @@
       </EventHandler>
     </EventBinding>
     <EventBinding id="EventBinding_13">
-      <Source xsi:type="opcUa.Event" refId="::Simulation:LeftValveCheck" event="ValueChanged" />
+      <Source xsi:type="opcUa.Event" refId="::Simulation:LValveCheck" event="ValueChanged" />
       <EventHandler condition="newValue">
         <Action>
           <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="PaintProgressBar">
@@ -713,7 +713,7 @@
       </EventHandler>
     </EventBinding>
     <EventBinding id="EventBinding_14">
-      <Source xsi:type="opcUa.Event" refId="::Simulation:RightValveCheck" event="ValueChanged" />
+      <Source xsi:type="opcUa.Event" refId="::Simulation:RValveCheck" event="ValueChanged" />
       <EventHandler condition="NOT(newValue)">
         <Action>
           <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="WaterProgressBar">

@@ -255,11 +255,11 @@
         <Variable Name="AnimationForMixer1" />
         <Variable Name="AnimationForMixer2" />
         <Variable Name="TanksValvesCheck" />
-        <Variable Name="LeftValveCheck" />
         <Variable Name="MixerCheck" />
-        <Variable Name="RightValveCheck" />
         <Variable Name="Auto" />
         <Variable Name="Manual" />
+        <Variable Name="RValveCheck" />
+        <Variable Name="LValveCheck" />
       </Task>
     </Module>
   </DefaultView>
