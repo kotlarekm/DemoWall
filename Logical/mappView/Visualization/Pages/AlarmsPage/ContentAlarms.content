@@ -33,6 +33,7 @@
                 <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemCode" width="90" zIndex="6" columnType="code" text="$IAT/Code" />
               </Widgets>
             </Widget>
+            <Widget xsi:type="widgets.brease.Button" id="ClearAlarmHistoryBtn" top="470" left="860" width="280" height="40" zIndex="1" image="Media/SymbolLib/Edit/Delete.svg" text="$IAT/ClearHistory" imageHeight="25" imageWidth="25" disabledImageColor="rgba(0, 0, 0, 1)" borderWidth="3px 3px 3px 3px" cornerRadius="30px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="18px" fontName="ABBvoiceMedium" />
           </Widgets>
         </Widget>
       </Widgets>

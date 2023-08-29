@@ -169,6 +169,7 @@
         <Variable Name="AlarmIsActive" />
         <Variable Name="doResetRedLED" />
         <Variable Name="doResetOrangeLED" />
+        <Variable Name="ClearHistory" />
       </Task>
       <Task Name="Motion">
         <Variable Name="CamCoupling" />
@@ -265,7 +266,7 @@
         <Variable Name="ChangeButtonColor_0">
           <Variable Name="RoundButton" RecursiveEnable="2" />
         </Variable>
-		</Task>
+      </Task>
     </Module>
   </DefaultView>
 </OpcUaSource>

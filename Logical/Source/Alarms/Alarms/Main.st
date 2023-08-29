@@ -17,7 +17,7 @@ PROGRAM _INIT
 	
 	// MpAlarmXHistory init
 	MpAlarmXHistory_0.MpLink := ADR(gAlarmXHistory);
-	MpAlarmXHistory_0.DeviceName := ADR('HDD');
+	MpAlarmXHistory_0.DeviceName := ADR('PLC');
 	MpAlarmXHistory_0.Enable := TRUE;
 	MpAlarmXHistory_0();
 	 
@@ -29,6 +29,11 @@ PROGRAM _CYCLIC
 	// Updates
 	MpAlarmXCore_0();
 	MpAlarmXHistory_0();
+	
+	IF ClearHistory THEN
+		MpAlarmXClearHistory(gAlarmXHistory);
+	  	ClearHistory := FALSE;
+	END_IF;
 	 
 	// Reset button
 	doReset := diReset;

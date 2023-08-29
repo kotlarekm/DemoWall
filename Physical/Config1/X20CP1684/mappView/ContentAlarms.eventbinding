@@ -21,5 +21,15 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="ContentAlarms.ClearAlarmHistoryBtn.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentAlarms" widgetRefId="ClearAlarmHistoryBtn" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Alarms:ClearHistory">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>
