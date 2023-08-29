@@ -518,7 +518,6 @@
     <Parameter ID="FileDeviceName3" Value="USB2" />
     <Parameter ID="FileDevicePath3" Value="\bd16" />
     <Parameter ID="ActivateOpcUa" Value="1" />
-    <Parameter ID="OpcUaPort" Value="4844" />
     <Parameter ID="OpcUaInformationModels_PV_Version" Value="1" />
   </Module>
   <Module Name="X20DC1396" Type="X20DC1396" Version="1.4.0.0">

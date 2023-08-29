@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EventBindingSet id="ContentIO_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Bindings>
-    <EventBinding id="EventBinding_2">
+    <EventBinding id="EventBinding_200">
       <Source xsi:type="opcUa.Event" refId="::IO:doLamp1" event="ValueChanged" />
       <EventHandler condition="newValue=TRUE">
         <Action>
@@ -18,7 +18,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_3">
+    <EventBinding id="EventBinding_300">
       <Source xsi:type="opcUa.Event" refId="::IO:doLamp2" event="ValueChanged" />
       <EventHandler condition="newValue=TRUE">
         <Action>
@@ -35,7 +35,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_4">
+    <EventBinding id="EventBinding_400">
       <Source xsi:type="opcUa.Event" refId="::IO:doLamp3" event="ValueChanged" />
       <EventHandler condition="newValue=TRUE">
         <Action>
@@ -52,7 +52,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_5">
+    <EventBinding id="EventBinding_500">
       <Source xsi:type="opcUa.Event" refId="::IO:doLamp4" event="ValueChanged" />
       <EventHandler condition="newValue=TRUE">
         <Action>
@@ -69,7 +69,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_6">
+    <EventBinding id="EventBinding_600">
       <Source xsi:type="opcUa.Event" refId="::IO:doLamp5" event="ValueChanged" />
       <EventHandler condition="newValue=TRUE">
         <Action>
@@ -86,7 +86,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_7">
+    <EventBinding id="EventBinding_700">
       <Source xsi:type="opcUa.Event" refId="::IO:doLamp6" event="ValueChanged" />
       <EventHandler condition="newValue=TRUE">
         <Action>
@@ -103,7 +103,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_8">
+    <EventBinding id="EventBinding_800">
       <Source xsi:type="opcUa.Event" refId="::IO:doLamp7" event="ValueChanged" />
       <EventHandler condition="newValue=TRUE">
         <Action>
@@ -120,7 +120,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_9">
+    <EventBinding id="EventBinding_900">
       <Source xsi:type="opcUa.Event" refId="::IO:doLamp8" event="ValueChanged" />
       <EventHandler condition="newValue=TRUE">
         <Action>
@@ -137,7 +137,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_10">
+    <EventBinding id="EventBinding_1000">
       <Source xsi:type="opcUa.Event" refId="::IO:ChangeButtonColor_0.RoundButton[1].Counter" event="ValueChanged" />
       <EventHandler condition="newValue=0">
         <Action>
@@ -168,7 +168,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_11">
+    <EventBinding id="EventBinding_1100">
       <Source xsi:type="opcUa.Event" refId="::IO:ChangeButtonColor_0.RoundButton[2].Counter" event="ValueChanged" />
       <EventHandler condition="newValue=0">
         <Action>
@@ -199,7 +199,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_12">
+    <EventBinding id="EventBinding_1200">
       <Source xsi:type="opcUa.Event" refId="::IO:ChangeButtonColor_0.RoundButton[3].Counter" event="ValueChanged" />
       <EventHandler condition="newValue=0">
         <Action>
@@ -230,7 +230,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_13">
+    <EventBinding id="EventBinding_1300">
       <Source xsi:type="opcUa.Event" refId="::IO:ChangeButtonColor_0.RoundButton[4].Counter" event="ValueChanged" />
       <EventHandler condition="newValue=0">
         <Action>
@@ -261,7 +261,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_14">
+    <EventBinding id="EventBinding_1400">
       <Source xsi:type="opcUa.Event" refId="::IO:ChangeButtonColor_0.RoundButton[5].Counter" event="ValueChanged" />
       <EventHandler condition="newValue=0">
         <Action>
@@ -292,7 +292,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_15">
+    <EventBinding id="EventBinding_1500">
       <Source xsi:type="opcUa.Event" refId="::Alarms:doResetOrangeLED" event="ValueChanged" />
       <EventHandler condition="newValue=FALSE">
         <Action>
@@ -309,7 +309,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_16">
+    <EventBinding id="EventBinding_1600">
       <Source xsi:type="opcUa.Event" refId="::Alarms:doResetRedLED" event="ValueChanged" />
       <EventHandler condition="newValue=FALSE">
         <Action>
