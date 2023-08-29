@@ -1025,7 +1025,11 @@
       <EventHandler>
         <Action>
           <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentMain" widgetRefId="Button1">
-            <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
+			<Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
+		  </Target>
+				</Action>
+	   </EventHandler>
+					</EventBinding>
     <EventBinding id="ContentMain.RegulatorSettingsBtn.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMain" widgetRefId="RegulatorSettingsBtn" event="Click" />
       <EventHandler>
