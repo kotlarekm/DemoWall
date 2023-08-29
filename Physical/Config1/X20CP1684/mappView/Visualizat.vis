@@ -36,6 +36,7 @@
     <EventBindingsSet refId="GraphDialogTopContent_eventbinding" />
     <EventBindingsSet refId="ContentIO_eventbinding" />
     <EventBindingsSet refId="PIDSettingsTopContent_eventbinding" />
+    <EventBindingsSet refId="PIDSettingsMainContent_eventbinding" />
   </EventBindingsSets>
   <Dialogs>
     <Dialog refId="LoginDialog" />

@@ -5,14 +5,16 @@
     <Group ID="TempController">
       <Property ID="Type" Value="2" />
       <Property ID="AmbientTemperature" Value="30.0" />
+      <Property ID="ProfileMode" Value="1" />
       <Group ID="PWMParameters">
         <Group ID="Heat">
-          <Property ID="Period" Value="0.1" />
+          <Property ID="Period" Value="0.02" />
         </Group>
         <Group ID="Cool">
-          <Property ID="Period" Value="0.1" />
+          <Property ID="Period" Value="0.02" />
         </Group>
       </Group>
+      <Selector ID="SoftStart" Value="NotUsed" />
     </Group>
   </Element>
 </Configuration>
