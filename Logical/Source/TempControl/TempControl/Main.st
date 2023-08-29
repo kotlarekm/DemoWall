@@ -48,6 +48,7 @@ PROGRAM _CYCLIC
 	ELSIF ManualON THEN
 		
 		MpTempController_0.Control := FALSE;
+		MpTempController_0.Tune := FALSE;
 		
 		// Fan PWM
 		MTBasicsPWMFan.Enable := TRUE;
@@ -79,6 +80,7 @@ PROGRAM _CYCLIC
 		MTBasicsPWMFan.Enable := FALSE;
 		MTBasicsPWMHeater.Enable := FALSE;
 		MpTempController_0.Control := TRUE;
+		MpTempController_0.Tune := FALSE;
 		
 		// Prameters and outputs update
 		MpTempController_0.ActualTemperature := TempInReal;

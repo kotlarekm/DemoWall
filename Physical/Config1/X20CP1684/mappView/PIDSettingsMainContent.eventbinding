@@ -5,6 +5,13 @@
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="PIDSettingsMainContent" widgetRefId="PIDSettingsCancelBtn" event="Click" />
       <EventHandler>
         <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::TempContro:AutoTune">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::TempContro:RestoreSettings">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
@@ -41,18 +48,22 @@
     <EventBinding id="PIDSettingsMainContent.PIDSettingsAutotuneBtn1.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="PIDSettingsMainContent" widgetRefId="PIDSettingsAutotuneBtn1" event="Click" />
       <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::TempContro:RestoreSettings">
-            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::TempContro:AutoTune">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::TempContro:AutoTune">
+                <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::TempContro:RestoreSettings">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="AutoTuneInProgress">
@@ -75,7 +86,7 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="NOT newValue">
+      <EventHandler condition="oldValue">
         <Sequence>
           <Step order="0">
             <Action>
@@ -92,6 +103,23 @@
             </Action>
           </Step>
         </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="PIDSettingsOpened">
+      <Source xsi:type="clientSystem.Event" event="DialogOpened" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="PIDSettingsMainContent" widgetRefId="PIDSettingsAutotuneBtn1">
+            <Method xsi:type="widgets.brease.Button.Action.SetImage" image="Media/SymbolLib/Symbols/Tool.svg" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="PIDSettingsMainContent" widgetRefId="PIDSettingsAutotuneBtn1">
+            <Method xsi:type="widgets.brease.Button.Action.SetText" text="$IAT/AutoTune" />
+          </Target>
+        </Action>
       </EventHandler>
     </EventBinding>
   </Bindings>
