@@ -131,5 +131,5 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank3FluidLvl" attribute="node" />
 <Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NotMixedProgressBarAuto" attribute="node" />
 </Binding>
-	</Bindings>
+</Bindings>
 </BindingsSet>
