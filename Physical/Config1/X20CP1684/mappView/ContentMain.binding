@@ -3,35 +3,35 @@
   <Bindings>
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Parameters.Tank1TargetFluidLvl" attribute="node" />
-<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericInput17" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Target1FluidLvlAutoInput" attribute="node" />
 </Binding>
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Parameters.Tank2TargetFluidLvl" attribute="node" />
-<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericInput20" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Target2FluidLvlAutoInput" attribute="node" />
 </Binding>
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Parameters.Tank3TargetFluidLvl" attribute="node" />
-<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericInput19" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Target3FluidLvlAutoInput" attribute="node" />
 </Binding>
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Parameters.Tank3LeftValveOpeningLvl" attribute="node" />
-<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericInput18" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Tank3ValveOpeningLeftAutoInput" attribute="node" />
 </Binding>
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Parameters.Tank3RightValveOpeningLvl" attribute="node" />
-<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericInput21" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Tank3ValveOpeningRightAutoInput" attribute="node" />
 </Binding>
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Parameters.Mixer1On" attribute="node" />
-<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericInput23" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Mixer1Autonput" attribute="node" />
 </Binding>
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Parameters.Mixer2On" attribute="node" />
-<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericInput24" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Mixer2AutoInput" attribute="node" />
 </Binding>
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Parameters.MixingTime" attribute="node" />
-<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericInput22" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="MixingTimeAutoInput" attribute="node" />
 </Binding>
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank1FluidLvl" attribute="node" />
@@ -93,19 +93,19 @@
 
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Simulation:Manual" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="ToggleButton2" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="ManualToggleButton" attribute="value" />
 </Binding>
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Simulation:Auto" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="ToggleButton1" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="AutoToggleButton" attribute="value" />
 </Binding>
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Commands.OpenTank3RightValve" attribute="node" />
-<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericInput1" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="RightValveManualInput" attribute="node" />
 </Binding>
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Commands.OpenTank3LeftValve" attribute="node" />
-<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericInput2" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="LeftValveManualInput" attribute="node" />
 </Binding>
 </Bindings>
 </BindingsSet>
