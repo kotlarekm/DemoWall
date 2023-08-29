@@ -127,6 +127,7 @@
         <Variable Name="LeftValveCheck" />
         <Variable Name="MixerCheck" />
         <Variable Name="RightValveCheck" />
+      </Task>
       <Task Name="IO">
         <Variable Name="diSwitch1" />
         <Variable Name="diSwitch2" />

@@ -17,12 +17,11 @@
     <Object Type="File">ContentNavigation.eventbinding</Object>
     <Object Type="File">ContentMain.binding</Object>
     <Object Type="File">ContentMain.eventbinding</Object>
-    <Object Type="File">OpcUaServer.uaserver</Object>
     <Object Type="File">ApplyRecipeTopContent.eventbinding</Object>
     <Object Type="File">ApplyRecipeMainContent.eventbinding</Object>
     <Object Type="File">ContentIO.eventbinding</Object>
-    <Object Type="File">OpcUaServer.uaserver</Object>
     <Object Type="File">ContentTop.binding</Object>
     <Object Type="File">ContentIO.binding</Object>
+    <Object Type="File">OpcUaServer.uaserver</Object>
   </Objects>
 </Package>

@@ -11,7 +11,7 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="EventBinding_1">
+    <EventBinding id="EventBinding_17">
       <Source xsi:type="opcUa.Event" refId="::Alarms:AlarmIsActive" event="ValueChanged" />
       <EventHandler condition="newValue=0">
         <Action>
