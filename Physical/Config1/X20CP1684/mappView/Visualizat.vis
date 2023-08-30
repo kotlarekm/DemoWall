@@ -71,7 +71,6 @@
     <Content refId="PIDSettingsTopContent" />
     <Content refId="ContentSettings" />
     <Content refId="ContentPDFViewer" />
-    <Content refId="ContentSDM" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

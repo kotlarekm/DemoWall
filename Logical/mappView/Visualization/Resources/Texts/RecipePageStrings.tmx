@@ -149,5 +149,61 @@
         <seg>Default values</seg>
       </tuv>
     </tu>
+    <tu tuid="SetValues">
+      <tuv xml:lang="pl">
+        <seg>Wartości zadane</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Set values</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CriticalValues">
+      <tuv xml:lang="pl">
+        <seg>Wartości krytyczne</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Critical values</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank1MaxAllowedFluid">
+      <tuv xml:lang="pl">
+        <seg>Maksymalny poziom cieczy w zbiorniku 1:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Tank 1 max allowed fluid level:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank2MaxAllowedFluid">
+      <tuv xml:lang="pl">
+        <seg>Maksymalny poziom cieczy w zbiorniku 2:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Tank 2 max allowed fluid level:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3MaxAllowedFluid">
+      <tuv xml:lang="pl">
+        <seg>Maksymalny poziom cieczy w zbiorniku 3:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Tank 3 max allowed fluid level:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Mixer1MaxVelocity">
+      <tuv xml:lang="pl">
+        <seg>Maksymalna prędkość dla miksera 1:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Mixer 1 max velocity:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Mixer2MaxVelocity">
+      <tuv xml:lang="pl">
+        <seg>Maksymalna prędkość dla miksera 2:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Mixer 2 max velocity:</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

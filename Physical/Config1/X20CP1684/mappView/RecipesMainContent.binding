@@ -85,5 +85,25 @@
 <Source xsi:type="opcUa" refId="::Recipes:ParametersToLoad.Tank3TargetTemp" attribute="node" />
 <Target xsi:type="brease" contentRefId="RecipesMainContent" widgetRefId="NumericInputTank3TargetTemp" attribute="node" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Parameters.Tank1MaxAllowedFluidLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="RecipesMainContent" widgetRefId="Tank1MaxFluiLvlNumericInput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Parameters.Tank2MaxAllowedFluidLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="RecipesMainContent" widgetRefId="Tank2MaxFluiLvlNumericInput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Parameters.Tank3MaxAllowedFluidLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="RecipesMainContent" widgetRefId="Tank3MaxFluiLvlNumericInput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Parameters.Mixer1MaxAllowedVelocity" attribute="node" />
+<Target xsi:type="brease" contentRefId="RecipesMainContent" widgetRefId="Mixer1MaxVelocityNumericInput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Parameters.Mixer2MaxAllowedVelocity" attribute="node" />
+<Target xsi:type="brease" contentRefId="RecipesMainContent" widgetRefId="Mixer2MaxVelocityNumericInput" attribute="node" />
+</Binding>
 </Bindings>
 </BindingsSet>

@@ -44,11 +44,7 @@ TYPE
 		Tank1FluidLvl : REAL;
 		Tank2FluidLvl : REAL;
 		Tank3FluidLvl : REAL;
-		Tank1Pressure : REAL;
-		Tank2Pressure : REAL;
 		Tank3Pressure : REAL;
-		Tank1Temp : INT;
-		Tank2Temp : INT;
 		Tank3Temp : INT;
 		Step : STEP_ENUM;
 	END_STRUCT;
