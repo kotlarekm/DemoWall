@@ -15,8 +15,8 @@ TYPE
 	END_STRUCT;
 	ParametersType : 	STRUCT 
 		ObjectType : ObjectType;
-		Tank3MaxAllowedPressure : INT;
-		Tank3MaxAllowedTemp : INT;
+		Tank3MaxAllowedPressure : REAL;
+		Tank3MaxAllowedTemp : REAL;
 		Tank3LeftValveOpeningLvl : UINT := 0;
 		Tank3RightValveOpeningLvl : UINT;
 		MixingTime : UDINT;

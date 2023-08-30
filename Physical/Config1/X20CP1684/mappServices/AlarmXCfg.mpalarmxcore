@@ -22,7 +22,7 @@
         <Property ID="Code" Value="11" />
         <Selector ID="Behavior" Value="LevelMonitoring">
           <Group ID="Monitoring">
-            <Property ID="MonitoredPV" Value="::gTanks.Status.Tank3Temp" />
+            <Property ID="MonitoredPV" Value="::TempContro:TempInReal" />
             <Selector ID="HighLimitEnable" Value="Dynamic">
               <Property ID="LimitPV" Value="::gTanks.Parameters.Tank3MaxAllowedTemp" />
             </Selector>

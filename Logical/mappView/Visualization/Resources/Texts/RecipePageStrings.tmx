@@ -31,18 +31,18 @@
     </tu>
     <tu tuid="Tank3MaxAllowedPressure">
       <tuv xml:lang="pl">
-        <seg>Maksymalne dopuszczalne ciśnienie w zbiorniku 3:</seg>
+        <seg>Maksymalne ciśnienie w zbiorniku 3:</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Max allowed pressure in tank 3:</seg>
+        <seg>Tank 3 max pressure:</seg>
       </tuv>
     </tu>
     <tu tuid="Tank3MaxAllowedTemp">
       <tuv xml:lang="pl">
-        <seg>Maksymalna dopuszczalna temperatura w zbiorniku 3:</seg>
+        <seg>Maksymalna temperatura w zbiorniku 3:</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Max allowed temperature in tank 3:</seg>
+        <seg>Tank 3 max temperature:</seg>
       </tuv>
     </tu>
     <tu tuid="Tank3LeftValveOpeningLvl">
@@ -74,7 +74,7 @@
         <seg>Poziom płynu w zbiorniku 3:</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Fluid level in tank 3:</seg>
+        <seg>Tank 3 fluid level:</seg>
       </tuv>
     </tu>
     <tu tuid="Tank1TargetFluidLvl">
@@ -82,7 +82,7 @@
         <seg>Poziom płynu w zbiorniku 1:</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Fluid level in tank 1:</seg>
+        <seg>Tank 1 fluid level:</seg>
       </tuv>
     </tu>
     <tu tuid="Tank2TargetFluidLvl">
@@ -90,7 +90,7 @@
         <seg>Poziom płynu w zbiorniku 2:</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Fluid level in tank 2:</seg>
+        <seg>Tank 2 fluid level:</seg>
       </tuv>
     </tu>
     <tu tuid="EnterRecipeName">
@@ -138,7 +138,7 @@
         <seg>Temperatura w zbiorniku 3:</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Temperature in tank 3:</seg>
+        <seg>Tank 3 temperature:</seg>
       </tuv>
     </tu>
     <tu tuid="DefaultParams">
@@ -170,7 +170,7 @@
         <seg>Maksymalny poziom cieczy w zbiorniku 1:</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Tank 1 max allowed fluid level:</seg>
+        <seg>Tank 1 max fluid level:</seg>
       </tuv>
     </tu>
     <tu tuid="Tank2MaxAllowedFluid">
@@ -178,7 +178,7 @@
         <seg>Maksymalny poziom cieczy w zbiorniku 2:</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Tank 2 max allowed fluid level:</seg>
+        <seg>Tank 2 max fluid level:</seg>
       </tuv>
     </tu>
     <tu tuid="Tank3MaxAllowedFluid">
@@ -186,7 +186,7 @@
         <seg>Maksymalny poziom cieczy w zbiorniku 3:</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Tank 3 max allowed fluid level:</seg>
+        <seg>Tank 3 max fluid level:</seg>
       </tuv>
     </tu>
     <tu tuid="Mixer1MaxVelocity">
@@ -203,6 +203,38 @@
       </tuv>
       <tuv xml:lang="en">
         <seg>Mixer 2 max velocity:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3TargetPressure">
+      <tuv xml:lang="pl">
+        <seg>Ciśnienie w zbiorniku 3:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Tank 3 pressure:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3PressureGain">
+      <tuv xml:lang="pl">
+        <seg>Wzmocnienie:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Gain:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3PressureTimeConstant">
+      <tuv xml:lang="pl">
+        <seg>Stała czasowa:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Time constant:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3PressureProcessModeling">
+      <tuv xml:lang="pl">
+        <seg>Model zmian ciśnienia w zbiorniku 3:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Modeling pressure changes in tank 3:</seg>
       </tuv>
     </tu>
   </body>
