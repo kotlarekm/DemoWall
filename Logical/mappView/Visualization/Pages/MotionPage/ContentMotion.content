@@ -35,7 +35,7 @@
           </Widgets>
         </Widget>
         <Widget xsi:type="widgets.brease.Label" id="LabelSetDirection" top="256" left="279" width="170" zIndex="23" text="$IAT/LabelSetDirection" textAlign="center" fontName="ABBvoiceMedium" />
-        <Widget xsi:type="widgets.brease.DropDownBox" id="DropDownBoxDirSelect" top="286" left="314" height="29" zIndex="24" dataProvider="[{'value':'0','text':'Right'},{'value':'1','text':'Left'}]" selectedValue="0" fontName="ABBvoiceMedium" />
+        <Widget xsi:type="widgets.brease.DropDownBox" id="DropDownBoxDirSelect" top="286" left="314" height="29" zIndex="24" dataProvider="[{'value':'0','text':'$IAT/Right'},{'value':'1','text':'$IAT/Left'}]" selectedValue="0" fontName="ABBvoiceMedium" />
         <Widget xsi:type="widgets.brease.Image" id="Image2" top="431" left="359" width="66" height="54" zIndex="25" image="Media/SymbolLib/Symbols/Graph.svg" />
       </Widgets>
     </Widget>
@@ -64,7 +64,7 @@
             <Widget xsi:type="widgets.brease.Button" id="ButtonStop1" top="5" left="235" height="50" zIndex="1" text="$IAT/BtnStop" fontSize="15px" fontName="ABBvoiceMedium" />
             <Widget xsi:type="widgets.brease.Button" id="ButtonMoveVelocity1" top="75" left="5" width="135" height="50" zIndex="2" multiLine="true" text="$IAT/BtnMoveVelocity" wordWrap="true" fontSize="15px" fontName="ABBvoiceMedium" />
             <Widget xsi:type="widgets.brease.Button" id="ButtonMoveAbsolute1" top="75" left="295" width="135" height="50" zIndex="3" text="$IAT/BtnMoveAbsolute" fontSize="15px" fontName="ABBvoiceMedium" />
-            <Widget xsi:type="widgets.brease.Button" id="ButtonMoveAdditive1" top="75" left="150" width="135" height="50" zIndex="4" text="$IAT/BtnMoveAdditive" fontSize="15px" fontName="ABBvoiceMedium" />
+            <Widget xsi:type="widgets.brease.Button" id="ButtonMoveAdditive1" top="75" left="150" width="135" height="50" zIndex="4" multiLine="true" text="$IAT/BtnMoveAdditive" wordWrap="true" fontSize="15px" fontName="ABBvoiceMedium" />
           </Widgets>
         </Widget>
         <Widget xsi:type="widgets.brease.Label" id="LabelDistance1" top="176" left="134" width="170" zIndex="18" text="$IAT/LabelSetDistance" textAlign="center" fontName="ABBvoiceMedium" />
