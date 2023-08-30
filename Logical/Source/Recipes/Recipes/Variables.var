@@ -9,7 +9,7 @@ VAR
 	NewRecipeSelected : BOOL; (*Information about new recipe being selected*)
 	NodeIdList : ARRAY[0..2] OF UDINT; (*Contains Id of usb devices*)
 	SetDefaultParams : BOOL := FALSE;
-	DefaultParameters : ParametersType := (ObjectType:=(Mode:=0),Tank3MaxAllowedPressure:=10,Tank3MaxAllowedTemp:=70,Tank3LeftValveOpeningLvl:=50,Tank3RightValveOpeningLvl:=50,MixingTime:=5000,Mixer2On:=1,Mixer1On:=1,Tank3TargetFluidLvl:=5000,Tank2TargetFluidLvl:=3000,Tank1TargetFluidLvl:=3000,Tank3MaxAllowedFluidLvl:=9000,Tank2MaxAllowedFluidLvl:=9000,Tank1MaxAllowedFluidLvl:=9000,Mixer1MaxAllowedVelocity:=720,Mixer2MaxAllowedVelocity:=720,Tank3TargetTemp:=40,Tank3TargetPressure:=5,InertialTermTimeConstant:=5,InertialTermGain:=1);
+	DefaultParameters : ParametersType := (ObjectType:=(Mode:=0),Tank3MaxAllowedPressure:=10,Tank3MaxAllowedTemp:=700,Tank3LeftValveOpeningLvl:=50,Tank3RightValveOpeningLvl:=50,MixingTime:=5000,Mixer2On:=1,Mixer1On:=1,Tank3TargetFluidLvl:=5000,Tank2TargetFluidLvl:=3000,Tank1TargetFluidLvl:=3000,Tank3MaxAllowedFluidLvl:=9000,Tank2MaxAllowedFluidLvl:=9000,Tank1MaxAllowedFluidLvl:=9000,Mixer1MaxAllowedVelocity:=720,Mixer2MaxAllowedVelocity:=720,Tank3TargetTemp:=40,Tank3TargetPressure:=5,InertialTermTimeConstant:=5,InertialTermGain:=1);
 	ParametersToLoad : ParametersType; (*Object parameters which can be load into gTanks.Parameters*)
 	PreviousNumberOfUSBDevices : UDINT := 0; (*Stores information about number of devices before plug/unplug*)
 	RecipeName : STRING[80] := 'NewRecipe'; (*String containing name of currently selected recipe*)

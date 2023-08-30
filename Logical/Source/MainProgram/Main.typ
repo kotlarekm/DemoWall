@@ -16,7 +16,7 @@ TYPE
 	ParametersType : 	STRUCT 
 		ObjectType : ObjectType;
 		Tank3MaxAllowedPressure : INT;
-		Tank3MaxAllowedTemp : SINT;
+		Tank3MaxAllowedTemp : INT;
 		Tank3LeftValveOpeningLvl : UINT := 0;
 		Tank3RightValveOpeningLvl : UINT;
 		MixingTime : UDINT;
