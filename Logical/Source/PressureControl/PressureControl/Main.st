@@ -9,7 +9,6 @@ PROGRAM _INIT
 	
 	// MTBasicsPT1 init
 	MTBasicsPT1_0.Enable := TRUE;
-	MTBasicsPT1_0.Update := TRUE;
 	MTBasicsPT1_0();
 	
 END_PROGRAM
@@ -21,6 +20,7 @@ PROGRAM _CYCLIC
 	MTBasicsPT1_0.TimeConstant := gTanks.Parameters.InertialTermTimeConstant;
 	MTBasicsPT1_0.In := gTanks.Parameters.Tank3TargetPressure;
 	gTanks.Status.Tank3Pressure := MTBasicsPT1_0.Out;
+	MTBasicsPT1_0.Update := TRUE;
 	MTBasicsPT1_0();
 	
 END_PROGRAM

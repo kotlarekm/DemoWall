@@ -11,7 +11,7 @@
           <Group ID="Monitoring">
             <Property ID="MonitoredPV" Value="::gTanks.Status.Tank3Pressure" />
             <Selector ID="HighLimitEnable" Value="Dynamic">
-              <Property ID="LimitPV" Value="::gTanks.ObjectParameters.Tank3MaxAllowedPressure" />
+              <Property ID="LimitPV" Value="::gTanks.Parameters.Tank3MaxAllowedPressure" />
             </Selector>
           </Group>
         </Selector>
@@ -24,7 +24,7 @@
           <Group ID="Monitoring">
             <Property ID="MonitoredPV" Value="::gTanks.Status.Tank3Temp" />
             <Selector ID="HighLimitEnable" Value="Dynamic">
-              <Property ID="LimitPV" Value="::gTanks.ObjectParameters.Tank3MaxAllowedTemp" />
+              <Property ID="LimitPV" Value="::gTanks.Parameters.Tank3MaxAllowedTemp" />
             </Selector>
           </Group>
         </Selector>
@@ -43,7 +43,7 @@
           <Group ID="Monitoring">
             <Property ID="MonitoredPV" Value="::gTanks.Status.Tank1FluidLvl" />
             <Selector ID="HighLimitEnable" Value="Dynamic">
-              <Property ID="LimitPV" Value="::gTanks.ObjectParameters.Tank1MaxAllowedFluidLvl" />
+              <Property ID="LimitPV" Value="::gTanks.Parameters.Tank1MaxAllowedFluidLvl" />
             </Selector>
           </Group>
         </Selector>
@@ -55,7 +55,7 @@
           <Group ID="Monitoring">
             <Property ID="MonitoredPV" Value="::gTanks.Status.Tank2FluidLvl" />
             <Selector ID="HighLimitEnable" Value="Dynamic">
-              <Property ID="LimitPV" Value="::gTanks.ObjectParameters.Tank2MaxAllowedFluidLvl" />
+              <Property ID="LimitPV" Value="::gTanks.Parameters.Tank2MaxAllowedFluidLvl" />
             </Selector>
           </Group>
         </Selector>
@@ -67,7 +67,7 @@
           <Group ID="Monitoring">
             <Property ID="MonitoredPV" Value="::gTanks.Status.Tank3FluidLvl" />
             <Selector ID="HighLimitEnable" Value="Dynamic">
-              <Property ID="LimitPV" Value="::gTanks.ObjectParameters.Tank3MaxAllowedFluidLvl" />
+              <Property ID="LimitPV" Value="::gTanks.Parameters.Tank3MaxAllowedFluidLvl" />
             </Selector>
           </Group>
         </Selector>
@@ -79,7 +79,7 @@
           <Group ID="Monitoring">
             <Property ID="MonitoredPV" Value="::Motion:MpAxisBasicParameters_0.Velocity" />
             <Selector ID="HighLimitEnable" Value="Dynamic">
-              <Property ID="LimitPV" Value="::gTanks.ObjectParameters.Mixer1MaxAllowedVelocity" />
+              <Property ID="LimitPV" Value="::gTanks.Parameters.Mixer1MaxAllowedVelocity" />
             </Selector>
           </Group>
         </Selector>
@@ -91,7 +91,7 @@
           <Group ID="Monitoring">
             <Property ID="MonitoredPV" Value="::Motion:MpAxisBasicParameters_1.Velocity" />
             <Selector ID="HighLimitEnable" Value="Dynamic">
-              <Property ID="LimitPV" Value="::gTanks.ObjectParameters.Mixer2MaxAllowedVelocity" />
+              <Property ID="LimitPV" Value="::gTanks.Parameters.Mixer2MaxAllowedVelocity" />
             </Selector>
           </Group>
         </Selector>
