@@ -39,11 +39,11 @@ PROGRAM _CYCLIC
 	doReset := diReset;
 	
 	// Reset LED
-	IF NOT(diDriveStop) AND NOT(diEStopNotPressed) THEN
+	IF NOT(DriveStop) AND NOT(diEStopNotPressed) THEN
 		doResetRedLED := TRUE;
 		TON_LED_OFF_FirstCounting := FALSE;
 		
-	ELSIF NOT(diDriveStop) AND diEStopNotPressed THEN
+	ELSIF NOT(DriveStop) AND diEStopNotPressed THEN
 		doResetRedLED := FALSE;
 		IF NOT(TON_LED_OFF_FirstCounting) THEN
 			TON_LED_OFF_FirstCounting := TRUE;

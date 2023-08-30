@@ -1,0 +1,3 @@
+VAR
+	DriveStop : BOOL;
+END_VAR

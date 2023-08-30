@@ -5,7 +5,6 @@ VAR
 	doResetOrangeLED : BOOL; (*Variable that sets reset button to orange*)
 	diEStopNotPressed : BOOL; (*Variable that indicates whether the safety button is not pressed*)
 	TON_LED_OFF_FirstCounting : BOOL; (*Variable that checks the first run of the counter off*)
-	diDriveStop : BOOL; (*Variable stopping of drives*)
 	TON_LED_ON : TON; (*The counter for which the reset button is orange*)
 	TON_LED_OFF : TON; (*The counter for which the reset button is not orange*)
 	doReset : BOOL; (*Reset button output*)
