@@ -786,23 +786,6 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="ContentMain.Ellipse27.Click">
-      <Source xsi:type="widgets.brease.Ellipse.Event" contentRefId="ContentMain" widgetRefId="Ellipse27" event="Click" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.TurnOnMixer1">
-            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.TurnOnMixer2">
-            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
     <EventBinding id="ContentMain.Ellipse26.Click">
       <Source xsi:type="widgets.brease.Ellipse.Event" contentRefId="ContentMain" widgetRefId="Ellipse26" event="Click" />
       <EventHandler>
@@ -836,33 +819,40 @@
           </Step>
           <Step order="1">
             <Action>
-              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Ellipse27">
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Mixer1Manual">
                 <Method xsi:type="widgets.brease.Ellipse.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
           <Step order="2">
             <Action>
-              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Ellipse26">
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Mixer2Manual">
                 <Method xsi:type="widgets.brease.Ellipse.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
           <Step order="3">
             <Action>
-              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Ellipse7">
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Ellipse26">
                 <Method xsi:type="widgets.brease.Ellipse.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
           <Step order="4">
             <Action>
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Ellipse7">
+                <Method xsi:type="widgets.brease.Ellipse.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="5">
+            <Action>
               <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="LeftValveManualInput">
                 <Method xsi:type="widgets.brease.NumericInput.Action.SetVisible" value="false" />
               </Target>
             </Action>
           </Step>
-          <Step order="5">
+          <Step order="6">
             <Action>
               <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="RightValveManualInput">
                 <Method xsi:type="widgets.brease.NumericInput.Action.SetVisible" value="false" />
@@ -909,7 +899,7 @@
           </Step>
           <Step order="3">
             <Action>
-              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Ellipse27">
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Mixer1Manual">
                 <Method xsi:type="widgets.brease.Ellipse.Action.SetVisible" value="true" />
               </Target>
             </Action>
@@ -925,6 +915,13 @@
             <Action>
               <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="RightValveManualInput">
                 <Method xsi:type="widgets.brease.NumericInput.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="6">
+            <Action>
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Mixer2Manual">
+                <Method xsi:type="widgets.brease.Ellipse.Action.SetVisible" value="true" />
               </Target>
             </Action>
           </Step>
@@ -1025,17 +1022,37 @@
       <EventHandler>
         <Action>
           <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentMain" widgetRefId="Button1">
-			<Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
-		  </Target>
-				</Action>
-	   </EventHandler>
-					</EventBinding>
+            <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
     <EventBinding id="ContentMain.RegulatorSettingsBtn.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMain" widgetRefId="RegulatorSettingsBtn" event="Click" />
       <EventHandler>
         <Action>
           <Target xsi:type="clientSystem.Action">
             <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="PIDSettingsDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMain.Mixer1Manual.Click">
+      <Source xsi:type="widgets.brease.Ellipse.Event" contentRefId="ContentMain" widgetRefId="Mixer1Manual" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.TurnOnMixer1">
+            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMain.Ellipse28.Click">
+      <Source xsi:type="widgets.brease.Ellipse.Event" contentRefId="ContentMain" widgetRefId="Mixer2Manual" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.TurnOnMixer2">
+            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
           </Target>
         </Action>
       </EventHandler>
