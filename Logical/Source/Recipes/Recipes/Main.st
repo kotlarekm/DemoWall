@@ -99,6 +99,15 @@ PROGRAM _CYCLIC
 		USB2Aveliable := FALSE;
 	END_IF;
 	
+	MpFileManagerUIConnect_0.File.List.Items[SelectedRecipeIndex].IsSelected := TRUE;
+	
+	// Checking if new recipe has been selected
+	IF NewRecipeSelected THEN
+		NewRecipeSelected := FALSE;
+		RecipeName := RecipesList[SelectedRecipeIndex];
+		WaitingForLoad := TRUE;
+	END_IF;
+	
 	// Checking if device name has been change dou to drive unplug
 	IF NOT(PreviousNumberOfUSBDevices = UsbNodeListGet_0.allNodes) THEN
 		DeviceChenged := TRUE;
@@ -116,17 +125,6 @@ PROGRAM _CYCLIC
 			NewRecipeSelected := TRUE;
 		END_IF;
 	END_IF;
-	
-	MpFileManagerUIConnect_0.File.List.Items[SelectedRecipeIndex].IsSelected := TRUE;
-	
-	// Checking if new recipe has been selected
-	IF NewRecipeSelected THEN
-		NewRecipeSelected := FALSE;
-		MpFileManagerUIConnect_0.File.List.Items[SelectedRecipeIndex].IsSelected := TRUE;
-		RecipeName := RecipesList[SelectedRecipeIndex];
-		WaitingForLoad := TRUE;
-	END_IF;
-	
 	
 	// Recipes loading
 	IF WaitingForLoad THEN
@@ -159,9 +157,9 @@ PROGRAM _CYCLIC
 	END_IF;
 	
 	// FB Updates
+	MpFileManagerUI_0();
 	MpRecipeXml_0();
 	MpRecipeRegPar_0();
-	MpFileManagerUI_0();
 	UsbNodeListGet_0();
 	
 	 

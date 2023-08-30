@@ -5,7 +5,7 @@
       <Widgets>
         <Widget xsi:type="widgets.brease.TabItem" id="TabItem1" left="0" zIndex="0" text="$IAT/List">
           <Widgets>
-            <Widget xsi:type="widgets.brease.AlarmList" id="AlarmList1" top="31" left="20" width="1126" height="409" zIndex="0" itemsPerPage="5" rowHeight="44" fontName="ABBvoiceMedium">
+            <Widget xsi:type="widgets.brease.AlarmList" id="AlarmList1" top="31" left="20" width="1126" height="409" zIndex="0" itemsPerPage="5" nextText="$IAT/Next" previousText="$IAT/Previous" rowHeight="44" fontName="ABBvoiceMedium">
               <Widgets>
                 <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemID" width="40" zIndex="0" columnType="instanceId" text="ID" />
                 <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemDate" width="285" zIndex="1" columnType="timestamp" text="$IAT/Date" />

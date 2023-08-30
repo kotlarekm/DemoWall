@@ -52,6 +52,5 @@
     <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="60" left="40" width="1120" height="500" zIndex="48" borderWidth="2px" backColor="rgba(255, 255, 255, 0)" />
     <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle2" top="60" left="560" width="600" height="200" zIndex="49" borderWidth="2px" backColor="rgba(255, 255, 255, 0)" />
     <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle3" top="60" left="560" width="600" height="500" zIndex="50" borderWidth="2px" backColor="rgba(255, 255, 255, 0)" />
-    <Widget xsi:type="widgets.brease.Label" id="Label1" top="20" left="0" width="1206" height="32" zIndex="51" text="I/O" textAlign="center" fontName="ABBvoiceMedium" fontSize="30px" bold="true" />
   </Widgets>
 </Content>
