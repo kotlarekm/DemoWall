@@ -149,7 +149,7 @@
     </tu>
     <tu tuid="BtnErrorReset">
       <tuv xml:lang="pl">
-        <seg>Reset  błędu</seg>
+        <seg>Reset  błędów</seg>
       </tuv>
       <tuv xml:lang="en">
         <seg>Error reset</seg>
@@ -241,6 +241,22 @@
       </tuv>
       <tuv xml:lang="en">
         <seg>Left</seg>
+      </tuv>
+    </tu>
+    <tu tuid="MixerPrimary">
+      <tuv xml:lang="pl">
+        <seg>Mikser główny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Mixer primary</seg>
+      </tuv>
+    </tu>
+    <tu tuid="MixerSecondary">
+      <tuv xml:lang="pl">
+        <seg>Mikser poboczny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Mixer secondary</seg>
       </tuv>
     </tu>
   </body>
