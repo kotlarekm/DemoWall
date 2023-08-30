@@ -165,6 +165,7 @@
         <Variable Name="UsbNodeListGet_0">
           <Variable Name="allNodes" />
         </Variable>
+        <Variable Name="SetDefaultParams" />
       </Task>
       <Task Name="Alarms">
         <Variable Name="AlarmButtonVisible" />
