@@ -58,7 +58,6 @@
     <Content refId="RecipesMainContent" />
     <Content refId="DeleteFileDialogTopContent" />
     <Content refId="DeleteFileMainContent" />
-    <Content refId="ContentAlarms" />
     <Content refId="ApplyRecipeTopContent" />
     <Content refId="ApplyRecipeMainContent" />
     <Content refId="ContentMotion" />
@@ -71,6 +70,8 @@
     <Content refId="PIDSettingsTopContent" />
     <Content refId="ContentSettings" />
     <Content refId="ContentPDFViewer" />
+    <Content refId="ContentSDM" />
+    <Content refId="ContentAlarms" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />
