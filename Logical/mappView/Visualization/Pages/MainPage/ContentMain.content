@@ -73,8 +73,8 @@
         </Widget>
         <Widget xsi:type="widgets.brease.TabItem" id="TabItem3" left="0" width="110" zIndex="3" text="Pressure" borderStyle="solid" borderWidth="0px 0px 0px 0px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" textColor="rgba(0, 0, 0, 1)" activeBorderWidth="5px" activeCornerRadius="0px" fontName="ABBvoiceBd">
           <Widgets>
-            <Widget xsi:type="widgets.brease.Label" id="Label60" top="85" left="135" width="165" zIndex="0" text="Pressure in tank 3" textAlign="center" fontName="ABBvoiceMedium" />
-            <Widget xsi:type="widgets.brease.OnlineChartHDA" id="TempChart1" top="125" left="15" width="410" height="285" zIndex="1" borderWidth="3px" borderColor="rgba(0, 0, 0, 1)">
+            <Widget xsi:type="widgets.brease.Label" id="Label60" top="23" left="63" width="300" height="31" zIndex="0" text="Pressure in tank 3" textColor="rgba(0, 0, 0, 1)" textAlign="center" fontName="ABBvoiceMedium" fontSize="18px" bold="true" />
+            <Widget xsi:type="widgets.brease.OnlineChartHDA" id="TempChart1" top="265" left="15" width="410" height="285" zIndex="1" borderWidth="3px" borderColor="rgba(0, 0, 0, 1)">
               <Properties>
                 <yAxis>
                   <Element id="yAxis1" textColor="rgba(0, 0, 0, 1)" color="rgba(0, 0, 0, 1)" fontSize="16px" fontName="ABBvoiceMedium" titleTextColor="rgba(0, 0, 0, 1)" titleFontSize="18px" titleFontName="ABBvoiceMedium" />
@@ -90,6 +90,7 @@
                 </cursor>
               </Properties>
             </Widget>
+            <Widget xsi:type="widgets.brease.RadialGauge" id="RadialGaugeKnob1" top="69" left="129" width="177" height="177" zIndex="2" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" maxValue="10" borderColor="rgba(0, 0, 0, 1)" backColor="rgba(255, 255, 255, 1)" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" pointerBackColor="rgba(0, 0, 0, 1)" pointerPathColor="rgba(0, 0, 0, 1)" pointerPathWidth="1px" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" />
           </Widgets>
         </Widget>
       </Widgets>
