@@ -53,7 +53,7 @@
     <Parameter ID="BrakeOutput" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="1" />
     <Parameter ID="NumberOfDigitalInputs" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="0" />
     <Parameter ID="NumberOfTriggers" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="2" />
-    <Parameter ID="AxisReference" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="gMixer_2" />
+    <Parameter ID="AxisReference" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="gMixer_1" />
     <Parameter ID="InputIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="0" />
     <Parameter ID="Input" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="1" />
     <Parameter ID="OutputIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="0" />
@@ -138,7 +138,7 @@
     </Connection>
     <Parameter ID="McAcoposTypeID" Location="DriveConfiguration/Module" Value="AcoposMicroDConfig" />
     <Parameter ID="ActivateACOPOSSimulationOnPLC" Location="DriveConfiguration/Module" Value="0" />
-    <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[1]/RealAxis" Value="gMixer_1" />
+    <Parameter ID="AxisReference" Location="DriveConfiguration/Channel[1]/RealAxis" Value="gMixer_2" />
     <Parameter ID="MechanicalElementsIsInvisible" Location="DriveConfiguration/Channel[1]/RealAxis" Value="0" />
     <Parameter ID="InputIsReadOnly" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="0" />
     <Parameter ID="Input" Location="DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="1" />

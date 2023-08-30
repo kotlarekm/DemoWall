@@ -53,34 +53,18 @@
     </tu>
     <tu tuid="LabelText1">
       <tuv xml:lang="pl">
-        <seg>Ta funkcja ustala oś podrzędną w określonym stosunku prędkości (1:1) do osi głównej.</seg>
+        <seg>Ta funkcja ustala oś podrzędną w określonym stosunku prędkości (1:1) do osi głównej.                                                                                                                 Dopóki nie jest ustawione wyjście „Sprzęganie ustalone”, oś główna może poruszać się tylko w kierunku dodatnim (Prawo). Po tym jak zostanie ustawione oś główna może poruszać się w dowolnym kierunku.</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>This function brings the slave axis in the specified (1:1) velocity ratio to the master axis.</seg>
-      </tuv>
-    </tu>
-    <tu tuid="LabelText2">
-      <tuv xml:lang="pl">
-        <seg>Dopóki nie jest ustawione wyjście „Sprzęganie ustalone”, oś główna może poruszać się tylko w kierunku dodatnim (Prawo). Po tym jak zostanie ustawione oś główna może poruszać się w dowolnym kierunku.</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>As long as the "Coupling Established" output is not set, the master axis is only allowed to move in the positive direction (Right). Once it has been set, the master can move in any direction.  </seg>
+        <seg>This function brings the slave axis in the specified (1:1) velocity ratio to the master axis.                                                                                                                 As long as the "Coupling Established" output is not set, the master axis is only allowed to move in the positive direction (Right). Once it has been set, the master can move in any direction.  </seg>
       </tuv>
     </tu>
     <tu tuid="LabelText3">
       <tuv xml:lang="pl">
-        <seg>Ta funkcja uruchamia sprzężenie krzywkowe pomiędzy osią główną i podrzędną.</seg>
+        <seg>Ta funkcja uruchamia sprzężenie krzywkowe pomiędzy osią główną i podrzędną.                                                                                                                                                                                                                                  Włączenie lub wyłączenie sprzężenia krzywkowego jest możliwe tylko wtedy, gdy oś główna osiągnie pozycję „MasterOffset” (0°). Aby osiągnąć „MasterOffset”, oś główna może poruszać się tylko w kierunku dodatnim (Prawo).</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>This function starts a cam coupling between the master and slave axes.</seg>
-      </tuv>
-    </tu>
-    <tu tuid="LabelText4">
-      <tuv xml:lang="pl">
-        <seg>Włączenie lub wyłączenie sprzężenia krzywkowego jest możliwe tylko wtedy, gdy oś główna osiągnie pozycję „MasterOffset” (0°). Aby osiągnąć „MasterOffset”, oś główna może poruszać się tylko w kierunku dodatnim (Prawo).</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Enabling or disabling cam coupling is only possible when the master reaches the "MasterOffset" position (0°). To reach "MasterOffset", the master axis is only permitted to move in a positive direction (Right). </seg>
+        <seg>This function starts a cam coupling between the master and slave axes.                                                                                                                                                                                                                                  Enabling or disabling cam coupling is only possible when the master reaches the "MasterOffset" position (0°). To reach "MasterOffset", the master axis is only permitted to move in a positive direction (Right). </seg>
       </tuv>
     </tu>
     <tu tuid="LabelCouplingInfo">
