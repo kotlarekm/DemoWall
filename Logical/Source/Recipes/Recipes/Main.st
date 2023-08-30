@@ -49,6 +49,31 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 	
+	// Errors
+	IF MpRecipeRegPar_0.Error THEN
+		// some actions
+		
+		MpRecipeRegPar_0.ErrorReset := TRUE;
+	ELSE
+		MpRecipeRegPar_0.ErrorReset := FALSE;
+	END_IF;
+	
+	IF MpFileManagerUI_0.Error THEN
+		// some actions
+		
+		MpFileManagerUI_0.ErrorReset := TRUE;
+	ELSE
+		MpFileManagerUI_0.ErrorReset := FALSE;
+	END_IF;
+	
+	IF MpRecipeXml_0.Error THEN
+		// some actions
+		
+		MpRecipeXml_0.ErrorReset := TRUE;
+	ELSE
+		MpRecipeXml_0.ErrorReset := FALSE;
+	END_IF;
+	
 	// Applying parameters to real object
 	IF ApplyParameters THEN
 		gTanks.Parameters := ParametersToLoad;
