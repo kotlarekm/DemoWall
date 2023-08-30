@@ -51,12 +51,12 @@ PROGRAM _CYCLIC
 			END_IF;
 			
 			IF NOT(gTanks.Commands.OpenTank1Valve) AND NOT(gTanks.Commands.OpenTank2Valve) THEN
-				gTanks.Commands.OpenTank3LeftValve := gTanks.Parameters.Tank3LeftValveOpeningLvl;
-				gTanks.Commands.OpenTank3RightValve := gTanks.Parameters.Tank3RightValveOpeningLvl;
 				gTanks.Status.Step := FILLING_TANK_3;
 			END_IF;
 			
 		FILLING_TANK_3:
+			gTanks.Commands.OpenTank3LeftValve := gTanks.Parameters.Tank3LeftValveOpeningLvl;
+			gTanks.Commands.OpenTank3RightValve := gTanks.Parameters.Tank3RightValveOpeningLvl;
 			
 			IF gTanks.Status.Tank3FluidLvl >= gTanks.Parameters.Tank3TargetFluidLvl 
 				AND UINT_TO_BOOL(NOT(gTanks.Parameters.Mixer1On)) 
@@ -68,6 +68,7 @@ PROGRAM _CYCLIC
 			
 			IF gTanks.Status.Tank3FluidLvl >= gTanks.Parameters.Tank3TargetFluidLvl
 				AND UINT_TO_BOOL(gTanks.Parameters.Mixer1On)
+				OR gTanks.Status.Tank3FluidLvl >= gTanks.Parameters.Tank3TargetFluidLvl 
 				AND UINT_TO_BOOL(gTanks.Parameters.Mixer2On) THEN
 				gTanks.Status.Step := MIXING;
 			END_IF
@@ -76,7 +77,10 @@ PROGRAM _CYCLIC
 				AND gTanks.Status.Tank1FluidLvl = 0 
 				AND gTanks.Status.Tank2FluidLvl = 0 
 				AND UINT_TO_BOOL(gTanks.Parameters.Mixer1On) 
-				AND UINT_TO_BOOL(gTanks.Parameters.Mixer2On) THEN
+				OR UINT_TO_BOOL(gTanks.Parameters.Mixer2On)
+				AND gTanks.Parameters.Tank1TargetFluidLvl + gTanks.Parameters.Tank2TargetFluidLvl < gTanks.Parameters.Tank3TargetFluidLvl
+				AND gTanks.Status.Tank1FluidLvl = 0 
+				AND gTanks.Status.Tank2FluidLvl = 0 THEN
 				gTanks.Status.Step := MIXING;
 			END_IF
 			
@@ -89,9 +93,15 @@ PROGRAM _CYCLIC
 			END_IF
 			
 		MIXING:
-			gTanks.Commands.TurnOnMixer1 := TRUE;
-			gTanks.Commands.TurnOnMixer2 := TRUE;
-
+			
+			IF UINT_TO_BOOL(gTanks.Parameters.Mixer1On) THEN
+				gTanks.Commands.TurnOnMixer1 := TRUE;
+			END_IF
+			
+			IF UINT_TO_BOOL(gTanks.Parameters.Mixer2On) THEN
+				gTanks.Commands.TurnOnMixer2 := TRUE;
+			END_IF
+			
 			IF NOT TON_0.IN THEN 
 				TON_0.PT := UDINT_TO_TIME(gTanks.Parameters.MixingTime);
 				TON_0.IN := TRUE; 
@@ -100,7 +110,7 @@ PROGRAM _CYCLIC
 			IF TON_0.Q THEN
 				gTanks.Commands.TurnOnMixer1 := FALSE;
 				gTanks.Commands.TurnOnMixer2 := FALSE;
-				TON_0(IN := FALSE);  
+				TON_0(IN := FALSE);
 				gTanks.Status.Step := END;
 			END_IF
 			

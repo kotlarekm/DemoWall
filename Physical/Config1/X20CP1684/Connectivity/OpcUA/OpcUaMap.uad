@@ -268,7 +268,7 @@
         <Variable Name="ChangeButtonColor_0">
           <Variable Name="RoundButton" RecursiveEnable="2" />
         </Variable>
-      </Task>
+		</Task>
     </Module>
   </DefaultView>
 </OpcUaSource>
