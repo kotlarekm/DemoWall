@@ -510,15 +510,13 @@
     <Parameter ID="Cyclic6Output" Value="2" />
     <Group ID="FileDevice1" />
     <Parameter ID="FileDeviceName1" Value="PLC" />
-    <Parameter ID="FileDevicePath1" Value="\" />
+    <Parameter ID="FileDevicePath1" Value="C:\Recipes" />
     <Group ID="FileDevice2" />
     <Parameter ID="FileDeviceName2" Value="USB1" />
     <Parameter ID="FileDevicePath2" Value="\bd0" />
     <Group ID="FileDevice3" />
     <Parameter ID="FileDeviceName3" Value="USB2" />
     <Parameter ID="FileDevicePath3" Value="\bd16" />
-    <Parameter ID="TimeZone" Value="160" />
-    <Parameter ID="ActivateSntpServer" Value="1" />
     <Parameter ID="ActivateOpcUa" Value="1" />
     <Parameter ID="OpcUaInformationModels_PV_Version" Value="1" />
   </Module>

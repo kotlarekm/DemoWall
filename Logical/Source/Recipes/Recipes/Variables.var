@@ -1,6 +1,4 @@
 VAR
-	SetDefaultParams : BOOL := FALSE;
-	DefaultParameters : ParametersType := (ObjectType:=(Mode:=0),Tank3MaxAllowedPressure:=1000,Tank3MaxAllowedTemp:=60,Tank3LeftValveOpeningLvl:=50,Tank3RightValveOpeningLvl:=50,MixingTime:=3000,Mixer2On:=1,Mixer1On:=1,Tank3TargetFluidLvl:=5000,Tank2TargetFluidLvl:=3000,Tank1TargetFluidLvl:=3000,Tank3MaxAllowedFluidLvl:=9000,Tank2MaxAllowedFluidLvl:=9000,Tank1MaxAllowedFluidLvl:=9000,Mixer1MaxAllowedVelocity:=300,Mixer2MaxAllowedVelocity:=300,Tank3TargetTemp:=40.0);
 	DeviceChenged : BOOL := FALSE; (*Variable informing about change of data device*)
 	DropDownBoxNamesCollection : ARRAY[0..49] OF STRING[100]; (*Item collection containing recipe names*)
 	MpFileManagerUIConnect_0 : MpFileManagerUIConnectType := (DeviceList:=(DeviceNames:=['HDD',9('')],SelectedIndex:=0),File:=(Filter:='.xml')); (*Structure used in MpFileManagerUI setup. Contains information about files in directory.*)
