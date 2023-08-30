@@ -141,5 +141,13 @@
         <seg>Temperature in tank 3:</seg>
       </tuv>
     </tu>
+    <tu tuid="DefaultParams">
+      <tuv xml:lang="pl">
+        <seg>Wartości domyślne</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Default values</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

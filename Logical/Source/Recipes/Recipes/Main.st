@@ -74,6 +74,12 @@ PROGRAM _CYCLIC
 		MpRecipeXml_0.ErrorReset := FALSE;
 	END_IF;
 	
+	// Loading default parameters
+	IF SetDefaultParams THEN
+		ParametersToLoad := DefaultParameters;
+	  	SetDefaultParams := FALSE;
+	END_IF;
+	
 	// Applying parameters to real object
 	IF ApplyParameters THEN
 		gTanks.Parameters := ParametersToLoad;
