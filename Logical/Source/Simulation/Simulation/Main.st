@@ -169,7 +169,6 @@ PROGRAM _CYCLIC
 			ProgressBarWaterManual := FALSE;
 			ProgressBarNotMixedManual := FALSE;
 			Tank3LeftValveSave := FALSE;
-			MixerCheck := FALSE;
 		END_IF
 		
 		IF gTanks.Status.Tank2FluidLvl = 0 AND gTanks.Status.Tank3FluidLvl = 0 THEN
@@ -177,7 +176,6 @@ PROGRAM _CYCLIC
 			ProgressBarPaintManual := FALSE;
 			ProgressBarNotMixedManual := FALSE;
 			Tank3RightValveSave := FALSE;
-			MixerCheck := FALSE;
 		END_IF
 		
 		IF gTanks.Status.Tank1FluidLvl = 0 AND gTanks.Status.Tank2FluidLvl = 0 AND gTanks.Status.Tank3FluidLvl = 0 THEN
@@ -195,6 +193,7 @@ PROGRAM _CYCLIC
 			gTanks.Commands.OpenTank3MainValve := FALSE;
 			Tank3LeftValveSave := FALSE;
 			Tank3RightValveSave := FALSE;
+			MixerCheck := FALSE;
 		END_IF
 		
 		IF gTanks.Status.Tank1FluidLvl = 0 THEN
