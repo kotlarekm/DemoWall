@@ -37,7 +37,7 @@
         <Info Name="ExtendedSourceSL" Value="1" />
         <Info Name="Description-de" Value="X20 SafeLOGIC, POWERLINK V2, X2X Link, 24V, univ." />
         <Info Name="Description-en" Value="X20 SafeLOGIC, POWERLINK V2, X2X Link, 24V, univ." />
-        <Info Name="AsVariable" Value="BOOL00001,DriveStop" />
+        <Info Name="AsVariable" Value="BOOL00001,gDriveStop" />
         <Info Name="AsVariable" Value="BOOL10001,Alarms:doReset" />
       </NodeDescription>
       <ChannelConfiguration>

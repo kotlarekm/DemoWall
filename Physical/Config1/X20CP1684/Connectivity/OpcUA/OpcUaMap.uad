@@ -104,6 +104,7 @@
             <Variable Name="Stop" />
           </Variable>
         </Variable>
+        <Variable Name="gDriveStop" />
       </GlobalVariables>
       <Task Name="Simulation">
         <Variable Name="AnimationForMixer1" />
