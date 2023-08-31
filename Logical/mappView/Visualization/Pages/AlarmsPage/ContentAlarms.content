@@ -5,15 +5,15 @@
       <Widgets>
         <Widget xsi:type="widgets.brease.TabItem" id="TabItem1" left="0" zIndex="0" text="$IAT/List" borderWidth="0px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" backColor="rgba(255, 255, 255, 0)" textColor="rgba(0, 0, 0, 1)" activeBorderWidth="5px" fontName="ABBvoiceMedium">
           <Widgets>
-            <Widget xsi:type="widgets.brease.AlarmList" id="AlarmList1" top="31" left="20" width="1126" height="400" zIndex="0" itemsPerPage="5" nextText="$IAT/Next" previousText="$IAT/Previous" searchBox="false" rowHeight="50" borderStyle="solid" borderWidth="2px" borderColor="rgba(0, 0, 0, 1)" headerBackColor="rgba(220, 220, 220, 1)" headerTextColor="rgba(0, 0, 0, 1)" backColorSelectedRow="rgba(255, 136, 0, 1)" backColorOddRow="rgba(255, 255, 255, 0)" fontSize="14px" fontName="ABBvoiceMedium" cornerRadius="0px" headerCellBorderColor="rgba(0, 0, 0, 1)" headerCellBorderWidth="0px 0px 1px 0px" headerCellBorderStyle="solid" bold="false" cellBorderColor="rgba(0, 0, 0, 1)" cellBorderWidth="0px 0px 1px 0px" cellBorderStyle="solid">
+            <Widget xsi:type="widgets.brease.AlarmList" id="AlarmList1" top="31" left="20" width="1126" height="400" zIndex="0" format="dd.MM.yyyy HH:mm" itemsPerPage="5" nextText="$IAT/Next" previousText="$IAT/Previous" searchBox="false" rowHeight="45" borderStyle="solid" borderWidth="2px" borderColor="rgba(0, 0, 0, 1)" headerBackColor="rgba(220, 220, 220, 1)" headerTextColor="rgba(0, 0, 0, 1)" backColorSelectedRow="rgba(255, 136, 0, 1)" backColorOddRow="rgba(255, 255, 255, 0)" fontSize="14px" fontName="ABBvoiceMedium" cornerRadius="0px" headerCellBorderColor="rgba(0, 0, 0, 1)" headerCellBorderWidth="0px 0px 1px 0px" headerCellBorderStyle="solid" bold="false" cellBorderColor="rgba(0, 0, 0, 1)" cellBorderWidth="0px 0px 1px 0px" cellBorderStyle="solid">
               <Widgets>
                 <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemID" width="40" zIndex="0" columnType="instanceId" text="ID" />
-                <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemDate" width="294" zIndex="1" columnType="timestamp" text="$IAT/Date" />
-                <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemName" width="186" zIndex="2" columnType="name" text="$IAT/Name" />
-                <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemMessage" width="297" zIndex="3" text="$IAT/Message" />
-                <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemState" width="103" zIndex="4" columnType="state" text="$IAT/State" />
-                <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemSeverity" width="115" zIndex="5" columnType="severity" text="$IAT/Severity" />
-                <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemCode" width="88" zIndex="6" columnType="code" text="$IAT/Code" />
+                <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemDate" width="140" zIndex="1" columnType="timestamp" text="$IAT/Date" />
+                <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemName" width="220" zIndex="2" columnType="name" text="$IAT/Name" />
+                <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemMessage" width="391" zIndex="3" text="$IAT/Message" />
+                <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemState" width="120" zIndex="4" columnType="state" text="$IAT/State" />
+                <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemSeverity" width="120" zIndex="5" columnType="severity" text="$IAT/Severity" />
+                <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemCode" width="90" zIndex="6" columnType="code" text="$IAT/Code" />
               </Widgets>
             </Widget>
             <Widget xsi:type="widgets.brease.Button" id="ButtonAcknowledge" top="470" left="560" width="280" height="40" zIndex="1" image="Media/SymbolLib/Alarm/Acknowledge.svg" text="$IAT/Ack" imageHeight="35" imageWidth="35" borderWidth="3px 3px 3px 3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="18px" fontName="ABBvoiceMedium" />
@@ -22,15 +22,15 @@
         </Widget>
         <Widget xsi:type="widgets.brease.TabItem" id="TabItem2" left="0" zIndex="1" text="$IAT/History" borderWidth="0px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" backColor="rgba(255, 255, 255, 0)" textColor="rgba(0, 0, 0, 1)" activeBorderWidth="5px" fontName="ABBvoiceMedium">
           <Widgets>
-            <Widget xsi:type="widgets.brease.AlarmHistory" id="AlarmHistory1" top="31" left="20" width="1126" height="400" zIndex="0" itemsPerPage="5" nextText="$IAT/Next" previousText="$IAT/Previous" searchBox="false" rowHeight="50" borderStyle="solid" borderWidth="2px" borderColor="rgba(0, 0, 0, 1)" headerBackColor="rgba(220, 220, 220, 1)" headerTextColor="rgba(0, 0, 0, 1)" backColorSelectedRow="rgba(255, 136, 0, 1)" backColorOddRow="rgba(245, 245, 245, 1)" fontName="ABBvoiceMedium" headerCellBorderColor="rgba(0, 0, 0, 1)" headerCellBorderWidth="0px 0px 1px 0px" headerCellBorderStyle="solid" cellBorderColor="rgba(0, 0, 0, 1)" cellBorderWidth="0px 0px 1px 0px">
+            <Widget xsi:type="widgets.brease.AlarmHistory" id="AlarmHistory1" top="31" left="20" width="1126" height="400" zIndex="0" format="dd.MM.yyyy HH:mm" itemsPerPage="5" nextText="$IAT/Next" previousText="$IAT/Previous" searchBox="false" rowHeight="45" borderStyle="solid" borderWidth="2px" borderColor="rgba(0, 0, 0, 1)" headerBackColor="rgba(220, 220, 220, 1)" headerTextColor="rgba(0, 0, 0, 1)" backColorSelectedRow="rgba(255, 136, 0, 1)" backColorOddRow="rgba(245, 245, 245, 1)" fontName="ABBvoiceMedium" headerCellBorderColor="rgba(0, 0, 0, 1)" headerCellBorderWidth="0px 0px 1px 0px" headerCellBorderStyle="solid" cellBorderColor="rgba(0, 0, 0, 1)" cellBorderWidth="0px 0px 1px 0px">
               <Widgets>
                 <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemID" width="40" zIndex="0" columnType="instanceId" text="ID" />
-                <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemDate" width="294" zIndex="1" columnType="timestamp" text="$IAT/Date" />
-                <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemName" width="186" zIndex="2" columnType="name" text="$IAT/Name" />
-                <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemMessage" width="297" zIndex="3" text="$IAT/Message" />
-                <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemOldState" width="103" zIndex="4" columnType="old state" text="$IAT/OldState" />
-                <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemNewState" width="115" zIndex="5" columnType="new state" text="$IAT/NewState" />
-                <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemCode" width="88" zIndex="6" columnType="code" text="$IAT/Code" />
+                <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemDate" width="140" zIndex="1" columnType="timestamp" text="$IAT/Date" />
+                <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemName" width="220" zIndex="2" columnType="name" text="$IAT/Name" />
+                <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemMessage" width="391" zIndex="3" text="$IAT/Message" />
+                <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemOldState" width="120" zIndex="4" columnType="old state" text="$IAT/OldState" />
+                <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemNewState" width="120" zIndex="5" columnType="new state" text="$IAT/NewState" />
+                <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemCode" width="90" zIndex="6" columnType="code" text="$IAT/Code" />
               </Widgets>
             </Widget>
             <Widget xsi:type="widgets.brease.Button" id="ClearAlarmHistoryBtn" top="470" left="860" width="280" height="40" zIndex="1" image="Media/SymbolLib/Edit/Delete.svg" text="$IAT/ClearHistory" imageHeight="25" imageWidth="25" disabledImageColor="rgba(0, 0, 0, 1)" borderWidth="3px 3px 3px 3px" cornerRadius="30px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="18px" fontName="ABBvoiceMedium" />
