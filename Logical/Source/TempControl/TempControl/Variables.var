@@ -1,5 +1,7 @@
 VAR
 	MpTempController_0 : MpTempController; (*Function block responsible for  temperature controll*)
+END_VAR
+VAR RETAIN
 	MpTempControllerParType_0 : MpTempControllerParType := (PID:=(Heat:=(ProportionalGain:=33.9530678,IntegrationTime:=72.68005,DerivativeTime:=8.721606,FilterTime:=0.8721606),Cool:=(ProportionalGain:=33.9530678,IntegrationTime:=72.68005,DerivativeTime:=8.721606,FilterTime:=0.8721606),IntegratorPreloading:=-0.0609090626),Tuning:=(Mode:=mpTEMP_TUNING_MODE_OSC_HEAT_COOL,SetPointHeat:=70.0,SetPointCool:=40.0),Profile:=(Heat:=(SlewRate:=0.354523033,FilterTime:=84.8989,DelayTime:=6.5,QuickStart:=FALSE),Cool:=(SlewRate:=0.273072,FilterTime:=91.55094,DelayTime:=2.5,QuickStart:=FALSE)),ToleranceBand:=(Lower:=2.0,Upper:=2.0),Hysteresis:=(Mode:=mpTEMP_HYSTERESIS_ON,Band:=(HeatToCool:=4.0,CoolToHeat:=4.0))); (*Temperature controller parameters*)
 END_VAR
 VAR CONSTANT

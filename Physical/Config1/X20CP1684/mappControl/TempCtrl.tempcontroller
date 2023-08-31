@@ -11,7 +11,7 @@
           <Property ID="Period" Value="0.02" />
         </Group>
         <Group ID="Cool">
-          <Property ID="Period" Value="0.02" />
+          <Property ID="Period" Value="1" />
         </Group>
       </Group>
       <Selector ID="SoftStart" Value="NotUsed" />

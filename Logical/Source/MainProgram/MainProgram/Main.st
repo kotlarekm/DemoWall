@@ -19,6 +19,7 @@ PROGRAM _CYCLIC
 		gTanks.Commands.OpenTank2Valve := FALSE;
 		gTanks.Commands.OpenTank3LeftValve := FALSE;
 		gTanks.Commands.OpenTank3RightValve := FALSE;
+		gTanks.Commands.Start := FALSE;
 	END_IF;
 	
 	CASE gTanks.Status.Step OF
@@ -33,7 +34,6 @@ PROGRAM _CYCLIC
 					gTanks.Commands.OpenTank2Valve := TRUE;
 				END_IF
 				
-				gTanks.Commands.Start := FALSE;
 				gTanks.Status.Step := FILLING_TANKS_1_AND_2;
 			END_IF;
 			
@@ -117,6 +117,7 @@ PROGRAM _CYCLIC
 			
 			IF gTanks.Status.Tank3FluidLvl = 0 THEN
 				gTanks.Commands.OpenTank3MainValve := FALSE;
+				gTanks.Commands.Start := FALSE;
 				gTanks.Status.Step := START;
 			END_IF;
 		

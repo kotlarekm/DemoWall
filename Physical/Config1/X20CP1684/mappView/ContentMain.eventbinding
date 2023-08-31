@@ -796,16 +796,6 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="ContentMain.ToggleButton1.Click">
-      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="ContentMain" widgetRefId="AutoToggleButton" event="Click" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Simulation:Manual">
-            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
     <EventBinding id="EventBinding_18">
       <Source xsi:type="opcUa.Event" refId="::Simulation:Auto" event="ValueChanged" />
       <EventHandler condition="newValue">
@@ -860,16 +850,6 @@
             </Action>
           </Step>
         </Sequence>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="ContentMain.ToggleButton2.Click">
-      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="ContentMain" widgetRefId="ManualToggleButton" event="Click" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Simulation:Auto">
-            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
-          </Target>
-        </Action>
       </EventHandler>
     </EventBinding>
     <EventBinding id="EventBinding_10">
@@ -997,36 +977,6 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="ContentMain.Button1.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMain" widgetRefId="Button1" event="Click" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.Start">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="EventBinding_22">
-      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="ContentMain" widgetRefId="ManualToggleButton" event="ValueChanged" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentMain" widgetRefId="Button1">
-            <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="false" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="EventBinding_23">
-      <Source xsi:type="widgets.brease.ToggleButton.Event" contentRefId="ContentMain" widgetRefId="AutoToggleButton" event="ValueChanged" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentMain" widgetRefId="Button1">
-            <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
     <EventBinding id="ContentMain.RegulatorSettingsBtn.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMain" widgetRefId="RegulatorSettingsBtn" event="Click" />
       <EventHandler>
@@ -1055,6 +1005,223 @@
             <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
           </Target>
         </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMain.AutoBtn.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMain" widgetRefId="AutoBtn" event="Click" />
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Simulation:Auto">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Simulation:Manual">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMain.ManualBtn.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMain" widgetRefId="ManualBtn" event="Click" />
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Simulation:Auto">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Simulation:Manual">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMain.ProcessStartButton.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMain" widgetRefId="ProcessStartButton" event="Click" />
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.Start">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentMain" widgetRefId="ProcessStartButton">
+                <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentMain" widgetRefId="ManualBtn">
+                <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="3">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="Target1FluidLvlAutoInput">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="4">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="Target2FluidLvlAutoInput">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="5">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="Target3FluidLvlAutoInput">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="6">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="Tank3ValveOpeningLeftAutoInput">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="7">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="Tank3ValveOpeningRightAutoInput">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="8">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="Mixer1Autonput">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="9">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="Mixer2AutoInput">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="10">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="MixingTimeAutoInput">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="11">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="MixingTimeAutoInput1">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ProcessEnd">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gTanks.Commands.Start" event="ValueChanged" />
+      <EventHandler condition="NOT(newValue)">
+        <Sequence>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentMain" widgetRefId="ProcessStartButton">
+                <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="ContentMain" widgetRefId="ManualBtn">
+                <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="3">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="Target1FluidLvlAutoInput">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="4">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="Target2FluidLvlAutoInput">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="5">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="Target3FluidLvlAutoInput">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="6">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="Tank3ValveOpeningLeftAutoInput">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="7">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="Tank3ValveOpeningRightAutoInput">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="8">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="Mixer1Autonput">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="9">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="Mixer2AutoInput">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="10">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="MixingTimeAutoInput">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="11">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="MixingTimeAutoInput1">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
   </Bindings>

@@ -78,5 +78,22 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="ProcessStarted">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gTanks.Commands.Start" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="RecipesMainContent" widgetRefId="ApplyRecipeBtn">
+            <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.Button.Action" contentRefId="RecipesMainContent" widgetRefId="ApplyRecipeBtn">
+            <Method xsi:type="widgets.brease.Button.Action.SetEnable" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>
