@@ -48,4 +48,8 @@ VAR_CONFIG
 	::IO:diRoundButton3 AT %IX."4XP0000.00-K21".DigitalInput03;
 	::IO:diRoundButton4 AT %IX."4XP0000.00-K21".DigitalInput02;
 	::IO:diRoundButton5 AT %IX."4XP0000.00-K21".DigitalInput01;
+	::IO:doLamp5 AT %QX."X67BC8321-1".IF1.ST1.DigitalOutput01;
+	::IO:doLamp6 AT %QX."X67BC8321-1".IF1.ST1.DigitalOutput03;
+	::IO:doLamp7 AT %QX."X67BC8321-1".IF1.ST1.DigitalOutput05;
+	::IO:doLamp8 AT %QX."X67BC8321-1".IF1.ST1.DigitalOutput07;
 END_VAR

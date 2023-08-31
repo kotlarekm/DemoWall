@@ -53,8 +53,45 @@
           <High ValueProvider="Const">360</High>
         </EURange>
       </EURanges>
+      <EURanges Id="13">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">10</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="15">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">720</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="16">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">300</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="17">
+        <EURange>
+          <Low ValueProvider="Const">1</Low>
+          <High ValueProvider="Const">100</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="19">
+        <EURange>
+          <Low ValueProvider="Const">30</Low>
+          <High ValueProvider="Const">45</High>
+        </EURange>
+      </EURanges>
     </EURangesAliases>
-    <EngineeringUnitAliases />
+    <EngineeringUnitAliases>
+      <EngineeringUnit Id="1" UnitId="4342098" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="bar [unit of pressure]" Symbol="bar" />
+      <EngineeringUnit Id="2" UnitId="4408652" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="degree Celsius" Symbol="°C" />
+      <EngineeringUnit Id="3" UnitId="4403766" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="millisecond" Symbol="ms" />
+      <EngineeringUnit Id="4" UnitId="5002322" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="litre" Symbol="l" />
+      <EngineeringUnit Id="5" UnitId="4536630" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="degree per second" Symbol="°/s" />
+      <EngineeringUnit Id="6" UnitId="5457219" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="second [unit of time]" Symbol="s" />
+    </EngineeringUnitAliases>
   </Aliases>
   <DefaultView>
     <Module Name="&lt;Default&gt;">
@@ -64,23 +101,25 @@
             <Variable Name="ObjectType">
               <Variable Name="Mode" />
             </Variable>
-            <Variable Name="Tank3MaxAllowedPressure" />
-            <Variable Name="Tank3MaxAllowedTemp" />
+            <Variable Name="Tank3MaxAllowedPressure" EURangesId="13" />
+            <Variable Name="Tank3MaxAllowedTemp" EURangesId="19" />
             <Variable Name="Tank3LeftValveOpeningLvl" EURangesId="4" />
             <Variable Name="Tank3RightValveOpeningLvl" EURangesId="4" />
-            <Variable Name="MixingTime" EURangesId="5" />
+            <Variable Name="MixingTime" EURangesId="5" EngineeringUnitId="3" />
             <Variable Name="Mixer2On" EURangesId="3" />
             <Variable Name="Mixer1On" EURangesId="3" />
-            <Variable Name="Tank3TargetFluidLvl" EURangesId="1" />
-            <Variable Name="Tank2TargetFluidLvl" EURangesId="1" />
-            <Variable Name="Tank1TargetFluidLvl" EURangesId="1" />
-            <Variable Name="Tank3MaxAllowedFluidLvl" />
-            <Variable Name="Tank2MaxAllowedFluidLvl" />
-            <Variable Name="Tank1MaxAllowedFluidLvl" />
-            <Variable Name="Mixer1MaxAllowedVelocity" />
-            <Variable Name="Mixer2MaxAllowedVelocity" />
-            <Variable Name="Tank3TargetPressure" />
-            <Variable Name="Tank3TargetTemp" />
+            <Variable Name="Tank3TargetFluidLvl" EURangesId="1" EngineeringUnitId="4" />
+            <Variable Name="Tank2TargetFluidLvl" EURangesId="1" EngineeringUnitId="4" />
+            <Variable Name="Tank1TargetFluidLvl" EURangesId="1" EngineeringUnitId="4" />
+            <Variable Name="Tank3MaxAllowedFluidLvl" EURangesId="1" />
+            <Variable Name="Tank2MaxAllowedFluidLvl" EURangesId="1" />
+            <Variable Name="Tank1MaxAllowedFluidLvl" EURangesId="1" />
+            <Variable Name="Mixer1MaxAllowedVelocity" EURangesId="15" />
+            <Variable Name="Mixer2MaxAllowedVelocity" EURangesId="15" />
+            <Variable Name="Tank3TargetPressure" EURangesId="13" EngineeringUnitId="1" />
+            <Variable Name="Tank3TargetTemp" EURangesId="19" EngineeringUnitId="2" />
+            <Variable Name="InertialTermTimeConstant" EURangesId="16" />
+            <Variable Name="InertialTermGain" EURangesId="17" />
           </Variable>
           <Variable Name="Status">
             <Variable Name="IsMixer1On" EURangesId="3" />
@@ -150,7 +189,27 @@
           </Variable>
         </Variable>
         <Variable Name="NewRecipeSelected" />
-        <Variable Name="ParametersToLoad" RecursiveEnable="2" />
+        <Variable Name="ParametersToLoad" RecursiveEnable="2">
+          <Variable Name="Tank3MaxAllowedPressure" EURangesId="13" EngineeringUnitId="1" />
+          <Variable Name="Tank3MaxAllowedTemp" EURangesId="19" EngineeringUnitId="2" />
+          <Variable Name="Tank3LeftValveOpeningLvl" EURangesId="4" />
+          <Variable Name="Tank3RightValveOpeningLvl" EURangesId="4" />
+          <Variable Name="MixingTime" EURangesId="5" EngineeringUnitId="3" />
+          <Variable Name="Mixer2On" EURangesId="3" />
+          <Variable Name="Mixer1On" EURangesId="3" />
+          <Variable Name="Tank3TargetFluidLvl" EURangesId="1" EngineeringUnitId="4" />
+          <Variable Name="Tank2TargetFluidLvl" EURangesId="1" EngineeringUnitId="4" />
+          <Variable Name="Tank1TargetFluidLvl" EURangesId="1" EngineeringUnitId="4" />
+          <Variable Name="Tank3MaxAllowedFluidLvl" EURangesId="1" EngineeringUnitId="4" />
+          <Variable Name="Tank2MaxAllowedFluidLvl" EURangesId="1" EngineeringUnitId="4" />
+          <Variable Name="Tank1MaxAllowedFluidLvl" EURangesId="1" EngineeringUnitId="4" />
+          <Variable Name="Mixer1MaxAllowedVelocity" EURangesId="15" EngineeringUnitId="5" />
+          <Variable Name="Mixer2MaxAllowedVelocity" EURangesId="15" EngineeringUnitId="5" />
+          <Variable Name="Tank3TargetTemp" EURangesId="19" EngineeringUnitId="2" />
+          <Variable Name="Tank3TargetPressure" EURangesId="13" EngineeringUnitId="1" />
+          <Variable Name="InertialTermTimeConstant" EURangesId="16" EngineeringUnitId="6" />
+          <Variable Name="InertialTermGain" EURangesId="17" />
+        </Variable>
         <Variable Name="RecipeName" />
         <Variable Name="RecipesList" />
         <Variable Name="SelectedRecipeIndex" />
