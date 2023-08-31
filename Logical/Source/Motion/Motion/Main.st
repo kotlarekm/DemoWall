@@ -66,7 +66,7 @@ PROGRAM _CYCLIC
 		MpAxisBasic_Secondary.Update := FALSE;
 	END_IF
 	//E-STOP
-	IF gDriveStop THEN
+	IF NOT gDriveStop THEN
 		Manual := FALSE;
 		gTanks.Commands.TurnOnMixer1 := FALSE;
 		gTanks.Commands.TurnOnMixer2 := FALSE;
@@ -222,7 +222,7 @@ PROGRAM _CYCLIC
 					MpAxisCoupling_0.Cam := TRUE;
 				END_IF
 			END_IF
-			IF MpAxisCoupling_0.InSync AND MpAxisBasic_Secondary.MoveActive THEN
+			IF MpAxisCoupling_0.InSync AND MpAxisCoupling_0.Cam AND MpAxisBasic_Secondary.MoveActive THEN
 				CouplingMode := CAM_COUPLING;
 			END_IF
 			IF NOT MpAxisCoupling_0.InSync AND NOT CamCoupling THEN
