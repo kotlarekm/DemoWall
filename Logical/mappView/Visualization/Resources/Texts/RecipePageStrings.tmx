@@ -215,18 +215,18 @@
     </tu>
     <tu tuid="Tank3PressureGain">
       <tuv xml:lang="pl">
-        <seg>Wzmocnienie:</seg>
+        <seg>Wzmocnienie w modelu zmian ciśnienia:</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Gain:</seg>
+        <seg>Gain in the pressure change model:</seg>
       </tuv>
     </tu>
     <tu tuid="Tank3PressureTimeConstant">
       <tuv xml:lang="pl">
-        <seg>Stała czasowa:</seg>
+        <seg>Stała czasowa w modelu zmian ciśnienia:</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Time constant:</seg>
+        <seg>Time constant in the pressure change model:</seg>
       </tuv>
     </tu>
     <tu tuid="Tank3PressureProcessModeling">
