@@ -1,6 +1,3 @@
 VAR
 	TON_0 : TON; (*Timer used to make mixers work*)
-	DENSITY_OF_LIQUID : REAL := 997; (*[kg/m^3] Density of water*)
-	GRAVITY : REAL := 9.81; (*[m/s^2] Earth acceleration*)
-	LITERS_TO_CUBIC_METERS_SCALLER : REAL := 1000.0; (*Variable used for transforming liters to cubic meters*)
 END_VAR
