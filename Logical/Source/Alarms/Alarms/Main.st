@@ -77,7 +77,7 @@ PROGRAM _CYCLIC
 		MpAlarmXSet(gAlarmXCore, 'E-stop');
 	END_IF
 	
-	IF diEStopNotPressed THEN
+	IF diEStopNotPressed AND doReset THEN
 		MpAlarmXReset(gAlarmXCore, 'E-stop');
 	END_IF
 	
