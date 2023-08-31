@@ -2,7 +2,7 @@
 <?AutomationStudio FileVersion="4.9"?>
 <BR.AS.HardwareTopology>
   <TimeStamps>
-    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="08/31/2023 10:12:16" />
+    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="08/31/2023 11:08:56" />
   </TimeStamps>
   <Modules>
     <Module Name="X20CP1684" Type="X20CP1684" X="100" Y="100" />
@@ -95,6 +95,18 @@
       <Point X="583" Y="481" />
       <Point X="583" Y="481" />
     </Link>
+    <Link From="0AC808.9" To="8I74xxxxxxx.01P-1" FromPort="ETH6" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="596" Y="481" />
+      <Point X="596" Y="481" />
+      <Point X="596" Y="501" />
+      <Point X="596" Y="529" />
+      <Point X="629" Y="529" />
+      <Point X="629" Y="1105" />
+      <Point X="664" Y="1105" />
+      <Point X="664" Y="1096" />
+      <Point X="664" Y="1054" />
+      <Point X="664" Y="1054" />
+    </Link>
     <Link From="0AC808.9" To="X20SL8101" FromPort="ETH7" ToPort="PLK2" IsRoutedByUser="False">
       <Point X="609" Y="481" />
       <Point X="609" Y="481" />
@@ -104,6 +116,16 @@
       <Point X="749" Y="558" />
       <Point X="749" Y="546" />
       <Point X="749" Y="546" />
+    </Link>
+    <Link From="0AC808.9" To="8EI2X2HWT10.xxxx-1" FromPort="ETH8" ToPort="PLK1" IsRoutedByUser="False">
+      <Point X="622" Y="481" />
+      <Point X="622" Y="481" />
+      <Point X="622" Y="501" />
+      <Point X="622" Y="522" />
+      <Point X="566.7" Y="522" />
+      <Point X="566.7" Y="894.5" />
+      <Point X="566.7" Y="905.5" />
+      <Point X="566.7" Y="905.5" />
     </Link>
     <Link From="4XP0000.00-K21" To="X67SI8103" FromPort="X2X1" ToPort="X2X2" IsRoutedByUser="False">
       <Point X="942" Y="619" />
@@ -115,6 +137,17 @@
       <Point X="1082" Y="696" />
       <Point X="1082" Y="691" />
       <Point X="1082" Y="691" />
+    </Link>
+    <Link From="5PPC2100_BY44_000" To="X20CP1684" FromPort="IF3" ToPort="IF2" IsRoutedByUser="False">
+      <Point X="467.8" Y="803" />
+      <Point X="467.8" Y="803" />
+      <Point X="477.8" Y="803" />
+      <Point X="485" Y="803" />
+      <Point X="485" Y="755" />
+      <Point X="132" Y="755" />
+      <Point X="132" Y="200" />
+      <Point X="132" Y="187" />
+      <Point X="132" Y="187" />
     </Link>
     <Link From="80SD100XD.C044-01" To="X20BT9400" FromPort="X2X1" ToPort="X2X1" IsRoutedByUser="False">
       <Point X="338" Y="350" />
@@ -144,39 +177,6 @@
       <Point X="910" Y="606" />
       <Point X="910" Y="619" />
       <Point X="910" Y="619" />
-    </Link>
-    <Link From="0AC808.9" To="8EI2X2HWT10.xxxx-1" FromPort="ETH8" ToPort="PLK1" IsRoutedByUser="False">
-      <Point X="622" Y="481" />
-      <Point X="622" Y="481" />
-      <Point X="622" Y="501" />
-      <Point X="622" Y="522" />
-      <Point X="566.7" Y="522" />
-      <Point X="566.7" Y="894.5" />
-      <Point X="566.7" Y="905.5" />
-      <Point X="566.7" Y="905.5" />
-    </Link>
-    <Link From="0AC808.9" To="8I74xxxxxxx.01P-1" FromPort="ETH6" ToPort="PLK1" IsRoutedByUser="False">
-      <Point X="596" Y="481" />
-      <Point X="596" Y="481" />
-      <Point X="596" Y="501" />
-      <Point X="596" Y="529" />
-      <Point X="629" Y="529" />
-      <Point X="629" Y="1105" />
-      <Point X="664" Y="1105" />
-      <Point X="664" Y="1096" />
-      <Point X="664" Y="1054" />
-      <Point X="664" Y="1054" />
-    </Link>
-    <Link From="5PPC2100_BY44_000" To="X20CP1684" FromPort="IF3" ToPort="IF2" IsRoutedByUser="False">
-      <Point X="467.8" Y="803" />
-      <Point X="467.8" Y="803" />
-      <Point X="477.8" Y="803" />
-      <Point X="485" Y="803" />
-      <Point X="485" Y="755" />
-      <Point X="132" Y="755" />
-      <Point X="132" Y="200" />
-      <Point X="132" Y="187" />
-      <Point X="132" Y="187" />
     </Link>
   </Links>
   <InfoElements />
