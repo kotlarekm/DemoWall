@@ -13,18 +13,12 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 	
-	IF gTanks.Commands.Stop THEN
-		gTanks.Status.Step := START;
-		gTanks.Commands.OpenTank1Valve := FALSE;
-		gTanks.Commands.OpenTank2Valve := FALSE;
-		gTanks.Commands.OpenTank3LeftValve := FALSE;
-		gTanks.Commands.OpenTank3RightValve := FALSE;
-		gTanks.Commands.Start := FALSE;
-	END_IF;
+	gTanks.Commands.Stop := NOT(gDriveStop);
 	
 	CASE gTanks.Status.Step OF
 		
 		START:
+			
 			IF gTanks.Commands.Start THEN
 				IF gTanks.Parameters.Tank1TargetFluidLvl > 0 THEN
 					gTanks.Commands.OpenTank1Valve := TRUE;
@@ -122,6 +116,15 @@ PROGRAM _CYCLIC
 			END_IF;
 		
 	END_CASE;
+	
+	IF gTanks.Commands.Stop THEN
+		gTanks.Status.Step := START;
+		gTanks.Commands.OpenTank1Valve := FALSE;
+		gTanks.Commands.OpenTank2Valve := FALSE;
+		gTanks.Commands.OpenTank3LeftValve := FALSE;
+		gTanks.Commands.OpenTank3RightValve := FALSE;
+		gTanks.Commands.Start := FALSE;
+	END_IF;
 
 	gTanks.Parameters.Tank3MaxAllowedPressure;
 	

@@ -7,7 +7,7 @@
   <body>
     <tu tuid="SelectRecipe">
       <tuv xml:lang="pl">
-        <seg>Wybierz receptę:</seg>
+        <seg>Wybierz recepturę:</seg>
       </tuv>
       <tuv xml:lang="en">
         <seg>Select recipe:</seg>

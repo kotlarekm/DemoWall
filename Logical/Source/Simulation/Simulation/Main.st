@@ -13,6 +13,18 @@ END_PROGRAM
  
 PROGRAM _CYCLIC
 	
+	// Mode change to auto
+	IF EDGEPOS(Auto) THEN
+		gTanks.Status.Step := START;
+		gTanks.Commands.OpenTank1Valve := FALSE;
+		gTanks.Commands.OpenTank2Valve := FALSE;
+		gTanks.Commands.OpenTank3LeftValve := 0;
+		gTanks.Commands.OpenTank3MainValve := FALSE;
+		gTanks.Commands.OpenTank3RightValve := 0;
+		gTanks.Commands.TurnOnMixer1 := FALSE;
+		gTanks.Commands.TurnOnMixer2 := FALSE;
+	END_IF;
+	
 	// Main page control buttons
 	IF Manual THEN
 		ManualBtnEnable := FALSE;
@@ -430,7 +442,7 @@ PROGRAM _CYCLIC
 		END_IF
 		
 		IF gTanks.Status.Tank3FluidLvl = 0 
-			OR gTanks.Status.Step = START 
+			//OR gTanks.Status.Step = START 
 			OR UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND RValveCheck
 			OR UINT_TO_BOOL(gTanks.Status.IsMixer2On) AND RValveCheck
 			OR UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND LValveCheck

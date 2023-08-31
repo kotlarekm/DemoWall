@@ -5,7 +5,7 @@
       <Info Name="ARVersion" Value="49302" />
       <Info Name="SafetyRelease" Value="5.23.0" />
       <Info Name="Communication" Value="/IF=tcpip /LOPO=11159 /SA=1 /COMT=2500 /RT=1000 /AM=* /SDT=5 /DAIP=192.168.0.2 /REPO=11169 /ANSL=1 /PORT=50000" />
-      <Info Name="mappSafetyPath" Value="C:\BrAutomation\AS412\AS\TechnologyPackages\mappSafety\5.23.0" />
+      <Info Name="mappSafetyPath" Value="C:\BRAutomation\AS412\AS\TechnologyPackages\mappSafety\5.23.0" />
     </GeneratorDescription>
     <SafetyConfigurationManager TransportSAddr="1">
       <DeviceDescription Module="X20SL81XX_110.SCM" minOpenSafetyRelease="1.5"><![CDATA[C:\BRAutomation\AS412\AS\Hardware\Modules\X20SL8101\2.4.2.0\OSDD\X20SL81XX_SCM_2_4_2_0.xosdd]]></DeviceDescription>

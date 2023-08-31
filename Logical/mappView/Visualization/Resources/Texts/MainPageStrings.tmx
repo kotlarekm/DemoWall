@@ -189,5 +189,13 @@
         <seg>Mixing time</seg>
       </tuv>
     </tu>
+    <tu tuid="PressureInTank3">
+      <tuv xml:lang="pl">
+        <seg>Ciśnienie w zbiorniku 3</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Pressure in tank 3</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>
