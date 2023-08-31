@@ -155,6 +155,10 @@
         <Variable Name="Tank2Save" />
         <Variable Name="Tank3LeftValveSave" />
         <Variable Name="Tank3RightValveSave" />
+        <Variable Name="AutoBtnEnable" />
+        <Variable Name="ManualBtnEnable" />
+        <Variable Name="StartBtnEnable" />
+        <Variable Name="NumericInputsEnable" />
       </Task>
       <Task Name="TempContro">
         <Variable Name="FanPWMDuty" />

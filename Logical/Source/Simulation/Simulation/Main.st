@@ -12,6 +12,26 @@ PROGRAM _INIT
 END_PROGRAM
  
 PROGRAM _CYCLIC
+	
+	// Main page control buttons
+	IF Manual THEN
+		ManualBtnEnable := FALSE;
+		AutoBtnEnable := TRUE;
+		StartBtnEnable := FALSE;
+	ELSE
+		AutoBtnEnable := FALSE;
+		ManualBtnEnable := TRUE;
+		StartBtnEnable := TRUE;
+	END_IF;
+	
+	IF gTanks.Commands.Start THEN
+		AutoBtnEnable := FALSE;
+		ManualBtnEnable := FALSE;
+		StartBtnEnable := FALSE;
+		NumericInputsEnable := FALSE;
+	ELSE
+		NumericInputsEnable := TRUE;
+	END_IF;
 
 	IF Manual THEN
 	
@@ -410,7 +430,7 @@ PROGRAM _CYCLIC
 		END_IF
 		
 		IF gTanks.Status.Tank3FluidLvl = 0 
-			OR gTanks.Commands.Start 
+			OR gTanks.Status.Step = START 
 			OR UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND RValveCheck
 			OR UINT_TO_BOOL(gTanks.Status.IsMixer2On) AND RValveCheck
 			OR UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND LValveCheck

@@ -125,17 +125,56 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank3Pressure" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="RadialGaugeKnob1" attribute="value" />
 </Binding>
+
+
+
 <Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::Simulation:Auto" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="ManualBtn" attribute="enable" />
+<Source xsi:type="opcUa" refId="::Simulation:StartBtnEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="ProcessStartButton" attribute="enable" />
 </Binding>
 <Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::Simulation:Manual" attribute="value" />
+<Source xsi:type="opcUa" refId="::Simulation:AutoBtnEnable" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="AutoBtn" attribute="enable" />
 </Binding>
 <Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::Simulation:Auto" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="ProcessStartButton" attribute="enable" />
+<Source xsi:type="opcUa" refId="::Simulation:ManualBtnEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="ManualBtn" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Simulation:NumericInputsEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Target1FluidLvlAutoInput" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Simulation:NumericInputsEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="MixingTimeAutoInput1" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Simulation:NumericInputsEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="MixingTimeAutoInput" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Simulation:NumericInputsEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Mixer1Autonput" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Simulation:NumericInputsEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Tank3ValveOpeningRightAutoInput" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Simulation:NumericInputsEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Target3FluidLvlAutoInput" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Simulation:NumericInputsEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Target2FluidLvlAutoInput" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Simulation:NumericInputsEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Tank3ValveOpeningLeftAutoInput" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Simulation:NumericInputsEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Mixer2AutoInput" attribute="enable" />
 </Binding>
 </Bindings>
 </BindingsSet>

@@ -48,11 +48,11 @@ PROGRAM _CYCLIC
 			
 			IF NOT(gTanks.Commands.OpenTank1Valve) AND NOT(gTanks.Commands.OpenTank2Valve) THEN
 				gTanks.Status.Step := FILLING_TANK_3;
+				gTanks.Commands.OpenTank3LeftValve := gTanks.Parameters.Tank3LeftValveOpeningLvl;
+				gTanks.Commands.OpenTank3RightValve := gTanks.Parameters.Tank3RightValveOpeningLvl;
 			END_IF;
 			
 		FILLING_TANK_3:
-			gTanks.Commands.OpenTank3LeftValve := gTanks.Parameters.Tank3LeftValveOpeningLvl;
-			gTanks.Commands.OpenTank3RightValve := gTanks.Parameters.Tank3RightValveOpeningLvl;
 			
 			IF gTanks.Status.Tank3FluidLvl >= gTanks.Parameters.Tank3TargetFluidLvl 
 				AND UINT_TO_BOOL(NOT(gTanks.Parameters.Mixer1On)) 
