@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="ContentAlarms" height="608" width="1206" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.TabControl" id="TabControl1" top="20" left="20" width="1166" height="561" zIndex="0" headerBackColor="rgba(0, 0, 0, 1)" backColor="rgba(245, 245, 245, 1)" borderStyle="solid" borderWidth="2px" borderColor="rgba(0, 0, 0, 1)">
+    <Widget xsi:type="widgets.brease.TabControl" id="TabControl1" top="20" left="20" width="1166" height="561" zIndex="0" headerBackColor="rgba(220, 220, 220, 1)" backColor="rgba(245, 245, 245, 1)" borderStyle="solid" borderWidth="2px" borderColor="rgba(0, 0, 0, 1)">
       <Widgets>
         <Widget xsi:type="widgets.brease.TabItem" id="TabItem1" left="0" zIndex="0" text="$IAT/List" borderWidth="0px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" backColor="rgba(255, 255, 255, 0)" textColor="rgba(0, 0, 0, 1)" activeBorderWidth="5px" fontName="ABBvoiceMedium">
           <Widgets>
-            <Widget xsi:type="widgets.brease.AlarmList" id="AlarmList1" top="31" left="20" width="1126" height="409" zIndex="0" itemsPerPage="5" nextText="$IAT/Next" searchBox="false" borderStyle="solid" borderWidth="2px" borderColor="rgba(0, 0, 0, 1)" headerBackColor="rgba(0, 0, 0, 1)" headerTextColor="rgba(255, 255, 255, 1)" backColorSelectedRow="rgba(255, 136, 0, 1)" backColorOddRow="rgba(255, 255, 255, 0)" fontSize="14px" cornerRadius="0px" bold="false" cellBorderColor="rgba(0, 0, 0, 1)" cellBorderWidth="1px" cellBorderStyle="solid" previousText="$IAT/Previous" rowHeight="50" fontName="ABBvoiceMedium">
+            <Widget xsi:type="widgets.brease.AlarmList" id="AlarmList1" top="31" left="20" width="1126" height="400" zIndex="0" itemsPerPage="5" nextText="$IAT/Next" previousText="$IAT/Previous" searchBox="false" rowHeight="50" borderStyle="solid" borderWidth="2px" borderColor="rgba(0, 0, 0, 1)" headerBackColor="rgba(220, 220, 220, 1)" headerTextColor="rgba(0, 0, 0, 1)" backColorSelectedRow="rgba(255, 136, 0, 1)" backColorOddRow="rgba(255, 255, 255, 0)" fontSize="14px" fontName="ABBvoiceMedium" cornerRadius="0px" headerCellBorderColor="rgba(0, 0, 0, 1)" headerCellBorderWidth="0px 0px 1px 0px" headerCellBorderStyle="solid" bold="false" cellBorderColor="rgba(0, 0, 0, 1)" cellBorderWidth="0px 0px 1px 0px" cellBorderStyle="solid">
               <Widgets>
                 <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemID" width="40" zIndex="0" columnType="instanceId" text="ID" />
                 <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemDate" width="294" zIndex="1" columnType="timestamp" text="$IAT/Date" />
@@ -22,7 +22,7 @@
         </Widget>
         <Widget xsi:type="widgets.brease.TabItem" id="TabItem2" left="0" zIndex="1" text="$IAT/History" borderWidth="0px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" backColor="rgba(255, 255, 255, 0)" textColor="rgba(0, 0, 0, 1)" activeBorderWidth="5px" fontName="ABBvoiceMedium">
           <Widgets>
-            <Widget xsi:type="widgets.brease.AlarmHistory" id="AlarmHistory1" top="36" left="20" width="1126" height="410" zIndex="0" itemsPerPage="5" nextText="$IAT/Next" previousText="$IAT/Previous" searchBox="false" rowHeight="50" borderStyle="solid" borderWidth="2px" borderColor="rgba(0, 0, 0, 1)" headerBackColor="rgba(0, 0, 0, 1)" headerTextColor="rgba(255, 255, 255, 1)" backColorSelectedRow="rgba(255, 136, 0, 1)" backColorOddRow="rgba(245, 245, 245, 1)" fontName="ABBvoiceMedium" cellBorderColor="rgba(0, 0, 0, 1)" cellBorderWidth="1px">
+            <Widget xsi:type="widgets.brease.AlarmHistory" id="AlarmHistory1" top="31" left="20" width="1126" height="400" zIndex="0" itemsPerPage="5" nextText="$IAT/Next" previousText="$IAT/Previous" searchBox="false" rowHeight="50" borderStyle="solid" borderWidth="2px" borderColor="rgba(0, 0, 0, 1)" headerBackColor="rgba(220, 220, 220, 1)" headerTextColor="rgba(0, 0, 0, 1)" backColorSelectedRow="rgba(255, 136, 0, 1)" backColorOddRow="rgba(245, 245, 245, 1)" fontName="ABBvoiceMedium" headerCellBorderColor="rgba(0, 0, 0, 1)" headerCellBorderWidth="0px 0px 1px 0px" headerCellBorderStyle="solid" cellBorderColor="rgba(0, 0, 0, 1)" cellBorderWidth="0px 0px 1px 0px">
               <Widgets>
                 <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemID" width="40" zIndex="0" columnType="instanceId" text="ID" />
                 <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemDate" width="294" zIndex="1" columnType="timestamp" text="$IAT/Date" />
@@ -40,5 +40,6 @@
     </Widget>
     <Widget xsi:type="widgets.brease.Line" id="Line1" zIndex="1" x1="19" x2="1187" y1="19" y2="19" lineColor="rgba(0, 0, 0, 1)" lineWidth="2px" />
     <Widget xsi:type="widgets.brease.Line" id="Line2" zIndex="2" x1="20" x2="20" y1="20" y2="581" lineColor="rgba(0, 0, 0, 1)" lineWidth="2px" />
+    <Widget xsi:type="widgets.brease.Line" id="Line3" zIndex="3" x1="1186" x2="1186" y1="18" y2="581" lineColor="rgba(0, 0, 0, 1)" lineWidth="1px" />
   </Widgets>
 </Content>

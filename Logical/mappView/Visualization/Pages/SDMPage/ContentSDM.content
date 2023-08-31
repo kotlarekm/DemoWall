@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Content id="ContentSDM" height="770" width="1370" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Widgets>
-    <Widget xsi:type="widgets.brease.NavigationButton" id="NavigationButton1" top="15" left="10" width="135" height="745" zIndex="0" image="Media/SymbolLib/Arrow/Back.svg" pageId="SettingPage" text="$IAT/Back" backGroundGradient="linear-gradient(to bottom,#F7F7F7 0%,#C6C6C6 100%)" fontName="ABBvoiceMedium" />
+    <Widget xsi:type="widgets.brease.NavigationButton" id="NavigationButton1" top="15" left="10" width="135" height="745" zIndex="0" image="Media/SymbolLib/Arrow/Back.svg" pageId="SettingPage" text="$IAT/Back" borderWidth="3px 3px 3px 3px" backGroundGradient="linear-gradient(to bottom,#F7F7F7 0%,#C6C6C6 100%)" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" />
     <Widget xsi:type="widgets.brease.WebViewer" id="WebViewer1" top="10" left="220" width="1050" height="752" zIndex="1" host="192.168.0.2" borderStyle="none" />
   </Widgets>
 </Content>

@@ -18,7 +18,7 @@
     <Widget xsi:type="widgets.brease.Label" id="SelectDeviceLabel" top="40" left="710" width="200" height="32" zIndex="8" text="$IAT/SelectDevice" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontName="ABBvoiceMedium" fontSize="16px" bold="true" />
     <Widget xsi:type="widgets.brease.Button" id="ApplyRecipeBtn" top="400" left="940" width="240" height="40" zIndex="9" image="Media/SymbolLib/Symbols/Upload.svg" text="$IAT/Apply" imageHeight="25" imageWidth="25" disabledImageColor="rgba(0, 0, 0, 1)" borderWidth="3px 3px 3px 3px" cornerRadius="30px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="16px" fontName="ABBvoiceMedium" />
     <Widget xsi:type="widgets.brease.Button" id="DefaultParametersBtn" top="280" left="940" width="240" height="40" zIndex="10" image="Media/SymbolLib/Symbols/Restart.svg" text="$IAT/DefaultParams" imageHeight="25" imageWidth="25" disabledImageColor="rgba(0, 0, 0, 1)" borderWidth="3px 3px 3px 3px" cornerRadius="30px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="16px" fontName="ABBvoiceMedium" />
-    <Widget xsi:type="widgets.brease.TabControl" id="RecipesTabControl" top="20" left="20" width="680" height="571" zIndex="11" headerBackColor="rgba(255, 255, 255, 1)" borderStyle="solid" borderWidth="2px" cornerRadius="3px" borderColor="rgba(0, 0, 0, 1)">
+    <Widget xsi:type="widgets.brease.TabControl" id="RecipesTabControl" top="20" left="20" width="680" height="571" zIndex="11" headerBackColor="rgba(255, 255, 255, 1)" borderStyle="solid" borderWidth="0px" cornerRadius="3px" borderColor="rgba(0, 0, 0, 1)">
       <Widgets>
         <Widget xsi:type="widgets.brease.TabItem" id="TabSetValuesItem" left="0" width="340" height="40" zIndex="0" image="Media/SymbolLib/Symbols/Slider_Symbol.svg" text="$IAT/SetValues" imageHeight="25" imageWidth="25" mouseDownImageColor="rgba(255, 255, 255, 1)" borderWidth="0px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" backColor="rgba(255, 255, 255, 1)" textColor="rgba(0, 0, 0, 1)" activeBorderWidth="8px" activeCornerRadius="0px" fontSize="16px" fontName="ABBvoiceMedium">
           <Widgets>
@@ -67,11 +67,10 @@
         </Widget>
       </Widgets>
     </Widget>
-    <Widget xsi:type="widgets.brease.Line" id="Line1" zIndex="12" x1="19" x2="700" y1="19" y2="19" lineColor="rgba(0, 0, 0, 1)" lineWidth="2px" />
-    <Widget xsi:type="widgets.brease.Line" id="Line2" zIndex="13" x1="700" x2="700" y1="18" y2="591" lineColor="rgba(0, 0, 0, 1)" lineWidth="2px" />
+    <Widget xsi:type="widgets.brease.Line" id="Line1" zIndex="12" x1="19" x2="701" y1="19" y2="19" lineColor="rgba(0, 0, 0, 1)" lineWidth="2px" />
+    <Widget xsi:type="widgets.brease.Line" id="Line2" zIndex="13" x1="700" x2="700" y1="19" y2="591" lineColor="rgba(0, 0, 0, 1)" lineWidth="2px" />
     <Widget xsi:type="widgets.brease.Line" id="Line3" zIndex="14" x1="19" x2="700" y1="590" y2="590" lineColor="rgba(0, 0, 0, 1)" lineWidth="2px" />
-    <Widget xsi:type="widgets.brease.Line" id="Line4" zIndex="15" x1="19" x2="19" y1="18" y2="591" lineColor="rgba(0, 0, 0, 1)" lineWidth="2px" />
-    <Widget xsi:type="widgets.brease.Line" id="Line5" zIndex="16" x1="19" x2="700" y1="19" y2="19" lineColor="rgba(0, 0, 0, 1)" lineWidth="2px" />
-    <Widget xsi:type="widgets.brease.Line" id="Line6" zIndex="17" x1="19" x2="700" y1="61" y2="61" lineColor="rgba(0, 0, 0, 1)" lineWidth="2px" />
+    <Widget xsi:type="widgets.brease.Line" id="Line4" zIndex="15" x1="19" x2="19" y1="19" y2="591" lineColor="rgba(0, 0, 0, 1)" lineWidth="2px" />
+    <Widget xsi:type="widgets.brease.Line" id="Line6" zIndex="16" x1="19" x2="700" y1="60" y2="60" lineColor="rgba(0, 0, 0, 1)" lineWidth="1px" />
   </Widgets>
 </Content>
