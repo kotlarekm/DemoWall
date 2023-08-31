@@ -1,21 +1,21 @@
 VAR
-	MpTempController_0 : MpTempController;
-	MpTempControllerParType_0 : MpTempControllerParType := (PID:=(Heat:=(ProportionalGain:=33.9530678,IntegrationTime:=72.68005,DerivativeTime:=8.721606,FilterTime:=0.8721606),Cool:=(ProportionalGain:=33.9530678,IntegrationTime:=72.68005,DerivativeTime:=8.721606,FilterTime:=0.8721606),IntegratorPreloading:=-0.0609090626),Tuning:=(Mode:=mpTEMP_TUNING_MODE_OSC_HEAT_COOL,SetPointHeat:=70.0,SetPointCool:=40.0),Profile:=(Heat:=(SlewRate:=0.354523033,FilterTime:=84.8989,DelayTime:=6.5,QuickStart:=FALSE),Cool:=(SlewRate:=0.273072,FilterTime:=91.55094,DelayTime:=2.5,QuickStart:=FALSE)),ToleranceBand:=(Lower:=2.0,Upper:=2.0),Hysteresis:=(Mode:=mpTEMP_HYSTERESIS_ON,Band:=(HeatToCool:=4.0,CoolToHeat:=4.0)));
+	MpTempController_0 : MpTempController; (*Function block responsible for  temperature controll*)
+	MpTempControllerParType_0 : MpTempControllerParType := (PID:=(Heat:=(ProportionalGain:=33.9530678,IntegrationTime:=72.68005,DerivativeTime:=8.721606,FilterTime:=0.8721606),Cool:=(ProportionalGain:=33.9530678,IntegrationTime:=72.68005,DerivativeTime:=8.721606,FilterTime:=0.8721606),IntegratorPreloading:=-0.0609090626),Tuning:=(Mode:=mpTEMP_TUNING_MODE_OSC_HEAT_COOL,SetPointHeat:=70.0,SetPointCool:=40.0),Profile:=(Heat:=(SlewRate:=0.354523033,FilterTime:=84.8989,DelayTime:=6.5,QuickStart:=FALSE),Cool:=(SlewRate:=0.273072,FilterTime:=91.55094,DelayTime:=2.5,QuickStart:=FALSE)),ToleranceBand:=(Lower:=2.0,Upper:=2.0),Hysteresis:=(Mode:=mpTEMP_HYSTERESIS_ON,Band:=(HeatToCool:=4.0,CoolToHeat:=4.0))); (*Temperature controller parameters*)
 END_VAR
 VAR CONSTANT
-	IntToRealScaller : REAL := 10.0;
+	IntToRealScaller : REAL := 10.0; (*Constant used to convert tempretature from int (directly from at2222) to real (in celcius degrees)*)
 END_VAR
 VAR
-	ManualON : BOOL := FALSE;
-	TempInReal : REAL;
-	MTBasicsPWMHeater : MTBasicsPWM := (Enable:=FALSE,Period:=0.1,DutyCycle:=0.0);
-	MTBasicsPWMFan : MTBasicsPWM := (Enable:=FALSE,Period:=0.1,DutyCycle:=0.0);
-	UpdateHeaterPWM : BOOL := FALSE;
-	UpdateFanPWM : BOOL := FALSE;
-	FanPWMDuty : REAL := 0.0;
-	HeaterPWMDuty : REAL := 0.0;
-	MpTempControllerParType_1 : MpTempControllerParType;
-	RestoreSettings : BOOL := FALSE;
-	ApplySettings : BOOL := FALSE;
-	AutoTune : BOOL := FALSE;
+	ManualON : BOOL := FALSE; (*If true, PID controller is not used, the outputs are supplied with the signals from PWM blocks*)
+	TempInReal : REAL; (*Measured temperature in celcius degrees*)
+	MTBasicsPWMHeater : MTBasicsPWM := (Enable:=FALSE,Period:=0.1,DutyCycle:=0.0); (*PWM block for heater*)
+	MTBasicsPWMFan : MTBasicsPWM := (Enable:=FALSE,Period:=0.1,DutyCycle:=0.0); (*PWM block for fan*)
+	UpdateHeaterPWM : BOOL := FALSE; (*If true, heater PWM block is updated*)
+	UpdateFanPWM : BOOL := FALSE; (*If true, fan PWM block is updated*)
+	FanPWMDuty : REAL := 0.0; (*Duty in % for fan PWM*)
+	HeaterPWMDuty : REAL := 0.0; (*Duty in % for heater PWM*)
+	MpTempControllerParType_1 : MpTempControllerParType; (*Displayed PID parameters*)
+	RestoreSettings : BOOL := FALSE; (*If true, displeyed PID parameters are restored*)
+	ApplySettings : BOOL := FALSE; (*If true, displeyed PID parameters are applied to controller*)
+	AutoTune : BOOL := FALSE; (*If true, controller tuning is activated*)
 END_VAR

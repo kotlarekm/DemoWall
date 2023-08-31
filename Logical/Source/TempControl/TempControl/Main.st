@@ -15,6 +15,7 @@ PROGRAM _INIT
 	MpTempController_0.Enable := TRUE;
 	MpTempController_0();
 	
+	// Displayed parameters init using parameters from regulator
 	MpTempControllerParType_1 := MpTempControllerParType_0;
 	 
 END_PROGRAM
@@ -34,9 +35,11 @@ PROGRAM _CYCLIC
 		gTanks.Commands.TurnOnHeater := MpTempController_0.Heat;
 		MpTempController_0.Tune := TRUE;
 	
+		// Checking if tunig is done
 		IF MpTempController_0.TuningDone THEN
 			MpTempController_0.Tune := FALSE;
 			AutoTune := FALSE;
+			// Applying parameters to controller
 			MpTempControllerParType_0.PID := MpTempController_0.Info.Tuning.PIDParameters;
 			MpTempControllerParType_0.Profile.Cool := MpTempController_0.Info.Tuning.ProfileParameters.Cool;
 			MpTempControllerParType_0.Profile.Heat := MpTempController_0.Info.Tuning.ProfileParameters.Heat;
@@ -104,6 +107,7 @@ PROGRAM _CYCLIC
 		MpTempController_0.Update := TRUE;
 	END_IF;
 	
+	// Controller update
 	IF MpTempController_0.UpdateDone THEN
 	  MpTempController_0.Update := FALSE;
 	END_IF;
@@ -129,6 +133,7 @@ END_PROGRAM
 
 PROGRAM _EXIT
 	
+	// FB exit actions
 	MpTempController_0.Enable := FALSE;
 	MpTempController_0();
 	 

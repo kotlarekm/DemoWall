@@ -26,10 +26,11 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 	 
-	// Updates
+	// FB updates
 	MpAlarmXCore_0();
 	MpAlarmXHistory_0();
 	
+	// Alarms history clearing
 	IF ClearHistory THEN
 		MpAlarmXClearHistory(gAlarmXHistory);
 	  	ClearHistory := FALSE;
@@ -96,6 +97,7 @@ END_PROGRAM
 
 PROGRAM _EXIT
 	
+	// FB exit actions
 	MpAlarmXCore_0.Enable := FALSE;
 	MpAlarmXCore_0();
 	

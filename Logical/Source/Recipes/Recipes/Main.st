@@ -9,7 +9,7 @@ PROGRAM _INIT
 	
 	gTanks.Parameters;
 	
-	// USB
+	// USB init
 	UsbNodeListGet_0.enable := TRUE;
 	UsbNodeListGet_0.bufferSize := SIZEOF(NodeIdList);
 	UsbNodeListGet_0.pBuffer := ADR(NodeIdList);
@@ -44,6 +44,9 @@ PROGRAM _INIT
 	MpRecipeRegPar_0.PVName := ADR('Recipes:ParametersToLoad');
 	MpRecipeRegPar_0.Enable := TRUE;
 	MpRecipeRegPar_0();
+	
+	// Initializing displayed parameters as default parameters
+	ParametersToLoad := DefaultParameters;
 	
 END_PROGRAM
 
@@ -99,6 +102,7 @@ PROGRAM _CYCLIC
 		USB2Aveliable := FALSE;
 	END_IF;
 	
+	// Updating selected file
 	MpFileManagerUIConnect_0.File.List.Items[SelectedRecipeIndex].IsSelected := TRUE;
 	
 	// Checking if new recipe has been selected
@@ -108,7 +112,7 @@ PROGRAM _CYCLIC
 		WaitingForLoad := TRUE;
 	END_IF;
 	
-	// Checking if device name has been change dou to drive unplug
+	// Checking if device name has been change due to drive unplug
 	IF NOT(PreviousNumberOfUSBDevices = UsbNodeListGet_0.allNodes) THEN
 		DeviceChenged := TRUE;
 		PreviousNumberOfUSBDevices := UsbNodeListGet_0.allNodes;
@@ -167,6 +171,7 @@ END_PROGRAM
 
 PROGRAM _EXIT
 	
+	// FB exit actions
 	MpRecipeXml_0.Enable := FALSE;
 	MpRecipeXml_0();
 	
