@@ -7,7 +7,7 @@
           <Element id="yAxis1" title="$IAT/LabelVelocity" unit="{'metric':'E96','imperial':'E96','imperial-us':'E96'}" titleFontSize="14px" />
         </yAxis>
         <xAxis>
-          <Element id="xAxis1" />
+          <Element id="xAxis1" timeSpan="30" />
         </xAxis>
         <graph>
           <Element id="graph1" yAxisReference="yAxis1" />

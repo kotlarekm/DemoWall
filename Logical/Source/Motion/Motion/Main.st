@@ -18,8 +18,8 @@ PROGRAM _INIT
 	MpAxisBasic_Secondary();
 	//Axis coupling init
 	MpAxisCoupling_0.Enable := TRUE;
-	MpAxisCoupling_0.MpLink := ADR(gMixer_1);
-	MpAxisCoupling_0.MpLinkMaster := ADR(gMixer_2);
+	MpAxisCoupling_0.MpLink := ADR(gMixer_2);
+	MpAxisCoupling_0.MpLinkMaster := ADR(gMixer_1);
 	MpAxisCoupling_0.Parameters := ADR(MpAxisCouplingParameters);
 	MpAxisCoupling_0();
 END_PROGRAM
@@ -34,8 +34,8 @@ PROGRAM _CYCLIC
 	MpAxisBasic_Secondary.Parameters := ADR(MpAxisBasicParameters_Secondary);
 	MpAxisBasic_Secondary();
 	
-	MpAxisCoupling_0.MpLink := ADR(gMixer_1);
-	MpAxisCoupling_0.MpLinkMaster := ADR(gMixer_2);
+	MpAxisCoupling_0.MpLink := ADR(gMixer_2);
+	MpAxisCoupling_0.MpLinkMaster := ADR(gMixer_1);
 	MpAxisCoupling_0.Parameters := ADR(MpAxisCouplingParameters);
 	MpAxisCoupling_0();
 	
@@ -43,9 +43,27 @@ PROGRAM _CYCLIC
 	gTanks.Status.IsMixer1On := BOOL_TO_UINT(MpAxisBasic_Primary.MoveActive);
 	gTanks.Status.IsMixer2On := BOOL_TO_UINT(MpAxisBasic_Secondary.MoveActive);
 	
+	//Assigning slave axis parameters to coupling parameters
+	MpAxisCouplingParameters.Gear.Acceleration := MpAxisBasicParameters_Secondary.Acceleration;
+	MpAxisCouplingParameters.Gear.Deceleration := MpAxisBasicParameters_Secondary.Deceleration;
+	
+	//Assigning deceleration from axis parameters to stop deceleration
+	MpAxisBasicParameters_Secondary.Stop.Deceleration := MpAxisBasicParameters_Secondary.Deceleration;
+	MpAxisBasicParameters_Primary.Stop.Deceleration := MpAxisBasicParameters_Primary.Deceleration;
+	
 	//Power_on negative edge detection
 	F_TRIG_0(CLK:=MpAxisBasic_Primary.PowerOn);
 	F_TRIG_1(CLK:=MpAxisBasic_Secondary.PowerOn);
+	
+	IF MpAxisCoupling_0.UpdateDone THEN
+	  MpAxisCoupling_0.Update := FALSE;
+	END_IF;
+	IF MpAxisBasic_Primary.UpdateDone THEN
+		MpAxisBasic_Primary.Update := FALSE;
+	END_IF
+	IF MpAxisBasic_Secondary.UpdateDone THEN
+		MpAxisBasic_Secondary.Update := FALSE;
+	END_IF
 	IF NOT Manual THEN
 		//Primary axis (Mixer1) state machine
 		CASE StepMixer1 OF
@@ -73,10 +91,6 @@ PROGRAM _CYCLIC
 				END_IF;
 				
 			STEP_RUNNING:
-				//Stopping slave axis for cam coupling
-				IF CamCoupling THEN
-					MpAxisBasic_Primary.MoveVelocity := FALSE;
-				END_IF;
 				IF NOT gTanks.Commands.TurnOnMixer1 THEN
 					StepMixer1 := STEP_POWER_OFF;
 				END_IF;
@@ -111,6 +125,10 @@ PROGRAM _CYCLIC
 				
 			STEP_MOVE_VELOCITY:
 				MpAxisBasic_Secondary.MoveVelocity := TRUE;
+				//Stopping slave axis for cam coupling
+				IF CamCoupling THEN
+					MpAxisBasic_Primary.MoveVelocity := FALSE;
+				END_IF;
 				IF MpAxisBasic_Secondary.InVelocity THEN
 					StepMixer2 := STEP_RUNNING;
 				END_IF;
@@ -138,6 +156,7 @@ PROGRAM _CYCLIC
 		IF MpAxisBasic_Primary.InPosition THEN
 			MpAxisBasic_Primary.MoveAdditive := FALSE;
 			MpAxisBasic_Primary.MoveAbsolute := FALSE;
+			MpAxisBasic_Primary.MoveVelocity := FALSE;
 		END_IF
 		IF MpAxisBasic_Primary.Stopped OR F_TRIG_0.Q THEN
 			MpAxisBasic_Primary.Stop := FALSE;
@@ -153,6 +172,7 @@ PROGRAM _CYCLIC
 		IF MpAxisBasic_Secondary.InPosition THEN
 			MpAxisBasic_Secondary.MoveAdditive := FALSE;
 			MpAxisBasic_Secondary.MoveAbsolute := FALSE;
+			MpAxisBasic_Secondary.MoveVelocity := FALSE;
 		END_IF;
 		IF MpAxisBasic_Secondary.Stopped OR F_TRIG_1.Q THEN
 			MpAxisBasic_Secondary.Stop := FALSE;
@@ -168,37 +188,43 @@ PROGRAM _CYCLIC
 	//Selected Coupling Mode case
 	CASE CouplingMode OF
 		NO_COUPLING:
-			IF GearCoupling AND MpAxisBasic_Primary.PowerOn THEN
-				MpAxisCouplingParameters.Gear.Acceleration := MpAxisBasicParameters_Primary.Acceleration;
-				MpAxisCouplingParameters.Gear.Deceleration := MpAxisBasicParameters_Primary.Deceleration;
+			IF GearCoupling AND MpAxisBasic_Secondary.PowerOn THEN
 				MpAxisCoupling_0.Gear := TRUE;
 				IF MpAxisCoupling_0.InSync THEN
 					CouplingMode := GEAR_COUPLING;
 				END_IF;
 			//Enabling Cam coupling only if primary axis is at standstill
-			ELSIF CamCoupling AND MpAxisBasic_Primary.PowerOn AND NOT MpAxisBasic_Primary.MoveActive THEN
-				MpAxisCoupling_0.Cam := TRUE;
-			ELSIF NOT MpAxisCoupling_0.InSync AND NOT CamCoupling THEN
+			ELSIF CamCoupling AND MpAxisBasic_Secondary.PowerOn THEN
+				IF MpAxisBasic_Secondary.MoveActive THEN
+					MpAxisBasic_Secondary.MoveVelocity := FALSE;
+					MpAxisBasic_Secondary.MoveAbsolute := FALSE;
+					MpAxisBasic_Secondary.MoveAdditive := FALSE;
+				ELSE
+					MpAxisCoupling_0.Cam := TRUE;
+				END_IF
+			END_IF
+			IF MpAxisCoupling_0.InSync AND NOT CamCoupling THEN
 				MpAxisCoupling_0.Cam := FALSE;
 			END_IF;	
-			IF MpAxisCoupling_0.InSync AND MpAxisCoupling_0.Cam THEN
+			IF MpAxisCoupling_0.InSync AND MpAxisCoupling_0.Cam AND MpAxisBasic_Secondary.MoveActive THEN
 				CouplingMode := CAM_COUPLING;
 			END_IF
 	    GEAR_COUPLING:
 			IF NOT GearCoupling THEN
 				MpAxisCoupling_0.Gear := FALSE;
-				MpAxisBasic_Primary.MoveVelocity := FALSE;
+				MpAxisBasic_Secondary.MoveVelocity := FALSE;
 				IF NOT MpAxisCoupling_0.InSync THEN
-					gTanks.Commands.TurnOnMixer1 := FALSE;
+					gTanks.Commands.TurnOnMixer2 := FALSE;
 					CouplingMode := NO_COUPLING;
 				END_IF
 			END_IF;
 			
 		CAM_COUPLING:
 			IF NOT CamCoupling THEN
+				MpAxisBasic_Secondary.Stop := TRUE;
 				MpAxisCoupling_0.Cam := FALSE;
 				IF NOT MpAxisCoupling_0.InSync THEN
-					gTanks.Commands.TurnOnMixer1 := FALSE;
+					gTanks.Commands.TurnOnMixer2 := FALSE;
 					CouplingMode := NO_COUPLING;
 				END_IF
 			END_IF

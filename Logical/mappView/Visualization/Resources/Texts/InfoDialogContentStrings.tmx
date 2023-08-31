@@ -37,18 +37,18 @@
     </tu>
     <tu tuid="LabelMixer1">
       <tuv xml:lang="pl">
-        <seg>Mixer główny - oś podrzędna</seg>
+        <seg>Mixer główny - oś główna</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Mixer primary - slave axis</seg>
+        <seg>Mixer primary - master axis</seg>
       </tuv>
     </tu>
     <tu tuid="LabelMixer2">
       <tuv xml:lang="pl">
-        <seg>Mixer poboczny - oś główna</seg>
+        <seg>Mixer poboczny - oś podrzędna</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Mixer secondary - master axis</seg>
+        <seg>Mixer secondary - slave axis</seg>
       </tuv>
     </tu>
     <tu tuid="LabelText1">

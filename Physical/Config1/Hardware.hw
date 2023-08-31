@@ -92,6 +92,7 @@
     <Parameter ID="Input" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Quickstop" Value="NotUsed" />
     <Parameter ID="BrakeControl" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalOutputs" Value="NotUsed" />
     <Parameter ID="LoadSimulationMode" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Simulation" Value="NotUsed" />
+    <Parameter ID="FeatureRef[1]" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/AxisFeatures" Value="CamListFeature" />
     <Parameter ID="AxisReference" Location="FunctionModel/DriveConfiguration/Channel[2]/RealAxis" Value="" />
     <Parameter ID="InputIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/Gearbox" Value="0" />
     <Parameter ID="Input" Location="FunctionModel/DriveConfiguration/Channel[2]/RealAxis/MechanicalElements/Gearbox" Value="1" />
