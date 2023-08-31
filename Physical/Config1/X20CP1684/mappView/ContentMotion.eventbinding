@@ -772,5 +772,22 @@
         </Sequence>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="EventBindingMotion13">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gDriveStop" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchManual">
+            <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchManual">
+            <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

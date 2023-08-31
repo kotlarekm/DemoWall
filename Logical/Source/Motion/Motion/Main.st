@@ -67,8 +67,7 @@ PROGRAM _CYCLIC
 	END_IF
 	//E-STOP
 	IF gDriveStop THEN
-		MpAxisBasic_Primary.Power := FALSE;
-		MpAxisBasic_Secondary.Power := FALSE;
+		Manual := FALSE;
 		gTanks.Commands.TurnOnMixer1 := FALSE;
 		gTanks.Commands.TurnOnMixer2 := FALSE;
 		StepMixer1 := STEP_INIT;
@@ -78,12 +77,12 @@ PROGRAM _CYCLIC
 		//Primary axis (Mixer1) state machine
 		CASE StepMixer1 OF
 			STEP_INIT:
-				CamCoupling := FALSE;
-				GearCoupling := FALSE;
 				MpAxisBasic_Primary.Power := FALSE;
 				MpAxisBasic_Primary.MoveAdditive := FALSE;
 				MpAxisBasic_Primary.MoveAbsolute := FALSE;
 				MpAxisBasic_Primary.MoveVelocity := FALSE;
+				CamCoupling := FALSE;
+				GearCoupling := FALSE;
 				IF gTanks.Commands.TurnOnMixer1 THEN
 					StepMixer1 := STEP_POWER_ON;
 				END_IF
@@ -117,12 +116,12 @@ PROGRAM _CYCLIC
 		//Secondary axis (Mixer2) state machine
 		CASE StepMixer2 OF
 			STEP_INIT:
-				CamCoupling := FALSE;
-				GearCoupling := FALSE;
 				MpAxisBasic_Secondary.Power := FALSE;
 				MpAxisBasic_Secondary.MoveVelocity := FALSE;
 				MpAxisBasic_Secondary.MoveAbsolute := FALSE;
 				MpAxisBasic_Secondary.MoveAdditive := FALSE;
+				CamCoupling := FALSE;
+				GearCoupling := FALSE;
 				IF gTanks.Commands.TurnOnMixer2 THEN
 					StepMixer2 := STEP_POWER_ON;
 				END_IF
@@ -158,25 +157,35 @@ PROGRAM _CYCLIC
 				END_IF;
 		END_CASE;
 	END_IF
-	
+	//Resetting commands after stop or power off
+	IF MpAxisBasic_Secondary.Stopped OR F_TRIG_1.Q THEN
+		CamCoupling := FALSE;
+		GearCoupling := FALSE;
+		MpAxisBasic_Secondary.Stop := FALSE;
+		MpAxisBasic_Secondary.MoveVelocity := FALSE;
+		MpAxisBasic_Secondary.MoveAbsolute := FALSE;
+		MpAxisBasic_Secondary.MoveAdditive := FALSE;
+	END_IF
+	IF MpAxisBasic_Primary.Stopped OR F_TRIG_0.Q THEN
+		CamCoupling := FALSE;
+		GearCoupling := FALSE;
+		MpAxisBasic_Primary.Stop := FALSE;
+		MpAxisBasic_Primary.MoveAdditive := FALSE;
+		MpAxisBasic_Primary.MoveAbsolute := FALSE;
+		MpAxisBasic_Primary.MoveVelocity := FALSE;
+	END_IF;
+	//Manual mode 
 	IF Manual THEN
 		StepMixer1 := STEP_INIT;
 		StepMixer2 := STEP_INIT;
+		gTanks.Commands.TurnOnMixer1 := FALSE;
+		gTanks.Commands.TurnOnMixer2 := FALSE;
 		//Manual mode MixerPrimary
 		IF MpAxisBasic_Primary.InPosition THEN
 			MpAxisBasic_Primary.MoveAdditive := FALSE;
 			MpAxisBasic_Primary.MoveAbsolute := FALSE;
 			MpAxisBasic_Primary.MoveVelocity := FALSE;
 		END_IF
-		//Resetting commands after stop or power off
-		IF MpAxisBasic_Primary.Stopped OR F_TRIG_0.Q THEN
-			CamCoupling := FALSE;
-			GearCoupling := FALSE;
-			MpAxisBasic_Primary.Stop := FALSE;
-			MpAxisBasic_Primary.MoveAdditive := FALSE;
-			MpAxisBasic_Primary.MoveAbsolute := FALSE;
-			MpAxisBasic_Primary.MoveVelocity := FALSE;
-		END_IF;
 		IF NOT MpAxisBasic_Primary.Error THEN
 			MpAxisBasic_Primary.ErrorReset := FALSE;
 		END_IF;
@@ -188,14 +197,6 @@ PROGRAM _CYCLIC
 			MpAxisBasic_Secondary.MoveVelocity := FALSE;
 		END_IF;
 		//Resetting commands after stop or power off
-		IF MpAxisBasic_Secondary.Stopped OR F_TRIG_1.Q THEN
-			CamCoupling := FALSE;
-			GearCoupling := FALSE;
-			MpAxisBasic_Secondary.Stop := FALSE;
-			MpAxisBasic_Secondary.MoveVelocity := FALSE;
-			MpAxisBasic_Secondary.MoveAbsolute := FALSE;
-			MpAxisBasic_Secondary.MoveAdditive := FALSE;
-		END_IF
 		IF NOT MpAxisBasic_Secondary.Error THEN
 			MpAxisBasic_Secondary.ErrorReset := FALSE;
 		END_IF;

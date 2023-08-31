@@ -26,7 +26,9 @@
       <Cable Type="X2XCable" Length="10" Version="1.0.0.3" />
     </Connection>
   </Module>
-  <Module Name="5AP933.156B-00" Type="5AP933.156B-00" Version="2.0.0.0" />
+  <Module Name="5AP933.156B-00" Type="5AP933.156B-00" Version="2.0.0.0">
+    <Parameter ID="Terminal" Value="true" />
+  </Module>
   <Module Name="5PPC2100_BY44_000" Type="5PPC2100.BY44-000" Version="2.1.1.0">
     <Connection Connector="IF3" TargetModule="X20CP1684" TargetConnector="IF2">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
