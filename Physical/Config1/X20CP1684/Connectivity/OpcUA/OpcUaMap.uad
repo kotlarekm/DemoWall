@@ -171,8 +171,6 @@
         <Variable Name="HeaterPWMDuty" />
         <Variable Name="ManualON" />
         <Variable Name="TempInReal" Historizing="True" HistoryBufferSize="2500" HistorySamplingInterval="Timer1" />
-        <Variable Name="UpdateFanPWM" />
-        <Variable Name="UpdateHeaterPWM" />
         <Variable Name="MpTempControllerParType_1" RecursiveEnable="2" />
         <Variable Name="ApplySettings" />
         <Variable Name="AutoTune" />

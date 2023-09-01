@@ -48,7 +48,7 @@
         <seg>Początkowa wartość bloku całkującego:</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Integraotr preloading:</seg>
+        <seg>Integrator preloading:</seg>
       </tuv>
     </tu>
     <tu tuid="HisterezisCoolToHeat">
@@ -96,7 +96,7 @@
         <seg>Wartość zadana grzania:</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Set point heat:</seg>
+        <seg>Heating setpoint:</seg>
       </tuv>
     </tu>
     <tu tuid="SetPointCool">
@@ -104,7 +104,7 @@
         <seg>Wartość zadana chłodzenia:</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Set point cool:</seg>
+        <seg>Cooling setpoint:</seg>
       </tuv>
     </tu>
     <tu tuid="CancelTuning">

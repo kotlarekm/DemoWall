@@ -75,5 +75,13 @@
         <seg>Back</seg>
       </tuv>
     </tu>
+    <tu tuid="Hardware">
+      <tuv xml:lang="pl">
+        <seg>Urządzenia</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Hardware</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>
