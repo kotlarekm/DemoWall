@@ -133,21 +133,21 @@
         <Sequence>
           <Step order="0">
             <Action>
-              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxMixer1">
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxManual">
                 <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="true" />
               </Target>
             </Action>
           </Step>
           <Step order="1">
             <Action>
-              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxMixer2">
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxManual1">
                 <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="true" />
               </Target>
             </Action>
           </Step>
           <Step order="2">
             <Action>
-              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxCoupling">
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxCouplingControl">
                 <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="true" />
               </Target>
             </Action>
@@ -156,23 +156,23 @@
       </EventHandler>
       <EventHandler condition="newValue = FALSE">
         <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxMixer1">
-                <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="false" />
-              </Target>
-            </Action>
-          </Step>
           <Step order="1">
             <Action>
-              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxMixer2">
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxManual">
                 <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="false" />
               </Target>
             </Action>
           </Step>
           <Step order="2">
             <Action>
-              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxCoupling">
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxManual1">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="3">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxCouplingControl">
                 <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="false" />
               </Target>
             </Action>
@@ -262,23 +262,12 @@
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="inSync = TRUE">
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Motion:GearCoupling">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Motion:CamCoupling">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
+      <EventHandler condition="inSync = TRUE" deactivated="true">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:GearCoupling">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
       </EventHandler>
     </EventBinding>
     <EventBinding id="ContentMotion.ButtonMoveAdditive1.Click">
@@ -295,23 +284,12 @@
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="inSync = TRUE">
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Motion:GearCoupling">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Motion:CamCoupling">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
+      <EventHandler condition="inSync = TRUE" deactivated="true">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:GearCoupling">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
       </EventHandler>
     </EventBinding>
     <EventBinding id="ContentMotion.ButtonMoveAbsolute1.Click">
@@ -328,23 +306,12 @@
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="inSync = TRUE">
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Motion:GearCoupling">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="opcUa.NodeAction" refId="::Motion:CamCoupling">
-                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
+      <EventHandler condition="inSync = TRUE" deactivated="true">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:GearCoupling">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
       </EventHandler>
     </EventBinding>
     <EventBinding id="ContentMotion.ButtonErrorReset.Click">
@@ -543,6 +510,11 @@
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
+      <Operand datatype="BOOL" name="GearCoupling">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:GearCoupling">
+          <Method xsi:type="opcUa.NodeAction.GetValue" />
+        </ReadTarget>
+      </Operand>
       <EventHandler condition="newValue = TRUE">
         <Action>
           <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse7">
@@ -593,6 +565,20 @@
           </Step>
         </Sequence>
       </EventHandler>
+      <EventHandler condition="newValue = FALSE AND CamCoupling = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchCam">
+            <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE AND GearCoupling = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchGear">
+            <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
       <EventHandler condition="newValue = TRUE AND CamCoupling = TRUE">
         <Action>
           <Target xsi:type="widgets.brease.DropDownBox.Action" contentRefId="ContentMotion" widgetRefId="DropDownBoxDirSelect">
@@ -613,24 +599,6 @@
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
-      <EventHandler condition="newValue = TRUE AND direction = 0 AND InSync = TRUE">
-        <Sequence>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchGear">
-                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="2">
-            <Action>
-              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchCam">
-                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="true" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
-      </EventHandler>
       <EventHandler condition="newValue = TRUE AND direction = 1 AND InSync = FALSE">
         <Sequence>
           <Step order="1">
@@ -753,7 +721,7 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="newValue = 0">
+      <EventHandler condition="newValue = 0 AND NOT inSync">
         <Sequence>
           <Step order="1">
             <Action>

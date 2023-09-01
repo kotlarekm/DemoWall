@@ -67,11 +67,13 @@ PROGRAM _CYCLIC
 	END_IF
 	//E-STOP
 	IF NOT gDriveStop THEN
-		Manual := FALSE;
+		MpAxisBasic_Primary.Power := FALSE;
+		MpAxisBasic_Secondary.Power := FALSE;
 		gTanks.Commands.TurnOnMixer1 := FALSE;
 		gTanks.Commands.TurnOnMixer2 := FALSE;
 		StepMixer1 := STEP_INIT;
 		StepMixer2 := STEP_INIT;
+		Manual := FALSE;
 	END_IF;
 	IF NOT Manual THEN
 		//Primary axis (Mixer1) state machine
@@ -81,8 +83,6 @@ PROGRAM _CYCLIC
 				MpAxisBasic_Primary.MoveAdditive := FALSE;
 				MpAxisBasic_Primary.MoveAbsolute := FALSE;
 				MpAxisBasic_Primary.MoveVelocity := FALSE;
-				CamCoupling := FALSE;
-				GearCoupling := FALSE;
 				IF gTanks.Commands.TurnOnMixer1 THEN
 					StepMixer1 := STEP_POWER_ON;
 				END_IF
@@ -120,8 +120,6 @@ PROGRAM _CYCLIC
 				MpAxisBasic_Secondary.MoveVelocity := FALSE;
 				MpAxisBasic_Secondary.MoveAbsolute := FALSE;
 				MpAxisBasic_Secondary.MoveAdditive := FALSE;
-				CamCoupling := FALSE;
-				GearCoupling := FALSE;
 				IF gTanks.Commands.TurnOnMixer2 THEN
 					StepMixer2 := STEP_POWER_ON;
 				END_IF
@@ -167,8 +165,6 @@ PROGRAM _CYCLIC
 		MpAxisBasic_Secondary.MoveAdditive := FALSE;
 	END_IF
 	IF MpAxisBasic_Primary.Stopped OR F_TRIG_0.Q THEN
-		CamCoupling := FALSE;
-		GearCoupling := FALSE;
 		MpAxisBasic_Primary.Stop := FALSE;
 		MpAxisBasic_Primary.MoveAdditive := FALSE;
 		MpAxisBasic_Primary.MoveAbsolute := FALSE;
@@ -211,6 +207,9 @@ PROGRAM _CYCLIC
 				IF MpAxisCoupling_0.InSync THEN
 					CouplingMode := GEAR_COUPLING;
 				END_IF;
+			IF NOT MpAxisCoupling_0.InSync AND NOT GearCoupling THEN
+					MpAxisCoupling_0.Gear := FALSE;
+			END_IF;	
 			//Cam coupling condition
 			ELSIF CamCoupling AND MpAxisBasic_Secondary.PowerOn THEN
 				//Stopping slave axis before coupling
@@ -231,7 +230,6 @@ PROGRAM _CYCLIC
 		GEAR_COUPLING:
 			IF NOT GearCoupling THEN
 				MpAxisCoupling_0.Gear := FALSE;
-				MpAxisBasic_Secondary.MoveVelocity := FALSE;
 				IF NOT MpAxisCoupling_0.InSync THEN
 					gTanks.Commands.TurnOnMixer2 := FALSE;
 					CouplingMode := NO_COUPLING;
@@ -240,8 +238,10 @@ PROGRAM _CYCLIC
 			
 		CAM_COUPLING:
 			IF NOT CamCoupling THEN
-				MpAxisBasic_Secondary.Stop := TRUE;
 				MpAxisCoupling_0.Cam := FALSE;
+				IF Manual THEN
+					MpAxisBasic_Secondary.Stop := TRUE;
+				END_IF
 				IF NOT MpAxisCoupling_0.InSync THEN
 					gTanks.Commands.TurnOnMixer2 := FALSE;
 					CouplingMode := NO_COUPLING;

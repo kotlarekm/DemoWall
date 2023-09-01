@@ -38,7 +38,7 @@
         <Property ID="Deceleration" Value="5000" />
       </Selector>
     </Selector>
-    <Selector ID="Alarms" Value="None" />
+    <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
   <Element ID="gMixer_2" Type="axis">
     <Property ID="BaseTypeIsReadOnly" Value="0" />
@@ -77,6 +77,6 @@
         <Property ID="Deceleration" Value="5000" />
       </Selector>
     </Selector>
-    <Selector ID="Alarms" Value="None" />
+    <Selector ID="Alarms" Value="MpAlarmX" />
   </Element>
 </Configuration>

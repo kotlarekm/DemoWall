@@ -6,6 +6,6 @@
     <Widget xsi:type="widgets.brease.Label" id="Label3" top="45" left="5" width="575" height="130" zIndex="2" multiLine="true" text="$IAT/LabelText1" wordWrap="true" textAlign="left top" fontName="ABBvoiceMedium" />
     <Widget xsi:type="widgets.brease.Label" id="Label5" top="205" left="5" width="575" height="135" zIndex="3" multiLine="true" text="$IAT/LabelText3" wordWrap="true" textAlign="left top" fontName="ABBvoiceMedium" />
     <Widget xsi:type="widgets.brease.Label" id="Label7" top="340" left="10" width="270" zIndex="4" text="$IAT/LabelMixer1" fontName="ABBvoiceMedium" fontSize="17px" />
-    <Widget xsi:type="widgets.brease.Label" id="Label8" top="340" left="305" width="250" zIndex="5" text="$IAT/LabelMixer2" fontName="ABBvoiceMedium" fontSize="17px" />
+    <Widget xsi:type="widgets.brease.Label" id="Label8" top="340" left="305" width="295" zIndex="5" text="$IAT/LabelMixer2" fontName="ABBvoiceMedium" fontSize="17px" />
   </Widgets>
 </Content>
