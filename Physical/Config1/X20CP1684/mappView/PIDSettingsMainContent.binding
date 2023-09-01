@@ -58,5 +58,9 @@
 <Source xsi:type="opcUa" refId="::TempContro:MpTempControllerParType_1.Tuning.Mode" attribute="value" />
 <Target xsi:type="brease" contentRefId="PIDSettingsMainContent" widgetRefId="DropDownBoxTuningMode" attribute="selectedIndex" />
 </Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::TempContro:TempControlWidgetsEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="PIDSettingsMainContent" widgetRefId="PIDSettingsAutotuneBtn1" attribute="enable" />
+</Binding>
 </Bindings>
 </BindingsSet>

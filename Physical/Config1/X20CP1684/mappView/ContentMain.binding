@@ -85,14 +85,8 @@
 <Source xsi:type="opcUa" refId="::TempContro:ManualON" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="TempManualToggleBtn" attribute="value" />
 </Binding>
-<Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::TempContro:ManualON" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="FanPWMSlider" attribute="enable" />
-</Binding>
-<Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::TempContro:ManualON" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="HeaterPWMSlider" attribute="enable" />
-</Binding>
+
+
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::TempContro:FanPWMDuty" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="FanPWMSlider" attribute="value" />
@@ -175,6 +169,18 @@
 <Binding mode="oneWay">
 <Source xsi:type="opcUa" refId="::Simulation:NumericInputsEnable" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Mixer2AutoInput" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::TempContro:TempControlWidgetsEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="FanPWMSlider" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::TempContro:TempControlWidgetsEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="TempManualToggleBtn" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::TempContro:TempControlWidgetsEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="HeaterPWMSlider" attribute="enable" />
 </Binding>
 </Bindings>
 </BindingsSet>

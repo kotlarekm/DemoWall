@@ -26,6 +26,10 @@ PROGRAM _CYCLIC
 	TempInReal := INT_TO_REAL(gTanks.Status.Tank3Temp) / IntToRealScaller;
 	
 	IF gDriveStop THEN
+		
+		// Temp control widgets
+		TempControlWidgetsEnable := TRUE;
+		
 		// Auto-tuning
 		IF AutoTune THEN
 		
@@ -93,37 +97,6 @@ PROGRAM _CYCLIC
 			gTanks.Commands.TurnOnFan := MpTempController_0.Cool;
 		
 		END_IF;
-	
-		// Apply settings
-		IF ApplySettings THEN
-			ApplySettings := FALSE;
-			MpTempControllerParType_0 := MpTempControllerParType_1;
-			MpTempController_0.Update := TRUE;
-		END_IF;
-	
-		// Restore settings
-		IF RestoreSettings THEN
-			RestoreSettings := FALSE;
-			MpTempControllerParType_1 := MpTempControllerParType_0;
-			MpTempController_0.Update := TRUE;
-		END_IF;
-	
-		// Controller update
-		IF MpTempController_0.UpdateDone THEN
-			MpTempController_0.Update := FALSE;
-		END_IF;
-	
-		// Checking errors
-		IF MpTempController_0.Error THEN
-			MpTempController_0.Control := FALSE;
-			MpTempController_0.Tune := FALSE;
-		
-			// some actions
-		
-			MpTempController_0.ErrorReset := TRUE;
-		ELSE
-			MpTempController_0.ErrorReset := FALSE;
-		END_IF;
 		
 	// Emergency button pressed
 	ELSE
@@ -133,6 +106,40 @@ PROGRAM _CYCLIC
 		FanPWMDuty := 0;
 		MpTempController_0.Tune := FALSE;
 		MpTempController_0.Control := FALSE;
+		
+		// Temp control widgets
+		TempControlWidgetsEnable := FALSE;
+	END_IF;
+	
+	// Apply settings
+	IF ApplySettings THEN
+		ApplySettings := FALSE;
+		MpTempControllerParType_0 := MpTempControllerParType_1;
+		MpTempController_0.Update := TRUE;
+	END_IF;
+	
+	// Restore settings
+	IF RestoreSettings THEN
+		RestoreSettings := FALSE;
+		MpTempControllerParType_1 := MpTempControllerParType_0;
+		MpTempController_0.Update := TRUE;
+	END_IF;
+	
+	// Controller update
+	IF MpTempController_0.UpdateDone THEN
+		MpTempController_0.Update := FALSE;
+	END_IF;
+	
+	// Checking errors
+	IF MpTempController_0.Error THEN
+		MpTempController_0.Control := FALSE;
+		MpTempController_0.Tune := FALSE;
+		
+		// some actions
+		
+		MpTempController_0.ErrorReset := TRUE;
+	ELSE
+		MpTempController_0.ErrorReset := FALSE;
 	END_IF;
 	
 	// FB updates

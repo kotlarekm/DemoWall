@@ -180,6 +180,7 @@
         <Variable Name="MpTempController_0">
           <Variable Name="TuningActive" />
         </Variable>
+        <Variable Name="TempControlWidgetsEnable" />
       </Task>
       <Task Name="Recipes">
         <Variable Name="ApplyParameters" />

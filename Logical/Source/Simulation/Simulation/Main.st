@@ -26,7 +26,11 @@ PROGRAM _CYCLIC
 	END_IF;
 	
 	// Main page control buttons
-	IF Manual THEN
+	IF NOT(gDriveStop) THEN
+		ManualBtnEnable := FALSE;
+		AutoBtnEnable := FALSE;
+		StartBtnEnable := FALSE;
+	ELSIF Manual THEN
 		ManualBtnEnable := FALSE;
 		AutoBtnEnable := TRUE;
 		StartBtnEnable := FALSE;

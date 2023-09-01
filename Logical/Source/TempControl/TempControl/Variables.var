@@ -20,4 +20,5 @@ VAR
 	RestoreSettings : BOOL := FALSE; (*If true, displeyed PID parameters are restored*)
 	ApplySettings : BOOL := FALSE; (*If true, displeyed PID parameters are applied to controller*)
 	AutoTune : BOOL := FALSE; (*If true, controller tuning is activated*)
+	TempControlWidgetsEnable : BOOL := FALSE; (*Defines if temperature control widgets can be used*)
 END_VAR
