@@ -16,8 +16,8 @@
                 <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItemCode" width="90" zIndex="6" columnType="code" text="$IAT/Code" />
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.Button" id="ButtonAcknowledge" top="470" left="560" width="280" height="40" zIndex="1" image="Media/SymbolLib/Alarm/Acknowledge.svg" text="$IAT/Ack" imageHeight="35" imageWidth="35" borderWidth="3px 3px 3px 3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="18px" fontName="ABBvoiceMedium" />
-            <Widget xsi:type="widgets.brease.Button" id="ButtonAcknowledgeAll" top="470" left="860" width="280" height="40" zIndex="2" image="Media/SymbolLib/Alarm/Acknowledge.svg" text="$IAT/Ack_all" imageHeight="35" imageWidth="35" borderWidth="3px 3px 3px 3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" textAlign="center" fontSize="18px" fontName="ABBvoiceMedium" />
+            <Widget xsi:type="widgets.brease.Button" id="ButtonAcknowledge" top="470" left="560" width="280" height="40" zIndex="1" image="Media/SymbolLib/Alarm/Acknowledge.svg" text="$IAT/Ack" imageHeight="35" imageWidth="35" borderWidth="3px 3px 3px 3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="18px" fontName="ABBvoiceMedium" permissionOperate="['Administrators', 'Operator']" />
+            <Widget xsi:type="widgets.brease.Button" id="ButtonAcknowledgeAll" top="470" left="860" width="280" height="40" zIndex="2" image="Media/SymbolLib/Alarm/Acknowledge.svg" text="$IAT/Ack_all" imageHeight="35" imageWidth="35" borderWidth="3px 3px 3px 3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" textAlign="center" fontSize="18px" fontName="ABBvoiceMedium" permissionOperate="['Administrators', 'Operator']" />
           </Widgets>
         </Widget>
         <Widget xsi:type="widgets.brease.TabItem" id="TabItem2" left="0" zIndex="1" text="$IAT/History" borderWidth="0px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" backColor="rgba(255, 255, 255, 0)" textColor="rgba(0, 0, 0, 1)" activeBorderWidth="5px" fontName="ABBvoiceMedium">
@@ -33,7 +33,7 @@
                 <Widget xsi:type="widgets.brease.AlarmHistoryItem" id="AlarmHistoryItemCode" width="90" zIndex="6" columnType="code" text="$IAT/Code" />
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.Button" id="ClearAlarmHistoryBtn" top="470" left="860" width="280" height="40" zIndex="1" image="Media/SymbolLib/Edit/Delete.svg" text="$IAT/ClearHistory" imageHeight="25" imageWidth="25" disabledImageColor="rgba(0, 0, 0, 1)" borderWidth="3px 3px 3px 3px" cornerRadius="30px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="18px" fontName="ABBvoiceMedium" />
+            <Widget xsi:type="widgets.brease.Button" id="ClearAlarmHistoryBtn" top="470" left="860" width="280" height="40" zIndex="1" image="Media/SymbolLib/Edit/Delete.svg" text="$IAT/ClearHistory" imageHeight="25" imageWidth="25" disabledImageColor="rgba(0, 0, 0, 1)" borderWidth="3px 3px 3px 3px" cornerRadius="30px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="18px" fontName="ABBvoiceMedium" permissionOperate="['Administrators', 'Operator']" />
           </Widgets>
         </Widget>
       </Widgets>
