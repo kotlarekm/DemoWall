@@ -106,6 +106,7 @@ PROGRAM _CYCLIC
 		FanPWMDuty := 0;
 		MpTempController_0.Tune := FALSE;
 		MpTempController_0.Control := FALSE;
+		ManualON := FALSE;
 		
 		// Temp control widgets
 		TempControlWidgetsEnable := FALSE;

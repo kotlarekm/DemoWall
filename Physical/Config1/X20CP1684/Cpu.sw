@@ -2,12 +2,11 @@
 <?AutomationStudio FileVersion="4.9"?>
 <SwConfiguration CpuAddress="SL1" xmlns="http://br-automation.co.at/AS/SwConfiguration">
   <TaskClass Name="Cyclic#1">
+    <Task Name="TempContro" Source="Source.TempControl.TempControl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Motion" Source="Source.Motion.Motion.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Simulation" Source="Source.Simulation.Simulation.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
-  <TaskClass Name="Cyclic#2">
-    <Task Name="TempContro" Source="Source.TempControl.TempControl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-  </TaskClass>
+  <TaskClass Name="Cyclic#2" />
   <TaskClass Name="Cyclic#3" />
   <TaskClass Name="Cyclic#4">
     <Task Name="MainProgra" Source="Source.MainProgram.MainProgram.prg" Memory="UserROM" Language="IEC" Debugging="true" />

@@ -46,10 +46,10 @@
         </Widget>
         <Widget xsi:type="widgets.brease.TabItem" id="Temperature" left="0" width="131" height="40" zIndex="2" text="$IAT/Temp" borderWidth="0px 0px 0px 0px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" textColor="rgba(0, 0, 0, 1)" activeBorderWidth="5px" activeCornerRadius="0px" fontName="ABBvoiceMedium">
           <Widgets>
-            <Widget xsi:type="widgets.brease.OnlineChartHDA" id="TempChart" top="265" left="15" width="410" height="285" zIndex="0" borderWidth="3px" borderColor="rgba(0, 0, 0, 1)">
+            <Widget xsi:type="widgets.brease.OnlineChartHDA" id="TempChart" top="265" left="15" width="410" height="285" zIndex="0" updateChartTime="50" borderWidth="3px" borderColor="rgba(0, 0, 0, 1)">
               <Properties>
                 <yAxis>
-                  <Element id="yAxis1" textColor="rgba(0, 0, 0, 1)" color="rgba(0, 0, 0, 1)" fontSize="16px" fontName="ABBvoiceMedium" titleTextColor="rgba(0, 0, 0, 1)" titleFontSize="18px" titleFontName="ABBvoiceMedium" />
+                  <Element id="yAxis1" textColor="rgba(0, 0, 0, 1)" color="rgba(0, 0, 0, 1)" fontSize="16px" fontName="ABBvoiceMedium" titleTextColor="rgba(0, 0, 0, 1)" titleFontSize="18px" titleFontName="ABBvoiceMedium" max="70" rangeMode="fromConfiguration" />
                 </yAxis>
                 <xAxis>
                   <Element id="xAxis1" timeFormat="hh:mm" timeSpan="480" color="rgba(0, 0, 0, 1)" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" fontSize="16px" />

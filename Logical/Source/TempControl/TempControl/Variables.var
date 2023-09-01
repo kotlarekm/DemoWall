@@ -2,7 +2,7 @@ VAR
 	MpTempController_0 : MpTempController; (*Function block responsible for  temperature controll*)
 END_VAR
 VAR RETAIN
-	MpTempControllerParType_0 : MpTempControllerParType := (PID:=(Heat:=(ProportionalGain:=33.9530678,IntegrationTime:=72.68005,DerivativeTime:=8.721606,FilterTime:=0.8721606),Cool:=(ProportionalGain:=33.9530678,IntegrationTime:=72.68005,DerivativeTime:=8.721606,FilterTime:=0.8721606),IntegratorPreloading:=-0.0609090626),Tuning:=(Mode:=mpTEMP_TUNING_MODE_OSC_HEAT_COOL,SetPointHeat:=45,SetPointCool:=35),Profile:=(Heat:=(SlewRate:=0.354523033,FilterTime:=84.8989,DelayTime:=6.5,QuickStart:=FALSE),Cool:=(SlewRate:=0.273072,FilterTime:=91.55094,DelayTime:=2.5,QuickStart:=FALSE)),ToleranceBand:=(Lower:=0.5,Upper:=0.5),Hysteresis:=(Mode:=mpTEMP_HYSTERESIS_ON,Band:=(HeatToCool:=1.0,CoolToHeat:=1.0))); (*Temperature controller parameters*)
+	MpTempControllerParType_0 : MpTempControllerParType := (PID:=(Heat:=(ProportionalGain:=35.9502945,IntegrationTime:=151.411163,DerivativeTime:=18.16934,FilterTime:=1.816934),Cool:=(ProportionalGain:=35.9502945,IntegrationTime:=151.411163,DerivativeTime:=18.16934,FilterTime:=1.816934),IntegratorPreloading:=-0.09875002),Tuning:=(Mode:=mpTEMP_TUNING_MODE_OSC_HEAT_COOL,SetPointHeat:=45,SetPointCool:=35),Profile:=(Heat:=(SlewRate:=0.354523033,FilterTime:=84.8989,DelayTime:=6.5,QuickStart:=FALSE),Cool:=(SlewRate:=0.273072,FilterTime:=91.55094,DelayTime:=2.5,QuickStart:=FALSE)),ToleranceBand:=(Lower:=0.5,Upper:=0.5),Hysteresis:=(Mode:=mpTEMP_HYSTERESIS_ON,Band:=(HeatToCool:=1.0,CoolToHeat:=1.0))); (*Temperature controller parameters*)
 END_VAR
 VAR CONSTANT
 	IntToRealScaller : REAL := 10.0; (*Constant used to convert tempretature from int (directly from at2222) to real (in celcius degrees)*)
