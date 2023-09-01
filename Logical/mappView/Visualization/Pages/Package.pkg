@@ -11,5 +11,6 @@
     <Object Type="Package">IOPage</Object>
     <Object Type="Package">PDFViewer</Object>
     <Object Type="Package">SDMPage</Object>
+    <Object Type="Package">HardwarePage</Object>
   </Objects>
 </Package>

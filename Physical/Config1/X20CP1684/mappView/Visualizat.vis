@@ -10,6 +10,7 @@
     <Page refId="IOPage" />
     <Page refId="pagePDFViewer" />
     <Page refId="SDMPage" />
+    <Page refId="HardwarePage" />
   </Pages>
   <Navigations />
   <BindingsSets>
@@ -72,6 +73,7 @@
     <Content refId="ContentPDFViewer" />
     <Content refId="ContentSDM" />
     <Content refId="ContentAlarms" />
+    <Content refId="ContentHardware" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />
