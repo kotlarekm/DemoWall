@@ -41,6 +41,7 @@
     <EventBindingsSet refId="ContentIO_eventbinding" />
     <EventBindingsSet refId="PIDSettingsMainContent_eventbinding" />
     <EventBindingsSet refId="PIDSettingsTopContent_eventbinding" />
+    <EventBindingsSet refId="EmergencyDialogMainContent_eventbinding" />
   </EventBindingsSets>
   <Dialogs>
     <Dialog refId="LoginDialog" />
@@ -49,6 +50,7 @@
     <Dialog refId="InfoDialog" />
     <Dialog refId="GraphDialog" />
     <Dialog refId="PIDSettingsDialog" />
+    <Dialog refId="EmergencyDialog" />
   </Dialogs>
   <Contents>
     <Content refId="ContentTop" />
@@ -74,6 +76,8 @@
     <Content refId="ContentSDM" />
     <Content refId="ContentAlarms" />
     <Content refId="ContentHardware" />
+    <Content refId="EmergencyDialogTopContent" />
+    <Content refId="EmergencyDialogMainContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />

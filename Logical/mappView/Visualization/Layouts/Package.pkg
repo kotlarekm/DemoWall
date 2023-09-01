@@ -8,5 +8,6 @@
     <Object Type="File">PIDSettingsLayout.layout</Object>
     <Object Type="File">PDFViewer.layout</Object>
     <Object Type="File">Hardware.layout</Object>
+    <Object Type="File">EmergencyDialogLayout.layout</Object>
   </Objects>
 </Package>

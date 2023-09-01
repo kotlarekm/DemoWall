@@ -45,5 +45,13 @@
         <seg>Selected parameters will be applied to the real object.</seg>
       </tuv>
     </tu>
+    <tu tuid="EmergencyPressed">
+      <tuv xml:lang="pl">
+        <seg>Przycisk bezpieczeństwa został wciśnięty!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Emergency button has been pressed!</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

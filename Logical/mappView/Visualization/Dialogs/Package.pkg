@@ -9,5 +9,6 @@
     <Object Type="Package">InfoDialog</Object>
     <Object Type="Package">GraphDialog</Object>
     <Object Type="Package">PIDSettingsDialog</Object>
+    <Object Type="Package">EmergencyDialog</Object>
   </Objects>
 </Package>

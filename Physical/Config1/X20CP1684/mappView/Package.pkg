@@ -31,5 +31,6 @@
     <Object Type="File">PIDSettingsTopContent.eventbinding</Object>
     <Object Type="File">PIDSettingsMainContent.eventbinding</Object>
     <Object Type="File">PIDSettingsMainContent.binding</Object>
+    <Object Type="File">EmergencyDialogMainContent.eventbinding</Object>
   </Objects>
 </Package>

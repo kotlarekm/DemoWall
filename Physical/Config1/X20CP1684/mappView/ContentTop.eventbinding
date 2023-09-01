@@ -102,5 +102,15 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="EmergencyBtnPressed">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gDriveStop" event="ValueChanged" />
+      <EventHandler condition="oldValue">
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="EmergencyDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

@@ -86,7 +86,7 @@ PROGRAM _CYCLIC
 	// Applying parameters to real object
 	IF ApplyParameters THEN
 		gTanks.Parameters := ParametersToLoad;
-	  ApplyParameters := FALSE;
+	  	ApplyParameters := FALSE;
 	END_IF;
 	
 	// Checking if usb devices are aveliable
@@ -106,8 +106,9 @@ PROGRAM _CYCLIC
 	MpFileManagerUIConnect_0.File.List.Items[SelectedRecipeIndex].IsSelected := TRUE;
 	
 	// Checking if new recipe has been selected
-	IF NewRecipeSelected THEN
+	IF NewRecipeSelected AND MpFileManagerUIConnect_0.Status = mpFILE_UI_STATUS_IDLE AND NOT(MpRecipeXml_0.CommandBusy) THEN
 		NewRecipeSelected := FALSE;
+		UpdateRecipesList(ADR(MpFileManagerUIConnect_0), ADR(RecipesList), ADR(DropDownBoxNamesCollection));
 		RecipeName := RecipesList[SelectedRecipeIndex];
 		WaitingForLoad := TRUE;
 	END_IF;
@@ -121,18 +122,15 @@ PROGRAM _CYCLIC
 	
 	// Data device change
 	IF DeviceChenged AND MpFileManagerUIConnect_0.Status = mpFILE_UI_STATUS_IDLE THEN
-		IF MpFileManagerUIConnect_0.Status = mpFILE_UI_STATUS_IDLE THEN
-			DeviceChenged := FALSE;
-			MpRecipeXml_0.DeviceName := ADR(MpFileManagerUIConnect_0.DeviceList.DeviceNames[MpFileManagerUIConnect_0.DeviceList.SelectedIndex]);
-			MpFileManagerUIConnect_0.File.Refresh := TRUE;
-			UpdateRecipesList(ADR(MpFileManagerUIConnect_0), ADR(RecipesList), ADR(DropDownBoxNamesCollection));
-			NewRecipeSelected := TRUE;
-		END_IF;
+		DeviceChenged := FALSE;
+		MpRecipeXml_0.DeviceName := ADR(MpFileManagerUIConnect_0.DeviceList.DeviceNames[MpFileManagerUIConnect_0.DeviceList.SelectedIndex]);
+		MpFileManagerUIConnect_0.File.Refresh := TRUE;
+		NewRecipeSelected := TRUE;
 	END_IF;
 	
 	// Recipes loading
 	IF WaitingForLoad THEN
-		IF NOT(MpRecipeXml_0.CommandBusy) THEN
+		IF NOT(MpRecipeXml_0.CommandBusy) AND MpFileManagerUIConnect_0.Status = mpFILE_UI_STATUS_IDLE THEN
 			MpRecipeXml_0.Load := TRUE;
 			WaitingForLoad := FALSE;
 		END_IF;
