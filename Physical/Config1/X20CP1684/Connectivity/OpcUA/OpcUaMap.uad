@@ -77,6 +77,12 @@
           <High ValueProvider="Const">45</High>
         </EURange>
       </EURanges>
+      <EURanges Id="20">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">500</High>
+        </EURange>
+      </EURanges>
     </EURangesAliases>
     <EngineeringUnitAliases>
       <EngineeringUnit Id="1" UnitId="4342098" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="bar [unit of pressure]" Symbol="bar" />
@@ -276,16 +282,16 @@
         </Variable>
         <Variable Name="MpAxisBasicParameters_Primary">
           <Variable Name="Velocity" EURangesId="15" />
-          <Variable Name="Acceleration" EURangesId="10" />
-          <Variable Name="Deceleration" EURangesId="10" />
+          <Variable Name="Acceleration" EURangesId="20" />
+          <Variable Name="Deceleration" EURangesId="20" />
           <Variable Name="Position" EURangesId="10" />
           <Variable Name="Distance" EURangesId="12" />
           <Variable Name="Direction" />
         </Variable>
         <Variable Name="MpAxisBasicParameters_Secondary">
           <Variable Name="Velocity" EURangesId="15" />
-          <Variable Name="Acceleration" EURangesId="10" />
-          <Variable Name="Deceleration" EURangesId="10" />
+          <Variable Name="Acceleration" EURangesId="20" />
+          <Variable Name="Deceleration" EURangesId="20" />
           <Variable Name="Position" EURangesId="10" />
           <Variable Name="Distance" EURangesId="12" />
           <Variable Name="Direction" />
