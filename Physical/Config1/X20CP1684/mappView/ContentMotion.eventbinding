@@ -250,11 +250,6 @@
     </EventBinding>
     <EventBinding id="ContentMotion.ButtonMoveVelocity1.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonMoveVelocity1" event="Click" />
-      <Operand datatype="BOOL" name="inSync">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisCoupling_0.InSync">
-          <Method xsi:type="opcUa.NodeAction.GetValue" />
-        </ReadTarget>
-      </Operand>
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_Secondary.MoveVelocity">
@@ -262,21 +257,9 @@
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="inSync = TRUE" deactivated="true">
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Motion:GearCoupling">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-          </Target>
-        </Action>
-      </EventHandler>
     </EventBinding>
     <EventBinding id="ContentMotion.ButtonMoveAdditive1.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonMoveAdditive1" event="Click" />
-      <Operand datatype="BOOL" name="inSync">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisCoupling_0.InSync">
-          <Method xsi:type="opcUa.NodeAction.GetValue" />
-        </ReadTarget>
-      </Operand>
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_Secondary.MoveAdditive">
@@ -284,32 +267,13 @@
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="inSync = TRUE" deactivated="true">
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Motion:GearCoupling">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
-          </Target>
-        </Action>
-      </EventHandler>
     </EventBinding>
     <EventBinding id="ContentMotion.ButtonMoveAbsolute1.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonMoveAbsolute1" event="Click" />
-      <Operand datatype="BOOL" name="inSync">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisCoupling_0.InSync">
-          <Method xsi:type="opcUa.NodeAction.GetValue" />
-        </ReadTarget>
-      </Operand>
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_Secondary.MoveAbsolute">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler condition="inSync = TRUE" deactivated="true">
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Motion:GearCoupling">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
           </Target>
         </Action>
       </EventHandler>

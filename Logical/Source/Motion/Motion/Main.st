@@ -157,8 +157,6 @@ PROGRAM _CYCLIC
 	END_IF
 	//Resetting commands after stop or power off
 	IF MpAxisBasic_Secondary.Stopped OR F_TRIG_1.Q THEN
-		CamCoupling := FALSE;
-		GearCoupling := FALSE;
 		MpAxisBasic_Secondary.Stop := FALSE;
 		MpAxisBasic_Secondary.MoveVelocity := FALSE;
 		MpAxisBasic_Secondary.MoveAbsolute := FALSE;
@@ -239,7 +237,7 @@ PROGRAM _CYCLIC
 		CAM_COUPLING:
 			IF NOT CamCoupling THEN
 				MpAxisCoupling_0.Cam := FALSE;
-				IF Manual THEN
+				IF Manual AND MpAxisCoupling_0.InSync THEN
 					MpAxisBasic_Secondary.Stop := TRUE;
 				END_IF
 				IF NOT MpAxisCoupling_0.InSync THEN
