@@ -197,5 +197,45 @@
         <seg>Pressure in tank 3</seg>
       </tuv>
     </tu>
+    <tu tuid="TuningInProgress">
+      <tuv xml:lang="pl">
+        <seg>Strojenie w toku...</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Tuning in progress...</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ManualMode">
+      <tuv xml:lang="pl">
+        <seg>Tryb manualny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Manual mode</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AutoMode">
+      <tuv xml:lang="pl">
+        <seg>Tryb automatyczny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Auto mode</seg>
+      </tuv>
+    </tu>
+    <tu tuid="TuningDone">
+      <tuv xml:lang="pl">
+        <seg>Strojenie ukończone.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Tuning done.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="EmergencyStop">
+      <tuv xml:lang="pl">
+        <seg>Wyłączenie awaryjne!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Emergency stop!</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

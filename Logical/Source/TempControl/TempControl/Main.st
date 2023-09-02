@@ -54,6 +54,7 @@ PROGRAM _CYCLIC
 			MTBasicsPWMFan.DutyCycle := MpTempController_0.CoolValue;
 			MTBasicsPWMHeater.DutyCycle := MpTempController_0.HeatValue;
 			MpTempController_0.Tune := TRUE;
+			InfoLabelIndex := 2;
 	
 			// Checking if tunig is done
 			IF MpTempController_0.TuningDone THEN
@@ -100,6 +101,7 @@ PROGRAM _CYCLIC
 		
 			MpTempController_0.Control := FALSE;
 			MpTempController_0.Tune := FALSE;
+			InfoLabelIndex := 1;
 			
 			// Fan PWM
 			MTBasicsPWMFan.DutyCycle := FanPWMDuty;
@@ -112,6 +114,7 @@ PROGRAM _CYCLIC
 		
 			MpTempController_0.Control := TRUE;
 			MpTempController_0.Tune := FALSE;
+			InfoLabelIndex := 0;
 		
 			// Prameters and outputs update
 			MpTempController_0.ActualTemperature := TempInReal;
@@ -130,8 +133,10 @@ PROGRAM _CYCLIC
 		MpTempController_0.Tune := FALSE;
 		MpTempController_0.Control := FALSE;
 		ManualON := FALSE;
+		AutoTune := FALSE;
 		MTBasicsPWMFan.Enable := FALSE;
 		MTBasicsPWMHeater.Enable := FALSE;
+		InfoLabelIndex := 3;
 		
 		// Temp control widgets
 		TempControlWidgetsEnable := FALSE;

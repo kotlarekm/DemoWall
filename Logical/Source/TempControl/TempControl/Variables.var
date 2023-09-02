@@ -1,22 +1,25 @@
 VAR
+	TempInReal : REAL; (*Measured temperature in celcius degrees*)
+	TempControlWidgetsEnable : BOOL := FALSE; (*Defines if temperature control widgets can be used*)
+	RestoreSettings : BOOL := FALSE; (*If true, displeyed PID parameters are restored*)
+	MTBasicsPWMHeater : MTBasicsPWM := (Enable:=FALSE,Period:=0.1,DutyCycle:=0.0); (*PWM block for heater*)
+	MTBasicsPWMFan : MTBasicsPWM := (Enable:=FALSE,Period:=0.1,DutyCycle:=0.0); (*PWM block for fan*)
 	MpTempController_0 : MpTempController; (*Function block responsible for  temperature controll*)
+	MpTempControllerParType_1 : MpTempControllerParType; (*Displayed PID parameters*)
 END_VAR
 VAR RETAIN
 	MpTempControllerParType_0 : MpTempControllerParType := (PID:=(Heat:=(ProportionalGain:=11.73522,IntegrationTime:=95.5396,DerivativeTime:=10.03165,FilterTime:=1.003165),Cool:=(ProportionalGain:=40.2958,IntegrationTime:=90.4432,DerivativeTime:=9.49654,FilterTime:=0.949653864),IntegratorPreloading:=0),Tuning:=(Mode:=mpTEMP_TUNING_MODE_OSC_HEAT_COOL,SetPointHeat:=45,SetPointCool:=35),Profile:=(Heat:=(SlewRate:=0.354523033,FilterTime:=84.8989,DelayTime:=6.5,QuickStart:=FALSE),Cool:=(SlewRate:=0.273072,FilterTime:=91.55094,DelayTime:=2.5,QuickStart:=FALSE)),ToleranceBand:=(Lower:=0.5,Upper:=0.5),Hysteresis:=(Mode:=mpTEMP_HYSTERESIS_ON,Band:=(HeatToCool:=1.0,CoolToHeat:=1.0))); (*Temperature controller parameters*)
+END_VAR
+VAR
+	ManualON : BOOL := FALSE; (*If true, PID controller is not used, the outputs are supplied with the signals from PWM blocks*)
 END_VAR
 VAR CONSTANT
 	IntToRealScaller : REAL := 10.0; (*Constant used to convert tempretature from int (directly from at2222) to real (in celcius degrees)*)
 END_VAR
 VAR
-	ManualON : BOOL := FALSE; (*If true, PID controller is not used, the outputs are supplied with the signals from PWM blocks*)
-	TempInReal : REAL; (*Measured temperature in celcius degrees*)
-	MTBasicsPWMHeater : MTBasicsPWM := (Enable:=FALSE,Period:=0.1,DutyCycle:=0.0); (*PWM block for heater*)
-	MTBasicsPWMFan : MTBasicsPWM := (Enable:=FALSE,Period:=0.1,DutyCycle:=0.0); (*PWM block for fan*)
-	FanPWMDuty : REAL := 0.0; (*Duty in % for fan PWM*)
 	HeaterPWMDuty : REAL := 0.0; (*Duty in % for heater PWM*)
-	MpTempControllerParType_1 : MpTempControllerParType; (*Displayed PID parameters*)
-	RestoreSettings : BOOL := FALSE; (*If true, displeyed PID parameters are restored*)
-	ApplySettings : BOOL := FALSE; (*If true, displeyed PID parameters are applied to controller*)
+	FanPWMDuty : REAL := 0.0; (*Duty in % for fan PWM*)
 	AutoTune : BOOL := FALSE; (*If true, controller tuning is activated*)
-	TempControlWidgetsEnable : BOOL := FALSE; (*Defines if temperature control widgets can be used*)
+	ApplySettings : BOOL := FALSE; (*If true, displeyed PID parameters are applied to controller*)
+	InfoLabelIndex : USINT := 0; (*Defines info displayed on main page: 0 - auto mode; 1 - manual mode; 2 - tuning in progress; 3 - emergency stop*)
 END_VAR

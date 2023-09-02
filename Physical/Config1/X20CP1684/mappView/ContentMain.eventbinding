@@ -1039,5 +1039,76 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="MainPageLoaded">
+      <Source xsi:type="clientSystem.Event" event="ContentLoaded" />
+      <EventHandler>
+        <Action>
+          <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::TempContro:InfoLabelIndex">
+            <Method xsi:type="opcUa.NodeAction.GetValue" />
+          </ReadTarget>
+          <Result>
+            <ResultHandler condition="result=0">
+              <Action>
+                <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentMain" widgetRefId="TempControlInfoLabel">
+                  <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/AutoMode" />
+                </Target>
+              </Action>
+            </ResultHandler>
+            <ResultHandler condition="result=1">
+              <Action>
+                <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentMain" widgetRefId="TempControlInfoLabel">
+                  <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/ManualMode" />
+                </Target>
+              </Action>
+            </ResultHandler>
+            <ResultHandler condition="result=2">
+              <Action>
+                <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentMain" widgetRefId="TempControlInfoLabel">
+                  <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/TuningInProgress" />
+                </Target>
+              </Action>
+            </ResultHandler>
+            <ResultHandler condition="result=3">
+              <Action>
+                <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentMain" widgetRefId="TempControlInfoLabel">
+                  <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/EmergencyStop" />
+                </Target>
+              </Action>
+            </ResultHandler>
+          </Result>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="InfoLabelIndexChanged">
+      <Source xsi:type="opcUa.Event" refId="::TempContro:InfoLabelIndex" event="ValueChanged" />
+      <EventHandler condition="newValue=0">
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentMain" widgetRefId="TempControlInfoLabel">
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/AutoMode" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=1">
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentMain" widgetRefId="TempControlInfoLabel">
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/ManualMode" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=2">
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentMain" widgetRefId="TempControlInfoLabel">
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/TuningInProgress" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=3">
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentMain" widgetRefId="TempControlInfoLabel">
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/EmergencyStop" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>

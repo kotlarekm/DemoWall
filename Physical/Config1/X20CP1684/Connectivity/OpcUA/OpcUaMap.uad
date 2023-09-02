@@ -179,6 +179,7 @@
           <Variable Name="TuningActive" />
         </Variable>
         <Variable Name="TempControlWidgetsEnable" />
+        <Variable Name="InfoLabelIndex" />
       </Task>
       <Task Name="Recipes">
         <Variable Name="ApplyParameters" />
