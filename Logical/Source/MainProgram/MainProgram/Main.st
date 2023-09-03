@@ -32,6 +32,7 @@ PROGRAM _CYCLIC
 			END_IF;
 			
 		FILLING_TANKS_1_AND_2:
+			
 			IF gTanks.Status.Tank1FluidLvl >= gTanks.Parameters.Tank1TargetFluidLvl THEN
 				gTanks.Commands.OpenTank1Valve := FALSE;
 			END_IF;
@@ -126,7 +127,7 @@ PROGRAM _CYCLIC
 		gTanks.Commands.Start := FALSE;
 	END_IF;
 
-	gTanks.Parameters.Tank3MaxAllowedPressure;
+
 	
 END_PROGRAM
 

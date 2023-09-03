@@ -2,7 +2,7 @@
 // Copyright: B&R Industrial Automation GmbH 
 // Author: B&R
 // Created: 25.08.2023
-// Description: Task resposible for temperature control.
+// Description: Task responsible for temperature control.
 //***********************************************************************
 
 PROGRAM _INIT
