@@ -25,7 +25,7 @@
   </Element>
   <Element ID="operator" Type="User">
     <Property ID="UserID" Value="4" />
-    <Property ID="Password" Value="XZKFglpg2V0orAGu2PqB4fs8q5ERxBGgKQZQ0EkndPyhzQe8GIY=" Description="1234" />
+    <Property ID="Password" Value="f2HMrDEv4eSawXc5gKO0Dj0p/Y0/ZqWQqmi8eMRVM6Tn4RyHWTM=" Description="operator" />
     <Group ID="Roles">
       <Property ID="Role[1]" Value="Operator" />
       <Property ID="Role[2]" Value="Everyone" />
