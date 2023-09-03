@@ -19,12 +19,12 @@
         <seg>Bonjour tout le monde!</seg>
       </tuv>
     </tu>
-    <tu tuid="MeasurmentSystem">
+    <tu tuid="MeasurementSystem">
       <tuv xml:lang="pl">
         <seg>System miar</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Measurment system</seg>
+        <seg>Measurement system</seg>
       </tuv>
     </tu>
     <tu tuid="Users">
