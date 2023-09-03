@@ -61,10 +61,10 @@
     </tu>
     <tu tuid="LabelText3">
       <tuv xml:lang="pl">
-        <seg>Ta funkcja uruchamia sprzężenie krzywkowe pomiędzy osią główną i podrzędną.                                                                                                                                                                                                                                  Włączenie lub wyłączenie sprzężenia krzywkowego jest możliwe tylko wtedy, gdy oś główna osiągnie pozycję „MasterOffset” (0°). Aby osiągnąć „MasterOffset”, oś główna może poruszać się tylko w kierunku dodatnim (Prawo).</seg>
+        <seg>Ta funkcja uruchamia sprzężenie krzywkowe pomiędzy osią główną i podrzędną.                                                                                                                                                                                                                                  Włączenie sprzężenia krzywkowego jest możliwe tylko wtedy, gdy oś główna osiągnie pozycję „MasterOffset” (0°). Aby osiągnąć „MasterOffset”, oś główna może poruszać się tylko w kierunku dodatnim (Prawo).</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>This function starts a cam coupling between the master and slave axes.                                                                                                                                                                                                                                  Enabling or disabling cam coupling is only possible when the master reaches the "MasterOffset" position (0°). To reach "MasterOffset", the master axis is only permitted to move in a positive direction (Right). </seg>
+        <seg>This function starts a cam coupling between the master and slave axes.                                                                                                                                                                                                                                  Enabling cam coupling is only possible when the master reaches the "MasterOffset" position (0°). To reach "MasterOffset", the master axis is only permitted to move in a positive direction (Right). </seg>
       </tuv>
     </tu>
     <tu tuid="LabelCouplingInfo">

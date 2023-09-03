@@ -35,12 +35,6 @@
           <High ValueProvider="Const" />
         </EURange>
       </EURanges>
-      <EURanges Id="12">
-        <EURange>
-          <Low ValueProvider="Const">0</Low>
-          <High ValueProvider="Const">1440</High>
-        </EURange>
-      </EURanges>
       <EURanges Id="10">
         <EURange>
           <Low ValueProvider="Const">0</Low>
@@ -81,6 +75,12 @@
         <EURange>
           <Low ValueProvider="Const">0</Low>
           <High ValueProvider="Const">500</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="21">
+        <EURange>
+          <Low ValueProvider="Const">-1080</Low>
+          <High ValueProvider="Const">1080</High>
         </EURange>
       </EURanges>
     </EURangesAliases>
@@ -287,7 +287,7 @@
           <Variable Name="Acceleration" EURangesId="20" />
           <Variable Name="Deceleration" EURangesId="20" />
           <Variable Name="Position" EURangesId="10" />
-          <Variable Name="Distance" EURangesId="12" />
+          <Variable Name="Distance" EURangesId="21" />
           <Variable Name="Direction" />
         </Variable>
         <Variable Name="MpAxisBasicParameters_Secondary">
@@ -295,7 +295,7 @@
           <Variable Name="Acceleration" EURangesId="20" />
           <Variable Name="Deceleration" EURangesId="20" />
           <Variable Name="Position" EURangesId="10" />
-          <Variable Name="Distance" EURangesId="12" />
+          <Variable Name="Distance" EURangesId="21" />
           <Variable Name="Direction" />
         </Variable>
         <Variable Name="Manual" />

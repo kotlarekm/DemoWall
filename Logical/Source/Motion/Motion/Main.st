@@ -204,7 +204,9 @@ PROGRAM _CYCLIC
 				MpAxisCoupling_0.Gear := TRUE;
 				IF MpAxisCoupling_0.InSync THEN
 					CouplingMode := GEAR_COUPLING;
+					MpAxisBasic_Secondary.MoveVelocity := FALSE;
 				END_IF;
+				//Option to disable gear coupling before InSync status
 			IF NOT MpAxisCoupling_0.InSync AND NOT GearCoupling THEN
 					MpAxisCoupling_0.Gear := FALSE;
 			END_IF;	
@@ -219,9 +221,11 @@ PROGRAM _CYCLIC
 					MpAxisCoupling_0.Cam := TRUE;
 				END_IF
 			END_IF
+			//Checking if secondary axis is in sync and moving
 			IF MpAxisCoupling_0.InSync AND MpAxisCoupling_0.Cam AND MpAxisBasic_Secondary.MoveActive THEN
 				CouplingMode := CAM_COUPLING;
 			END_IF
+			//Option to disable cam coupling before in sync status
 			IF NOT MpAxisCoupling_0.InSync AND NOT CamCoupling THEN
 				MpAxisCoupling_0.Cam := FALSE;
 			END_IF;	
