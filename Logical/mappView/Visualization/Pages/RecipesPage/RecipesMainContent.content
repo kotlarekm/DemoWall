@@ -73,8 +73,8 @@
     <Widget xsi:type="widgets.brease.Line" id="Line3" zIndex="14" x1="19" x2="700" y1="590" y2="590" lineColor="rgba(0, 0, 0, 1)" lineWidth="2px" />
     <Widget xsi:type="widgets.brease.Line" id="Line4" zIndex="15" x1="19" x2="19" y1="19" y2="591" lineColor="rgba(0, 0, 0, 1)" lineWidth="2px" />
     <Widget xsi:type="widgets.brease.Line" id="Line6" zIndex="16" x1="19" x2="700" y1="60" y2="60" lineColor="rgba(0, 0, 0, 1)" lineWidth="1px" />
-    <Widget xsi:type="widgets.brease.Image" id="DeviceImg3" top="120" left="1050" width="30" height="30" zIndex="17" image="Media/SymbolLib/Symbols/USB.svg" />
-    <Widget xsi:type="widgets.brease.Image" id="DeviceImg2" top="80" left="1050" width="30" height="30" zIndex="18" image="Media/SymbolLib/Symbols/USB.svg" />
-    <Widget xsi:type="widgets.brease.Image" id="DeviceImg1" top="40" left="1050" width="30" height="30" zIndex="19" image="Media/SymbolLib/File/Package.svg" />
+    <Widget xsi:type="widgets.brease.Image" id="DeviceImg3" top="120" left="1060" width="30" height="30" zIndex="17" image="Media/SymbolLib/Symbols/USB.svg" />
+    <Widget xsi:type="widgets.brease.Image" id="DeviceImg2" top="80" left="1060" width="30" height="30" zIndex="18" image="Media/SymbolLib/Symbols/USB.svg" />
+    <Widget xsi:type="widgets.brease.Image" id="DeviceImg1" top="40" left="1060" width="30" height="30" zIndex="19" image="Media/SymbolLib/File/Package.svg" />
   </Widgets>
 </Content>

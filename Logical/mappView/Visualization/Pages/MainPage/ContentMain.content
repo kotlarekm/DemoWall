@@ -49,7 +49,7 @@
             <Widget xsi:type="widgets.brease.OnlineChartHDA" id="TempChart" top="265" left="15" width="410" height="285" zIndex="0" updateChartTime="50" borderWidth="3px" borderColor="rgba(0, 0, 0, 1)">
               <Properties>
                 <yAxis>
-                  <Element id="yAxis1" textColor="rgba(0, 0, 0, 1)" color="rgba(0, 0, 0, 1)" fontSize="16px" fontName="ABBvoiceMedium" titleTextColor="rgba(0, 0, 0, 1)" titleFontSize="18px" titleFontName="ABBvoiceMedium" max="70" rangeMode="fromConfiguration" />
+                  <Element id="yAxis1" textColor="rgba(0, 0, 0, 1)" color="rgba(0, 0, 0, 1)" fontSize="16px" fontName="ABBvoiceMedium" titleTextColor="rgba(0, 0, 0, 1)" titleFontSize="18px" titleFontName="ABBvoiceMedium" max="170" />
                 </yAxis>
                 <xAxis>
                   <Element id="xAxis1" timeFormat="hh:mm" timeSpan="480" color="rgba(0, 0, 0, 1)" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" fontSize="16px" />

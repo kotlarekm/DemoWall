@@ -83,6 +83,12 @@
           <High ValueProvider="Const">1080</High>
         </EURange>
       </EURanges>
+      <EURanges Id="21">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">70</High>
+        </EURange>
+      </EURanges>
     </EURangesAliases>
     <EngineeringUnitAliases>
       <EngineeringUnit Id="1" UnitId="4342098" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="bar [unit of pressure]" Symbol="bar" />
@@ -170,8 +176,33 @@
         <Variable Name="FanPWMDuty" />
         <Variable Name="HeaterPWMDuty" />
         <Variable Name="ManualON" />
-        <Variable Name="TempInReal" Historizing="True" HistoryBufferSize="2500" HistorySamplingInterval="Timer1" />
-        <Variable Name="MpTempControllerParType_1" RecursiveEnable="2" />
+        <Variable Name="TempInReal" Historizing="True" HistoryBufferSize="2500" HistorySamplingInterval="Timer1" EngineeringUnitId="2" />
+        <Variable Name="MpTempControllerParType_1" RecursiveEnable="2">
+          <Variable Name="Tuning">
+            <Variable Name="SetPointHeat" EURangesId="21" EngineeringUnitId="2" />
+            <Variable Name="SetPointCool" EURangesId="21" EngineeringUnitId="2" />
+          </Variable>
+          <Variable Name="Hysteresis">
+            <Variable Name="Band">
+              <Variable Name="HeatToCool" EURangesId="13" EngineeringUnitId="2" />
+              <Variable Name="CoolToHeat" EURangesId="13" EngineeringUnitId="2" />
+            </Variable>
+          </Variable>
+          <Variable Name="PID">
+            <Variable Name="Heat">
+              <Variable Name="ProportionalGain" EURangesId="6" />
+              <Variable Name="IntegrationTime" EURangesId="6" />
+              <Variable Name="DerivativeTime" EURangesId="6" />
+              <Variable Name="FilterTime" EURangesId="6" />
+            </Variable>
+            <Variable Name="Cool">
+              <Variable Name="ProportionalGain" EURangesId="6" />
+              <Variable Name="IntegrationTime" EURangesId="6" />
+              <Variable Name="DerivativeTime" EURangesId="6" />
+              <Variable Name="FilterTime" EURangesId="6" />
+            </Variable>
+          </Variable>
+        </Variable>
         <Variable Name="ApplySettings" />
         <Variable Name="AutoTune" />
         <Variable Name="RestoreSettings" />
