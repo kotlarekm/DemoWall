@@ -8,7 +8,7 @@
     <Widget xsi:type="widgets.brease.Button" id="SaveRecipeBtn" top="540" left="940" width="238" height="40" zIndex="4" image="Media/SymbolLib/Edit/Save.svg" text="$IAT/Save" imageHeight="25" imageWidth="25" disabledImageColor="rgba(0, 0, 0, 1)" borderWidth="3px 3px 3px 3px" cornerRadius="30px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="16px" fontName="ABBvoiceMedium" permissionOperate="['Administrators', 'Operator']" />
     <Widget xsi:type="widgets.brease.Button" id="DeleteRecipeBtn" top="200" left="1140" width="40" height="40" zIndex="5" image="Media/SymbolLib/Edit/Delete.svg" imageHeight="25" imageWidth="25" borderWidth="3px 3px 3px 3px" cornerRadius="10px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" permissionOperate="['Administrators', 'Operator']" />
     <Widget xsi:type="widgets.brease.Button" id="RestoreBtn" top="340" left="940" width="240" height="40" zIndex="6" image="Media/SymbolLib/Edit/Undo.svg" text="$IAT/Restore" imageHeight="25" imageWidth="25" disabledImageColor="rgba(0, 0, 0, 1)" borderWidth="3px 3px 3px 3px" cornerRadius="30px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="16px" fontName="ABBvoiceMedium" permissionOperate="['Administrators', 'Operator']" />
-    <Widget xsi:type="widgets.brease.RadioButtonGroup" id="SelectDeviceRadioGroup" top="20" left="920" width="260" height="140" zIndex="7">
+    <Widget xsi:type="widgets.brease.RadioButtonGroup" id="SelectDeviceRadioGroup" top="20" left="920" width="120" height="140" zIndex="7">
       <Widgets>
         <Widget xsi:type="widgets.brease.RadioButton" id="RadioButtonDevice1" top="20" left="20" width="180" height="38" zIndex="0" text="PLC" fontSize="16px" fontName="ABBvoiceMedium" bold="true" checkedTextColor="rgba(0, 128, 0, 1)" permissionOperate="['Administrators', 'Operator']" />
         <Widget xsi:type="widgets.brease.RadioButton" id="RadioButtonDevice3" top="59" left="20" width="180" zIndex="1" text="USB1" fontSize="16px" fontName="ABBvoiceMedium" bold="true" checkedTextColor="rgba(0, 128, 0, 1)" permissionOperate="['Administrators', 'Operator']" />
@@ -73,5 +73,8 @@
     <Widget xsi:type="widgets.brease.Line" id="Line3" zIndex="14" x1="19" x2="700" y1="590" y2="590" lineColor="rgba(0, 0, 0, 1)" lineWidth="2px" />
     <Widget xsi:type="widgets.brease.Line" id="Line4" zIndex="15" x1="19" x2="19" y1="19" y2="591" lineColor="rgba(0, 0, 0, 1)" lineWidth="2px" />
     <Widget xsi:type="widgets.brease.Line" id="Line6" zIndex="16" x1="19" x2="700" y1="60" y2="60" lineColor="rgba(0, 0, 0, 1)" lineWidth="1px" />
+    <Widget xsi:type="widgets.brease.Image" id="DeviceImg3" top="120" left="1050" width="30" height="30" zIndex="17" image="Media/SymbolLib/Symbols/USB.svg" />
+    <Widget xsi:type="widgets.brease.Image" id="DeviceImg2" top="80" left="1050" width="30" height="30" zIndex="18" image="Media/SymbolLib/Symbols/USB.svg" />
+    <Widget xsi:type="widgets.brease.Image" id="DeviceImg1" top="40" left="1050" width="30" height="30" zIndex="19" image="Media/SymbolLib/File/Package.svg" />
   </Widgets>
 </Content>
