@@ -83,7 +83,7 @@
           <High ValueProvider="Const">1080</High>
         </EURange>
       </EURanges>
-      <EURanges Id="21">
+      <EURanges Id="22">
         <EURange>
           <Low ValueProvider="Const">0</Low>
           <High ValueProvider="Const">70</High>
@@ -179,8 +179,8 @@
         <Variable Name="TempInReal" Historizing="True" HistoryBufferSize="2500" HistorySamplingInterval="Timer1" EngineeringUnitId="2" />
         <Variable Name="MpTempControllerParType_1" RecursiveEnable="2">
           <Variable Name="Tuning">
-            <Variable Name="SetPointHeat" EURangesId="21" EngineeringUnitId="2" />
-            <Variable Name="SetPointCool" EURangesId="21" EngineeringUnitId="2" />
+            <Variable Name="SetPointHeat" EURangesId="22" EngineeringUnitId="2" />
+            <Variable Name="SetPointCool" EURangesId="22" EngineeringUnitId="2" />
           </Variable>
           <Variable Name="Hysteresis">
             <Variable Name="Band">
