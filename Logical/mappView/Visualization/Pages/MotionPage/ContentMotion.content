@@ -15,8 +15,7 @@
         <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse8" top="429" left="141" width="27" height="27" zIndex="9" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
         <Widget xsi:type="widgets.brease.Label" id="LabelStatus13" top="427" left="14" width="116" zIndex="10" text="$IAT/LabelError" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" />
         <Widget xsi:type="widgets.brease.Button" id="ButtonErrorReset" top="429" left="204" width="148" zIndex="11" text="$IAT/BtnErrorReset" borderWidth="3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="14px" fontName="ABBvoiceLight" permissionOperate="['Administrators', 'Operator']" />
-        <Widget xsi:type="widgets.brease.Image" id="Image2" top="431" left="359" width="54" height="54" zIndex="12" image="Media/SymbolLib/Symbols/Graph.svg" />
-        <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxManual" top="30" left="-2" width="436" height="325" zIndex="13" borderWidth="0px" headerGradient="linear-gradient(to bottom,#FFFFFF 0%,#FFFFFF 100%)" borderStyle="none" shadow="0px 0px rgba(62, 79, 92, 0.75)">
+        <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxManual" top="30" left="-2" width="436" height="325" zIndex="12" borderWidth="0px" headerGradient="linear-gradient(to bottom,#FFFFFF 0%,#FFFFFF 100%)" borderStyle="none" shadow="0px 0px rgba(62, 79, 92, 0.75)">
           <Widgets>
             <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButtonPower" top="5" left="74" width="135" height="50" zIndex="0" image="Media/SymbolLib/Symbols/Energy.svg" text="$IAT/BtnPower" borderWidth="3px 3px 3px 3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="15px" fontName="ABBvoiceMedium" permissionOperate="['Administrators', 'Operator']" />
             <Widget xsi:type="widgets.brease.Button" id="ButtonStop" top="5" left="222" width="135" height="50" zIndex="1" text="$IAT/BtnStop" borderWidth="3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="15px" fontName="ABBvoiceMedium" permissionOperate="['Administrators', 'Operator']" />
@@ -74,6 +73,7 @@
             <Widget xsi:type="widgets.brease.DropDownBox" id="DropDownBoxDirSelect1" top="275" left="306" width="113" zIndex="16" dataProvider="[{'value':'0','text':'$IAT/Right'},{'value':'1','text':'$IAT/Left'}]" selectedValue="0" cornerRadius="8px" shadow="4px 1px 3px rgba(255, 113, 0, 0.75)" borderWidth="2px 2px 1px 1px" borderColor="rgba(255, 136, 0, 1)" disabledBorderColor="rgba(255, 136, 0, 1)" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontName="ABBvoiceMedium" permissionOperate="['Administrators', 'Operator']" />
           </Widgets>
         </Widget>
+        <Widget xsi:type="widgets.brease.Image" id="Image2" top="430" left="368" width="54" height="54" zIndex="13" image="Media/SymbolLib/Symbols/Graph.svg" />
       </Widgets>
     </Widget>
     <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxCoupling" top="55" left="930" width="265" height="535" zIndex="2" text="$IAT/LabelCoupling" borderWidth="2px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" fontSize="18px">
