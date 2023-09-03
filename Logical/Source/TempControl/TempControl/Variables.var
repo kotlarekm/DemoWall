@@ -22,4 +22,5 @@ VAR
 	AutoTune : BOOL := FALSE; (*If true, controller tuning is activated*)
 	ApplySettings : BOOL := FALSE; (*If true, displeyed PID parameters are applied to controller*)
 	InfoLabelIndex : USINT := 0; (*Defines info displayed on main page: 0 - auto mode; 1 - manual mode; 2 - tuning in progress; 3 - emergency stop*)
+	ShowTuningDoneDialog : BOOL := FALSE; (*If true, tuning done dialog is displayed.*)
 END_VAR

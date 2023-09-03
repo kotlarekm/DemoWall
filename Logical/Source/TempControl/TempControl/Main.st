@@ -60,6 +60,8 @@ PROGRAM _CYCLIC
 			IF MpTempController_0.TuningDone THEN
 				MpTempController_0.Tune := FALSE;
 				AutoTune := FALSE;
+				ShowTuningDoneDialog := TRUE;
+				
 				// Applying parameters to controller
 				CASE MpTempControllerParType_0.Tuning.Mode OF
 					mpTEMP_TUNING_MODE_HEAT:

@@ -177,9 +177,11 @@
         <Variable Name="RestoreSettings" />
         <Variable Name="MpTempController_0">
           <Variable Name="TuningActive" />
+          <Variable Name="TuningDone" />
         </Variable>
         <Variable Name="TempControlWidgetsEnable" />
         <Variable Name="InfoLabelIndex" />
+        <Variable Name="ShowTuningDoneDialog" />
       </Task>
       <Task Name="Recipes">
         <Variable Name="ApplyParameters" />

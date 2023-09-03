@@ -10,5 +10,6 @@
     <Object Type="Package">GraphDialog</Object>
     <Object Type="Package">PIDSettingsDialog</Object>
     <Object Type="Package">EmergencyDialog</Object>
+    <Object Type="Package">TuningDoneDialog</Object>
   </Objects>
 </Package>

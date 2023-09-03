@@ -42,6 +42,7 @@
     <EventBindingsSet refId="PIDSettingsMainContent_eventbinding" />
     <EventBindingsSet refId="PIDSettingsTopContent_eventbinding" />
     <EventBindingsSet refId="EmergencyDialogMainContent_eventbinding" />
+    <EventBindingsSet refId="TuningDoneMainContent_eventbinding" />
   </EventBindingsSets>
   <Dialogs>
     <Dialog refId="LoginDialog" />
@@ -51,6 +52,7 @@
     <Dialog refId="GraphDialog" />
     <Dialog refId="PIDSettingsDialog" />
     <Dialog refId="EmergencyDialog" />
+    <Dialog refId="TuningDoneDialog" />
   </Dialogs>
   <Contents>
     <Content refId="ContentTop" />
@@ -78,6 +80,8 @@
     <Content refId="ContentHardware" />
     <Content refId="EmergencyDialogTopContent" />
     <Content refId="EmergencyDialogMainContent" />
+    <Content refId="TuningDoneTopContent" />
+    <Content refId="TuningDoneMainContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />
