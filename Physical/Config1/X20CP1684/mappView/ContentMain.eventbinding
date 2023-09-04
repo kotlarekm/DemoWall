@@ -1,0 +1,1114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingSet id="ContentMain_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+    <EventBinding id="EventBinding_1">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gTanks.Commands.OpenTank1Valve" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLineValve1">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLineValve1">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine2Valve1">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine2Valve1">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLineValve1">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLineValve1">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine2Valve1">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine2Valve1">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_2">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gTanks.Commands.OpenTank2Valve" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine1Valve2">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine1Valve2">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine1Valve2">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine1Valve2">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine2Valve2">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine2Valve2">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine2Valve2">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine2Valve2">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_3">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gTanks.Commands.OpenTank3LeftValve" event="ValueChanged" />
+      <EventHandler condition="newValue &gt; 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine1LeftValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine1LeftValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &gt; 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine2LeftValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine2LeftValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &gt; 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine1LeftValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine1LeftValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &gt; 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine2LeftValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine2LeftValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_4">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gTanks.Commands.OpenTank3RightValve" event="ValueChanged" />
+      <EventHandler condition="newValue &gt; 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine1RightValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine1RightValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &gt; 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine1RightValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine1RightValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &gt; 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine2RightValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine2RightValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &gt; 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine2RightValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition=" newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine2RightValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_5">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gTanks.Commands.OpenTank3MainValve" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine1MainValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine1MainValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine2MainValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="HorizontalLine2MainValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue ">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine1MainValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine1MainValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine2MainValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.Rectangle.Action" contentRefId="ContentMain" widgetRefId="VerticalLine2MainValve">
+            <Method xsi:type="widgets.brease.Rectangle.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_6">
+      <Source xsi:type="opcUa.Event" refId="::Simulation:AnimationForMixer1" event="ValueChanged" />
+      <EventHandler condition="newValue &lt;= 5 OR newValue &gt;= 7">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer1Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 6">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer1Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &lt;= 4 OR newValue &gt;=6">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer2Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 5">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer2Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &lt;= 3 OR newValue &gt;= 5">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer3Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 4">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer3Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &lt;= 2 OR newValue &gt;= 4">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer4Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 3">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer4Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &lt;= 1 OR newValue &gt;= 3">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer5Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 2">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer5Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &gt;= 2">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer6Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 1 OR newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer6Left">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_7">
+      <Source xsi:type="opcUa.Event" refId="::Simulation:AnimationForMixer2" event="ValueChanged" />
+      <EventHandler condition="newValue = 1 OR newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer1Right">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &gt;= 2">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer1Right">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 2">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer2Right">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &lt;= 1 OR newValue &gt;= 3">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer2Right">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 3">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer3Right">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &lt;= 2 OR newValue &gt;= 4">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer3Right">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 4">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer4Right">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &lt;= 3 OR newValue &gt;= 5">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer4Right">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 5">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer5Right">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &lt;= 4 OR newValue &gt;=6">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer5Right">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 6 ">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer6Right">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &lt;= 5 OR newValue = 7">
+        <Action>
+          <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMain" widgetRefId="Mixer6Right">
+            <Method xsi:type="widgets.brease.Image.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_8">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gTanks.Commands.OpenTank1Valve" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="Tank1ProgressBarInside">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="Tank1ProgressBarInside">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="Tank1FirstProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="Tank1FirstProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="Tank1SecondProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="Tank1SecondProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_12">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gTanks.Commands.OpenTank3LeftValve" event="ValueChanged" />
+      <EventHandler condition="newValue &gt; 0">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="Tank1ThirdProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="Tank1ThirdProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &gt; 0">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="Tank1FourthProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="Tank1FourthProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &gt; 0">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="Tank1FifthProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="Tank1FifthProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &gt; 0">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="LeftTank3ProgressBarInside">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="LeftTank3ProgressBarInside">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_15">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gTanks.Commands.OpenTank2Valve" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="Tank2FirstProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="Tank2FirstProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="Tank2SecondProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="Tank2SecondProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="Tank2ProgressBarInside">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="Tank2ProgressBarInside">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_9">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gTanks.Commands.OpenTank3RightValve" event="ValueChanged" />
+      <EventHandler condition="newValue &gt; 0">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="Tank2ThirdProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="Tank2ThirdProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &gt; 0">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="Tank2FourthProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="Tank2FourthProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &gt; 0">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="Tank2FifthProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="Tank2FifthProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue &gt; 0">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="RightTank3ProgressBarInside">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = 0">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="RightTank3ProgressBarInside">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_11">
+      <Source xsi:type="opcUa.Event" refId="::Simulation:TanksValvesCheck" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="MergedTank3ProgressBarInside">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="MergedTank3ProgressBarInside">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_13">
+      <Source xsi:type="opcUa.Event" refId="::Simulation:LValveCheck" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="PaintProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="PaintProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_14">
+      <Source xsi:type="opcUa.Event" refId="::Simulation:RValveCheck" event="ValueChanged" />
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="WaterProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="WaterProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_16">
+      <Source xsi:type="opcUa.Event" refId="::Simulation:MixerCheck" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="MixedProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="MixedProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMain.Ellipse12.Click">
+      <Source xsi:type="widgets.brease.Ellipse.Event" contentRefId="ContentMain" widgetRefId="Ellipse7" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.OpenTank1Valve">
+            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMain.Ellipse8.Click">
+      <Source xsi:type="widgets.brease.Ellipse.Event" contentRefId="ContentMain" widgetRefId="Ellipse8" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.OpenTank2Valve">
+            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMain.Ellipse26.Click">
+      <Source xsi:type="widgets.brease.Ellipse.Event" contentRefId="ContentMain" widgetRefId="Ellipse26" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.OpenTank3MainValve">
+            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_18">
+      <Source xsi:type="opcUa.Event" refId="::Simulation:Auto" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Ellipse8">
+                <Method xsi:type="widgets.brease.Ellipse.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Mixer1Manual">
+                <Method xsi:type="widgets.brease.Ellipse.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Mixer2Manual">
+                <Method xsi:type="widgets.brease.Ellipse.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="3">
+            <Action>
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Ellipse26">
+                <Method xsi:type="widgets.brease.Ellipse.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="4">
+            <Action>
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Ellipse7">
+                <Method xsi:type="widgets.brease.Ellipse.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="5">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="LeftValveManualInput">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="6">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="RightValveManualInput">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_10">
+      <Source xsi:type="opcUa.Event" refId="::Simulation:Manual" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Ellipse8">
+                <Method xsi:type="widgets.brease.Ellipse.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Ellipse7">
+                <Method xsi:type="widgets.brease.Ellipse.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Ellipse26">
+                <Method xsi:type="widgets.brease.Ellipse.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="3">
+            <Action>
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Mixer1Manual">
+                <Method xsi:type="widgets.brease.Ellipse.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="4">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="LeftValveManualInput">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="5">
+            <Action>
+              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="RightValveManualInput">
+                <Method xsi:type="widgets.brease.NumericInput.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="6">
+            <Action>
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Mixer2Manual">
+                <Method xsi:type="widgets.brease.Ellipse.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_19">
+      <Source xsi:type="opcUa.Event" refId="::Simulation:ProgressBarPaintManual" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="PaintProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="PaintProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_20">
+      <Source xsi:type="opcUa.Event" refId="::Simulation:ProgressBarWaterManual" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="WaterProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="WaterProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_21">
+      <Source xsi:type="opcUa.Event" refId="::Simulation:ProgressBarNotMixedManual" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="NotMixedProgressBar">
+                <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="PaintProgressBar">
+                <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="WaterProgressBar">
+                <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="NotMixedProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMain.RegulatorSettingsBtn.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMain" widgetRefId="RegulatorSettingsBtn" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="PIDSettingsDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMain.Mixer1Manual.Click">
+      <Source xsi:type="widgets.brease.Ellipse.Event" contentRefId="ContentMain" widgetRefId="Mixer1Manual" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.TurnOnMixer1">
+            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMain.Ellipse28.Click">
+      <Source xsi:type="widgets.brease.Ellipse.Event" contentRefId="ContentMain" widgetRefId="Mixer2Manual" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.TurnOnMixer2">
+            <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMain.AutoBtn.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMain" widgetRefId="AutoBtn" event="Click" />
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Simulation:Auto">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Simulation:Manual">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMain.ManualBtn.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMain" widgetRefId="ManualBtn" event="Click" />
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Simulation:Auto">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Simulation:Manual">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMain.ProcessStartButton.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMain" widgetRefId="ProcessStartButton" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.Start">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="MainPageLoaded">
+      <Source xsi:type="clientSystem.Event" event="ContentLoaded" />
+      <EventHandler>
+        <Action>
+          <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::TempContro:InfoLabelIndex">
+            <Method xsi:type="opcUa.NodeAction.GetValue" />
+          </ReadTarget>
+          <Result>
+            <ResultHandler condition="result=0">
+              <Action>
+                <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentMain" widgetRefId="TempControlInfoLabel">
+                  <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/AutoMode" />
+                </Target>
+              </Action>
+            </ResultHandler>
+            <ResultHandler condition="result=1">
+              <Action>
+                <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentMain" widgetRefId="TempControlInfoLabel">
+                  <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/ManualMode" />
+                </Target>
+              </Action>
+            </ResultHandler>
+            <ResultHandler condition="result=2">
+              <Action>
+                <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentMain" widgetRefId="TempControlInfoLabel">
+                  <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/TuningInProgress" />
+                </Target>
+              </Action>
+            </ResultHandler>
+            <ResultHandler condition="result=3">
+              <Action>
+                <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentMain" widgetRefId="TempControlInfoLabel">
+                  <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/EmergencyStop" />
+                </Target>
+              </Action>
+            </ResultHandler>
+          </Result>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="InfoLabelIndexChanged">
+      <Source xsi:type="opcUa.Event" refId="::TempContro:InfoLabelIndex" event="ValueChanged" />
+      <EventHandler condition="newValue=0">
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentMain" widgetRefId="TempControlInfoLabel">
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/AutoMode" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=1">
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentMain" widgetRefId="TempControlInfoLabel">
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/ManualMode" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=2">
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentMain" widgetRefId="TempControlInfoLabel">
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/TuningInProgress" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=3">
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentMain" widgetRefId="TempControlInfoLabel">
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/EmergencyStop" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Bindings>
+</EventBindingSet>

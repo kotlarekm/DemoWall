@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT</prop>
+  </header>
+  <body>
+    <tu tuid="CurrentUser">
+      <tuv xml:lang="pl">
+        <seg>Aktualny użytkownik:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Current user:</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Servus Welt!</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Alarms">
+      <tuv xml:lang="pl">
+        <seg>Alarmy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Alarms</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Recipes">
+      <tuv xml:lang="pl">
+        <seg>Receptury</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Recipes</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Settings">
+      <tuv xml:lang="pl">
+        <seg>Ustawienia</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Settings</seg>
+      </tuv>
+    </tu>
+    <tu tuid="IO">
+      <tuv xml:lang="pl">
+        <seg>Wejścia/Wyjścia</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Inputs/Outputs</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Motion">
+      <tuv xml:lang="pl">
+        <seg>Napędy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Motion</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Main">
+      <tuv xml:lang="pl">
+        <seg>Strona główna</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Main Page</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

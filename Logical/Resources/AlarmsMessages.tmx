@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">AlarmsMessages</prop>
+  </header>
+  <body>
+    <tu tuid="E-stop">
+      <tuv xml:lang="pl">
+        <seg>Naciśnięto przycisk awaryjny!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Emergency button pressed!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank1FluidLvlHigh">
+      <tuv xml:lang="pl">
+        <seg>Poziom cieczy w zbiorniku nr 1 jest za wysoki!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Fluid level in the tank 1  is too high!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank2FluidLvlHigh">
+      <tuv xml:lang="pl">
+        <seg>Poziom cieczy w zbiorniku nr 2 jest za wysoki!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Fluid level in the tank 2  is too high!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3FluidLvlHigh">
+      <tuv xml:lang="pl">
+        <seg>Poziom cieczy w zbiorniku nr 3 jest za wysoki!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Fluid level in the tank 3  is too high!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3PressureHigh">
+      <tuv xml:lang="pl">
+        <seg>Ciśnienie w zbiorniku 3 jest za wysokie!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Pressure in tank 3 is too high!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3TempHigh">
+      <tuv xml:lang="pl">
+        <seg>Temperatura w zbiorniku 3 jest za wysoka!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Temperature in tank 3 is too high!</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Servus Welt!</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Mixer1VelocityHigh">
+      <tuv xml:lang="pl">
+        <seg>Prędkość mieszadła 1 jest za duża!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Velocity mixer 1 is too high!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Mixer2VelocityHigh">
+      <tuv xml:lang="pl">
+        <seg>Prędkość mieszadła 2 jest za duża!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Velocity mixer 2 is too high!</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

@@ -4,5 +4,8 @@
   <Objects>
     <Object Type="Package">SafeApplication</Object>
     <Object Type="Package">SafeCommissioning</Object>
+    <Object Type="File">Config.sfdomain</Object>
+    <Object Type="File">Settings_1.sfcfg</Object>
+    <Object Type="File">Safety.swt</Object>
   </Objects>
 </Package>

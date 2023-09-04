@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pdef:Page xmlns:pdef="http://www.br-automation.com/iat2015/pageDefinition/v2" id="IOPage" layoutRefId="MainLayout">
+  <Assignments>
+    <Assignment type="Content" baseContentRefId="ContentTop" areaRefId="AreaTop" />
+    <Assignment type="Content" baseContentRefId="ContentNavigation" areaRefId="AreaNavigation" backColor="rgba(255, 136, 0, 1)" backGroundGradient="linear-gradient(to bottom, rgba(255, 136, 0, 1) 0%, rgba(255, 170, 68, 1) 50%, rgba(255, 204, 119, 1) 100%)" />
+    <Assignment type="Content" baseContentRefId="ContentIO" areaRefId="AreaMain" />
+  </Assignments>
+</pdef:Page>

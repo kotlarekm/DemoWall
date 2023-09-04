@@ -7,5 +7,8 @@
     <Object Type="Package">Alarms</Object>
     <Object Type="Package">Simulation</Object>
     <Object Type="Package">Motion</Object>
+    <Object Type="Package">TempControl</Object>
+    <Object Type="Package">IO</Object>
+    <Object Type="Package">PressureControl</Object>
   </Objects>
 </Package>

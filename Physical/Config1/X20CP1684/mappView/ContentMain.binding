@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="ContentMain_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Parameters.Tank1TargetFluidLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Target1FluidLvlAutoInput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Parameters.Tank2TargetFluidLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Target2FluidLvlAutoInput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Parameters.Tank3TargetFluidLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Target3FluidLvlAutoInput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Parameters.Tank3LeftValveOpeningLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Tank3ValveOpeningLeftAutoInput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Parameters.Tank3RightValveOpeningLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Tank3ValveOpeningRightAutoInput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Parameters.Mixer1On" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Mixer1Autonput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Parameters.Mixer2On" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Mixer2AutoInput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Parameters.MixingTime" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="MixingTimeAutoInput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank1FluidLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericOutput10" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank2FluidLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericOutput8" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank3FluidLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericOutput9" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.IsMixer1On" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericOutput6" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.IsMixer2On" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericOutput7" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank2FluidLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="ProgressBar20" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank1FluidLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="ProgressBar21" attribute="node" />
+</Binding>		
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank3FluidLvl" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="MixedProgressBar" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank3FluidLvl" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="WaterProgressBar" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank3FluidLvl" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NotMixedProgressBar" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank3FluidLvl" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="PaintProgressBar" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::TempContro:TempInReal" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="TempChart" attribute="graph[graph1].node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::TempContro:ManualON" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="TempManualToggleBtn" attribute="value" />
+</Binding>
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::TempContro:FanPWMDuty" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="FanPWMSlider" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::TempContro:HeaterPWMDuty" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="HeaterPWMSlider" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Commands.OpenTank3RightValve" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="RightValveManualInput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Commands.OpenTank3LeftValve" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="LeftValveManualInput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank3FluidLvl" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NotMixedProgressBarAuto" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Parameters.Tank3TargetPressure" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="MixingTimeAutoInput1" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank3Pressure" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="TempChart1" attribute="graph[graph1].node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Status.Tank3Pressure" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="RadialGaugeKnob1" attribute="value" />
+</Binding>
+
+
+
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Simulation:StartBtnEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="ProcessStartButton" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Simulation:AutoBtnEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="AutoBtn" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Simulation:ManualBtnEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="ManualBtn" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Simulation:NumericInputsEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Target1FluidLvlAutoInput" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Simulation:NumericInputsEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="MixingTimeAutoInput1" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Simulation:NumericInputsEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="MixingTimeAutoInput" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Simulation:NumericInputsEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Mixer1Autonput" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Simulation:NumericInputsEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Tank3ValveOpeningRightAutoInput" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Simulation:NumericInputsEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Target3FluidLvlAutoInput" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Simulation:NumericInputsEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Target2FluidLvlAutoInput" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Simulation:NumericInputsEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Tank3ValveOpeningLeftAutoInput" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Simulation:NumericInputsEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="Mixer2AutoInput" attribute="enable" />
+</Binding>
+
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::TempContro:TempControlWidgetsEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="TempManualToggleBtn" attribute="enable" />
+</Binding>
+
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::TempContro:ManualON" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="HeaterPWMSlider" attribute="enable" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::TempContro:ManualON" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="FanPWMSlider" attribute="enable" />
+</Binding>
+</Bindings>
+</BindingsSet>

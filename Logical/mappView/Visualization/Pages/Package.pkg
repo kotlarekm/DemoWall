@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package SubType="PagesPackage" PackageType="PagesPackage" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Package" Description="AreaContents">AreaContents</Object>
+    <Object Type="Package">MainPage</Object>
+    <Object Type="Package">RecipesPage</Object>
+    <Object Type="Package">AlarmsPage</Object>
+    <Object Type="Package">MotionPage</Object>
+    <Object Type="Package">SettingsPage</Object>
+    <Object Type="Package">IOPage</Object>
+    <Object Type="Package">PDFViewer</Object>
+    <Object Type="Package">SDMPage</Object>
+    <Object Type="Package">HardwarePage</Object>
+  </Objects>
+</Package>

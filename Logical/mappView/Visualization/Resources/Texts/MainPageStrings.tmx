@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT</prop>
+  </header>
+  <body>
+    <tu tuid="ManualControl">
+      <tuv xml:lang="pl">
+        <seg>Sterowanie ręczne:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Manual control:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="PIDSettings">
+      <tuv xml:lang="pl">
+        <seg>Ustawienia PID</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>PID settings</seg>
+      </tuv>
+    </tu>
+    <tu tuid="HeaterPWM">
+      <tuv xml:lang="pl">
+        <seg>PWM grzałki:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Heater PWM:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="FanPWM">
+      <tuv xml:lang="pl">
+        <seg>PWM wentylatora:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Fan PWM:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Inputs">
+      <tuv xml:lang="pl">
+        <seg>Wejścia</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Inputs</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Outputs">
+      <tuv xml:lang="pl">
+        <seg>Wyjścia</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Outputs</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Temp">
+      <tuv xml:lang="pl">
+        <seg>Temperatura</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Temperature</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Pressure">
+      <tuv xml:lang="pl">
+        <seg>Ciśnienie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Pressure</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Manual">
+      <tuv xml:lang="pl">
+        <seg>Manualny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Manual</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3Pressure">
+      <tuv xml:lang="pl">
+        <seg>Ciśnienie w zbiorniku 3</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Tank 3 pressure</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank1">
+      <tuv xml:lang="pl">
+        <seg>Zbiornik 1:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Tank 1:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank2">
+      <tuv xml:lang="pl">
+        <seg>Zbiornik 2:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Tank 2:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3">
+      <tuv xml:lang="pl">
+        <seg>Zbiornik 3:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Tank 3:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="FirstMixer">
+      <tuv xml:lang="pl">
+        <seg>Mikser 1:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Mixer 1:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SecondMixer">
+      <tuv xml:lang="pl">
+        <seg>Mikser 2:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Mixer 2:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="FluidLvl">
+      <tuv xml:lang="pl">
+        <seg>Poziom cieczy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Fluid level</seg>
+      </tuv>
+    </tu>
+    <tu tuid="MixersStatus">
+      <tuv xml:lang="pl">
+        <seg>Status mikserów</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Mixers status</seg>
+      </tuv>
+    </tu>
+    <tu tuid="TargetFluidLvl">
+      <tuv xml:lang="pl">
+        <seg>Docelowy poziom cieczy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Target fluid level</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ValvesOpeningLvl">
+      <tuv xml:lang="pl">
+        <seg>Poziom otwarcia zaworów</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Valve opening level</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LeftValve">
+      <tuv xml:lang="pl">
+        <seg>Lewy:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Left:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="RightValve">
+      <tuv xml:lang="pl">
+        <seg>Prawy:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Right:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="MixerONOF">
+      <tuv xml:lang="pl">
+        <seg>Mikser Wł/Wył</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Mixer ON/OFF</seg>
+      </tuv>
+    </tu>
+    <tu tuid="MixingT">
+      <tuv xml:lang="pl">
+        <seg>Czas mieszania</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Mixing time</seg>
+      </tuv>
+    </tu>
+    <tu tuid="PressureInTank3">
+      <tuv xml:lang="pl">
+        <seg>Ciśnienie w zbiorniku 3</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Pressure in tank 3</seg>
+      </tuv>
+    </tu>
+    <tu tuid="TuningInProgress">
+      <tuv xml:lang="pl">
+        <seg>Strojenie w toku...</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Tuning in progress...</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ManualMode">
+      <tuv xml:lang="pl">
+        <seg>Tryb manualny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Manual mode</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AutoMode">
+      <tuv xml:lang="pl">
+        <seg>Tryb automatyczny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Auto mode</seg>
+      </tuv>
+    </tu>
+    <tu tuid="TuningDone">
+      <tuv xml:lang="pl">
+        <seg>Strojenie ukończone.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Tuning done.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="EmergencyStop">
+      <tuv xml:lang="pl">
+        <seg>Wyłączenie awaryjne!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Emergency stop!</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ddef:Dialog xmlns:ddef="http://www.br-automation.com/iat2015/dialogDefinition/v2" id="PIDSettingsDialog" layoutRefId="PIDSettingsLayout" headerHeight="0px" headerBorderStyle="none" showCloseButton="false">
+  <Assignments>
+    <Assignment type="Content" baseContentRefId="PIDSettingsMainContent" areaRefId="AreaMain" />
+    <Assignment type="Content" baseContentRefId="PIDSettingsTopContent" areaRefId="AreaTop" backGroundGradient="linear-gradient(to right, rgba(255, 136, 0, 1) 0%, rgba(255, 170, 68, 1) 50%, rgba(255, 204, 119, 1) 100%)" />
+  </Assignments>
+</ddef:Dialog>

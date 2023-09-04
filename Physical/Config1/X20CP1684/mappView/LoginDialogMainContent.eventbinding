@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingSet id="LoginDialogMainContent_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+    <EventBinding id="LoginDialogMainContent.LoginButton.LoginSuccess">
+      <Source xsi:type="widgets.brease.LoginButton.Event" contentRefId="LoginDialogMainContent" widgetRefId="LoginButton" event="LoginSuccess" />
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.TextInput.Action" contentRefId="LoginDialogMainContent" widgetRefId="LoginInput">
+                <Method xsi:type="widgets.brease.TextInput.Action.SetValue" value="" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Password.Action" contentRefId="LoginDialogMainContent" widgetRefId="PasswordInput">
+                <Method xsi:type="widgets.brease.Password.Action.SetValue" value="" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.LoginButton.Action" contentRefId="LoginDialogMainContent" widgetRefId="LoginButton">
+                <Method xsi:type="widgets.brease.LoginButton.Action.SetUserName" userName="" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="3">
+            <Action>
+              <Target xsi:type="widgets.brease.LoginButton.Action" contentRefId="LoginDialogMainContent" widgetRefId="LoginButton">
+                <Method xsi:type="widgets.brease.LoginButton.Action.SetPassword" password="" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="4">
+            <Action>
+              <Target xsi:type="clientSystem.Action">
+                <Method xsi:type="clientSystem.Action.CloseDialog" dialogId="LoginDialog" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="LoginDialogMainContent.LoginButton.AuthentificationFailed">
+      <Source xsi:type="widgets.brease.LoginButton.Event" contentRefId="LoginDialogMainContent" widgetRefId="LoginButton" event="AuthentificationFailed" />
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="LoginDialogMainContent" widgetRefId="LoginInfo">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Password.Action" contentRefId="LoginDialogMainContent" widgetRefId="PasswordInput">
+                <Method xsi:type="widgets.brease.Password.Action.SetValue" value="" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="LoginDialogMainContent" widgetRefId="LoginInfo">
+                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/AuthorizationFailedMsg" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="LoginInfoReset">
+      <Source xsi:type="clientSystem.Event" event="DialogOpened" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="LoginDialogMainContent" widgetRefId="LoginInfo">
+            <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="LoginDialogMainContent.LoginInput.ValueChanged">
+      <Source xsi:type="widgets.brease.TextInput.Event" contentRefId="LoginDialogMainContent" widgetRefId="LoginInput" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.LoginButton.Action" contentRefId="LoginDialogMainContent" widgetRefId="LoginButton">
+            <Method xsi:type="widgets.brease.LoginButton.Action.SetUserName" userName="=value" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="LoginDialogMainContent.PasswordInput.ValueChanged">
+      <Source xsi:type="widgets.brease.Password.Event" contentRefId="LoginDialogMainContent" widgetRefId="PasswordInput" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="widgets.brease.LoginButton.Action" contentRefId="LoginDialogMainContent" widgetRefId="LoginButton">
+            <Method xsi:type="widgets.brease.LoginButton.Action.SetPassword" password="=value" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="LoginDialogMainContent.LoginDialogLogoutButton.Click">
+      <Source xsi:type="widgets.brease.LogoutButton.Event" contentRefId="LoginDialogMainContent" widgetRefId="LoginDialogLogoutButton" event="Click" />
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="LoginDialogMainContent" widgetRefId="LoginInfo">
+                <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/LogedOut" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Label.Action" contentRefId="LoginDialogMainContent" widgetRefId="LoginInfo">
+                <Method xsi:type="widgets.brease.Label.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+  </Bindings>
+</EventBindingSet>

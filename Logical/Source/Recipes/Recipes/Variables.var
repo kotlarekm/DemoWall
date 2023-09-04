@@ -1,8 +1,29 @@
-
 VAR
-
+	DeviceChenged : BOOL := FALSE; (*Variable informing about change of data device*)
+	DropDownBoxNamesCollection : ARRAY[0..49] OF STRING[100]; (*Item collection containing recipe names*)
+	MpFileManagerUIConnect_0 : MpFileManagerUIConnectType := (DeviceList:=(DeviceNames:=['HDD',9('')],SelectedIndex:=0),File:=(Filter:='.xml')); (*Structure used in MpFileManagerUI setup. Contains information about files in directory.*)
+	MpFileManagerUISetup_0 : MpFileManagerUISetupType; (*Structure used in MpFileManagerUI setup.*)
+	MpFileManagerUI_0 : MpFileManagerUI; (*Function block used for managing files*)
+	MpRecipeRegPar_0 : MpRecipeRegPar; (*Function block used to link parameters structure to recipes system*)
+	MpRecipeXml_0 : MpRecipeXml; (*Function block used for managing recipes*)
+	NewRecipeSelected : BOOL := FALSE; (*Information about new recipe being selected*)
+	NodeIdList : ARRAY[0..2] OF UDINT; (*Contains Id of usb devices*)
+	SetDefaultParams : BOOL := FALSE; (*If true, default parameters are loaded*)
 END_VAR
-
 VAR CONSTANT
-
+	DefaultParameters : ParametersType := (ObjectType:=(Mode:=0),Tank3MaxAllowedPressure:=10,Tank3MaxAllowedTemp:=70,Tank3LeftValveOpeningLvl:=50,Tank3RightValveOpeningLvl:=50,MixingTime:=5000,Mixer2On:=1,Mixer1On:=1,Tank3TargetFluidLvl:=5000,Tank2TargetFluidLvl:=3000,Tank1TargetFluidLvl:=3000,Tank3MaxAllowedFluidLvl:=9000,Tank2MaxAllowedFluidLvl:=9000,Tank1MaxAllowedFluidLvl:=9000,Mixer1MaxAllowedVelocity:=720,Mixer2MaxAllowedVelocity:=720,Tank3TargetTemp:=40,Tank3TargetPressure:=5,InertialTermTimeConstant:=5,InertialTermGain:=1); (*Parameters loaded at programs start and in when default parameters button is pressed*)
+END_VAR
+VAR
+	ParametersToLoad : ParametersType; (*Object parameters which can be load into gTanks.Parameters*)
+	PreviousNumberOfUSBDevices : UDINT := 0; (*Stores information about number of devices before plug/unplug*)
+	RecipeName : STRING[80] := 'NewRecipe'; (*String containing name of currently selected recipe*)
+	RecipesList : ARRAY[0..49] OF STRING[255] := ['RandomRecipe',49('')]; (*List of recipe names*)
+	SelectedRecipeIndex : USINT := 0; (*Index of recipe selected in dropdownbox on recipe page*)
+	USB1Aveliable : BOOL := FALSE; (*True if usb in port 1 is detected*)
+	USB2Aveliable : BOOL := FALSE; (*True if usb in port 2 is detected*)
+	UsbNodeListGet_0 : UsbNodeListGet; (*Function block resposble for reading and saving recipes on usb drive*)
+	WaitingForDelete : BOOL := FALSE; (*Variable informing about the recipe waiting to be deleted*)
+	WaitingForLoad : BOOL := FALSE; (*Variable informing about the recipe waiting to be loaded *)
+	WaitingForSave : BOOL := FALSE; (*Variable informing about the recipe waiting to be saved*)
+	ApplyParameters : BOOL := FALSE; (*If true apply recipe parameters to real object.*)
 END_VAR

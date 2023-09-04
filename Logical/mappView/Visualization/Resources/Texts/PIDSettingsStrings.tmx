@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT</prop>
+  </header>
+  <body>
+    <tu tuid="PIDSettingsWinLabel">
+      <tuv xml:lang="pl">
+        <seg>Ustawienia regulatora PID</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>PID controller settings</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Servus Welt!</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AutoTune">
+      <tuv xml:lang="pl">
+        <seg>Auto-tuning</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Auto-tune</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Heat">
+      <tuv xml:lang="pl">
+        <seg>Grzanie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Heating</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Cool">
+      <tuv xml:lang="pl">
+        <seg>Chłodzenie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Cooling</seg>
+      </tuv>
+    </tu>
+    <tu tuid="IntegratorPreloading">
+      <tuv xml:lang="pl">
+        <seg>Początkowa wartość bloku całkującego:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Integrator preloading:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="HisterezisCoolToHeat">
+      <tuv xml:lang="pl">
+        <seg>Chłodzenie-Grzanie:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Cooling-Heating:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="HisteresisHeatToCool">
+      <tuv xml:lang="pl">
+        <seg>Grzanie-Chłodzenie:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Heating-Cooling:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Histeresis">
+      <tuv xml:lang="pl">
+        <seg>Histereza</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Histeresis</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tuning">
+      <tuv xml:lang="pl">
+        <seg>Tuning</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Tuning</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Mode">
+      <tuv xml:lang="pl">
+        <seg>Typ:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Mode:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SetPointHeat">
+      <tuv xml:lang="pl">
+        <seg>Wartość zadana grzania:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Heating setpoint:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SetPointCool">
+      <tuv xml:lang="pl">
+        <seg>Wartość zadana chłodzenia:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Cooling setpoint:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CancelTuning">
+      <tuv xml:lang="pl">
+        <seg>Anuluj tuning</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Cancel tuning</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

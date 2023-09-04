@@ -1,0 +1,3 @@
+VAR
+	gDriveStop : BOOL;
+END_VAR

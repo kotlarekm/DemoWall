@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT</prop>
+  </header>
+  <body>
+    <tu tuid="Language">
+      <tuv xml:lang="pl">
+        <seg>Język</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Language</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Servus Welt!</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="MeasurementSystem">
+      <tuv xml:lang="pl">
+        <seg>System miar</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Measurement system</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Users">
+      <tuv xml:lang="pl">
+        <seg>Użytkownicy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Users</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Username">
+      <tuv xml:lang="pl">
+        <seg>Nazwa użytkownika</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Username</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Roles">
+      <tuv xml:lang="pl">
+        <seg>Role</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Roles</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LastLogin">
+      <tuv xml:lang="pl">
+        <seg>Ostatnie logowanie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Last login</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Documentation">
+      <tuv xml:lang="pl">
+        <seg>Dokumentacja</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Documentation</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Back">
+      <tuv xml:lang="pl">
+        <seg>Wróć</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Back</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Hardware">
+      <tuv xml:lang="pl">
+        <seg>Urządzenia</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Hardware</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="PIDSettingsMainContent_binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::TempContro:MpTempControllerParType_1.PID.Heat.IntegrationTime" attribute="node" />
+<Target xsi:type="brease" contentRefId="PIDSettingsMainContent" widgetRefId="HeatingTiNumericInput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::TempContro:MpTempControllerParType_1.PID.Heat.DerivativeTime" attribute="node" />
+<Target xsi:type="brease" contentRefId="PIDSettingsMainContent" widgetRefId="HeatingTdNumericInput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::TempContro:MpTempControllerParType_1.PID.Heat.ProportionalGain" attribute="node" />
+<Target xsi:type="brease" contentRefId="PIDSettingsMainContent" widgetRefId="HeatingPNumericInput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::TempContro:MpTempControllerParType_1.PID.Heat.FilterTime" attribute="node" />
+<Target xsi:type="brease" contentRefId="PIDSettingsMainContent" widgetRefId="HeatingTfNumericInput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::TempContro:MpTempControllerParType_1.PID.Cool.IntegrationTime" attribute="node" />
+<Target xsi:type="brease" contentRefId="PIDSettingsMainContent" widgetRefId="CoolingTiNumericInput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::TempContro:MpTempControllerParType_1.PID.Cool.DerivativeTime" attribute="node" />
+<Target xsi:type="brease" contentRefId="PIDSettingsMainContent" widgetRefId="CoolingTdNumericInput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::TempContro:MpTempControllerParType_1.PID.Cool.ProportionalGain" attribute="node" />
+<Target xsi:type="brease" contentRefId="PIDSettingsMainContent" widgetRefId="CoolingPNumericInput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::TempContro:MpTempControllerParType_1.PID.Cool.FilterTime" attribute="node" />
+<Target xsi:type="brease" contentRefId="PIDSettingsMainContent" widgetRefId="CoolingTfNumericInput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::TempContro:MpTempControllerParType_1.PID.IntegratorPreloading" attribute="node" />
+<Target xsi:type="brease" contentRefId="PIDSettingsMainContent" widgetRefId="IntegratorPreloadingNumericInput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::TempContro:MpTempControllerParType_1.Hysteresis.Band.HeatToCool" attribute="node" />
+<Target xsi:type="brease" contentRefId="PIDSettingsMainContent" widgetRefId="HeatingToCoolingNumericInput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::TempContro:MpTempControllerParType_1.Hysteresis.Band.CoolToHeat" attribute="node" />
+<Target xsi:type="brease" contentRefId="PIDSettingsMainContent" widgetRefId="CoolingToHeatingNumericInput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::TempContro:MpTempControllerParType_1.Tuning.SetPointCool" attribute="node" />
+<Target xsi:type="brease" contentRefId="PIDSettingsMainContent" widgetRefId="SetPointCoolNumericInput" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::TempContro:MpTempControllerParType_1.Tuning.SetPointHeat" attribute="node" />
+<Target xsi:type="brease" contentRefId="PIDSettingsMainContent" widgetRefId="SetPointHeatNumericInput" attribute="node" />
+</Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::TempContro:MpTempControllerParType_1.Tuning.Mode" attribute="value" />
+<Target xsi:type="brease" contentRefId="PIDSettingsMainContent" widgetRefId="DropDownBoxTuningMode" attribute="selectedIndex" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::TempContro:TempControlWidgetsEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="PIDSettingsMainContent" widgetRefId="PIDSettingsAutotuneBtn1" attribute="enable" />
+</Binding>
+</Bindings>
+</BindingsSet>

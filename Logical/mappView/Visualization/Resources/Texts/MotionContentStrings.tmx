@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT</prop>
+  </header>
+  <body>
+    <tu tuid="LabelControls">
+      <tuv xml:lang="pl">
+        <seg>Sterowanie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Controls</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Servus Welt!</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="BtnStop">
+      <tuv xml:lang="pl">
+        <seg>Stop</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Stop</seg>
+      </tuv>
+    </tu>
+    <tu tuid="BtnPower">
+      <tuv xml:lang="pl">
+        <seg>Zasilanie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Power</seg>
+      </tuv>
+    </tu>
+    <tu tuid="BtnMoveVelocity">
+      <tuv xml:lang="pl">
+        <seg>Ruch o stałej prędkości</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Move velocity</seg>
+      </tuv>
+    </tu>
+    <tu tuid="BtnMoveAdditive">
+      <tuv xml:lang="pl">
+        <seg>Ruch addytywny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Move additive</seg>
+      </tuv>
+    </tu>
+    <tu tuid="BtnMoveAbsolute">
+      <tuv xml:lang="pl">
+        <seg>Ruch absolutny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Move absolute</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelSetVelocity">
+      <tuv xml:lang="pl">
+        <seg>Ustaw prędkość</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Set velocity</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelSetDistance">
+      <tuv xml:lang="pl">
+        <seg>Ustaw dystans</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Set distance</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelSetPosition">
+      <tuv xml:lang="pl">
+        <seg>Ustaw pozycje</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Set position</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelSetAcceleration">
+      <tuv xml:lang="pl">
+        <seg>Ustaw przyśpieszenie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Set acceleration</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelSetDeceleration">
+      <tuv xml:lang="pl">
+        <seg>Ustaw opóźnienie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Set deceleration</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelSetDirection">
+      <tuv xml:lang="pl">
+        <seg>Ustaw kierunek</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Set direction</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelPowerON">
+      <tuv xml:lang="pl">
+        <seg>Zasilanie ON</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Power ON</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelRunning">
+      <tuv xml:lang="pl">
+        <seg>W ruchu</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Running</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelError">
+      <tuv xml:lang="pl">
+        <seg>Błąd</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Error</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelVelocity">
+      <tuv xml:lang="pl">
+        <seg>Prędkość</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Velocity</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelPosition">
+      <tuv xml:lang="pl">
+        <seg>Pozycja</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Position</seg>
+      </tuv>
+    </tu>
+    <tu tuid="BtnErrorReset">
+      <tuv xml:lang="pl">
+        <seg>Reset  błędów</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Error reset</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelCoupling">
+      <tuv xml:lang="pl">
+        <seg>Sprzęganie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Coupling</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelSelectCouplingMode">
+      <tuv xml:lang="pl">
+        <seg>Wybierz tryb sprzęgania</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Select coupling mode</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelCam">
+      <tuv xml:lang="pl">
+        <seg>Krzywka</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Cam</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelGear">
+      <tuv xml:lang="pl">
+        <seg>Przekładnia</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Gear</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelCamSelect">
+      <tuv xml:lang="pl">
+        <seg>Wybór krzywki</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Cam select</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelCouplingEstablished">
+      <tuv xml:lang="pl">
+        <seg>Sprzęganie ustalone</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Coupling Established</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LabelManualMode">
+      <tuv xml:lang="pl">
+        <seg>Tryb Manualny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Manual</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Cam1">
+      <tuv xml:lang="pl">
+        <seg>Krzywka 1</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Cam 1</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Cam2">
+      <tuv xml:lang="pl">
+        <seg>Krzywka 2</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Cam 2</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Right">
+      <tuv xml:lang="pl">
+        <seg>Prawo</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Right</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Left">
+      <tuv xml:lang="pl">
+        <seg>Lewo</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Left</seg>
+      </tuv>
+    </tu>
+    <tu tuid="MixerPrimary">
+      <tuv xml:lang="pl">
+        <seg>Mikser główny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Mixer primary</seg>
+      </tuv>
+    </tu>
+    <tu tuid="MixerSecondary">
+      <tuv xml:lang="pl">
+        <seg>Mikser poboczny</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Mixer secondary</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

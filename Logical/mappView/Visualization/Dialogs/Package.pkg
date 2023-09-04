@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package SubType="DialogsPackage" PackageType="DialogsPackage" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Package" Description="AreaContents">AreaContents</Object>
+    <Object Type="Package">LoginDialog</Object>
+    <Object Type="Package">DeleteFileDialog</Object>
+    <Object Type="Package">ApplyRecipeDialog</Object>
+    <Object Type="Package">InfoDialog</Object>
+    <Object Type="Package">GraphDialog</Object>
+    <Object Type="Package">PIDSettingsDialog</Object>
+    <Object Type="Package">EmergencyDialog</Object>
+    <Object Type="Package">TuningDoneDialog</Object>
+  </Objects>
+</Package>

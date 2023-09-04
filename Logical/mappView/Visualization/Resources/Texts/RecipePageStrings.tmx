@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT</prop>
+  </header>
+  <body>
+    <tu tuid="SelectRecipe">
+      <tuv xml:lang="pl">
+        <seg>Wybierz recepturę:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Select recipe:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Mixer1">
+      <tuv xml:lang="pl">
+        <seg>Włącz mikser 1:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Turn on mixer 1: </seg>
+      </tuv>
+    </tu>
+    <tu tuid="Mixer2">
+      <tuv xml:lang="pl">
+        <seg>Włącz mikser 2:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Turn on mixer 2:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3MaxAllowedPressure">
+      <tuv xml:lang="pl">
+        <seg>Maksymalne ciśnienie w zbiorniku 3:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Tank 3 max pressure:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3MaxAllowedTemp">
+      <tuv xml:lang="pl">
+        <seg>Maksymalna temperatura w zbiorniku 3:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Tank 3 max temperature:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3LeftValveOpeningLvl">
+      <tuv xml:lang="pl">
+        <seg>Stopień otwarcia lewego zaworu:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Left valve opening level:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3RightValveOpeningLvl">
+      <tuv xml:lang="pl">
+        <seg>Stopień otwarcia prawego zaworu:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Right valve opening level:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="MixingTime">
+      <tuv xml:lang="pl">
+        <seg>Czas miksowania:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Mixing time:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3TargetFluidLvl">
+      <tuv xml:lang="pl">
+        <seg>Poziom płynu w zbiorniku 3:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Tank 3 fluid level:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank1TargetFluidLvl">
+      <tuv xml:lang="pl">
+        <seg>Poziom płynu w zbiorniku 1:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Tank 1 fluid level:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank2TargetFluidLvl">
+      <tuv xml:lang="pl">
+        <seg>Poziom płynu w zbiorniku 2:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Tank 2 fluid level:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="EnterRecipeName">
+      <tuv xml:lang="pl">
+        <seg>Wprowadź nazwę receptury:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Enter recipe name:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Save">
+      <tuv xml:lang="pl">
+        <seg>Zapisz</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Save</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Restore">
+      <tuv xml:lang="pl">
+        <seg>Przywróć</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Restore</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SelectDevice">
+      <tuv xml:lang="pl">
+        <seg>Wybierz nośnik:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Select data device:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Apply">
+      <tuv xml:lang="pl">
+        <seg>Zastosuj</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Apply</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3TargetTempLvl">
+      <tuv xml:lang="pl">
+        <seg>Temperatura w zbiorniku 3:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Tank 3 temperature:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="DefaultParams">
+      <tuv xml:lang="pl">
+        <seg>Wartości domyślne</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Default values</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SetValues">
+      <tuv xml:lang="pl">
+        <seg>Wartości zadane</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Set values</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CriticalValues">
+      <tuv xml:lang="pl">
+        <seg>Wartości krytyczne</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Critical values</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank1MaxAllowedFluid">
+      <tuv xml:lang="pl">
+        <seg>Maksymalny poziom cieczy w zbiorniku 1:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Tank 1 max fluid level:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank2MaxAllowedFluid">
+      <tuv xml:lang="pl">
+        <seg>Maksymalny poziom cieczy w zbiorniku 2:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Tank 2 max fluid level:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3MaxAllowedFluid">
+      <tuv xml:lang="pl">
+        <seg>Maksymalny poziom cieczy w zbiorniku 3:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Tank 3 max fluid level:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Mixer1MaxVelocity">
+      <tuv xml:lang="pl">
+        <seg>Maksymalna prędkość dla miksera 1:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Mixer 1 max velocity:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Mixer2MaxVelocity">
+      <tuv xml:lang="pl">
+        <seg>Maksymalna prędkość dla miksera 2:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Mixer 2 max velocity:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3TargetPressure">
+      <tuv xml:lang="pl">
+        <seg>Ciśnienie w zbiorniku 3:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Tank 3 pressure:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3PressureGain">
+      <tuv xml:lang="pl">
+        <seg>Wzmocnienie w modelu zmian ciśnienia:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Gain in the pressure change model:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3PressureTimeConstant">
+      <tuv xml:lang="pl">
+        <seg>Stała czasowa w modelu zmian ciśnienia:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Time constant in the pressure change model:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Tank3PressureProcessModeling">
+      <tuv xml:lang="pl">
+        <seg>Model zmian ciśnienia w zbiorniku 3:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Modeling pressure changes in tank 3:</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

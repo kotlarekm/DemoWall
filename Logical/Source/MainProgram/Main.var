@@ -1,0 +1,3 @@
+VAR
+	gTanks : TanksType := (Parameters:=(Tank3TargetTemp:=40));
+END_VAR

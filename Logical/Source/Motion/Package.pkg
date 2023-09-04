@@ -3,5 +3,7 @@
 <Package xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
     <Object Type="Program" Language="IEC">Motion</Object>
+    <Object Type="DataObject" Language="Cam">Cam1</Object>
+    <Object Type="DataObject" Language="Cam">Cam2</Object>
   </Objects>
 </Package>

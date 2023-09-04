@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingSet id="PIDSettingsMainContent_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+    <EventBinding id="PIDSettingsMainContent.PIDSettingsCancelBtn.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="PIDSettingsMainContent" widgetRefId="PIDSettingsCancelBtn" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::TempContro:AutoTune">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::TempContro:RestoreSettings">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.CloseDialog" dialogId="PIDSettingsDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="PIDSettingsMainContent.PIDSettingsApplyBtn.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="PIDSettingsMainContent" widgetRefId="PIDSettingsApplyBtn" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::TempContro:ApplySettings">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="PIDSettingsMainContent.PIDSettingsRestoreBtn.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="PIDSettingsMainContent" widgetRefId="PIDSettingsRestoreBtn" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::TempContro:RestoreSettings">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="PIDSettingsMainContent.PIDSettingsAutotuneBtn1.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="PIDSettingsMainContent" widgetRefId="PIDSettingsAutotuneBtn1" event="Click" />
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::TempContro:AutoTune">
+                <Method xsi:type="opcUa.NodeAction.ToggleValueBool" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::TempContro:RestoreSettings">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="AutoTuneInProgress">
+      <Source xsi:type="opcUa.Event" refId="::TempContro:MpTempController_0.TuningActive" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="PIDSettingsMainContent" widgetRefId="PIDSettingsAutotuneBtn1">
+                <Method xsi:type="widgets.brease.Button.Action.SetImage" image="Media/SymbolLib/Symbols/Wait.svg" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="PIDSettingsMainContent" widgetRefId="PIDSettingsAutotuneBtn1">
+                <Method xsi:type="widgets.brease.Button.Action.SetText" text="$IAT/CancelTuning" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="oldValue">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="PIDSettingsMainContent" widgetRefId="PIDSettingsAutotuneBtn1">
+                <Method xsi:type="widgets.brease.Button.Action.SetImage" image="Media/SymbolLib/Symbols/Tool.svg" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Button.Action" contentRefId="PIDSettingsMainContent" widgetRefId="PIDSettingsAutotuneBtn1">
+                <Method xsi:type="widgets.brease.Button.Action.SetText" text="$IAT/AutoTune" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="PIDSettingsOpened">
+      <Source xsi:type="clientSystem.Event" event="DialogOpened" />
+      <EventHandler condition="dialogId=&quot;PIDSettingsDialog&quot;">
+        <Action>
+          <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::TempContro:MpTempController_0.TuningActive">
+            <Method xsi:type="opcUa.NodeAction.GetValue" />
+          </ReadTarget>
+          <Result>
+            <ResultHandler condition="NOT(result)">
+              <Sequence>
+                <Step order="0">
+                  <Action>
+                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="PIDSettingsMainContent" widgetRefId="PIDSettingsAutotuneBtn1">
+                      <Method xsi:type="widgets.brease.Button.Action.SetImage" image="Media/SymbolLib/Symbols/Tool.svg" />
+                    </Target>
+                  </Action>
+                </Step>
+                <Step order="1">
+                  <Action>
+                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="PIDSettingsMainContent" widgetRefId="PIDSettingsAutotuneBtn1">
+                      <Method xsi:type="widgets.brease.Button.Action.SetText" text="$IAT/AutoTune" />
+                    </Target>
+                  </Action>
+                </Step>
+              </Sequence>
+            </ResultHandler>
+            <ResultHandler condition="result">
+              <Sequence>
+                <Step order="0">
+                  <Action>
+                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="PIDSettingsMainContent" widgetRefId="PIDSettingsAutotuneBtn1">
+                      <Method xsi:type="widgets.brease.Button.Action.SetImage" image="Media/SymbolLib/Symbols/Wait.svg" />
+                    </Target>
+                  </Action>
+                </Step>
+                <Step order="1">
+                  <Action>
+                    <Target xsi:type="widgets.brease.Button.Action" contentRefId="PIDSettingsMainContent" widgetRefId="PIDSettingsAutotuneBtn1">
+                      <Method xsi:type="widgets.brease.Button.Action.SetText" text="$IAT/CancelTuning" />
+                    </Target>
+                  </Action>
+                </Step>
+              </Sequence>
+            </ResultHandler>
+          </Result>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+  </Bindings>
+</EventBindingSet>
