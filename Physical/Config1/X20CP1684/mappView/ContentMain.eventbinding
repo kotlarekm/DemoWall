@@ -815,20 +815,6 @@
               </Target>
             </Action>
           </Step>
-          <Step order="5">
-            <Action>
-              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="LeftValveManualInput">
-                <Method xsi:type="widgets.brease.NumericInput.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="6">
-            <Action>
-              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="RightValveManualInput">
-                <Method xsi:type="widgets.brease.NumericInput.Action.SetVisible" value="false" />
-              </Target>
-            </Action>
-          </Step>
           <Step order="7">
             <Action>
               <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="NotMixedProgressBar">
@@ -892,20 +878,6 @@
               </Target>
             </Action>
           </Step>
-          <Step order="4">
-            <Action>
-              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="LeftValveManualInput">
-                <Method xsi:type="widgets.brease.NumericInput.Action.SetVisible" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="5">
-            <Action>
-              <Target xsi:type="widgets.brease.NumericInput.Action" contentRefId="ContentMain" widgetRefId="RightValveManualInput">
-                <Method xsi:type="widgets.brease.NumericInput.Action.SetVisible" value="true" />
-              </Target>
-            </Action>
-          </Step>
           <Step order="6">
             <Action>
               <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMain" widgetRefId="Mixer2Manual">
@@ -942,6 +914,169 @@
             <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
           </Target>
         </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_22">
+      <Source xsi:type="clientSystem.Event" event="ContentLoaded" />
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Simulation:LValveCheck">
+                <Method xsi:type="opcUa.NodeAction.GetValue" />
+              </ReadTarget>
+              <Result>
+                <ResultHandler condition="newValue">
+                  <Action>
+                    <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="PaintProgressBar">
+                      <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+                    </Target>
+                  </Action>
+                </ResultHandler>
+                <ResultHandler condition="NOT(newValue)">
+                  <Action>
+                    <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="PaintProgressBar">
+                      <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+                    </Target>
+                  </Action>
+                </ResultHandler>
+              </Result>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Simulation:RValveCheck">
+                <Method xsi:type="opcUa.NodeAction.GetValue" />
+              </ReadTarget>
+              <Result>
+                <ResultHandler condition="NOT(newValue)">
+                  <Action>
+                    <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="WaterProgressBar">
+                      <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+                    </Target>
+                  </Action>
+                </ResultHandler>
+                <ResultHandler condition="newValue">
+                  <Action>
+                    <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="WaterProgressBar">
+                      <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+                    </Target>
+                  </Action>
+                </ResultHandler>
+              </Result>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Simulation:MixerCheck">
+                <Method xsi:type="opcUa.NodeAction.GetValue" />
+              </ReadTarget>
+              <Result>
+                <ResultHandler condition="newValue">
+                  <Action>
+                    <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="MixedProgressBar">
+                      <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+                    </Target>
+                  </Action>
+                </ResultHandler>
+                <ResultHandler condition="NOT(newValue)">
+                  <Action>
+                    <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="MixedProgressBar">
+                      <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+                    </Target>
+                  </Action>
+                </ResultHandler>
+              </Result>
+            </Action>
+          </Step>
+          <Step order="3">
+            <Action>
+              <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Simulation:ProgressBarNotMixedManual">
+                <Method xsi:type="opcUa.NodeAction.GetValue" />
+              </ReadTarget>
+              <Result>
+                <ResultHandler condition="newValue">
+                  <Sequence>
+                    <Step order="0">
+                      <Action>
+                        <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="NotMixedProgressBar">
+                          <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+                        </Target>
+                      </Action>
+                    </Step>
+                    <Step order="1">
+                      <Action>
+                        <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="PaintProgressBar">
+                          <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+                        </Target>
+                      </Action>
+                    </Step>
+                    <Step order="2">
+                      <Action>
+                        <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="WaterProgressBar">
+                          <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+                        </Target>
+                      </Action>
+                    </Step>
+                  </Sequence>
+                </ResultHandler>
+                <ResultHandler condition="NOT(newValue)">
+                  <Action>
+                    <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="NotMixedProgressBar">
+                      <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+                    </Target>
+                  </Action>
+                </ResultHandler>
+              </Result>
+            </Action>
+          </Step>
+          <Step order="4">
+            <Action>
+              <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Simulation:ProgressBarPaintManual">
+                <Method xsi:type="opcUa.NodeAction.GetValue" />
+              </ReadTarget>
+              <Result>
+                <ResultHandler condition="newValue">
+                  <Action>
+                    <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="PaintProgressBar">
+                      <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+                    </Target>
+                  </Action>
+                </ResultHandler>
+                <ResultHandler condition="NOT(newValue)">
+                  <Action>
+                    <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="PaintProgressBar">
+                      <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+                    </Target>
+                  </Action>
+                </ResultHandler>
+              </Result>
+            </Action>
+          </Step>
+          <Step order="5">
+            <Action>
+              <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Simulation:ProgressBarWaterManual">
+                <Method xsi:type="opcUa.NodeAction.GetValue" />
+              </ReadTarget>
+              <Result>
+                <ResultHandler condition="newValue">
+                  <Action>
+                    <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="WaterProgressBar">
+                      <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+                    </Target>
+                  </Action>
+                </ResultHandler>
+                <ResultHandler condition="NOT(newValue)">
+                  <Action>
+                    <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="WaterProgressBar">
+                      <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+                    </Target>
+                  </Action>
+                </ResultHandler>
+              </Result>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="EventBinding_19">
