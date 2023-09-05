@@ -11,5 +11,6 @@
     <Object Type="Package">PIDSettingsDialog</Object>
     <Object Type="Package">EmergencyDialog</Object>
     <Object Type="Package">TuningDoneDialog</Object>
+    <Object Type="Package">Dialog</Object>
   </Objects>
 </Package>

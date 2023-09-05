@@ -19,8 +19,6 @@
     <Property ID="Password" Value="9oWn7dqvv8zt8yBAEsR9RznL0eyG3aETq3/UIOoEu1FHgqP1Yu8=" Description="admin" />
     <Group ID="Roles">
       <Property ID="Role[1]" Value="Administrators" />
-      <Property ID="Role[2]" Value="Everyone" />
-      <Property ID="Role[3]" Value="Operator" />
     </Group>
   </Element>
   <Element ID="operator" Type="User">
@@ -28,7 +26,6 @@
     <Property ID="Password" Value="f2HMrDEv4eSawXc5gKO0Dj0p/Y0/ZqWQqmi8eMRVM6Tn4RyHWTM=" Description="operator" />
     <Group ID="Roles">
       <Property ID="Role[1]" Value="Operator" />
-      <Property ID="Role[2]" Value="Everyone" />
     </Group>
   </Element>
 </Configuration>

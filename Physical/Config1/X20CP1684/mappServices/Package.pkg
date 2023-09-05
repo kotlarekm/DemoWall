@@ -6,5 +6,6 @@
     <Object Type="File">FMUICfg.mpfilemanagerui</Object>
     <Object Type="File">AlarmXCfg.mpalarmxcore</Object>
     <Object Type="File">AlarmXHCfg.mpalarmxhistory</Object>
+    <Object Type="File">UserMgmtX.mpuserx</Object>
   </Objects>
 </Package>
