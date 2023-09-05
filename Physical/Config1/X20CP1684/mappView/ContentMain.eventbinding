@@ -829,7 +829,35 @@
               </Target>
             </Action>
           </Step>
+          <Step order="7">
+            <Action>
+              <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="NotMixedProgressBar">
+                <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="8">
+            <Action>
+              <Target xsi:type="widgets.brease.BasicSlider.Action" contentRefId="ContentMain" widgetRefId="SliderLeftValve">
+                <Method xsi:type="widgets.brease.BasicSlider.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="9">
+            <Action>
+              <Target xsi:type="widgets.brease.BasicSlider.Action" contentRefId="ContentMain" widgetRefId="SliderRightValve">
+                <Method xsi:type="widgets.brease.BasicSlider.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
         </Sequence>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="NotMixedProgressBar">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
       </EventHandler>
     </EventBinding>
     <EventBinding id="EventBinding_10">
@@ -885,7 +913,35 @@
               </Target>
             </Action>
           </Step>
+          <Step order="7">
+            <Action>
+              <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="NotMixedProgressBarAuto">
+                <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="8">
+            <Action>
+              <Target xsi:type="widgets.brease.BasicSlider.Action" contentRefId="ContentMain" widgetRefId="SliderLeftValve">
+                <Method xsi:type="widgets.brease.BasicSlider.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="9">
+            <Action>
+              <Target xsi:type="widgets.brease.BasicSlider.Action" contentRefId="ContentMain" widgetRefId="SliderRightValve">
+                <Method xsi:type="widgets.brease.BasicSlider.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
         </Sequence>
+      </EventHandler>
+      <EventHandler condition="NOT(newValue)">
+        <Action>
+          <Target xsi:type="widgets.brease.ProgressBar.Action" contentRefId="ContentMain" widgetRefId="NotMixedProgressBarAuto">
+            <Method xsi:type="widgets.brease.ProgressBar.Action.SetVisible" value="true" />
+          </Target>
+        </Action>
       </EventHandler>
     </EventBinding>
     <EventBinding id="EventBinding_19">
