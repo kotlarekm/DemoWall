@@ -34,6 +34,11 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 	
+	// Value assignment
+	TurnOnHeater := gTanks.Commands.TurnOnHeater;
+	TurnOnFan := gTanks.Commands.TurnOnFan;
+	gTanks.Status.Tank3Temp := Tank3Temp;
+	
 	// Temp measurement
 	TempInReal := INT_TO_REAL(gTanks.Status.Tank3Temp) / IntToRealScaller;
 	
