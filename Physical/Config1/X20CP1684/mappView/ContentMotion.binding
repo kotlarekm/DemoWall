@@ -130,5 +130,9 @@
 <Source xsi:type="opcUa" refId="::Motion:MpAxisBasicParameters_Secondary.Position" attribute="node" />
 <Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericInputSetPosition1" attribute="node" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Motion:CamCoupling" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="ImageCam" attribute="visible" />
+</Binding>
 </Bindings>
 </BindingsSet>

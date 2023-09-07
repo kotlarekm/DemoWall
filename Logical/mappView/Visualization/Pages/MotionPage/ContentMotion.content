@@ -79,7 +79,7 @@
     <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxCoupling" top="55" left="930" width="265" height="535" zIndex="2" text="$IAT/LabelCoupling" borderWidth="2px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" fontSize="18px">
       <Widgets>
         <Widget xsi:type="widgets.brease.Image" id="Image1" top="435" left="198" width="51" height="48" zIndex="0" image="Media/SymbolLib/Edit/Help.svg" imageColor="rgba(255, 136, 0, 1)" />
-        <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxCouplingControl" top="15" left="-12" width="285" height="325" zIndex="1" borderWidth="0px" headerGradient="linear-gradient(to bottom,#FFFFFF 0%,#FFFFFF 100%)" borderStyle="none" shadow="0px 0px rgba(62, 79, 92, 0.75)">
+        <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxCouplingControl" top="15" left="-12" width="285" height="265" zIndex="1" borderWidth="0px" headerGradient="linear-gradient(to bottom,#FFFFFF 0%,#FFFFFF 100%)" borderStyle="none" shadow="0px 0px rgba(62, 79, 92, 0.75)">
           <Widgets>
             <Widget xsi:type="widgets.brease.Label" id="Label1" top="20" left="10" width="260" zIndex="0" text="$IAT/LabelSelectCouplingMode" textAlign="center" fontName="ABBvoiceMedium" fontSize="16px" />
             <Widget xsi:type="widgets.brease.DropDownBox" id="DropDownBoxCamSelect" top="154" left="157" zIndex="1" dataProvider="[{'value':'0','text':'$IAT/Cam1'},{'value':'1','text':'$IAT/Cam2'}]" selectedValue="0" cornerRadius="8px" shadow="4px 1px 3px rgba(255, 113, 0, 0.75)" borderWidth="2px 2px 1px 1px" borderColor="rgba(255, 136, 0, 1)" disabledBorderColor="rgba(255, 136, 0, 1)" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontName="ABBvoiceMedium" />
@@ -88,10 +88,11 @@
             <Widget xsi:type="widgets.brease.Label" id="Label4" top="109" left="17" width="81" zIndex="4" text="$IAT/LabelCam" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" />
             <Widget xsi:type="widgets.brease.ToggleSwitch" id="ToggleSwitchGear" top="64" left="157" zIndex="5" borderWidth="3px 3px 3px 3px" backGroundGradient="linear-gradient(to bottom, rgba(153, 0, 0, 1) 0%, rgba(255, 0, 0, 1) 100%)" mouseDownBackGroundGradient="linear-gradient(to bottom, rgba(0, 102, 0, 1) 0%, rgba(0, 204, 0, 1) 100%)" disabledCheckedBackGroundGradient="linear-gradient(to bottom, rgba(0, 102, 0, 1) 0%, rgba(0, 204, 0, 1) 100%)" />
             <Widget xsi:type="widgets.brease.ToggleSwitch" id="ToggleSwitchCam" top="109" left="157" zIndex="6" borderWidth="3px 3px 3px 3px" backGroundGradient="linear-gradient(to bottom, rgba(153, 0, 0, 1) 0%, rgba(255, 0, 0, 1) 100%)" mouseDownBackGroundGradient="linear-gradient(to bottom, rgba(0, 102, 0, 1) 0%, rgba(0, 204, 0, 1) 100%)" disabledCheckedBackGroundGradient="linear-gradient(to bottom, rgba(0, 102, 0, 1) 0%, rgba(0, 204, 0, 1) 100%)" />
-            <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse7" top="244" left="212" width="27" height="27" zIndex="7" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
-            <Widget xsi:type="widgets.brease.Label" id="Label5" top="244" left="27" width="176" zIndex="8" text="$IAT/LabelCouplingEstablished" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" />
+            <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse7" top="210" left="220" width="27" height="27" zIndex="7" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
+            <Widget xsi:type="widgets.brease.Label" id="Label5" top="210" left="20" width="176" zIndex="8" text="$IAT/LabelCouplingEstablished" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" />
           </Widgets>
         </Widget>
+        <Widget xsi:type="widgets.brease.Image" id="ImageCam" top="300" left="18" width="225" height="130" zIndex="2" image="Media/cam1.png" />
       </Widgets>
     </Widget>
     <Widget xsi:type="widgets.brease.ToggleSwitch" id="ToggleSwitchManual" top="15" left="15" width="70" zIndex="3" borderWidth="3px 3px 3px 3px" backGroundGradient="linear-gradient(to bottom, rgba(153, 0, 0, 1) 0%, rgba(255, 0, 0, 1) 100%)" mouseDownBackGroundGradient="linear-gradient(to bottom, rgba(0, 102, 0, 1) 0%, rgba(0, 204, 0, 1) 100%)" fontName="ABBvoiceMedium" disabledCheckedBackGroundGradient="linear-gradient(to bottom, rgba(0, 102, 0, 1) 0%, rgba(0, 204, 0, 1) 100%)" />

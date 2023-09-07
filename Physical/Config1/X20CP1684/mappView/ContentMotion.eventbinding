@@ -106,18 +106,40 @@
     <EventBinding id="ContentMotion.DropDownBoxCamSelect.SelectedIndexChanged">
       <Source xsi:type="widgets.brease.DropDownBox.Event" contentRefId="ContentMotion" widgetRefId="DropDownBoxCamSelect" event="SelectedIndexChanged" />
       <EventHandler condition="selectedIndex = 0">
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisCouplingParameters.Cam.ID">
-            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisCouplingParameters.Cam.ID">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMotion" widgetRefId="ImageCam">
+                <Method xsi:type="widgets.brease.Image.Action.SetImage" image="Media/cam1.png" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
       <EventHandler condition="selectedIndex = 1">
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisCouplingParameters.Cam.ID">
-            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="2" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisCouplingParameters.Cam.ID">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="2" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.Image.Action" contentRefId="ContentMotion" widgetRefId="ImageCam">
+                <Method xsi:type="widgets.brease.Image.Action.SetImage" image="Media/cam2.png" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
       <EventHandler>
         <Action>
