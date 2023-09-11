@@ -4,10 +4,11 @@
   <TaskClass Name="Cyclic#1">
     <Task Name="TempContro" Source="Source.TempControl.TempControl.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Motion" Source="Source.Motion.Motion.prg" Memory="UserROM" Language="IEC" Debugging="true" />
-    <Task Name="Simulation" Source="Source.Simulation.Simulation.prg" Memory="UserROM" Language="IEC" Debugging="true" />
   </TaskClass>
   <TaskClass Name="Cyclic#2" />
-  <TaskClass Name="Cyclic#3" />
+  <TaskClass Name="Cyclic#3">
+    <Task Name="Simulation" Source="Source.Simulation.Simulation.prg" Memory="UserROM" Language="IEC" Debugging="true" />
+  </TaskClass>
   <TaskClass Name="Cyclic#4">
     <Task Name="MainProgra" Source="Source.MainProgram.MainProgram.prg" Memory="UserROM" Language="IEC" Debugging="true" />
     <Task Name="Recipes" Source="Source.Recipes.Recipes.prg" Memory="UserROM" Language="IEC" Debugging="true" />
@@ -63,6 +64,7 @@
     <BinaryObject Name="AlarmXCfg" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="AlarmXHCfg" Source="" Memory="UserROM" Language="Binary" />
     <BinaryObject Name="TempCtrl" Source="" Memory="UserROM" Language="Binary" />
+    <BinaryObject Name="UserMgmtX" Source="" Memory="UserROM" Language="Binary" />
   </Binaries>
   <Libraries>
     <LibraryObject Name="SfDomain" Source="Libraries.SfDomain.lby" Memory="UserROM" Language="Binary" Debugging="true" />
@@ -91,6 +93,7 @@
     <LibraryObject Name="MTBasics" Source="Libraries.MTBasics.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="brsystem" Source="Libraries.brsystem.lby" Memory="UserROM" Language="binary" Debugging="true" />
     <LibraryObject Name="MTTypes" Source="Libraries.MTTypes.lby" Memory="UserROM" Language="binary" Debugging="true" />
+    <LibraryObject Name="MpUserX" Source="Libraries.MpUserX.lby" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="asepl" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="powerlnk" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="MpSfDomMgr" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
@@ -104,6 +107,8 @@
     <LibraryObject Name="asioacc" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="astcp" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
     <LibraryObject Name="dataobj" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
-    <LibraryObject Name="MpUserX" Source="Libraries.MpUserX.lby" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="aseth" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="ashw" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
+    <LibraryObject Name="arcert" Source="" Memory="UserROM" Language="Binary" Debugging="true" />
   </Libraries>
 </SwConfiguration>

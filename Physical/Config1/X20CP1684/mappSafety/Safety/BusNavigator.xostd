@@ -4,7 +4,7 @@
     <GeneratorDescription Name="AutomationStudio" Version="4.12.4.107" LanguageID="1">
       <Info Name="ARVersion" Value="49302" />
       <Info Name="SafetyRelease" Value="5.23.0" />
-      <Info Name="Communication" Value="/IF=tcpip /LOPO=11159 /SA=1 /COMT=2500 /RT=1000 /AM=* /SDT=5 /DAIP=192.168.0.2 /REPO=11169 /ANSL=1 /PORT=50000" />
+      <Info Name="Communication" Value="/IF=tcpip /LOPO=11159 /SA=1 /COMT=2500 /RT=1000 /AM=* /SDT=5 /DAIP=10.48.50.238 /REPO=11159 /ANSL=1 /PT=11169 /PORT=50000" />
       <Info Name="mappSafetyPath" Value="C:\BRAutomation\AS412\AS\TechnologyPackages\mappSafety\5.23.0" />
     </GeneratorDescription>
     <SafetyConfigurationManager TransportSAddr="1">
@@ -30,7 +30,7 @@
         <Classification Type="VendorSpecific">Safe</Classification>
         <Info Name="Interface" Value="IF3.ST3" />
         <Info Name="HWC_Revision" Value="2.4.2.0" />
-        <Info Name="HWC_LastEdit" Value="08.03.2022 17:31:28" />
+        <Info Name="HWC_LastEdit" Value="3/8/2022 5:31:28 PM" />
         <Info Name="AS_Name" Value="X20SL8101" />
         <Info Name="FirstPublishedSafetyRelease" Value="1.0" />
         <Info Name="ProjectSL" Value="1" />
@@ -75,7 +75,7 @@
         <Classification Type="VendorSpecific">IO</Classification>
         <Info Name="Interface" Value="IF3.ST1.IF1.ST7" />
         <Info Name="HWC_Revision" Value="2.5.0.0" />
-        <Info Name="HWC_LastEdit" Value="08.03.2022 17:31:28" />
+        <Info Name="HWC_LastEdit" Value="3/8/2022 5:31:28 PM" />
         <Info Name="AS_Name" Value="X20SC2432" />
         <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
         <Info Name="Description-de" Value="X20 Safe Digital 2xE 24V, 2xA Relais" />
@@ -109,7 +109,7 @@
         <Classification Type="VendorSpecific">IO</Classification>
         <Info Name="Interface" Value="IF3.ST1.IF1.ST6" />
         <Info Name="HWC_Revision" Value="2.4.0.0" />
-        <Info Name="HWC_LastEdit" Value="08.03.2022 17:31:28" />
+        <Info Name="HWC_LastEdit" Value="3/8/2022 5:31:28 PM" />
         <Info Name="AS_Name" Value="X20SI9100" />
         <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
         <Info Name="Description-de" Value="X20 Safe Digital In, 20xE, 24V" />
@@ -127,7 +127,7 @@
         <Classification Type="VendorSpecific">IO</Classification>
         <Info Name="Interface" Value="IF3.ST3.IF1.ST2" />
         <Info Name="HWC_Revision" Value="2.4.0.0" />
-        <Info Name="HWC_LastEdit" Value="08.03.2022 17:31:28" />
+        <Info Name="HWC_LastEdit" Value="3/8/2022 5:31:28 PM" />
         <Info Name="AS_Name" Value="X20SI2100" />
         <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
         <Info Name="Description-de" Value="X20 Safe Digital In, 2xE, 24V" />
@@ -144,7 +144,7 @@
         <Classification Type="VendorSpecific">IO</Classification>
         <Info Name="Interface" Value="IF3.ST2.IF1.ST2" />
         <Info Name="HWC_Revision" Value="2.4.0.0" />
-        <Info Name="HWC_LastEdit" Value="08.03.2022 17:31:28" />
+        <Info Name="HWC_LastEdit" Value="3/8/2022 5:31:28 PM" />
         <Info Name="AS_Name" Value="X67SI8103" />
         <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
         <Info Name="Description-de" Value="X67 Safe Digital In, 8xE, 24V" />
