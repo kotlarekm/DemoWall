@@ -30,7 +30,7 @@
         <Classification Type="VendorSpecific">Safe</Classification>
         <Info Name="Interface" Value="IF3.ST3" />
         <Info Name="HWC_Revision" Value="2.4.2.0" />
-        <Info Name="HWC_LastEdit" Value="3/8/2022 5:31:28 PM" />
+        <Info Name="HWC_LastEdit" Value="3/8/2022 8:31:28 PM" />
         <Info Name="AS_Name" Value="X20SL8101" />
         <Info Name="FirstPublishedSafetyRelease" Value="1.0" />
         <Info Name="ProjectSL" Value="1" />
@@ -75,7 +75,7 @@
         <Classification Type="VendorSpecific">IO</Classification>
         <Info Name="Interface" Value="IF3.ST1.IF1.ST7" />
         <Info Name="HWC_Revision" Value="2.5.0.0" />
-        <Info Name="HWC_LastEdit" Value="3/8/2022 5:31:28 PM" />
+        <Info Name="HWC_LastEdit" Value="3/8/2022 8:31:28 PM" />
         <Info Name="AS_Name" Value="X20SC2432" />
         <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
         <Info Name="Description-de" Value="X20 Safe Digital 2xE 24V, 2xA Relais" />
@@ -109,7 +109,7 @@
         <Classification Type="VendorSpecific">IO</Classification>
         <Info Name="Interface" Value="IF3.ST1.IF1.ST6" />
         <Info Name="HWC_Revision" Value="2.4.0.0" />
-        <Info Name="HWC_LastEdit" Value="3/8/2022 5:31:28 PM" />
+        <Info Name="HWC_LastEdit" Value="3/8/2022 8:31:28 PM" />
         <Info Name="AS_Name" Value="X20SI9100" />
         <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
         <Info Name="Description-de" Value="X20 Safe Digital In, 20xE, 24V" />
@@ -127,7 +127,7 @@
         <Classification Type="VendorSpecific">IO</Classification>
         <Info Name="Interface" Value="IF3.ST3.IF1.ST2" />
         <Info Name="HWC_Revision" Value="2.4.0.0" />
-        <Info Name="HWC_LastEdit" Value="3/8/2022 5:31:28 PM" />
+        <Info Name="HWC_LastEdit" Value="3/8/2022 8:31:28 PM" />
         <Info Name="AS_Name" Value="X20SI2100" />
         <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
         <Info Name="Description-de" Value="X20 Safe Digital In, 2xE, 24V" />
@@ -144,7 +144,7 @@
         <Classification Type="VendorSpecific">IO</Classification>
         <Info Name="Interface" Value="IF3.ST2.IF1.ST2" />
         <Info Name="HWC_Revision" Value="2.4.0.0" />
-        <Info Name="HWC_LastEdit" Value="3/8/2022 5:31:28 PM" />
+        <Info Name="HWC_LastEdit" Value="3/8/2022 8:31:28 PM" />
         <Info Name="AS_Name" Value="X67SI8103" />
         <Info Name="FirstPublishedSafetyRelease" Value="5.4" />
         <Info Name="Description-de" Value="X67 Safe Digital In, 8xE, 24V" />

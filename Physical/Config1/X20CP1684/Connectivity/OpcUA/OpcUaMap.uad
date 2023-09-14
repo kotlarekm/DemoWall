@@ -213,6 +213,14 @@
         <Variable Name="TempControlWidgetsEnable" />
         <Variable Name="InfoLabelIndex" />
         <Variable Name="ShowTuningDoneDialog" />
+        <Variable Name="MpTempControllerParType_0">
+          <Variable Name="Tuning">
+            <Variable Name="Mode" />
+            <Variable Name="SetPointHeat" />
+            <Variable Name="SetPointCool" />
+          </Variable>
+        </Variable>
+        <Variable Name="NameOfMode" />
       </Task>
       <Task Name="Recipes">
         <Variable Name="ApplyParameters" />

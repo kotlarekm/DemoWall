@@ -15,18 +15,10 @@
     </tu>
     <tu tuid="Mixer1">
       <tuv xml:lang="pl">
-        <seg>Włącz mikser 1:</seg>
+        <seg>Włącz mikser -</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Turn on mixer 1: </seg>
-      </tuv>
-    </tu>
-    <tu tuid="Mixer2">
-      <tuv xml:lang="pl">
-        <seg>Włącz mikser 2:</seg>
-      </tuv>
-      <tuv xml:lang="en">
-        <seg>Turn on mixer 2:</seg>
+        <seg>Turn on mixer - </seg>
       </tuv>
     </tu>
     <tu tuid="Tank3MaxAllowedPressure">
@@ -235,6 +227,14 @@
       </tuv>
       <tuv xml:lang="en">
         <seg>Modeling pressure changes in tank 3:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Heat_Cool">
+      <tuv xml:lang="pl">
+        <seg>Włącz grzanie i chłodzenie w trybie auto:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Turn on heating and cooling in auto mode:</seg>
       </tuv>
     </tu>
   </body>

@@ -83,9 +83,11 @@ PROGRAM _CYCLIC
 	  	SetDefaultParams := FALSE;
 	END_IF;
 	
-	// Applying parameters to real object
+	// Applying parameters to real object and confirming heating cooling or heating mode
 	IF ApplyParameters THEN
 		gTanks.Parameters := ParametersToLoad;
+		ConfirmingHeatCoolOrHeat := TRUE;
+		
 	  	ApplyParameters := FALSE;
 	END_IF;
 	

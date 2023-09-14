@@ -34,6 +34,7 @@ TYPE
 		Tank3TargetPressure : REAL; (*Tank 3 target pressure to set*)
 		InertialTermTimeConstant : REAL := 5; (*Time constant to set for intertial term*)
 		InertialTermGain : REAL := 1; (*Gain to set for intertial term*)
+		HeatCool : BOOL; (*Heating and cooling in automatic temperature control mode / if not - only heating*)
 	END_STRUCT;
 	ObjectType : 	STRUCT 
 		Mode : UINT;

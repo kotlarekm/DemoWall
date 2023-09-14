@@ -1,0 +1,3 @@
+VAR
+	ConfirmingHeatCoolOrHeat : BOOL;
+END_VAR

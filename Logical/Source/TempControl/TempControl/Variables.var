@@ -26,4 +26,10 @@ VAR
 	TurnOnHeater : BOOL;
 	TurnOnFan : BOOL;
 	Tank3Temp : INT;
+	MpTempControllerConfig_0 : MpTempControllerConfig;
+	MpTempControllerConfigType_0 : MpTempControllerConfigType := (Type:=mpTEMP_ZONE_TYPE_HEAT,AmbientTemperature:=30,ProfileMode:=mpTEMP_PROFILE_MODE_TIME_OPT);
+	MpTempTuningType_0 : MpTempTuningType := (Mode:=mpTEMP_TUNING_MODE_HEAT_COOL,SetPointHeat:=45,SetPointCool:=35);
+	zmienna : BOOL;
+	NameOfMode : STRING[80];
+	tryby : INT;
 END_VAR

@@ -45,22 +45,22 @@
 <Source xsi:type="opcUa" refId="::TempContro:MpTempControllerParType_1.Hysteresis.Band.CoolToHeat" attribute="node" />
 <Target xsi:type="brease" contentRefId="PIDSettingsMainContent" widgetRefId="CoolingToHeatingNumericInput" attribute="node" />
 </Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::TempContro:MpTempControllerParType_1.Tuning.SetPointCool" attribute="node" />
-<Target xsi:type="brease" contentRefId="PIDSettingsMainContent" widgetRefId="SetPointCoolNumericInput" attribute="node" />
-</Binding>
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::TempContro:MpTempControllerParType_1.Tuning.SetPointHeat" attribute="node" />
-<Target xsi:type="brease" contentRefId="PIDSettingsMainContent" widgetRefId="SetPointHeatNumericInput" attribute="node" />
-</Binding>
-
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::TempContro:MpTempControllerParType_1.Tuning.Mode" attribute="value" />
-<Target xsi:type="brease" contentRefId="PIDSettingsMainContent" widgetRefId="DropDownBoxTuningMode" attribute="selectedIndex" />
-</Binding>
 <Binding mode="oneWay">
 <Source xsi:type="opcUa" refId="::TempContro:TempControlWidgetsEnable" attribute="value" />
 <Target xsi:type="brease" contentRefId="PIDSettingsMainContent" widgetRefId="PIDSettingsAutotuneBtn1" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::TempContro:NameOfMode" attribute="value" />
+<Target xsi:type="brease" contentRefId="PIDSettingsMainContent" widgetRefId="TextOutput1" attribute="value" />
+</Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::TempContro:MpTempControllerParType_0.Tuning.SetPointCool" attribute="node" />
+<Target xsi:type="brease" contentRefId="PIDSettingsMainContent" widgetRefId="NumericOutput2" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::TempContro:MpTempControllerParType_0.Tuning.SetPointHeat" attribute="node" />
+<Target xsi:type="brease" contentRefId="PIDSettingsMainContent" widgetRefId="NumericOutput1" attribute="node" />
 </Binding>
 </Bindings>
 </BindingsSet>
