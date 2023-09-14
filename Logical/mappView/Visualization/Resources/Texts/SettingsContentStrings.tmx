@@ -123,5 +123,19 @@
         <seg>Admin</seg>
       </tuv>
     </tu>
+    <tu tuid="ResetButton">
+      <tuv xml:lang="pl">
+        <seg>Ten przycisk służy do resetowania systemu bezpieczeństwa!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>This button is used to reset the security system!</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Servus Welt!</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

@@ -1,6 +1,153 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EventBindingSet id="ContentIO_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Bindings>
+    <EventBinding id="IOContentLoaded">
+      <Source xsi:type="clientSystem.Event" event="ContentLoaded" />
+      <EventHandler>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::IO:ChangeButtonColor_0.RoundButton[1].Counter">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::IO:ChangeButtonColor_0.RoundButton[1].doRedLED">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::IO:ChangeButtonColor_0.RoundButton[1].doYellowLED">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="3">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::IO:ChangeButtonColor_0.RoundButton[1].doGreenLED">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="4">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::IO:ChangeButtonColor_0.RoundButton[2].Counter">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="5">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::IO:ChangeButtonColor_0.RoundButton[2].doRedLED">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="6">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::IO:ChangeButtonColor_0.RoundButton[2].doYellowLED">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="7">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::IO:ChangeButtonColor_0.RoundButton[2].doGreenLED">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="8">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::IO:ChangeButtonColor_0.RoundButton[3].Counter">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="9">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::IO:ChangeButtonColor_0.RoundButton[3].doRedLED">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="10">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::IO:ChangeButtonColor_0.RoundButton[3].doYellowLED">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="11">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::IO:ChangeButtonColor_0.RoundButton[3].doGreenLED">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="12">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::IO:ChangeButtonColor_0.RoundButton[4].Counter">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="13">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::IO:ChangeButtonColor_0.RoundButton[4].doRedLED">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="14">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::IO:ChangeButtonColor_0.RoundButton[4].doYellowLED">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="15">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::IO:ChangeButtonColor_0.RoundButton[4].doGreenLED">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="16">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::IO:ChangeButtonColor_0.RoundButton[5].Counter">
+                <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="17">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::IO:ChangeButtonColor_0.RoundButton[5].doRedLED">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="18">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::IO:ChangeButtonColor_0.RoundButton[5].doYellowLED">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="19">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::IO:ChangeButtonColor_0.RoundButton[5].doGreenLED">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
     <EventBinding id="EventBinding_200">
       <Source xsi:type="opcUa.Event" refId="::IO:doLamp1" event="ValueChanged" />
       <EventHandler condition="newValue=TRUE">
@@ -322,6 +469,21 @@
         <Action>
           <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentIO" widgetRefId="EllipseRoundButtonReset">
             <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Solid_Gray_LightGray_gradient_red_button" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_1700">
+      <Source xsi:type="opcUa.Event" refId="::Alarms:diReset" event="ValueChanged" />
+      <Operand datatype="ANY_STRING" name="CurrentPage">
+        <ReadTarget xsi:type="session.VariableAction.Read" refId="::SYSTEM:clientInfo.currentPageId">
+          <Method xsi:type="session.VariableAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="CurrentPage = &quot;IOPage&quot;">
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="ResetButtonDialog" />
           </Target>
         </Action>
       </EventHandler>

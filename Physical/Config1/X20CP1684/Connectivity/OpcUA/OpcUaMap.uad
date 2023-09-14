@@ -274,6 +274,7 @@
         <Variable Name="doResetRedLED" />
         <Variable Name="doResetOrangeLED" />
         <Variable Name="ClearHistory" />
+        <Variable Name="diReset" />
       </Task>
       <Task Name="Motion">
         <Variable Name="CamCoupling" />

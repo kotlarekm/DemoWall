@@ -2,8 +2,8 @@
 <?AutomationStudio FileVersion="4.9"?>
 <Package SubType="DialogPackage" PackageType="DialogPackage" xmlns="http://br-automation.co.at/AS/Package">
   <Objects>
-    <Object Type="File" Description="Dialog">AddUser.dialog</Object>
-    <Object Type="File">AddUserTopContent.content</Object>
-    <Object Type="File">AddUserMainContent.content</Object>
+    <Object Type="File" Description="Dialog">ResetButtonDialog.dialog</Object>
+    <Object Type="File">ResetButtonTapContent.content</Object>
+    <Object Type="File">ResetButtonMainContent.content</Object>
   </Objects>
 </Package>

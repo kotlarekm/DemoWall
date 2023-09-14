@@ -13,6 +13,5 @@
     <Object Type="File">GraphDialogContentStrings.tmx</Object>
     <Object Type="File">PIDSettingsStrings.tmx</Object>
     <Object Type="File">SettingsContentStrings.tmx</Object>
-    <Object Type="File">AddUserDialog.tmx</Object>
   </Objects>
 </Package>

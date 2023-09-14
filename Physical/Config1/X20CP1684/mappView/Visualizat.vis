@@ -45,6 +45,8 @@
     <EventBindingsSet refId="TuningDoneMainContent_eventbinding" />
     <EventBindingsSet refId="ContentSettings_eventbinding" />
     <EventBindingsSet refId="AddUserMainContent_eventbinding" />
+    <EventBindingsSet refId="ResetButtonMainContent_eventbinding" />
+    <EventBindingsSet refId="ResetButtonTapContent_eventbinding" />
   </EventBindingsSets>
   <Dialogs>
     <Dialog refId="LoginDialog" />
@@ -55,7 +57,7 @@
     <Dialog refId="PIDSettingsDialog" />
     <Dialog refId="EmergencyDialog" />
     <Dialog refId="TuningDoneDialog" />
-    <Dialog refId="AddUserDialog" />
+    <Dialog refId="ResetButtonDialog" />
   </Dialogs>
   <Contents>
     <Content refId="ContentTop" />
@@ -85,8 +87,8 @@
     <Content refId="EmergencyDialogMainContent" />
     <Content refId="TuningDoneTopContent" />
     <Content refId="TuningDoneMainContent" />
-    <Content refId="AddUserTopContent" />
-    <Content refId="AddUserMainContent" />
+    <Content refId="ResetButtonTapContent" />
+    <Content refId="ResetButtonMainContent" />
   </Contents>
   <SnippetsSets />
   <VariablesSets />
