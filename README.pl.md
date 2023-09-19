@@ -78,52 +78,22 @@ Szczegóły dostępne w [Dokumentacji](Logical/mappView/Resources/Media/DemoWall
 [![Static Badge](https://img.shields.io/badge/Dokumentacja-PL-red)](Logical/mappView/Resources/Media/DemoWall_dokumentacja.pdf)
 
 ## Zespół 🤝
-<style>
-  .photos-container {
-    display: flex;
-  }
-
-  .photos {
-    margin: 7px;
-    display: inline-block;
-    position: relative;
-    width: 70px;
-    height: 70px;
-    overflow: hidden;
-    border-radius: 50%;
-  }
-</style>
-
-<div class="photos-container">
-  <div class="photos">
+<div style="display: flex;">
     <a href="https://github.com/kotlarekm"> 
-      <img src="https://avatars.githubusercontent.com/u/68740321?v=4"> 
+      <img src="https://avatars.githubusercontent.com/u/68740321?v=4" height="auto" width="100" style="border-radius:50%; margin: 10px"> 
     </a> 
-  </div>
-
-  <div class="photos">
     <a href="https://github.com/Urizien"> 
-      <img src="https://avatars.githubusercontent.com/u/86104795?v=4"> 
+      <img src="https://avatars.githubusercontent.com/u/86104795?v=4" height="auto" width="100" style="border-radius:50%; margin: 10px"> 
     </a> 
-  </div>
-
-  <div class="photos">
     <a href="https://github.com/bartekz6"> 
-      <img src="https://avatars.githubusercontent.com/u/142492905?v=4"> 
+      <img src="https://avatars.githubusercontent.com/u/142492905?v=4" height="auto" width="100" style="border-radius:50%; margin: 10px"> 
+    </a>
+     <a href="https://github.com/Sylwia-git"> 
+      <img src="https://avatars.githubusercontent.com/u/59863208?v=4" height="auto" width="100" style="border-radius:50%; margin: 10px"> 
     </a> 
-  </div>
-
-  <div class="photos">
-    <a href="https://github.com/Sylwia-git"> 
-      <img src="https://avatars.githubusercontent.com/u/59863208?v=4"> 
+     <a href="https://github.com/PiotrZb"> 
+      <img src="https://avatars.githubusercontent.com/u/84187115?v=4" height="auto" width="100" style="border-radius:50%; margin: 10px"> 
     </a> 
-  </div>
-
-  <div class="photos">
-    <a href="https://github.com/PiotrZb"> 
-      <img src="https://avatars.githubusercontent.com/u/84187115?v=4"> 
-    </a> 
-  </div>
 </div>
 
 ## Licencja 📄
