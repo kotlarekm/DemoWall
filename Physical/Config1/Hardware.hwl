@@ -2,7 +2,7 @@
 <?AutomationStudio FileVersion="4.9"?>
 <BR.AS.HardwareTopology>
   <TimeStamps>
-    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="09/04/2023 15:01:12" />
+    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="09/19/2023 11:46:29" />
   </TimeStamps>
   <Modules>
     <Module Name="X20CP1684" Type="X20CP1684" X="100" Y="100" />
@@ -177,6 +177,18 @@
       <Point X="910" Y="606" />
       <Point X="910" Y="619" />
       <Point X="910" Y="619" />
+    </Link>
+    <Link From="X20BC0063" To="X20IF1061_1" FromPort="PRB1" ToPort="IF1" IsRoutedByUser="False">
+      <Point X="829" Y="934" />
+      <Point X="829" Y="934" />
+      <Point X="809" Y="934" />
+      <Point X="805" Y="934" />
+      <Point X="805" Y="748" />
+      <Point X="275" Y="748" />
+      <Point X="275" Y="532" />
+      <Point X="288" Y="532" />
+      <Point X="301" Y="532" />
+      <Point X="301" Y="532" />
     </Link>
   </Links>
   <InfoElements />

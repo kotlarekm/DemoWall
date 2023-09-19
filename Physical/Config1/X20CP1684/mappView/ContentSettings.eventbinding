@@ -15,9 +15,18 @@
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentSettings" widgetRefId="ButtonDeleteUser" event="Click" />
       <EventHandler>
         <Action>
-          <Target xsi:type="widgets.brease.UserList.Action" contentRefId="ContentSettings" widgetRefId="UserList1">
-            <Method xsi:type="widgets.brease.UserList.Action.DeleteUser" />
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.ShowMessageBox" type="OKCancel" message="$IAT/DeleteUserMessage" header="$IAT/Warning" icon="Warning" style="my_style" />
           </Target>
+          <Result>
+            <ResultHandler condition="result = 4">
+              <Action>
+                <Target xsi:type="widgets.brease.UserList.Action" contentRefId="ContentSettings" widgetRefId="UserList1">
+                  <Method xsi:type="widgets.brease.UserList.Action.DeleteUser" />
+                </Target>
+              </Action>
+            </ResultHandler>
+          </Result>
         </Action>
       </EventHandler>
     </EventBinding>

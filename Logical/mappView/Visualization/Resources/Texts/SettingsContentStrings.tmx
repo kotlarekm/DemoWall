@@ -137,5 +137,13 @@
         <seg>Bonjour tout le monde!</seg>
       </tuv>
     </tu>
+    <tu tuid="DeleteUserMessage">
+      <tuv xml:lang="pl">
+        <seg>Czy na pewno chcesz usunąć tego użytkownika?</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Are you sure you want to delete this user?</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

@@ -17,6 +17,7 @@
     <BindingsSet refId="RecipesMainContent_binding" />
     <BindingsSet refId="ContentAlarms_binding" />
     <BindingsSet refId="ContentMain_binding" />
+    <BindingsSet refId="ContentMotion_binding" />
     <BindingsSet refId="GraphDialogMainContent_binding" />
     <BindingsSet refId="ContentTop_binding" />
     <BindingsSet refId="ContentIO_binding" />

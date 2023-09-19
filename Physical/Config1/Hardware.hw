@@ -69,7 +69,7 @@
     <Parameter ID="StandstillCurrent" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="0.1" />
     <Parameter ID="ConstantSpeedCurrent" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="1.5" />
     <Parameter ID="SpeedChangeCurrent" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="3" />
-    <Parameter ID="FullStepThreshold" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="0.0" />
+    <Parameter ID="FullStepThreshold" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="30" />
     <Parameter ID="MotorSettlingTime" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="1" />
     <Parameter ID="DelayedCurrentSwitchOff" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="1" />
     <Parameter ID="Mode" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing" Value="Direct" />
@@ -452,7 +452,15 @@
     <Parameter ID="SensorType02" Value="off" />
   </Module>
   <Module Name="X20BB81" Type="X20BB81" Version="1.1.0.0" />
-  <Module Name="X20BC0063" Type="FBD.GSDDTM.DTMDev.X20BC0063" Version="1.44" OrderNumber="X20BC0063" />
+  <Module Name="X20BC0063" Type="FBD.GSDDTM.DTMDev.X20BC0063" Version="1.44" OrderNumber="X20BC0063" VendorAddress="2">
+    <Connection Connector="PRB1" TargetModule="X20IF1061_1" TargetConnector="IF1" NodeNumber="2" />
+    <Parameter ID="DtmId" Value="3d0be9d6-979d-462a-88c0-7e936d41449d" />
+    <Group ID="ChannelBlocks_ba4a2e69-20e0-4f89-b4e0-678b84f3bae1" Description="X20 DO 9322: 12 DO (24V Source) &lt;Slot 2&gt;" />
+    <Group ID="IO_InputImage_ba4a2e69-20e0-4f89-b4e0-678b84f3bae1" Description="2 Byte(s)" />
+    <Group ID="IO_OutputImage_ba4a2e69-20e0-4f89-b4e0-678b84f3bae1" Description="2 Byte(s)" />
+    <Group ID="Channel_1_IO_OutputImage_ba4a2e69-20e0-4f89-b4e0-678b84f3bae1" />
+    <Parameter ID="Name_Channel_1_IO_OutputImage_ba4a2e69-20e0-4f89-b4e0-678b84f3bae1" Value="DigitalOutput01" />
+  </Module>
   <Module Name="X20BC1083" Type="X20BC1083" Version="2.14.0.0">
     <Connection Connector="PLK1" TargetModule="0AC808.9" TargetConnector="ETH3" NodeNumber="1">
       <Cable Type="PowerlinkCable" Length="10" Version="1.0.0.3" />
