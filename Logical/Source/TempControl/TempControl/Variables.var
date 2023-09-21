@@ -8,7 +8,7 @@ VAR
 	MpTempControllerParType_1 : MpTempControllerParType; (*Displayed PID parameters*)
 END_VAR
 VAR RETAIN
-	MpTempControllerParType_0 : MpTempControllerParType := (PID:=(Heat:=(ProportionalGain:=11.73522,IntegrationTime:=95.5396,DerivativeTime:=10.03165,FilterTime:=1.003165),Cool:=(ProportionalGain:=40.2958,IntegrationTime:=90.4432,DerivativeTime:=9.49654,FilterTime:=0.949653864),IntegratorPreloading:=0),Tuning:=(Mode:=mpTEMP_TUNING_MODE_OSC_HEAT_COOL,SetPointHeat:=45,SetPointCool:=35),Profile:=(Heat:=(SlewRate:=0.354523033,FilterTime:=84.8989,DelayTime:=6.5,QuickStart:=FALSE),Cool:=(SlewRate:=0.273072,FilterTime:=91.55094,DelayTime:=2.5,QuickStart:=FALSE)),ToleranceBand:=(Lower:=0.5,Upper:=0.5),Hysteresis:=(Mode:=mpTEMP_HYSTERESIS_ON,Band:=(HeatToCool:=1.0,CoolToHeat:=1.0))); (*Temperature controller parameters*)
+	MpTempControllerParType_0 : MpTempControllerParType := (PID:=(Heat:=(ProportionalGain:=15.23996,IntegrationTime:=74.8946152,DerivativeTime:=7.86393452,FilterTime:=0.786393464),Cool:=(ProportionalGain:=0,IntegrationTime:=0,DerivativeTime:=0,FilterTime:=0),IntegratorPreloading:=0),Tuning:=(Mode:=mpTEMP_TUNING_MODE_OSC_HEAT_COOL,SetPointHeat:=45,SetPointCool:=35),Profile:=(Heat:=(SlewRate:=0.185037389,FilterTime:=77.42902,DelayTime:=7,QuickStart:=FALSE),Cool:=(SlewRate:=0.03187467,FilterTime:=91.55094,DelayTime:=7,QuickStart:=FALSE)),ToleranceBand:=(Lower:=0.3,Upper:=0.3),Hysteresis:=(Mode:=mpTEMP_HYSTERESIS_ON,Band:=(HeatToCool:=1.0,CoolToHeat:=1.0))); (*Temperature controller parameters*)
 END_VAR
 VAR
 	ManualON : BOOL := FALSE; (*If true, PID controller is not used, the outputs are supplied with the signals from PWM blocks*)
@@ -31,5 +31,8 @@ VAR
 	MpTempTuningType_0 : MpTempTuningType := (Mode:=mpTEMP_TUNING_MODE_HEAT_COOL,SetPointHeat:=45,SetPointCool:=35);
 	zmienna : BOOL;
 	NameOfMode : STRING[80];
-	tryby : INT;
+	tryby : INT := 4;
+	StepHeatCool : StepEnum;
+	StepHeat : StepEnum;
+	FirstUpload : BOOL := FALSE;
 END_VAR

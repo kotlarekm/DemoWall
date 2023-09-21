@@ -9,6 +9,7 @@ PROGRAM _INIT
 	
 	gTanks;
 	
+	// MpTempControllerConfig init
 	MpTempControllerConfig_0.MpLink := ADR(gTempController_0);
 	MpTempControllerConfig_0.Configuration := ADR(MpTempControllerConfigType_0);
 	MpTempControllerConfig_0.Enable := TRUE;
@@ -40,85 +41,120 @@ END_PROGRAM
 PROGRAM _CYCLIC
 	
 	// Only heating
-	IF NOT(gTanks.Parameters.HeatCool) THEN
+	IF NOT(gTanks.Parameters.HeatCool) THEN	
 		MpTempControllerConfigType_0.Type := mpTEMP_ZONE_TYPE_HEAT;
-		MpTempControllerConfigType_0.SystemParameters.Heat.Gain := 1.3742317;
-		MpTempControllerConfigType_0.SystemParameters.Heat.TimeConstant1 := 299.400116;
-		MpTempControllerConfigType_0.SystemParameters.Heat.TimeConstant2 := 16.139101;
-		MpTempControllerConfigType_0.SystemParameters.Heat.DelayTime := 8;
-		
-		IF ConfirmingHeatCoolOrHeat THEN
-			MpTempControllerParType_0.PID.Heat.ProportionalGain := 15.2788744;
-			MpTempControllerParType_0.PID.Heat.IntegrationTime := 768.8433;
-			MpTempControllerParType_0.PID.Heat.DerivativeTime := 92.2612;
-			MpTempControllerParType_0.PID.Heat.FilterTime := 9.22612;
-			MpTempControllerParType_0.PID.Cool.ProportionalGain := 0;
-			MpTempControllerParType_0.PID.Cool.IntegrationTime := 0;
-			MpTempControllerParType_0.PID.Cool.DerivativeTime := 0;
-			MpTempControllerParType_0.PID.Cool.FilterTime := 0;
-			MpTempControllerParType_0.PID.IntegratorPreloading := -0.1297297;
+		MpTempControllerConfigType_0.SystemParameters.Heat.Gain := 1.97903;
+		MpTempControllerConfigType_0.SystemParameters.Heat.TimeConstant1 := 415.2267;
+		MpTempControllerConfigType_0.SystemParameters.Heat.TimeConstant2 := 15.1164656;
+		MpTempControllerConfigType_0.SystemParameters.Heat.DelayTime := 7;
+		MpTempControllerConfigType_0.SystemParameters.Cool.Gain := 0;
+		MpTempControllerConfigType_0.SystemParameters.Cool.TimeConstant1 := 0;
+		MpTempControllerConfigType_0.SystemParameters.Cool.TimeConstant2 := 0;
+		MpTempControllerConfigType_0.SystemParameters.Cool.DelayTime := 0;
+		 
+		CASE StepHeat OF
+			STEP_WAIT:
+				IF ConfirmingHeatCoolOrHeat OR NOT(FirstUpload) THEN
+					MpTempControllerParType_0.PID.Heat.ProportionalGain := 15.23996;
+					MpTempControllerParType_0.PID.Heat.IntegrationTime := 74.8946152;
+					MpTempControllerParType_0.PID.Heat.DerivativeTime := 7.86393452;
+					MpTempControllerParType_0.PID.Heat.FilterTime := 0.786393464;
+					MpTempControllerParType_0.PID.Cool.ProportionalGain := 0;
+					MpTempControllerParType_0.PID.Cool.IntegrationTime := 0;
+					MpTempControllerParType_0.PID.Cool.DerivativeTime := 0;
+					MpTempControllerParType_0.PID.Cool.FilterTime := 0;
+					MpTempControllerParType_0.PID.IntegratorPreloading := 0;
+					MpTempControllerParType_0.Profile.Heat.SlewRate := 0.185037389;
+					MpTempControllerParType_0.Profile.Heat.FilterTime := 77.42902;
+					MpTempControllerParType_0.Profile.Heat.DelayTime := 7;
+					MpTempControllerParType_0.Profile.Heat.QuickStart :=  FALSE;
+					MpTempControllerParType_0.Profile.Cool.SlewRate := 0.03187467;
+					MpTempControllerParType_0.Profile.Cool.FilterTime := 15.1164656;
+					MpTempControllerParType_0.Profile.Cool.DelayTime := 7;
+					MpTempControllerParType_0.Profile.Cool.QuickStart := FALSE;
+					StepHeat := STEP_SAVE;
+				END_IF
 			
-			MpTempControllerConfig_0.Save := TRUE;
-			MpTempControllerParType_1 := MpTempControllerParType_0;
-			MpTempControllerConfig_0.Load := TRUE;
-			MpTempController_0.Update := TRUE;
-		END_IF
-		IF MpTempControllerConfig_0.CommandDone THEN
-			MpTempControllerConfig_0.Save := FALSE;
-			MpTempControllerConfig_0.Load := FALSE;
-			MpTempController_0.Update := FALSE;
-			ConfirmingHeatCoolOrHeat := FALSE;
-		END_IF
-		MpTempTuningType_0.Mode := mpTEMP_TUNING_MODE_OSC_HEAT;
+			STEP_SAVE:
+				ConfirmingHeatCoolOrHeat := FALSE;
+				FirstUpload := TRUE;
+				MpTempControllerConfig_0.Save := TRUE;
+				MpTempControllerParType_1 := MpTempControllerParType_0;
+				IF MpTempControllerConfig_0.CommandDone THEN
+					MpTempControllerConfig_0.Save := FALSE;
+					StepHeat := STEP_UPDATE;
+				END_IF
+			
+			STEP_UPDATE:
+				MpTempController_0.Update := TRUE;
+				IF MpTempController_0.UpdateDone THEN
+					MpTempController_0.Update := FALSE;
+					StepHeat := STEP_WAIT;
+				END_IF
+		END_CASE
+		MpTempTuningType_0.Mode := mpTEMP_TUNING_MODE_HEAT;
 		NameOfMode := 'Oscilation Heat';
-	ELSE
+	
+	ELSIF gTanks.Parameters.HeatCool THEN // Heating and cooling
 		MpTempControllerConfigType_0.Type := mpTEMP_ZONE_TYPE_HEAT_COOL;
-		MpTempControllerConfigType_0.SystemParameters.Heat.Gain := 2.8;
-		MpTempControllerConfigType_0.SystemParameters.Heat.TimeConstant1 := 30;
-		MpTempControllerConfigType_0.SystemParameters.Heat.TimeConstant2 := 2;
-		MpTempControllerConfigType_0.SystemParameters.Heat.DelayTime := 1;
-		MpTempControllerConfigType_0.SystemParameters.Cool.Gain := 2.8;
-		MpTempControllerConfigType_0.SystemParameters.Cool.TimeConstant1 := 30;
-		MpTempControllerConfigType_0.SystemParameters.Cool.TimeConstant2 := 2;
-		MpTempControllerConfigType_0.SystemParameters.Cool.DelayTime := 1;
-		MpTempControllerConfigType_0.SystemParameters.Heat.DelayTime := 8;
+		MpTempControllerConfigType_0.SystemParameters.Heat.Gain := 1.95778942;
+		MpTempControllerConfigType_0.SystemParameters.Heat.TimeConstant1 := 396.665375;
+		MpTempControllerConfigType_0.SystemParameters.Heat.TimeConstant2 := 16.8905449;
+		MpTempControllerConfigType_0.SystemParameters.Heat.DelayTime := 5;
+		MpTempControllerConfigType_0.SystemParameters.Cool.Gain := 0.00042889435;
+		MpTempControllerConfigType_0.SystemParameters.Cool.TimeConstant1 := 1.86782444;
+		MpTempControllerConfigType_0.SystemParameters.Cool.TimeConstant2 := 0;
+		MpTempControllerConfigType_0.SystemParameters.Cool.DelayTime := 13;
 		
-		IF ConfirmingHeatCoolOrHeat THEN
-			MpTempControllerParType_0.PID.Heat.ProportionalGain := 34.72473;
-			MpTempControllerParType_0.PID.Heat.IntegrationTime := 164.504242;
-			MpTempControllerParType_0.PID.Heat.DerivativeTime := 19.470509;
-			MpTempControllerParType_0.PID.Heat.FilterTime := 1.97405088;
-			MpTempControllerParType_0.PID.Cool.ProportionalGain :=  34.72473;
-			MpTempControllerParType_0.PID.Cool.IntegrationTime :=  164.504242;
-			MpTempControllerParType_0.PID.Cool.DerivativeTime := 19.470509;
-			MpTempControllerParType_0.PID.Cool.FilterTime := 1.97405088;
-			MpTempControllerParType_0.PID.IntegratorPreloading := -0.110810772;
-			
-			MpTempControllerConfig_0.Save := TRUE;
-			MpTempControllerParType_1 := MpTempControllerParType_0;
-			MpTempControllerConfig_0.Load := TRUE;
-			MpTempController_0.Update := TRUE;
-		END_IF
-		IF MpTempControllerConfig_0.CommandDone THEN
-			MpTempControllerConfig_0.Save := FALSE;
-			MpTempControllerConfig_0.Load := FALSE;
-			MpTempController_0.Update := FALSE;
-			ConfirmingHeatCoolOrHeat := FALSE;
-		END_IF
-		MpTempTuningType_0.Mode := mpTEMP_TUNING_MODE_OSC_HEAT_COOL;
+		CASE StepHeatCool OF
+			STEP_WAIT:
+				IF ConfirmingHeatCoolOrHeat OR NOT(FirstUpload) THEN
+					MpTempControllerParType_0.PID.Heat.ProportionalGain := 40;
+					MpTempControllerParType_0.PID.Heat.IntegrationTime := 250;
+					MpTempControllerParType_0.PID.Heat.DerivativeTime := 25;
+					MpTempControllerParType_0.PID.Heat.FilterTime := 2.5;
+					MpTempControllerParType_0.PID.Cool.ProportionalGain :=  40;
+					MpTempControllerParType_0.PID.Cool.IntegrationTime :=  250;
+					MpTempControllerParType_0.PID.Cool.DerivativeTime := 25;
+					MpTempControllerParType_0.PID.Cool.FilterTime := 2.5;
+					MpTempControllerParType_0.PID.IntegratorPreloading := -0.117142811;
+					MpTempControllerParType_0.Profile.Heat.SlewRate := 0.180146277;
+					MpTempControllerParType_0.Profile.Heat.FilterTime := 80.4640656;
+					MpTempControllerParType_0.Profile.Heat.DelayTime := 6;
+					MpTempControllerParType_0.Profile.Heat.QuickStart :=  FALSE;
+					MpTempControllerParType_0.Profile.Cool.SlewRate := 0.1221704;
+					MpTempControllerParType_0.Profile.Cool.FilterTime := 81.8528748;
+					MpTempControllerParType_0.Profile.Cool.DelayTime := 15;
+					MpTempControllerParType_0.Profile.Cool.QuickStart := FALSE;
+					StepHeatCool := STEP_SAVE;
+				END_IF
+						
+			STEP_SAVE:
+					ConfirmingHeatCoolOrHeat := FALSE;
+					FirstUpload := TRUE;
+					MpTempControllerConfig_0.Save := TRUE;
+					MpTempControllerParType_1 := MpTempControllerParType_0;
+					IF MpTempControllerConfig_0.CommandDone THEN
+						MpTempControllerConfig_0.Save := FALSE;
+						StepHeatCool := STEP_UPDATE;
+					END_IF
+		
+			STEP_UPDATE:
+				MpTempController_0.Update := TRUE;
+				IF MpTempController_0.UpdateDone THEN
+					MpTempController_0.Update := FALSE;
+					StepHeatCool := STEP_WAIT;
+				END_IF
+		END_CASE
+		//MpTempTuningType_0.Mode := mpTEMP_TUNING_MODE_HEAT_COOL;
+		CASE tryby OF
+			3:
+				MpTempTuningType_0.Mode := mpTEMP_TUNING_MODE_HEAT_COOL;
+			4:
+				MpTempTuningType_0.Mode := mpTEMP_TUNING_MODE_OSC_HEAT_COOL;
+		END_CASE;
 		NameOfMode := 'Oscilation Heat and Cool';
 	END_IF;
-	
-//	CASE tryby OF
-//		1:
-//			MpTempTuningType_0.Mode := mpTEMP_TUNING_MODE_HEAT;
-//		2:
-//			MpTempTuningType_0.Mode := mpTEMP_TUNING_MODE_OSC_HEAT;
-//		3:
-//			MpTempTuningType_0.Mode := mpTEMP_TUNING_MODE_HEAT_COOL;
-//		4:
-//			MpTempTuningType_0.Mode := mpTEMP_TUNING_MODE_OSC_HEAT_COOL;
-//	END_CASE;
 	
 	MpTempControllerParType_0.Tuning := MpTempTuningType_0;
 	

@@ -10,13 +10,11 @@ PROGRAM _INIT
 	MpAxisBasic_Primary.Enable := TRUE;
 	MpAxisBasic_Primary.MpLink := ADR(gMixer_1);
 	MpAxisBasic_Primary.Parameters := ADR(MpAxisBasicParameters_Primary);
-	//MpAxisBasic_Primary.Simulate := TRUE;
 	MpAxisBasic_Primary();
 	//Secondary axis (Mixer2) init
 	MpAxisBasic_Secondary.Enable := TRUE;
 	MpAxisBasic_Secondary.MpLink := ADR(gMixer_2);
 	MpAxisBasic_Secondary.Parameters := ADR(MpAxisBasicParameters_Secondary);
-	//MpAxisBasic_Secondary.Simulate := TRUE;
 	MpAxisBasic_Secondary();
 	//Axis coupling init
 	MpAxisCoupling_0.Enable := TRUE;

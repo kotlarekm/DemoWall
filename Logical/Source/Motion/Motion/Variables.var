@@ -11,7 +11,6 @@ VAR
 	CouplingMode : CouplingEnum := NO_COUPLING; (*Coupling mode*)
 	CamCoupling : BOOL := FALSE; (*Cam coupling enable variable*)
 	F_TRIG_0 : F_TRIG; (*Edge detection function*)
-	F_TRIG_1 : F_TRIG; (*Edge detection function
-*)
+	F_TRIG_1 : F_TRIG; (*Edge detection function*)
 	Manual : BOOL := FALSE; (*Manual mode toggle variable*)
 END_VAR
