@@ -89,6 +89,12 @@
           <High ValueProvider="Const">70</High>
         </EURange>
       </EURanges>
+      <EURanges Id="23">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">2</High>
+        </EURange>
+      </EURanges>
     </EURangesAliases>
     <EngineeringUnitAliases>
       <EngineeringUnit Id="1" UnitId="4342098" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="bar [unit of pressure]" Symbol="bar" />
@@ -339,6 +345,8 @@
           <Variable Name="Direction" />
         </Variable>
         <Variable Name="Manual" />
+        <Variable Name="RatioDenominatorReal" />
+        <Variable Name="RatioNumeratorReal" EURangesId="23" />
       </Task>
       <Task Name="IO">
         <Variable Name="diSwitch1" />

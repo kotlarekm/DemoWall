@@ -259,5 +259,13 @@
         <seg>Mixer secondary</seg>
       </tuv>
     </tu>
+    <tu tuid="VelocityRatio">
+      <tuv xml:lang="pl">
+        <seg>Stosunek prędkości</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Velocity ratio</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

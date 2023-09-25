@@ -13,4 +13,6 @@ VAR
 	F_TRIG_0 : F_TRIG; (*Edge detection function*)
 	F_TRIG_1 : F_TRIG; (*Edge detection function*)
 	Manual : BOOL := FALSE; (*Manual mode toggle variable*)
+	RatioNumeratorReal : REAL := 1;
+	RatioDenominatorReal : REAL := 1;
 END_VAR

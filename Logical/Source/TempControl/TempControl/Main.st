@@ -40,6 +40,7 @@ END_PROGRAM
 
 PROGRAM _CYCLIC
 	
+	// Loading system parameters, pid parameters and profile parameters
 	// Only heating
 	IF NOT(gTanks.Parameters.HeatCool) THEN	
 		MpTempControllerConfigType_0.Type := mpTEMP_ZONE_TYPE_HEAT;
@@ -93,9 +94,10 @@ PROGRAM _CYCLIC
 				END_IF
 		END_CASE
 		MpTempTuningType_0.Mode := mpTEMP_TUNING_MODE_HEAT;
-		NameOfMode := 'Oscilation Heat';
+		NameOfMode := 'Step Heat';
 	
-	ELSIF gTanks.Parameters.HeatCool THEN // Heating and cooling
+	// Heating and cooling
+	ELSIF gTanks.Parameters.HeatCool THEN 
 		MpTempControllerConfigType_0.Type := mpTEMP_ZONE_TYPE_HEAT_COOL;
 		MpTempControllerConfigType_0.SystemParameters.Heat.Gain := 1.95778942;
 		MpTempControllerConfigType_0.SystemParameters.Heat.TimeConstant1 := 396.665375;
@@ -146,13 +148,7 @@ PROGRAM _CYCLIC
 					StepHeatCool := STEP_WAIT;
 				END_IF
 		END_CASE
-		//MpTempTuningType_0.Mode := mpTEMP_TUNING_MODE_HEAT_COOL;
-		CASE tryby OF
-			3:
-				MpTempTuningType_0.Mode := mpTEMP_TUNING_MODE_HEAT_COOL;
-			4:
-				MpTempTuningType_0.Mode := mpTEMP_TUNING_MODE_OSC_HEAT_COOL;
-		END_CASE;
+		MpTempTuningType_0.Mode := mpTEMP_TUNING_MODE_HEAT_COOL;
 		NameOfMode := 'Oscilation Heat and Cool';
 	END_IF;
 	

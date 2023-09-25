@@ -72,11 +72,22 @@
     <EventBinding id="EventBindingMotion5">
       <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_Primary.Error" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
-        <Action>
-          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse8">
-            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Green" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse8">
+                <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Green" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_Primary.Power">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
       <EventHandler condition="newValue = FALSE">
         <Action>
@@ -515,24 +526,6 @@
           </Target>
         </Action>
       </EventHandler>
-      <EventHandler condition="newValue = FALSE AND NOT(moveActive AND direction = 1)">
-        <Sequence>
-          <Step order="0">
-            <Action>
-              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchCam">
-                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="true" />
-              </Target>
-            </Action>
-          </Step>
-          <Step order="1">
-            <Action>
-              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchGear">
-                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="true" />
-              </Target>
-            </Action>
-          </Step>
-        </Sequence>
-      </EventHandler>
       <EventHandler condition="newValue = FALSE AND moveActive AND direction = 1">
         <Sequence>
           <Step order="0">
@@ -551,26 +544,54 @@
           </Step>
         </Sequence>
       </EventHandler>
-      <EventHandler condition="newValue = FALSE AND CamCoupling = TRUE">
-        <Action>
-          <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchCam">
-            <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetValueBool" value="false" />
-          </Target>
-        </Action>
-      </EventHandler>
-      <EventHandler condition="newValue = FALSE AND GearCoupling = TRUE">
-        <Action>
-          <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchGear">
-            <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetValueBool" value="false" />
-          </Target>
-        </Action>
-      </EventHandler>
       <EventHandler condition="newValue = TRUE AND CamCoupling = TRUE">
         <Action>
           <Target xsi:type="widgets.brease.DropDownBox.Action" contentRefId="ContentMotion" widgetRefId="DropDownBoxDirSelect">
             <Method xsi:type="widgets.brease.DropDownBox.Action.SetEnable" value="true" />
           </Target>
         </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_222">
+      <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_Secondary.Error" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchCam">
+                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchGear">
+                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="2">
+            <Action>
+              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchCam">
+                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="3">
+            <Action>
+              <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchGear">
+                <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="4">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_Secondary.Power">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
     </EventBinding>
     <EventBinding id="EventBindingMotion11">
@@ -739,6 +760,16 @@
         <Action>
           <Target xsi:type="widgets.brease.ToggleSwitch.Action" contentRefId="ContentMotion" widgetRefId="ToggleSwitchManual">
             <Method xsi:type="widgets.brease.ToggleSwitch.Action.SetEnable" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMotion.SliderLeftValve.ValueChanged">
+      <Source xsi:type="widgets.brease.BasicSlider.Event" contentRefId="ContentMotion" widgetRefId="SliderLeftValve" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisCoupling_0.Update">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
       </EventHandler>

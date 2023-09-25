@@ -10,11 +10,13 @@ PROGRAM _INIT
 	MpAxisBasic_Primary.Enable := TRUE;
 	MpAxisBasic_Primary.MpLink := ADR(gMixer_1);
 	MpAxisBasic_Primary.Parameters := ADR(MpAxisBasicParameters_Primary);
+	//MpAxisBasic_Primary.Simulate := TRUE;
 	MpAxisBasic_Primary();
 	//Secondary axis (Mixer2) init
 	MpAxisBasic_Secondary.Enable := TRUE;
 	MpAxisBasic_Secondary.MpLink := ADR(gMixer_2);
 	MpAxisBasic_Secondary.Parameters := ADR(MpAxisBasicParameters_Secondary);
+	//MpAxisBasic_Secondary.Simulate := TRUE;
 	MpAxisBasic_Secondary();
 	//Axis coupling init
 	MpAxisCoupling_0.Enable := TRUE;
@@ -65,6 +67,12 @@ PROGRAM _CYCLIC
 	IF MpAxisBasic_Secondary.UpdateDone THEN
 		MpAxisBasic_Secondary.Update := FALSE;
 	END_IF
+	
+	//
+	MpAxisCouplingParameters.Gear.RatioDenominator := REAL_TO_DINT(RatioDenominatorReal * 10);
+	MpAxisCouplingParameters.Gear.RatioNumerator := REAL_TO_DINT(RatioNumeratorReal * 10);
+	MpAxisCouplingParameters.Cam.MasterScaling := REAL_TO_DINT(RatioDenominatorReal * 36000);
+	MpAxisCouplingParameters.Cam.SlaveScaling := REAL_TO_DINT(RatioNumeratorReal * 36000);
 	//E-STOP
 	IF NOT gDriveStop THEN
 		MpAxisBasic_Primary.Power := FALSE;

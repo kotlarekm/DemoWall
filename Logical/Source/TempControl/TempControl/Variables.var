@@ -23,16 +23,14 @@ VAR
 	ApplySettings : BOOL := FALSE; (*If true, displeyed PID parameters are applied to controller*)
 	InfoLabelIndex : USINT := 0; (*Defines info displayed on main page: 0 - auto mode; 1 - manual mode; 2 - tuning in progress; 3 - emergency stop*)
 	ShowTuningDoneDialog : BOOL := FALSE; (*If true, tuning done dialog is displayed.*)
-	TurnOnHeater : BOOL;
-	TurnOnFan : BOOL;
-	Tank3Temp : INT;
-	MpTempControllerConfig_0 : MpTempControllerConfig;
-	MpTempControllerConfigType_0 : MpTempControllerConfigType := (Type:=mpTEMP_ZONE_TYPE_HEAT,AmbientTemperature:=30,ProfileMode:=mpTEMP_PROFILE_MODE_TIME_OPT);
-	MpTempTuningType_0 : MpTempTuningType := (Mode:=mpTEMP_TUNING_MODE_HEAT_COOL,SetPointHeat:=45,SetPointCool:=35);
-	zmienna : BOOL;
-	NameOfMode : STRING[80];
-	tryby : INT := 4;
-	StepHeatCool : StepEnum;
-	StepHeat : StepEnum;
-	FirstUpload : BOOL := FALSE;
+	TurnOnHeater : BOOL; (*Variable that switches the fan on (not retain)*)
+	TurnOnFan : BOOL; (*Variable that switches the heater on (not retain)*)
+	Tank3Temp : INT; (*Current temperature in the tank 3 (not retain)*)
+	MpTempControllerConfig_0 : MpTempControllerConfig; (*The function block is used to modify a MpTempController configuration*)
+	MpTempControllerConfigType_0 : MpTempControllerConfigType := (Type:=mpTEMP_ZONE_TYPE_HEAT,AmbientTemperature:=30,ProfileMode:=mpTEMP_PROFILE_MODE_TIME_OPT); (*This data type contains configuration parameters for the controller and the system*)
+	MpTempTuningType_0 : MpTempTuningType := (Mode:=mpTEMP_TUNING_MODE_HEAT_COOL,SetPointHeat:=45,SetPointCool:=35); (*This data type contains parameters for tuning*)
+	NameOfMode : STRING[80]; (*Name of the mode used in the visualization*)
+	StepHeatCool : StepEnum; (*Steps when confirming controller parameters*)
+	StepHeat : StepEnum; (*Steps when confirming controller parameters*)
+	FirstUpload : BOOL := FALSE; (*Variable enabling correct uploading of controller parameters immediately after transfer*)
 END_VAR
