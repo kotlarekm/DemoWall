@@ -53,10 +53,10 @@
     </tu>
     <tu tuid="LabelText1">
       <tuv xml:lang="pl">
-        <seg>Ta funkcja ustala oś podrzędną w określonym stosunku prędkości (1:1) do osi głównej.                                                                                                                 Dopóki nie jest ustawione wyjście „Sprzęganie ustalone”, oś główna może poruszać się tylko w kierunku dodatnim (Prawo). Po tym jak zostanie ustawione oś główna może poruszać się w dowolnym kierunku.</seg>
+        <seg>Ta funkcja ustala oś podrzędną w określonym stosunku prędkości do osi głównej.                                                                                                                         Dopóki nie jest ustawione wyjście „Sprzęganie ustalone”, oś główna może poruszać się tylko w kierunku dodatnim (Prawo). Po tym jak zostanie ustawione oś główna może poruszać się w dowolnym kierunku.</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>This function brings the slave axis in the specified (1:1) velocity ratio to the master axis.                                                                                                                 As long as the "Coupling Established" output is not set, the master axis is only allowed to move in the positive direction (Right). Once it has been set, the master can move in any direction.  </seg>
+        <seg>This function brings the slave axis in the specified velocity ratio to the master axis.                                                                                                                         As long as the "Coupling Established" output is not set, the master axis is only allowed to move in the positive direction (Right). Once it has been set, the master can move in any direction.  </seg>
       </tuv>
     </tu>
     <tu tuid="LabelText3">
