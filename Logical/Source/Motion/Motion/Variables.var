@@ -1,12 +1,12 @@
 VAR
 	MpAxisBasic_Primary : MpAxisBasic; (*Mixer 1 axis function block*)
-	MpAxisBasicParameters_Primary : MpAxisBasicParType := (Velocity:=200,Acceleration:=250,Deceleration:=250,Direction:=mcDIR_POSITIVE); (*Mixer 1 axis parameters structure*)
+	MpAxisBasicParameters_Primary : MpAxisBasicParType := (Velocity:=100,Acceleration:=250,Deceleration:=250,Direction:=mcDIR_POSITIVE); (*Mixer 1 axis parameters structure*)
 	StepMixer1 : StepEnum := STEP_INIT; (*Automatic mode mixer 1 step*)
 	StepMixer2 : StepEnum := STEP_INIT; (*Automatic mode mixer 2 step*)
 	MpAxisBasic_Secondary : MpAxisBasic; (*Mixer 2 axis function block*)
 	MpAxisCoupling_0 : MpAxisCoupling; (*Axis coupling function block*)
 	MpAxisCouplingParameters : MpAxisCouplingParType := (Cam:=(ID:=1)); (*Axis coupling parameters structure*)
-	MpAxisBasicParameters_Secondary : MpAxisBasicParType := (Velocity:=200,Acceleration:=250,Deceleration:=250,Direction:=mcDIR_POSITIVE); (*Mixer 2 axis parameters structure*)
+	MpAxisBasicParameters_Secondary : MpAxisBasicParType := (Velocity:=100,Acceleration:=250,Deceleration:=250,Direction:=mcDIR_POSITIVE); (*Mixer 2 axis parameters structure*)
 	GearCoupling : BOOL := FALSE; (*Gear coupling enable variable*)
 	CouplingMode : CouplingEnum := NO_COUPLING; (*Coupling mode*)
 	CamCoupling : BOOL := FALSE; (*Cam coupling enable variable*)
@@ -15,4 +15,9 @@ VAR
 	Manual : BOOL := FALSE; (*Manual mode toggle variable*)
 	RatioNumeratorReal : REAL := 1;
 	RatioDenominatorReal : REAL := 1;
+	MpAxisBasic_P3 : MpAxisBasic := (Power:=FALSE,MoveVelocity:=FALSE,MoveAbsolute:=FALSE,MoveAdditive:=FALSE);
+	MpAxisBasicParameters_P3 : MpAxisBasicParType := (Velocity:=200,Acceleration:=250,Deceleration:=250,Direction:=mcDIR_POSITIVE);
+	F_TRIG_2 : F_TRIG;
+	MixerSecondaryVelocity : REAL := 0;
+	MixerP3Velocity : REAL := 0;
 END_VAR

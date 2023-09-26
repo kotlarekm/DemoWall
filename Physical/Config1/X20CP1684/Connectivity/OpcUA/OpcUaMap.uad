@@ -347,6 +347,32 @@
         <Variable Name="Manual" />
         <Variable Name="RatioDenominatorReal" />
         <Variable Name="RatioNumeratorReal" EURangesId="23" />
+        <Variable Name="MpAxisBasic_P3">
+          <Variable Name="Error" />
+          <Variable Name="Position" />
+          <Variable Name="Velocity" />
+          <Variable Name="PowerOn" />
+          <Variable Name="InVelocity" />
+          <Variable Name="InPosition" />
+          <Variable Name="MoveActive" />
+          <Variable Name="ErrorReset" />
+          <Variable Name="Update" />
+          <Variable Name="Power" />
+          <Variable Name="MoveVelocity" />
+          <Variable Name="MoveAbsolute" />
+          <Variable Name="MoveAdditive" />
+          <Variable Name="Stop" />
+        </Variable>
+        <Variable Name="MpAxisBasicParameters_P3">
+          <Variable Name="Position" EURangesId="10" />
+          <Variable Name="Distance" EURangesId="21" />
+          <Variable Name="Velocity" EURangesId="15" />
+          <Variable Name="Acceleration" EURangesId="20" />
+          <Variable Name="Deceleration" EURangesId="20" />
+          <Variable Name="Direction" />
+        </Variable>
+        <Variable Name="MixerP3Velocity" />
+        <Variable Name="MixerSecondaryVelocity" />
       </Task>
       <Task Name="IO">
         <Variable Name="diSwitch1" />

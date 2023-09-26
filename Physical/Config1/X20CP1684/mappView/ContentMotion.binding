@@ -39,10 +39,7 @@
 <Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_Secondary.Position" attribute="node" />
 <Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericOutputActualVelocity4" attribute="node" />
 </Binding>
-<Binding mode="oneWay">
-<Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_Secondary.Velocity" attribute="node" />
-<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericOutputActualVelocity3" attribute="node" />
-</Binding>
+
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Motion:CamCoupling" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="ToggleSwitchCam" attribute="value" />
@@ -146,6 +143,73 @@
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::Motion:RatioNumeratorReal" attribute="value" />
 <Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="SliderLeftValve" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_P3.Power" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="ToggleButtonPower2" attribute="value" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_P3.PowerOn" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="ButtonStop2" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_P3.PowerOn" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="ButtonMoveAbsolute2" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_P3.PowerOn" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="ButtonMoveAdditive2" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_P3.PowerOn" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="ButtonMoveVelocity2" attribute="enable" />
+</Binding>
+
+
+
+
+
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasicParameters_P3.Deceleration" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericInputSetDeceleration3" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasicParameters_P3.Acceleration" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericInputSetAcceleration3" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasicParameters_P3.Position" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericInputSetPosition4" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasicParameters_P3.Distance" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericInputSetDistance2" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasicParameters_P3.Velocity" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericInputSetVelocity3" attribute="node" />
+</Binding>
+
+
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Motion:MixerP3Velocity" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="OnlineChartHDA1" attribute="graph[graph1].node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Motion:MixerP3Velocity" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericOutputActualVelocity5" attribute="node" />
+</Binding>
+<Binding mode="oneWay">
+<Source xsi:type="opcUa" refId="::Motion:MixerSecondaryVelocity" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericOutputActualVelocity3" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Motion:MpAxisBasic_P3.Position" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMotion" widgetRefId="NumericOutputActualVelocity6" attribute="node" />
 </Binding>
 </Bindings>
 </BindingsSet>

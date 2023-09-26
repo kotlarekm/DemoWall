@@ -35,6 +35,23 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="EventBinding_220">
+      <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_P3.PowerOn" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse2">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Green" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse2">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Red" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
     <EventBinding id="EventBindingMotion3">
       <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_Primary.MoveActive" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
@@ -64,6 +81,23 @@
       <EventHandler condition="newValue = FALSE">
         <Action>
           <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse6">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Red" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_230">
+      <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_P3.MoveActive" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse5">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Green" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse5">
             <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Red" />
           </Target>
         </Action>
@@ -109,6 +143,23 @@
       <EventHandler condition="newValue = FALSE">
         <Action>
           <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse9">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Red" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_240">
+      <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_P3.Error" event="ValueChanged" />
+      <EventHandler condition="newValue = TRUE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse10">
+            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Green" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue = FALSE">
+        <Action>
+          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse10">
             <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Red" />
           </Target>
         </Action>
@@ -185,6 +236,13 @@
               </Target>
             </Action>
           </Step>
+          <Step order="3">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxManual2">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="true" />
+              </Target>
+            </Action>
+          </Step>
         </Sequence>
       </EventHandler>
       <EventHandler condition="newValue = FALSE">
@@ -206,6 +264,13 @@
           <Step order="3">
             <Action>
               <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxCouplingControl">
+                <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="false" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="4">
+            <Action>
+              <Target xsi:type="widgets.brease.GroupBox.Action" contentRefId="ContentMotion" widgetRefId="GroupBoxManual2">
                 <Method xsi:type="widgets.brease.GroupBox.Action.SetEnable" value="false" />
               </Target>
             </Action>
@@ -281,6 +346,16 @@
         </Sequence>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="ContentMotion.ButtonStop2.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonStop2" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_P3.Stop">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
     <EventBinding id="ContentMotion.ButtonMoveVelocity1.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonMoveVelocity1" event="Click" />
       <EventHandler>
@@ -311,6 +386,36 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="ContentMotion.ButtonMoveVelocity2.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonMoveVelocity2" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_P3.MoveVelocity">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMotion.ButtonMoveAdditive2.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonMoveAdditive2" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_P3.MoveAdditive">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMotion.ButtonMoveAbsolute2.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonMoveAbsolute2" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_P3.MoveAbsolute">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
     <EventBinding id="ContentMotion.ButtonErrorReset.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonErrorReset" event="Click" />
       <EventHandler>
@@ -326,6 +431,16 @@
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_Secondary.ErrorReset">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMotion.ButtonErrorReset2.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMotion" widgetRefId="ButtonErrorReset2" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_P3.ErrorReset">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
@@ -374,6 +489,30 @@
       <EventHandler>
         <Action>
           <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_Secondary.Update">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMotion.DropDownBoxDirSelect2.SelectedIndexChanged">
+      <Source xsi:type="widgets.brease.DropDownBox.Event" contentRefId="ContentMotion" widgetRefId="DropDownBoxDirSelect2" event="SelectedIndexChanged" />
+      <EventHandler condition="selectedIndex = 0">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasicParameters_P3.Direction">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="selectedIndex = 1">
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasicParameters_P3.Direction">
+            <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_P3.Update">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>

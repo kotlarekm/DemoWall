@@ -10,13 +10,11 @@ PROGRAM _INIT
 	MpAxisBasic_Primary.Enable := TRUE;
 	MpAxisBasic_Primary.MpLink := ADR(gMixer_1);
 	MpAxisBasic_Primary.Parameters := ADR(MpAxisBasicParameters_Primary);
-	MpAxisBasic_Primary.Simulate := TRUE;
 	MpAxisBasic_Primary();
 	//Secondary axis (Mixer2) init
 	MpAxisBasic_Secondary.Enable := TRUE;
 	MpAxisBasic_Secondary.MpLink := ADR(gMixer_2);
 	MpAxisBasic_Secondary.Parameters := ADR(MpAxisBasicParameters_Secondary);
-	MpAxisBasic_Secondary.Simulate := TRUE;
 	MpAxisBasic_Secondary();
 	//Axis coupling init
 	MpAxisCoupling_0.Enable := TRUE;
@@ -24,6 +22,11 @@ PROGRAM _INIT
 	MpAxisCoupling_0.MpLinkMaster := ADR(gMixer_1);
 	MpAxisCoupling_0.Parameters := ADR(MpAxisCouplingParameters);
 	MpAxisCoupling_0();
+	//MpAxisBasic_P3
+	MpAxisBasic_P3.Enable := TRUE;
+	MpAxisBasic_P3.MpLink := ADR(gAxis_P3);
+	MpAxisBasic_P3.Parameters := ADR(MpAxisBasicParameters_P3);
+	MpAxisBasic_P3();
 END_PROGRAM
 
 PROGRAM _CYCLIC
@@ -41,6 +44,10 @@ PROGRAM _CYCLIC
 	MpAxisCoupling_0.Parameters := ADR(MpAxisCouplingParameters);
 	MpAxisCoupling_0();
 	
+	MpAxisBasic_P3.MpLink := ADR(gAxis_P3);
+	MpAxisBasic_P3.Parameters := ADR(MpAxisBasicParameters_P3);
+	MpAxisBasic_P3();
+	
 	//Mixer 1,2 status update
 	gTanks.Status.IsMixer1On := BOOL_TO_UINT(MpAxisBasic_Primary.MoveActive);
 	gTanks.Status.IsMixer2On := BOOL_TO_UINT(MpAxisBasic_Secondary.MoveActive);
@@ -56,6 +63,7 @@ PROGRAM _CYCLIC
 	//Power_on negative edge detection
 	F_TRIG_0(CLK:=MpAxisBasic_Primary.PowerOn);
 	F_TRIG_1(CLK:=MpAxisBasic_Secondary.PowerOn);
+	F_TRIG_2(CLK:=MpAxisBasic_P3.PowerOn);
 	
 	//Resetting update commands
 	IF MpAxisCoupling_0.UpdateDone THEN
@@ -67,23 +75,44 @@ PROGRAM _CYCLIC
 	IF MpAxisBasic_Secondary.UpdateDone THEN
 		MpAxisBasic_Secondary.Update := FALSE;
 	END_IF
+	IF MpAxisBasic_P3.UpdateDone THEN
+		MpAxisBasic_P3.Update := FALSE;
+	END_IF
 	
 	//
 	MpAxisCouplingParameters.Gear.RatioDenominator := REAL_TO_DINT(RatioDenominatorReal * 10);
 	MpAxisCouplingParameters.Gear.RatioNumerator := REAL_TO_DINT(RatioNumeratorReal * 10);
 	MpAxisCouplingParameters.Cam.MasterScaling := REAL_TO_DINT(RatioDenominatorReal * 36000);
 	MpAxisCouplingParameters.Cam.SlaveScaling := REAL_TO_DINT(RatioNumeratorReal * 36000);
+	
+	IF MpAxisBasic_Secondary.Power THEN
+		MixerSecondaryVelocity := MpAxisBasic_Secondary.Velocity;
+	ELSE
+		MixerSecondaryVelocity := 0;
+	END_IF
+		
+	IF MpAxisBasic_P3.Power THEN
+		MixerP3Velocity := MpAxisBasic_P3.Velocity;
+	ELSE
+		MixerP3Velocity := 0;
+	END_IF
+	
+	
+	
 	//E-STOP
 	IF NOT gDriveStop THEN
 		MpAxisBasic_Primary.Power := FALSE;
 		MpAxisBasic_Secondary.Power := FALSE;
+		MpAxisBasic_P3.Power := FALSE;
 		gTanks.Commands.TurnOnMixer1 := FALSE;
 		gTanks.Commands.TurnOnMixer2 := FALSE;
 		StepMixer1 := STEP_INIT;
 		StepMixer2 := STEP_INIT;
 		Manual := FALSE;
 	END_IF;
+	
 	IF NOT Manual THEN
+		MpAxisBasic_P3.Power := FALSE;
 		//Primary axis (Mixer1) state machine
 		CASE StepMixer1 OF
 			STEP_INIT:
@@ -121,6 +150,7 @@ PROGRAM _CYCLIC
 					StepMixer1:= STEP_INIT;
 				END_IF;
 		END_CASE;
+		
 		//Secondary axis (Mixer2) state machine
 		CASE StepMixer2 OF
 			STEP_INIT:
@@ -163,18 +193,25 @@ PROGRAM _CYCLIC
 				END_IF;
 		END_CASE;
 	END_IF
+	
 	//Resetting commands after stop or power off
+	IF MpAxisBasic_Primary.Stopped OR F_TRIG_0.Q THEN
+		MpAxisBasic_Primary.Stop := FALSE;
+		MpAxisBasic_Primary.MoveAdditive := FALSE;
+		MpAxisBasic_Primary.MoveAbsolute := FALSE;
+		MpAxisBasic_Primary.MoveVelocity := FALSE;
+	END_IF;
 	IF MpAxisBasic_Secondary.Stopped OR F_TRIG_1.Q THEN
 		MpAxisBasic_Secondary.Stop := FALSE;
 		MpAxisBasic_Secondary.MoveVelocity := FALSE;
 		MpAxisBasic_Secondary.MoveAbsolute := FALSE;
 		MpAxisBasic_Secondary.MoveAdditive := FALSE;
 	END_IF
-	IF MpAxisBasic_Primary.Stopped OR F_TRIG_0.Q THEN
-		MpAxisBasic_Primary.Stop := FALSE;
-		MpAxisBasic_Primary.MoveAdditive := FALSE;
-		MpAxisBasic_Primary.MoveAbsolute := FALSE;
-		MpAxisBasic_Primary.MoveVelocity := FALSE;
+	IF MpAxisBasic_P3.Stopped OR F_TRIG_2.Q THEN
+		MpAxisBasic_P3.Stop := FALSE;
+		MpAxisBasic_P3.MoveAdditive := FALSE;
+		MpAxisBasic_P3.MoveAbsolute := FALSE;
+		MpAxisBasic_P3.MoveVelocity := FALSE;
 	END_IF;
 	//Manual mode 
 	IF Manual THEN
@@ -201,6 +238,16 @@ PROGRAM _CYCLIC
 		//Resetting commands after stop or power off
 		IF NOT MpAxisBasic_Secondary.Error THEN
 			MpAxisBasic_Secondary.ErrorReset := FALSE;
+		END_IF;
+		
+		//Manual mode P3 Mixer
+		IF MpAxisBasic_P3.InPosition THEN
+			MpAxisBasic_P3.MoveAdditive := FALSE;
+			MpAxisBasic_P3.MoveAbsolute := FALSE;
+			MpAxisBasic_P3.MoveVelocity := FALSE;
+		END_IF
+		IF NOT MpAxisBasic_P3.Error THEN
+			MpAxisBasic_P3.ErrorReset := FALSE;
 		END_IF;
 	END_IF
 	
@@ -270,4 +317,7 @@ PROGRAM _EXIT
 	
 	MpAxisCoupling_0.Enable := FALSE; 
 	MpAxisCoupling_0();
+	
+	MpAxisBasic_P3.Enable := FALSE;
+	MpAxisBasic_P3();
 END_PROGRAM

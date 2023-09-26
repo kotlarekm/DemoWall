@@ -2,7 +2,7 @@
 <?AutomationStudio FileVersion="4.9"?>
 <BR.AS.HardwareTopology>
   <TimeStamps>
-    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="09/20/2023 15:03:05" />
+    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="09/26/2023 14:35:35" />
   </TimeStamps>
   <Modules>
     <Module Name="X20CP1684" Type="X20CP1684" X="100" Y="100" />
@@ -159,6 +159,18 @@
       <Point X="283" Y="144" />
       <Point X="283" Y="144" />
     </Link>
+    <Link From="X20BC0063" To="X20IF1061_1" FromPort="PRB1" ToPort="IF1" IsRoutedByUser="False">
+      <Point X="829" Y="934" />
+      <Point X="829" Y="934" />
+      <Point X="809" Y="934" />
+      <Point X="805" Y="934" />
+      <Point X="805" Y="748" />
+      <Point X="275" Y="748" />
+      <Point X="275" Y="532" />
+      <Point X="288" Y="532" />
+      <Point X="301" Y="532" />
+      <Point X="301" Y="532" />
+    </Link>
     <Link From="X20BC1083" To="X20CP1684" FromPort="PLK2" ToPort="IF3" IsRoutedByUser="False">
       <Point X="328" Y="547" />
       <Point X="328" Y="547" />
@@ -177,18 +189,6 @@
       <Point X="910" Y="606" />
       <Point X="910" Y="619" />
       <Point X="910" Y="619" />
-    </Link>
-    <Link From="X20BC0063" To="X20IF1061_1" FromPort="PRB1" ToPort="IF1" IsRoutedByUser="False">
-      <Point X="829" Y="934" />
-      <Point X="829" Y="934" />
-      <Point X="809" Y="934" />
-      <Point X="805" Y="934" />
-      <Point X="805" Y="748" />
-      <Point X="275" Y="748" />
-      <Point X="275" Y="532" />
-      <Point X="288" Y="532" />
-      <Point X="301" Y="532" />
-      <Point X="301" Y="532" />
     </Link>
   </Links>
   <InfoElements />

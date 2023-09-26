@@ -259,12 +259,36 @@
         <seg>Mixer secondary</seg>
       </tuv>
     </tu>
-    <tu tuid="VelocityRatio">
+    <tu tuid="GearRatio">
       <tuv xml:lang="pl">
-        <seg>Stosunek prędkości</seg>
+        <seg>Przełożenie</seg>
       </tuv>
       <tuv xml:lang="en">
         <seg>Gear ratio</seg>
+      </tuv>
+    </tu>
+    <tu tuid="BasicDrives">
+      <tuv xml:lang="pl">
+        <seg>Podstawowe napędy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Basic drives</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AdditionalDrives">
+      <tuv xml:lang="pl">
+        <seg>Dodatkowe napędy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Additional drives</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AcoposP3">
+      <tuv xml:lang="pl">
+        <seg>ACOPOS P3 - napęd</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>ACOPOS P3 - drive</seg>
       </tuv>
     </tu>
   </body>
