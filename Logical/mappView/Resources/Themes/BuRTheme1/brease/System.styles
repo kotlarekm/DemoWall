@@ -24,7 +24,6 @@
 	
 	<Style id="my_style" xsi:type="system.brease.MessageBox"
 		headerBackColor="rgba(255, 255, 255, 1)"
-		margin="10px"	
 		backColor="rgba(255, 255, 255, 1)"
 		headerGradient="linear-gradient(to right, rgba(255, 136, 0, 1) 0%, rgba(255, 170, 68, 1) 50%, rgba(255, 204, 119, 1) 100%)" 
 		buttonBackColor="rgba(255, 255, 255, 1)"
@@ -36,16 +35,20 @@
 		buttonBorderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)"
 		buttonBackGroundGradient="linear-gradient(to bottom,#F7F7F7 0%,#C6C6C6 100%)"
 		buttonTextColor="rgba(0, 0, 0, 1)"
-		fontSize="25px" 
+		fontSize="24px" 
 		fontName="ABBvoiceMedium"
 		textColor="rgba(0, 0, 0, 1)" 
 		cornerRadius="8px 8px 0px 0px" 
 		borderWidth="0px" 
 		borderColor="#A899A0 #5F5F5F #5F5F5F #A899A0" 
-		headerTextColor="rgba(255, 255, 255, 1)"
+		headerTextColor="rgba(0, 0, 0, 1)"
 		headerFontName="ABBvoiceMedium"
-		headerFontSize="26px" 
-		shadow="5px 5px 20px 0px rgba(62, 79, 92, 0.75)" />
+		headerFontSize="30px" 
+		italic="false"
+		headerItalic="false"
+		shadow="5px 5px 20px 0px rgba(62, 79, 92, 0.75)" 
+		padding="10px"
+		margin="15px"/>
 	
 	<Style id="default" xsi:type="system.brease.Area" 
 		backColor="#ffffff" />

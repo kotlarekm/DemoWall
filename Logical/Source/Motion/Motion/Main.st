@@ -79,12 +79,13 @@ PROGRAM _CYCLIC
 		MpAxisBasic_P3.Update := FALSE;
 	END_IF
 	
-	//
+	// Gear and cam ratio
 	MpAxisCouplingParameters.Gear.RatioDenominator := REAL_TO_DINT(RatioDenominatorReal * 10);
 	MpAxisCouplingParameters.Gear.RatioNumerator := REAL_TO_DINT(RatioNumeratorReal * 10);
 	MpAxisCouplingParameters.Cam.MasterScaling := REAL_TO_DINT(RatioDenominatorReal * 36000);
 	MpAxisCouplingParameters.Cam.SlaveScaling := REAL_TO_DINT(RatioNumeratorReal * 36000);
 	
+	// Correct display of velocity values on the visualization
 	IF MpAxisBasic_Secondary.Power THEN
 		MixerSecondaryVelocity := MpAxisBasic_Secondary.Velocity;
 	ELSE
@@ -213,6 +214,7 @@ PROGRAM _CYCLIC
 		MpAxisBasic_P3.MoveAbsolute := FALSE;
 		MpAxisBasic_P3.MoveVelocity := FALSE;
 	END_IF;
+	
 	//Manual mode 
 	IF Manual THEN
 		StepMixer1 := STEP_INIT;
