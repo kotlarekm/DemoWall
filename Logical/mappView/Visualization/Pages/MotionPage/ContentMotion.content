@@ -25,9 +25,9 @@
                   <Widgets>
                     <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButtonPower" top="5" left="74" width="135" height="50" zIndex="0" image="Media/SymbolLib/Symbols/Energy.svg" text="$IAT/BtnPower" borderWidth="3px 3px 3px 3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="15px" fontName="ABBvoiceMedium" />
                     <Widget xsi:type="widgets.brease.Button" id="ButtonStop" top="5" left="222" width="135" height="50" zIndex="1" text="$IAT/BtnStop" borderWidth="3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="15px" fontName="ABBvoiceMedium" />
-                    <Widget xsi:type="widgets.brease.Button" id="ButtonMoveVelocity" top="75" left="5" width="125" height="50" zIndex="2" multiLine="true" text="$IAT/BtnMoveVelocity" wordWrap="true" borderWidth="3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="15px" fontName="ABBvoiceMedium" />
+                    <Widget xsi:type="widgets.brease.Button" id="ButtonMoveVelocity" top="75" left="5" width="135" height="50" zIndex="2" multiLine="true" text="$IAT/BtnMoveVelocity" wordWrap="true" borderWidth="3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="15px" fontName="ABBvoiceMedium" />
                     <Widget xsi:type="widgets.brease.Button" id="ButtonMoveAbsolute" top="75" left="295" width="135" height="50" zIndex="3" multiLine="true" text="$IAT/BtnMoveAbsolute" wordWrap="true" borderWidth="3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="15px" fontName="ABBvoiceMedium" />
-                    <Widget xsi:type="widgets.brease.Button" id="ButtonMoveAdditive" top="75" left="150" width="130" height="50" zIndex="4" multiLine="true" text="$IAT/BtnMoveAdditive" wordWrap="true" borderWidth="3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="15px" fontName="ABBvoiceMedium" />
+                    <Widget xsi:type="widgets.brease.Button" id="ButtonMoveAdditive" top="75" left="150" width="135" height="50" zIndex="4" multiLine="true" text="$IAT/BtnMoveAdditive" wordWrap="true" borderWidth="3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="15px" fontName="ABBvoiceMedium" />
                     <Widget xsi:type="widgets.brease.Label" id="LabelVelocity1" top="155" left="-8" width="170" zIndex="5" text="$IAT/LabelSetVelocity" textAlign="center" fontName="ABBvoiceMedium" />
                     <Widget xsi:type="widgets.brease.Label" id="LabelDistance" top="155" left="134" width="170" zIndex="6" text="$IAT/LabelSetDistance" textAlign="center" fontName="ABBvoiceMedium" />
                     <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetVelocity1" top="190" left="20" width="113" zIndex="7" unit="{'metric':'E96','imperial':'E96','imperial-us':'E96'}" unitAlign="right" unitTextAlign="right" disabledBorderWidth="2px 2px 1px 1px" cornerRadius="8px" disabledBorderColor="rgba(255, 136, 0, 1)" fontName="ABBvoiceMedium" />
@@ -147,13 +147,13 @@
                 </Widget>
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.OnlineChartHDA" id="OnlineChartHDA1" top="60" left="513" width="630" height="410" zIndex="1" updateChartTime="50">
+            <Widget xsi:type="widgets.brease.OnlineChartHDA" id="OnlineChartHDA1" top="60" left="513" width="630" height="410" zIndex="1" updateChartTime="50" borderWidth="3px" borderColor="rgba(0, 0, 0, 1)">
               <Properties>
                 <yAxis>
-                  <Element id="yAxis1" title="$IAT/LabelVelocity" unit="{'metric':'E96','imperial':'E96','imperial-us':'E96'}" titleFontSize="14px" />
+                  <Element id="yAxis1" title="$IAT/LabelVelocity" unit="{'metric':'E96','imperial':'E96','imperial-us':'E96'}" titleFontSize="14px" textColor="rgba(0, 0, 0, 1)" color="rgba(0, 0, 0, 1)" fontSize="16px" fontName="ABBvoiceMedium" titleTextColor="rgba(0, 0, 0, 1)" titleFontName="ABBvoiceMedium" />
                 </yAxis>
                 <xAxis>
-                  <Element id="xAxis1" timeSpan="30" />
+                  <Element id="xAxis1" timeSpan="30" timeFormat="hh:mm" color="rgba(0, 0, 0, 1)" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" fontSize="16px" />
                 </xAxis>
                 <graph>
                   <Element id="graph1" yAxisReference="yAxis1" />
