@@ -1114,7 +1114,7 @@
             <ResultHandler condition="result=0">
               <Action>
                 <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentMain" widgetRefId="TempControlInfoLabel">
-                  <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/AutoMode" />
+                  <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/AutoModeHeatCool" />
                 </Target>
               </Action>
             </ResultHandler>
@@ -1139,6 +1139,13 @@
                 </Target>
               </Action>
             </ResultHandler>
+            <ResultHandler condition="result=4">
+              <Action>
+                <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentMain" widgetRefId="TempControlInfoLabel">
+                  <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/AutoModeHeat" />
+                </Target>
+              </Action>
+            </ResultHandler>
           </Result>
         </Action>
       </EventHandler>
@@ -1148,7 +1155,7 @@
       <EventHandler condition="newValue=0">
         <Action>
           <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentMain" widgetRefId="TempControlInfoLabel">
-            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/AutoMode" />
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/AutoModeHeatCool" />
           </Target>
         </Action>
       </EventHandler>
@@ -1170,6 +1177,23 @@
         <Action>
           <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentMain" widgetRefId="TempControlInfoLabel">
             <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/EmergencyStop" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=4">
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentMain" widgetRefId="TempControlInfoLabel">
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/AutoModeHeat" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="ContentMain.ProcessStopButton.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentMain" widgetRefId="ProcessStopButton" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gTanks.Commands.Stop">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
       </EventHandler>

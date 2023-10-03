@@ -12,6 +12,7 @@ TYPE
 		Stop : BOOL; (*Stopping a program*)
 		TurnOnHeater : BOOL := FALSE; (*Turning on a heater*)
 		TurnOnFan : BOOL := FALSE; (*Turning on a fan*)
+		EStop : BOOL;
 	END_STRUCT;
 	ParametersType : 	STRUCT 
 		ObjectType : ObjectType; (*Substructure of ParametersType*)

@@ -237,5 +237,53 @@
         <seg>Emergency stop!</seg>
       </tuv>
     </tu>
+    <tu tuid="CurrentTemp">
+      <tuv xml:lang="pl">
+        <seg>Aktualna temp:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Current temp:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="TargetTemperature">
+      <tuv xml:lang="pl">
+        <seg>Temp zadana:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Target temp:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CurrentTemp_1">
+      <tuv xml:lang="pl">
+        <seg>Aktualna temperatura</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Current temperature</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CurrentPressure">
+      <tuv xml:lang="pl">
+        <seg>Aktualne ciśnienie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Current pressure</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AutoModeHeat">
+      <tuv xml:lang="pl">
+        <seg>Tryb automatyczny - grzanie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Auto mode - heating</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AutoModeHeatCool">
+      <tuv xml:lang="pl">
+        <seg>Tryb automatyczny - grzanie i chłodzenie</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Auto mode - heating and cooling</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

@@ -184,5 +184,29 @@
 <Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Commands.OpenTank3RightValve" attribute="node" />
 <Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="SliderRightValve" attribute="node" />
 </Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::AsGlobalPV:gTanks.Parameters.Tank3TargetTemp" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericInputTank3TargetTemp" attribute="node" />
+</Binding>
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::TempContro:MTBasicsPWMFan.DutyCycle" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericOutput13" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::TempContro:MTBasicsPWMHeater.DutyCycle" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericOutput12" attribute="node" />
+</Binding>
+
+
+
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Simulation:Auto" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="ProcessStopButton" attribute="enable" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::TempContro:TempInReal" attribute="node" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericOutput11" attribute="node" />
+</Binding>
 </Bindings>
 </BindingsSet>

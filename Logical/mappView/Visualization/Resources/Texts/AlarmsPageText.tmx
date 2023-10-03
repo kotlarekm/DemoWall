@@ -72,7 +72,7 @@
     </tu>
     <tu tuid="Severity">
       <tuv xml:lang="pl">
-        <seg>Powaga</seg>
+        <seg>Priorytet</seg>
       </tuv>
       <tuv xml:lang="en">
         <seg>Severity</seg>

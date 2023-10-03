@@ -49,6 +49,7 @@ PROGRAM _CYCLIC
 		NumericInputsEnable := TRUE;
 	END_IF;
  
+	
 	//Manual control
 	IF Manual THEN
  

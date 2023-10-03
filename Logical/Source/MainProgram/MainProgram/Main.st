@@ -13,7 +13,8 @@ END_PROGRAM
  
 PROGRAM _CYCLIC
  
-	gTanks.Commands.Stop := NOT(gDriveStop);
+	gTanks.Commands.EStop := NOT(gDriveStop);
+	
  
 	CASE gTanks.Status.Step OF
  
@@ -130,9 +131,22 @@ PROGRAM _CYCLIC
 		gTanks.Commands.OpenTank2Valve := FALSE;
 		gTanks.Commands.OpenTank3LeftValve := FALSE;
 		gTanks.Commands.OpenTank3RightValve := FALSE;
+		gTanks.Commands.OpenTank3MainValve := FALSE;
+		gTanks.Commands.TurnOnMixer1 := FALSE;
+		gTanks.Commands.TurnOnMixer2 :=FALSE;
 		gTanks.Commands.Start := FALSE;
+		gTanks.Commands.Stop := FALSE;
 	END_IF;
  
+	IF gTanks.Commands.EStop THEN
+		gTanks.Status.Step := START;
+		gTanks.Commands.OpenTank1Valve := FALSE;
+		gTanks.Commands.OpenTank2Valve := FALSE;
+		gTanks.Commands.OpenTank3LeftValve := FALSE;
+		gTanks.Commands.OpenTank3RightValve := FALSE;
+		gTanks.Commands.OpenTank3MainValve := FALSE;
+		gTanks.Commands.Start := FALSE;
+	END_IF;
  
  
 END_PROGRAM

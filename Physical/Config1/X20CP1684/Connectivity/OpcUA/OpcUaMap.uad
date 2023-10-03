@@ -215,6 +215,8 @@
         <Variable Name="MpTempController_0">
           <Variable Name="TuningActive" />
           <Variable Name="TuningDone" />
+          <Variable Name="HeatValue" />
+          <Variable Name="CoolValue" />
         </Variable>
         <Variable Name="TempControlWidgetsEnable" />
         <Variable Name="InfoLabelIndex" />
@@ -227,6 +229,12 @@
           </Variable>
         </Variable>
         <Variable Name="NameOfMode" />
+        <Variable Name="MTBasicsPWMFan">
+          <Variable Name="DutyCycle" />
+        </Variable>
+        <Variable Name="MTBasicsPWMHeater">
+          <Variable Name="DutyCycle" />
+        </Variable>
       </Task>
       <Task Name="Recipes">
         <Variable Name="ApplyParameters" />

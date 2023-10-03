@@ -267,12 +267,12 @@
         <seg>Gear ratio</seg>
       </tuv>
     </tu>
-    <tu tuid="BasicDrives">
+    <tu tuid="MixerDrives">
       <tuv xml:lang="pl">
-        <seg>Podstawowe napędy</seg>
+        <seg>Napędy mixerów</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Basic drives</seg>
+        <seg>Mixer drives</seg>
       </tuv>
     </tu>
     <tu tuid="AdditionalDrives">

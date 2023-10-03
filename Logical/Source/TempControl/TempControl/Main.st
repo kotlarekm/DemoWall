@@ -241,8 +241,12 @@ PROGRAM _CYCLIC
 		
 			MpTempController_0.Control := TRUE;
 			MpTempController_0.Tune := FALSE;
-			InfoLabelIndex := 0;
-		
+			IF gTanks.Parameters.HeatCool THEN
+				InfoLabelIndex := 0;
+			END_IF
+			IF NOT(gTanks.Parameters.HeatCool) THEN
+				InfoLabelIndex := 4;
+			END_IF
 			// Prameters and outputs update
 			MpTempController_0.ActualTemperature := TempInReal;
 			MpTempController_0.SetTemperature := gTanks.Parameters.Tank3TargetTemp;
