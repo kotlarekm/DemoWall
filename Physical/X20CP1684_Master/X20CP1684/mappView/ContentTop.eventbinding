@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingSet id="ContentTop_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Bindings>
+    <EventBinding id="ContentTop.ChangeUserBtn.Click">
+      <Source xsi:type="widgets.brease.Button.Event" contentRefId="ContentTop" widgetRefId="ChangeUserBtn" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="LoginDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_17">
+      <Source xsi:type="opcUa.Event" refId="::Alarms:AlarmIsActive" event="ValueChanged" />
+      <EventHandler condition="newValue=0">
+        <Action>
+          <Target xsi:type="widgets.brease.NavigationButton.Action" contentRefId="ContentTop" widgetRefId="TopAlarmsNavBtn">
+            <Method xsi:type="widgets.brease.NavigationButton.Action.SetVisible" value="false" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="newValue=1">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.NavigationButton.Action" contentRefId="ContentTop" widgetRefId="TopAlarmsNavBtn">
+                <Method xsi:type="widgets.brease.NavigationButton.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.NavigationButton.Action" contentRefId="ContentTop" widgetRefId="TopAlarmsNavBtn">
+                <Method xsi:type="widgets.brease.NavigationButton.Action.SetStyle" value="redStyle" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+      <EventHandler condition="newValue=2">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.NavigationButton.Action" contentRefId="ContentTop" widgetRefId="TopAlarmsNavBtn">
+                <Method xsi:type="widgets.brease.NavigationButton.Action.SetVisible" value="true" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="widgets.brease.NavigationButton.Action" contentRefId="ContentTop" widgetRefId="TopAlarmsNavBtn">
+                <Method xsi:type="widgets.brease.NavigationButton.Action.SetStyle" value="orangeStyle" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_24">
+      <Source xsi:type="clientSystem.Event" event="ContentLoaded" />
+      <EventHandler condition="contentId=&quot;ContentMain&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentTop" widgetRefId="TopContentPageLabel">
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Main" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="contentId=&quot;ContentMotion&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentTop" widgetRefId="TopContentPageLabel">
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Motion" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="contentId=&quot;RecipesMainContent&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentTop" widgetRefId="TopContentPageLabel">
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Recipes" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="contentId=&quot;ContentIO&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentTop" widgetRefId="TopContentPageLabel">
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/IO" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="contentId=&quot;ContentSettings&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentTop" widgetRefId="TopContentPageLabel">
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Settings" />
+          </Target>
+        </Action>
+      </EventHandler>
+      <EventHandler condition="contentId=&quot;ContentAlarms&quot;">
+        <Action>
+          <Target xsi:type="widgets.brease.Label.Action" contentRefId="ContentTop" widgetRefId="TopContentPageLabel">
+            <Method xsi:type="widgets.brease.Label.Action.SetText" text="$IAT/Alarms" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EmergencyBtnPressed">
+      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gDriveStop" event="ValueChanged" />
+      <EventHandler condition="oldValue">
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="EmergencyDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="TuningDone">
+      <Source xsi:type="opcUa.Event" refId="::TempContro:ShowTuningDoneDialog" event="ValueChanged" />
+      <EventHandler condition="newValue">
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="clientSystem.Action">
+                <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="TuningDoneDialog" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::TempContro:ShowTuningDoneDialog">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
+      </EventHandler>
+    </EventBinding>
+  </Bindings>
+</EventBindingSet>

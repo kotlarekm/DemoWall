@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaSource FileVersion="9" ArVersion="B4.93">
+  <Aliases>
+    <ACLAliases />
+    <EURangeViolationAliases />
+    <EURangesAliases>
+      <EURanges Id="1">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">10000</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="3">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">1</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="4">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">100</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="5">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">100000</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="6">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const" />
+        </EURange>
+      </EURanges>
+      <EURanges Id="10">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">360</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="13">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">10</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="15">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">720</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="16">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">300</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="17">
+        <EURange>
+          <Low ValueProvider="Const">1</Low>
+          <High ValueProvider="Const">100</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="19">
+        <EURange>
+          <Low ValueProvider="Const">30</Low>
+          <High ValueProvider="Const">45</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="20">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">500</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="21">
+        <EURange>
+          <Low ValueProvider="Const">-1080</Low>
+          <High ValueProvider="Const">1080</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="22">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">70</High>
+        </EURange>
+      </EURanges>
+      <EURanges Id="23">
+        <EURange>
+          <Low ValueProvider="Const">0</Low>
+          <High ValueProvider="Const">2</High>
+        </EURange>
+      </EURanges>
+    </EURangesAliases>
+    <EngineeringUnitAliases>
+      <EngineeringUnit Id="1" UnitId="4342098" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="bar [unit of pressure]" Symbol="bar" />
+      <EngineeringUnit Id="2" UnitId="4408652" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="degree Celsius" Symbol="°C" />
+      <EngineeringUnit Id="3" UnitId="4403766" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="millisecond" Symbol="ms" />
+      <EngineeringUnit Id="4" UnitId="5002322" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="litre" Symbol="l" />
+      <EngineeringUnit Id="5" UnitId="4536630" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="degree per second" Symbol="°/s" />
+      <EngineeringUnit Id="6" UnitId="5457219" NameSpaceUri="http://www.opcfoundation.org/UA/units/un/cefact" Name="second [unit of time]" Symbol="s" />
+    </EngineeringUnitAliases>
+  </Aliases>
+  <DefaultView>
+    <Module Name="&lt;Default&gt;">
+      <GlobalVariables Name="Global Variables">
+        <Variable Name="gTanks">
+          <Variable Name="Parameters">
+            <Variable Name="ObjectType">
+              <Variable Name="Mode" />
+            </Variable>
+            <Variable Name="Tank3MaxAllowedPressure" EURangesId="13" />
+            <Variable Name="Tank3MaxAllowedTemp" EURangesId="19" />
+            <Variable Name="Tank3LeftValveOpeningLvl" EURangesId="4" />
+            <Variable Name="Tank3RightValveOpeningLvl" EURangesId="4" />
+            <Variable Name="MixingTime" EURangesId="5" EngineeringUnitId="3" />
+            <Variable Name="Mixer2On" EURangesId="3" />
+            <Variable Name="Mixer1On" EURangesId="3" />
+            <Variable Name="Tank3TargetFluidLvl" EURangesId="1" EngineeringUnitId="4" />
+            <Variable Name="Tank2TargetFluidLvl" EURangesId="1" EngineeringUnitId="4" />
+            <Variable Name="Tank1TargetFluidLvl" EURangesId="1" EngineeringUnitId="4" />
+            <Variable Name="Tank3MaxAllowedFluidLvl" EURangesId="1" />
+            <Variable Name="Tank2MaxAllowedFluidLvl" EURangesId="1" />
+            <Variable Name="Tank1MaxAllowedFluidLvl" EURangesId="1" />
+            <Variable Name="Mixer1MaxAllowedVelocity" EURangesId="15" />
+            <Variable Name="Mixer2MaxAllowedVelocity" EURangesId="15" />
+            <Variable Name="Tank3TargetPressure" EURangesId="13" EngineeringUnitId="1" />
+            <Variable Name="Tank3TargetTemp" EURangesId="19" EngineeringUnitId="2" />
+            <Variable Name="InertialTermTimeConstant" EURangesId="16" />
+            <Variable Name="InertialTermGain" EURangesId="17" />
+          </Variable>
+          <Variable Name="Status">
+            <Variable Name="IsMixer1On" EURangesId="3" />
+            <Variable Name="IsMixer2On" EURangesId="3" />
+            <Variable Name="Tank1FluidLvl" EURangesId="1" />
+            <Variable Name="Tank2FluidLvl" EURangesId="1" />
+            <Variable Name="Tank3FluidLvl" EURangesId="1" />
+            <Variable Name="Tank3Pressure" Historizing="True" HistoryBufferSize="3000" HistorySamplingInterval="Timer4" EURangesId="6" />
+            <Variable Name="Tank3Temp" />
+            <Variable Name="Step" />
+          </Variable>
+          <Variable Name="Commands">
+            <Variable Name="TurnOnMixer1" />
+            <Variable Name="TurnOnMixer2" />
+            <Variable Name="OpenTank1Valve" />
+            <Variable Name="OpenTank2Valve" />
+            <Variable Name="OpenTank3LeftValve" EURangesId="4" />
+            <Variable Name="OpenTank3RightValve" EURangesId="4" />
+            <Variable Name="OpenTank3MainValve" />
+            <Variable Name="Start" />
+            <Variable Name="Stop" />
+          </Variable>
+        </Variable>
+        <Variable Name="gDriveStop" />
+      </GlobalVariables>
+      <Task Name="Simulation">
+        <Variable Name="AnimationForMixer1" />
+        <Variable Name="AnimationForMixer2" />
+        <Variable Name="MixerCheck" />
+        <Variable Name="TanksValvesCheck" />
+        <Variable Name="RValveCheck" />
+        <Variable Name="LValveCheck" />
+        <Variable Name="Auto" />
+        <Variable Name="Manual" />
+        <Variable Name="ProgressBarNotMixedManual" />
+        <Variable Name="ProgressBarPaintManual" />
+        <Variable Name="ProgressBarWaterManual" />
+        <Variable Name="Tank1Save" />
+        <Variable Name="Tank2Save" />
+        <Variable Name="Tank3LeftValveSave" />
+        <Variable Name="Tank3RightValveSave" />
+        <Variable Name="AutoBtnEnable" />
+        <Variable Name="ManualBtnEnable" />
+        <Variable Name="StartBtnEnable" />
+        <Variable Name="NumericInputsEnable" />
+      </Task>
+      <Task Name="TempContro">
+        <Variable Name="FanPWMDuty" />
+        <Variable Name="HeaterPWMDuty" />
+        <Variable Name="ManualON" />
+        <Variable Name="TempInReal" Historizing="True" HistoryBufferSize="2500" HistorySamplingInterval="Timer1" EngineeringUnitId="2" />
+        <Variable Name="MpTempControllerParType_1" RecursiveEnable="2">
+          <Variable Name="Tuning">
+            <Variable Name="SetPointHeat" EURangesId="22" EngineeringUnitId="2" />
+            <Variable Name="SetPointCool" EURangesId="22" EngineeringUnitId="2" />
+          </Variable>
+          <Variable Name="Hysteresis">
+            <Variable Name="Band">
+              <Variable Name="HeatToCool" EURangesId="13" EngineeringUnitId="2" />
+              <Variable Name="CoolToHeat" EURangesId="13" EngineeringUnitId="2" />
+            </Variable>
+          </Variable>
+          <Variable Name="PID">
+            <Variable Name="Heat">
+              <Variable Name="ProportionalGain" EURangesId="6" />
+              <Variable Name="IntegrationTime" EURangesId="6" />
+              <Variable Name="DerivativeTime" EURangesId="6" />
+              <Variable Name="FilterTime" EURangesId="6" />
+            </Variable>
+            <Variable Name="Cool">
+              <Variable Name="ProportionalGain" EURangesId="6" />
+              <Variable Name="IntegrationTime" EURangesId="6" />
+              <Variable Name="DerivativeTime" EURangesId="6" />
+              <Variable Name="FilterTime" EURangesId="6" />
+            </Variable>
+          </Variable>
+        </Variable>
+        <Variable Name="ApplySettings" />
+        <Variable Name="AutoTune" />
+        <Variable Name="RestoreSettings" />
+        <Variable Name="MpTempController_0">
+          <Variable Name="TuningActive" />
+          <Variable Name="TuningDone" />
+          <Variable Name="HeatValue" />
+          <Variable Name="CoolValue" />
+        </Variable>
+        <Variable Name="TempControlWidgetsEnable" />
+        <Variable Name="InfoLabelIndex" />
+        <Variable Name="ShowTuningDoneDialog" />
+        <Variable Name="MpTempControllerParType_0">
+          <Variable Name="Tuning">
+            <Variable Name="Mode" />
+            <Variable Name="SetPointHeat" />
+            <Variable Name="SetPointCool" />
+          </Variable>
+        </Variable>
+        <Variable Name="NameOfMode" />
+        <Variable Name="MTBasicsPWMFan">
+          <Variable Name="DutyCycle" />
+        </Variable>
+        <Variable Name="MTBasicsPWMHeater">
+          <Variable Name="DutyCycle" />
+        </Variable>
+      </Task>
+      <Task Name="Recipes">
+        <Variable Name="ApplyParameters" />
+        <Variable Name="DeviceChenged" />
+        <Variable Name="DropDownBoxNamesCollection" />
+        <Variable Name="MpFileManagerUIConnect_0">
+          <Variable Name="DeviceList" RecursiveEnable="2" />
+          <Variable Name="MessageBox">
+            <Variable Name="Confirm" />
+            <Variable Name="Cancel" />
+          </Variable>
+        </Variable>
+        <Variable Name="NewRecipeSelected" />
+        <Variable Name="ParametersToLoad" RecursiveEnable="2">
+          <Variable Name="Tank3MaxAllowedPressure" EURangesId="13" EngineeringUnitId="1" />
+          <Variable Name="Tank3MaxAllowedTemp" EURangesId="19" EngineeringUnitId="2" />
+          <Variable Name="Tank3LeftValveOpeningLvl" EURangesId="4" />
+          <Variable Name="Tank3RightValveOpeningLvl" EURangesId="4" />
+          <Variable Name="MixingTime" EURangesId="5" EngineeringUnitId="3" />
+          <Variable Name="Mixer2On" EURangesId="3" />
+          <Variable Name="Mixer1On" EURangesId="3" />
+          <Variable Name="Tank3TargetFluidLvl" EURangesId="1" EngineeringUnitId="4" />
+          <Variable Name="Tank2TargetFluidLvl" EURangesId="1" EngineeringUnitId="4" />
+          <Variable Name="Tank1TargetFluidLvl" EURangesId="1" EngineeringUnitId="4" />
+          <Variable Name="Tank3MaxAllowedFluidLvl" EURangesId="1" EngineeringUnitId="4" />
+          <Variable Name="Tank2MaxAllowedFluidLvl" EURangesId="1" EngineeringUnitId="4" />
+          <Variable Name="Tank1MaxAllowedFluidLvl" EURangesId="1" EngineeringUnitId="4" />
+          <Variable Name="Mixer1MaxAllowedVelocity" EURangesId="15" EngineeringUnitId="5" />
+          <Variable Name="Mixer2MaxAllowedVelocity" EURangesId="15" EngineeringUnitId="5" />
+          <Variable Name="Tank3TargetTemp" EURangesId="19" EngineeringUnitId="2" />
+          <Variable Name="Tank3TargetPressure" EURangesId="13" EngineeringUnitId="1" />
+          <Variable Name="InertialTermTimeConstant" EURangesId="16" EngineeringUnitId="6" />
+          <Variable Name="InertialTermGain" EURangesId="17" />
+        </Variable>
+        <Variable Name="RecipeName" />
+        <Variable Name="RecipesList" />
+        <Variable Name="SelectedRecipeIndex" />
+        <Variable Name="USB1Aveliable" />
+        <Variable Name="USB2Aveliable" />
+        <Variable Name="WaitingForDelete" />
+        <Variable Name="WaitingForLoad" />
+        <Variable Name="WaitingForSave" />
+        <Variable Name="UsbNodeListGet_0">
+          <Variable Name="allNodes" />
+        </Variable>
+        <Variable Name="SetDefaultParams" />
+      </Task>
+      <Task Name="Alarms">
+        <Variable Name="AlarmButtonVisible" />
+        <Variable Name="AlarmIsActive" />
+        <Variable Name="doResetRedLED" />
+        <Variable Name="doResetOrangeLED" />
+        <Variable Name="ClearHistory" />
+        <Variable Name="diReset" />
+      </Task>
+      <Task Name="Motion">
+        <Variable Name="CamCoupling" />
+        <Variable Name="GearCoupling" />
+        <Variable Name="StepMixer1" />
+        <Variable Name="StepMixer2" />
+        <Variable Name="MpAxisCouplingParameters">
+          <Variable Name="Cam">
+            <Variable Name="ID" />
+          </Variable>
+        </Variable>
+        <Variable Name="MpAxisCoupling_0">
+          <Variable Name="InSync" />
+          <Variable Name="Update" />
+        </Variable>
+        <Variable Name="MpAxisBasic_Primary">
+          <Variable Name="PowerOn" />
+          <Variable Name="MoveActive" />
+          <Variable Name="MoveVelocity" />
+          <Variable Name="Velocity" HistoryBufferSize="3000" HistorySamplingInterval="Timer4" />
+          <Variable Name="Position" />
+          <Variable Name="Error" />
+          <Variable Name="MoveAbsolute" />
+          <Variable Name="MoveAdditive" />
+          <Variable Name="Stop" />
+          <Variable Name="Power" />
+          <Variable Name="InPosition" />
+          <Variable Name="InVelocity" />
+          <Variable Name="ErrorReset" />
+          <Variable Name="Update" />
+        </Variable>
+        <Variable Name="MpAxisBasic_Secondary">
+          <Variable Name="PowerOn" />
+          <Variable Name="MoveActive" />
+          <Variable Name="MoveVelocity" />
+          <Variable Name="Velocity" MinimumSamplingInterval="Timer2" Historizing="True" HistoryBufferSize="2000" HistorySamplingInterval="Timer4" />
+          <Variable Name="Position" />
+          <Variable Name="Error" />
+          <Variable Name="Power" />
+          <Variable Name="MoveAbsolute" />
+          <Variable Name="MoveAdditive" />
+          <Variable Name="Stop" />
+          <Variable Name="InPosition" />
+          <Variable Name="InVelocity" />
+          <Variable Name="ErrorReset" />
+          <Variable Name="Update" />
+        </Variable>
+        <Variable Name="MpAxisBasicParameters_Primary">
+          <Variable Name="Velocity" EURangesId="15" />
+          <Variable Name="Acceleration" EURangesId="20" />
+          <Variable Name="Deceleration" EURangesId="20" />
+          <Variable Name="Position" EURangesId="10" />
+          <Variable Name="Distance" EURangesId="21" />
+          <Variable Name="Direction" />
+        </Variable>
+        <Variable Name="MpAxisBasicParameters_Secondary">
+          <Variable Name="Velocity" EURangesId="15" />
+          <Variable Name="Acceleration" EURangesId="20" />
+          <Variable Name="Deceleration" EURangesId="20" />
+          <Variable Name="Position" EURangesId="10" />
+          <Variable Name="Distance" EURangesId="21" />
+          <Variable Name="Direction" />
+        </Variable>
+        <Variable Name="Manual" />
+        <Variable Name="RatioDenominatorReal" />
+        <Variable Name="RatioNumeratorReal" EURangesId="23" />
+        <Variable Name="MpAxisBasic_P3">
+          <Variable Name="Error" />
+          <Variable Name="Position" />
+          <Variable Name="Velocity" />
+          <Variable Name="PowerOn" />
+          <Variable Name="InVelocity" />
+          <Variable Name="InPosition" />
+          <Variable Name="MoveActive" />
+          <Variable Name="ErrorReset" />
+          <Variable Name="Update" />
+          <Variable Name="Power" />
+          <Variable Name="MoveVelocity" />
+          <Variable Name="MoveAbsolute" />
+          <Variable Name="MoveAdditive" />
+          <Variable Name="Stop" />
+        </Variable>
+        <Variable Name="MpAxisBasicParameters_P3">
+          <Variable Name="Position" EURangesId="10" />
+          <Variable Name="Distance" EURangesId="21" />
+          <Variable Name="Velocity" EURangesId="15" />
+          <Variable Name="Acceleration" EURangesId="20" />
+          <Variable Name="Deceleration" EURangesId="20" />
+          <Variable Name="Direction" />
+        </Variable>
+        <Variable Name="MixerP3Velocity" />
+        <Variable Name="MixerSecondaryVelocity" />
+      </Task>
+      <Task Name="IO">
+        <Variable Name="diSwitch1" />
+        <Variable Name="diSwitch2" />
+        <Variable Name="diSwitch3" />
+        <Variable Name="diSwitch4" />
+        <Variable Name="diSwitch5" />
+        <Variable Name="diSwitch6" />
+        <Variable Name="diSwitch7" />
+        <Variable Name="diSwitch8" />
+        <Variable Name="diSwitch1Down" />
+        <Variable Name="diSwitch2Down" />
+        <Variable Name="diSwitch3Down" />
+        <Variable Name="diSwitch4Down" />
+        <Variable Name="diSwitch5Down" />
+        <Variable Name="diSwitch6Down" />
+        <Variable Name="diSwitch7Down" />
+        <Variable Name="diSwitch8Down" />
+        <Variable Name="doLamp1" />
+        <Variable Name="doLamp2" />
+        <Variable Name="doLamp3" />
+        <Variable Name="doLamp4" />
+        <Variable Name="doLamp5" />
+        <Variable Name="doLamp6" />
+        <Variable Name="doLamp7" />
+        <Variable Name="doLamp8" />
+        <Variable Name="aiKnob1" />
+        <Variable Name="aiKnob2" />
+        <Variable Name="aoDisplay1" />
+        <Variable Name="aoDisplay2" />
+        <Variable Name="aoValueToDisplay1" />
+        <Variable Name="aoValueToDisplay2" />
+        <Variable Name="ChangeButtonColor_0">
+          <Variable Name="RoundButton" RecursiveEnable="2" />
+        </Variable>
+      </Task>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

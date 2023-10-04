@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.12.4.107 FileVersion="4.9"?>
+<Hardware xmlns="http://br-automation.co.at/AS/Hardware">
+  <Module Name="X20CP1684" Type="X20CP1684" Version="1.5.0.0">
+    <Connector Name="IF2">
+      <Parameter ID="ActivateDevice" Value="1" />
+    </Connector>
+    <Connector Name="IF3">
+      <Parameter ID="Mode" Value="CN" />
+      <Parameter ID="NodeID" Value="7" />
+      <Group ID="Channel1" />
+      <Parameter ID="ChannelID1" Value="DP_iNC_Produce_01" />
+      <Parameter ID="ChannelType1" Value="USINT" />
+      <Parameter ID="ChannelDirection1" Value="OUT" />
+      <Group ID="Channel2" />
+      <Parameter ID="ChannelID2" Value="DP_iNC_Consume_01" />
+      <Parameter ID="ChannelType2" Value="USINT" />
+    </Connector>
+    <Group ID="FileDevice1" />
+    <Parameter ID="FileDeviceName1" Value="USER" />
+    <Parameter ID="FileDevicePath1" Value="USER_PATH" />
+  </Module>
+</Hardware>

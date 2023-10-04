@@ -1,3 +1,4 @@
 VAR
 	gDriveStop : BOOL;
+	diDriveStopESystem : BOOL;
 END_VAR

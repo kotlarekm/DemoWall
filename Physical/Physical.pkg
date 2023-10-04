@@ -2,6 +2,8 @@
 <?AutomationStudio FileVersion="4.9"?>
 <Physical xmlns="http://br-automation.co.at/AS/Physical">
   <Objects>
-    <Object Type="Configuration">Config1</Object>
+    <Object Type="Configuration">X20CP1684_Master</Object>
+    <Object Type="Configuration">PPC2100</Object>
+    <Object Type="Configuration">X20CP1684_iCN</Object>
   </Objects>
 </Physical>
