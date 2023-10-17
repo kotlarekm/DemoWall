@@ -1,0 +1,5 @@
+VAR
+	gMixer1Parameters : Mixer1ParametersType := (Velocity:=100,Acceleration:=250,Deceleration:=250);
+	gMixer1Outputs : Mixer1OutputsType;
+	gMixer1Inputs : Mixer1InputsType;
+END_VAR

@@ -200,13 +200,14 @@
 
 
 
-<Binding mode="twoWay">
-<Source xsi:type="opcUa" refId="::Simulation:Auto" attribute="value" />
-<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="ProcessStopButton" attribute="enable" />
-</Binding>
+
 <Binding mode="twoWay">
 <Source xsi:type="opcUa" refId="::TempContro:TempInReal" attribute="node" />
 <Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="NumericOutput11" attribute="node" />
+</Binding>
+<Binding mode="twoWay">
+<Source xsi:type="opcUa" refId="::Simulation:ButtonStopEnable" attribute="value" />
+<Target xsi:type="brease" contentRefId="ContentMain" widgetRefId="ProcessStopButton" attribute="enable" />
 </Binding>
 </Bindings>
 </BindingsSet>

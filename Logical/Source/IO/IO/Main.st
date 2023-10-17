@@ -10,6 +10,11 @@ PROGRAM _INIT
 END_PROGRAM
 
 PROGRAM _CYCLIC
+	// Value assignment
+	TurnOnHeater;
+	TurnOnFan;
+	//gTanks.Status.Tank3Temp := Tank3Temp;
+	
 	// Handling inputs and outputs
 	doLamp1 := diSwitch1;
 	doLamp2 := diSwitch2;

@@ -29,4 +29,5 @@ VAR
 	Tank1Save : REAL := 0.0; (*Variable used to remember value of tank 1 in order to correctly working simulation*)
 	Tank2Save : REAL := 0.0; (*Variable used to remember value of tank 2 in order to correctly working simulation*)
 	MAX_TANK_CAPACITY : REAL := 10000; (*Variable used to set max capacity of tanks*)
+	ButtonStopEnable : BOOL;
 END_VAR

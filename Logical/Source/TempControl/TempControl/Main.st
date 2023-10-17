@@ -26,11 +26,16 @@ PROGRAM _INIT
 	MTBasicsPWMFan.Enable := TRUE;
 	MTBasicsPWMFan.Period := 0.005;
 	MTBasicsPWMFan.MinPulseWidth := 0.002;
+	//MTBasicsPWMFan.Period := 0.05;
+	//MTBasicsPWMFan.MinPulseWidth := 0.01;
 	MTBasicsPWMFan();
 	
 	MTBasicsPWMHeater.DutyCycle := 0;
 	MTBasicsPWMHeater.Enable := TRUE;
 	MTBasicsPWMHeater.Period := 0.005;
+	MTBasicsPWMHeater.MinPulseWidth := 0.002;
+	//MTBasicsPWMHeater.Period := 0.05;
+	//MTBasicsPWMHeater.MinPulseWidth := 0.01;
 	MTBasicsPWMHeater();
 	
 	// Displayed parameters init using parameters from regulator
@@ -236,6 +241,12 @@ PROGRAM _CYCLIC
 			// Heater PWM
 			MTBasicsPWMHeater.DutyCycle := HeaterPWMDuty;
 	
+			
+			//gTanks.Commands.TurnOnFan := MTBasicsPWMFan.Out;
+			//gTanks.Commands.TurnOnHeater := MTBasicsPWMHeater.Out;
+			
+			
+			
 			// Auto mode
 		ELSE
 		
@@ -252,6 +263,9 @@ PROGRAM _CYCLIC
 			MpTempController_0.SetTemperature := gTanks.Parameters.Tank3TargetTemp;
 			MTBasicsPWMHeater.DutyCycle := MpTempController_0.HeatValue;
 			MTBasicsPWMFan.DutyCycle := MpTempController_0.CoolValue;
+			//Outputs.DO11 := MpTempControllerTest.Heat;
+			//gTanks.Commands.TurnOnFan := MpTempController_0.Cool;
+			//gTanks.Commands.TurnOnHeater := MpTempController_0.Heat;
 		END_IF;
 		
 	// Emergency button pressed

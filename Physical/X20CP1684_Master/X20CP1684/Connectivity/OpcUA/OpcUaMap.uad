@@ -177,6 +177,7 @@
         <Variable Name="ManualBtnEnable" />
         <Variable Name="StartBtnEnable" />
         <Variable Name="NumericInputsEnable" />
+        <Variable Name="ButtonStopEnable" />
       </Task>
       <Task Name="TempContro">
         <Variable Name="FanPWMDuty" />

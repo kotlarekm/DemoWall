@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?AutomationStudio FileVersion="4.9"?>
-<OpcUaSource FileVersion="9" ArVersion="B4.93">
+<OpcUaSource FileVersion="9" ArVersion="G4.83">
   <Aliases>
     <ACLAliases />
     <EURangeViolationAliases />
@@ -156,6 +156,34 @@
           </Variable>
         </Variable>
         <Variable Name="gDriveStop" />
+        <Variable Name="TurnOnFan" />
+        <Variable Name="TurnOnHeater" />
+        <Variable Name="gMixer1Outputs">
+          <Variable Name="PowerOn" />
+          <Variable Name="MoveActive" />
+          <Variable Name="MoveDone" />
+          <Variable Name="Error" />
+          <Variable Name="UpdateDone" />
+          <Variable Name="InVelocity" />
+          <Variable Name="InPosition" />
+          <Variable Name="Stopped" />
+          <Variable Name="Velocity" />
+          <Variable Name="Position" />
+        </Variable>
+        <Variable Name="gMixer1Parameters">
+          <Variable Name="Velocity" />
+          <Variable Name="Distance" />
+          <Variable Name="Position" />
+          <Variable Name="Acceleration" />
+          <Variable Name="Deceleration" />
+          <Variable Name="Direction" />
+          <Variable Name="Stop_Deceleration" />
+        </Variable>
+        <Variable Name="gMixer1Inputs">
+          <Variable Name="MoveVelocity" />
+          <Variable Name="MoveAdditive" />
+          <Variable Name="MoveAbsolute" />
+        </Variable>
       </GlobalVariables>
       <Task Name="Simulation">
         <Variable Name="AnimationForMixer1" />
@@ -177,6 +205,7 @@
         <Variable Name="ManualBtnEnable" />
         <Variable Name="StartBtnEnable" />
         <Variable Name="NumericInputsEnable" />
+        <Variable Name="ButtonStopEnable" />
       </Task>
       <Task Name="TempContro">
         <Variable Name="FanPWMDuty" />
@@ -383,14 +412,6 @@
         <Variable Name="MixerSecondaryVelocity" />
       </Task>
       <Task Name="IO">
-        <Variable Name="diSwitch1" />
-        <Variable Name="diSwitch2" />
-        <Variable Name="diSwitch3" />
-        <Variable Name="diSwitch4" />
-        <Variable Name="diSwitch5" />
-        <Variable Name="diSwitch6" />
-        <Variable Name="diSwitch7" />
-        <Variable Name="diSwitch8" />
         <Variable Name="diSwitch1Down" />
         <Variable Name="diSwitch2Down" />
         <Variable Name="diSwitch3Down" />
@@ -399,14 +420,6 @@
         <Variable Name="diSwitch6Down" />
         <Variable Name="diSwitch7Down" />
         <Variable Name="diSwitch8Down" />
-        <Variable Name="doLamp1" />
-        <Variable Name="doLamp2" />
-        <Variable Name="doLamp3" />
-        <Variable Name="doLamp4" />
-        <Variable Name="doLamp5" />
-        <Variable Name="doLamp6" />
-        <Variable Name="doLamp7" />
-        <Variable Name="doLamp8" />
         <Variable Name="aiKnob1" />
         <Variable Name="aiKnob2" />
         <Variable Name="aoDisplay1" />
@@ -416,6 +429,22 @@
         <Variable Name="ChangeButtonColor_0">
           <Variable Name="RoundButton" RecursiveEnable="2" />
         </Variable>
+        <Variable Name="diSwitch1" />
+        <Variable Name="diSwitch2" />
+        <Variable Name="diSwitch3" />
+        <Variable Name="diSwitch4" />
+        <Variable Name="diSwitch5" />
+        <Variable Name="diSwitch6" />
+        <Variable Name="diSwitch7" />
+        <Variable Name="diSwitch8" />
+        <Variable Name="doLamp1" />
+        <Variable Name="doLamp2" />
+        <Variable Name="doLamp3" />
+        <Variable Name="doLamp4" />
+        <Variable Name="doLamp5" />
+        <Variable Name="doLamp6" />
+        <Variable Name="doLamp7" />
+        <Variable Name="doLamp8" />
       </Task>
     </Module>
   </DefaultView>

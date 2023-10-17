@@ -49,11 +49,17 @@ PROGRAM _CYCLIC
 		NumericInputsEnable := TRUE;
 	END_IF;
  
+	// Button Stop enable on visualization
+	IF NOT(Auto) OR NOT(gDriveStop) THEN
+		ButtonStopEnable := FALSE;
+	ELSE
+		ButtonStopEnable := TRUE;
+	END_IF
 	
-	//Manual control
+	// Manual control
 	IF Manual THEN
  
-		//Tank 1 valve control
+		// Tank 1 valve control
 		gTanks.Commands.Start := FALSE;
 		IF gTanks.Commands.OpenTank1Valve AND gTanks.Status.Tank1FluidLvl < MAX_TANK_CAPACITY THEN
 			IF NOT TON_1.IN THEN 
@@ -69,7 +75,7 @@ PROGRAM _CYCLIC
  
 		TON_1();
  
-		//Tank 2 valve control
+		// Tank 2 valve control
 		IF gTanks.Commands.OpenTank2Valve AND gTanks.Status.Tank2FluidLvl < MAX_TANK_CAPACITY THEN
 			IF NOT TON_2.IN THEN 
 				TON_2(IN := TRUE, PT := T#50ms);
@@ -84,7 +90,7 @@ PROGRAM _CYCLIC
  
 		TON_2();
  
-		//Tank 3 left valve control
+		// Tank 3 left valve control
 		IF UINT_TO_BOOL(gTanks.Commands.OpenTank3LeftValve) AND gTanks.Status.Tank1FluidLvl > 0 AND gTanks.Status.Tank3FluidLvl < MAX_TANK_CAPACITY THEN
 			IF NOT TON_3.IN THEN 
 				TON_3(IN := TRUE, PT := T#50ms);
@@ -105,7 +111,7 @@ PROGRAM _CYCLIC
  
 		TON_3();
  
-		//Tank 3 right valve control
+		// Tank 3 right valve control
 		IF UINT_TO_BOOL(gTanks.Commands.OpenTank3RightValve) AND gTanks.Status.Tank2FluidLvl > 0 AND gTanks.Status.Tank3FluidLvl < MAX_TANK_CAPACITY THEN
 			IF NOT TON_4.IN THEN 
 				TON_4(IN := TRUE, PT := T#50ms);
@@ -126,7 +132,7 @@ PROGRAM _CYCLIC
  
 		TON_4();
  
-		//Tank 3 main valve control
+		// Tank 3 main valve control
 		IF gTanks.Commands.OpenTank3MainValve AND gTanks.Status.Tank3FluidLvl > 0 THEN
 			IF NOT TON_5.IN THEN 
 				TON_5(IN := TRUE, PT := T#50ms);
@@ -144,7 +150,7 @@ PROGRAM _CYCLIC
  
 		TON_5();
  
-		//Mixer animations for simulation
+		// Mixer animations for simulation
 		IF UINT_TO_BOOL(gTanks.Status.IsMixer1On) THEN
 			IF NOT TON_6.IN THEN
 				TON_6(IN := TRUE, PT := T#175ms);
@@ -181,12 +187,12 @@ PROGRAM _CYCLIC
  
 		TON_6();
  
-		//Progress bar colours - water
+		// Progress bar colours - water
 		IF Tank1Save > 0 AND Tank3LeftValveSave THEN
 			ProgressBarWaterManual := TRUE;
 		END_IF
  
-		//Progress bar colours - paint
+		// Progress bar colours - paint
 		IF Tank2Save > 0 AND Tank3RightValveSave THEN
 			ProgressBarPaintManual := TRUE;
 		END_IF
@@ -203,17 +209,17 @@ PROGRAM _CYCLIC
 			ProgressBarNotMixedManual := FALSE;
 		END_IF
  
-		//Condition to remember action made on left valve
+		// Condition to remember action made on left valve
 		IF gTanks.Commands.OpenTank3LeftValve > 0 THEN
 			Tank3LeftValveSave := TRUE;
 		END_IF
  
-		//Condition to remember action made on right valve
+		// Condition to remember action made on right valve
 		IF gTanks.Commands.OpenTank3RightValve > 0 THEN
 			Tank3RightValveSave := TRUE;
 		END_IF
  
-		//Colours reset to prevent previous colours from being displayed
+		// Colours reset to prevent previous colours from being displayed
 		IF gTanks.Status.Tank1FluidLvl = 0 AND gTanks.Status.Tank3FluidLvl = 0 THEN
 			Tank1Save := 0;
 			ProgressBarWaterManual := FALSE;
@@ -248,24 +254,24 @@ PROGRAM _CYCLIC
 			ProgressBarWaterManual := FALSE;
 		END_IF
  
-		//Tank 3 left valve reset to prevent colours bugging by intolerable users
+		// Tank 3 left valve reset to prevent colours bugging by intolerable users
 		IF gTanks.Status.Tank1FluidLvl = 0 THEN
 			gTanks.Commands.OpenTank3LeftValve := 0;
 		END_IF
  
-		//Tank 3 right valve reset to prevent colours bugging by intolerable users
+		// Tank 3 right valve reset to prevent colours bugging by intolerable users
 		IF gTanks.Status.Tank2FluidLvl = 0 THEN
 			gTanks.Commands.OpenTank3RightValve := 0;
 		END_IF
  
-		//Überprüfung der beiden Ventile für den Fortschrittsbalken der Wasser-Leck-Verbindung
+		// Überprüfung der beiden Ventile für den Fortschrittsbalken der Wasser-Leck-Verbindung
 		IF UINT_TO_BOOL(gTanks.Commands.OpenTank3LeftValve) AND UINT_TO_BOOL(gTanks.Commands.OpenTank3RightValve) THEN
 			TanksValvesCheck := TRUE;
 		ELSE
 			TanksValvesCheck := FALSE;
 		END_IF
  
-		//Checking mixers status to display mixed progress bar
+		// Checking mixers status to display mixed progress bar
 		IF UINT_TO_BOOL(gTanks.Status.IsMixer1On)  
 			AND Tank3RightValveSave
 			AND Tank3LeftValveSave  
@@ -276,11 +282,11 @@ PROGRAM _CYCLIC
 		END_IF
 	END_IF
  
-	//Auto control
+	// Auto control
 	IF Auto THEN
 		ProgressBarNotMixedManual := FALSE;
  
-		//Tank 1 valve control
+		// Tank 1 valve control
 		IF gTanks.Commands.OpenTank1Valve AND gTanks.Status.Tank1FluidLvl < gTanks.Parameters.Tank1TargetFluidLvl THEN
 			IF NOT TON_1.IN THEN 
 				TON_1(IN := TRUE, PT := T#50ms);
@@ -305,7 +311,7 @@ PROGRAM _CYCLIC
  
 		TON_1();
  
-		//Tank 2 valve control
+		// Tank 2 valve control
 		IF gTanks.Commands.OpenTank2Valve AND gTanks.Status.Tank2FluidLvl < gTanks.Parameters.Tank2TargetFluidLvl THEN
 			IF NOT TON_2.IN THEN 
 				TON_2(IN := TRUE, PT := T#50ms);
@@ -330,7 +336,7 @@ PROGRAM _CYCLIC
  
 		TON_2();
  
-		//Tank 3 left valve control
+		// Tank 3 left valve control
 		IF UINT_TO_BOOL(gTanks.Commands.OpenTank3LeftValve) AND gTanks.Status.Tank3FluidLvl <= gTanks.Parameters.Tank3TargetFluidLvl THEN
 			IF NOT TON_3.IN THEN 
 				TON_3(IN := TRUE, PT := T#50ms);
@@ -365,7 +371,7 @@ PROGRAM _CYCLIC
  
 		TON_3();
  
-		//Tank 3 right valve control
+		// Tank 3 right valve control
 		IF UINT_TO_BOOL(gTanks.Commands.OpenTank3RightValve) AND gTanks.Status.Tank3FluidLvl <= gTanks.Parameters.Tank3TargetFluidLvl THEN
 			IF NOT TON_4.IN THEN 
 				TON_4(IN := TRUE, PT := T#50ms);
@@ -400,7 +406,7 @@ PROGRAM _CYCLIC
  
 		TON_4();
  
-		//Tank 3 main valve control
+		// Tank 3 main valve control
 		IF gTanks.Commands.OpenTank3MainValve THEN
 			IF NOT TON_5.IN THEN 
 				TON_5(IN := TRUE, PT := T#50ms);
@@ -419,7 +425,7 @@ PROGRAM _CYCLIC
  
 		TON_5();
  
-		//Animations for mixers
+		// Animations for mixers
 		IF UINT_TO_BOOL(gTanks.Status.IsMixer1On) THEN
 			IF NOT TON_6.IN THEN
 				TON_6(IN := TRUE, PT := T#175ms);
@@ -456,14 +462,14 @@ PROGRAM _CYCLIC
  
 		TON_6();
  
-		//Überprüfung der beiden Ventile für den Fortschrittsbalken der Wasser-Leck-Verbindung
+		// Überprüfung der beiden Ventile für den Fortschrittsbalken der Wasser-Leck-Verbindung
 		IF UINT_TO_BOOL(gTanks.Commands.OpenTank3LeftValve) AND UINT_TO_BOOL(gTanks.Commands.OpenTank3RightValve) THEN
 			TanksValvesCheck := TRUE;
 		ELSE
 			TanksValvesCheck := FALSE;
 		END_IF
- 
-		//Condition to remember action made on left and rigtht valves
+  
+		// Condition to remember action made on left and rigtht valves
 		LValveCheck := FALSE;
 		RValveCheck := FALSE;
  
@@ -476,7 +482,7 @@ PROGRAM _CYCLIC
 		END_IF
  
  
-		//Mixed progress bar display
+		// Mixed progress bar display
 		IF UINT_TO_BOOL(gTanks.Status.IsMixer1On) OR UINT_TO_BOOL(gTanks.Status.IsMixer2On) THEN
 			MixerCheck := TRUE;
 		END_IF
@@ -501,7 +507,7 @@ PROGRAM _CYCLIC
 		IF gTanks.Commands.OpenTank3RightValve > 0 THEN
 			ProgressBarWaterManual := FALSE;
 		END_IF
-		//Reset mixercheck for every start click
+		// Reset mixercheck for every start click
 		IF gTanks.Status.Tank3FluidLvl = 0 
 			OR UINT_TO_BOOL(gTanks.Status.IsMixer1On) AND RValveCheck
 			OR UINT_TO_BOOL(gTanks.Status.IsMixer2On) AND RValveCheck

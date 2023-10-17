@@ -1,6 +1,4 @@
 VAR
-	MpAxisBasic_Primary : MpAxisBasic; (*Mixer 1 axis function block*)
-	MpAxisBasicParameters_Primary : MpAxisBasicParType := (Velocity:=100,Acceleration:=250,Deceleration:=250,Direction:=mcDIR_POSITIVE); (*Mixer 1 axis parameters structure*)
 	StepMixer1 : StepEnum := STEP_INIT; (*Automatic mode mixer 1 step*)
 	StepMixer2 : StepEnum := STEP_INIT; (*Automatic mode mixer 2 step*)
 	MpAxisBasic_Secondary : MpAxisBasic; (*Mixer 2 axis function block*)
@@ -20,4 +18,7 @@ VAR
 	F_TRIG_2 : F_TRIG; (*Edge detection function*)
 	MixerSecondaryVelocity : REAL := 0; (*Mixer 2 velocity (to visualization)*)
 	MixerP3Velocity : REAL := 0; (*ACOPOS P3 drive velocity (to visualization)*)
+	MpAxisBasic_Primary : MpAxisBasic; (*Mixer 1 axis function block*)
+	MpAxisBasicParameters_Primary : MpAxisBasicParType := (Velocity:=100,Acceleration:=250,Deceleration:=250,Direction:=mcDIR_POSITIVE); (*Mixer 1 axis parameters structure*)
+	MC_ReadStatus_0 : MC_ReadStatus;
 END_VAR
