@@ -191,9 +191,10 @@
       <Parameter ID="ChannelType27" Value="REAL" />
       <Group ID="Channel28" />
       <Parameter ID="ChannelID28" Value="DP_iNC_Master_Motion_14" />
-      <Parameter ID="ChannelType28" Value="REAL" />
+      <Parameter ID="ChannelType28" Value="INT" />
       <Group ID="Channel29" />
       <Parameter ID="ChannelID29" Value="DP_iNC_Master_Motion_15" />
+      <Parameter ID="ChannelType29" Value="REAL" />
       <Group ID="Channel30" />
       <Parameter ID="ChannelID30" Value="DP_iNC_Master_Motion_16" />
       <Group ID="Channel31" />

@@ -14,11 +14,12 @@ VAR
 	RatioNumeratorReal : REAL := 1; (*Ratio numerator in gear ratio*)
 	RatioDenominatorReal : REAL := 1; (*Ratio denominator in gear ratio*)
 	MpAxisBasic_P3 : MpAxisBasic := (Power:=FALSE,MoveVelocity:=FALSE,MoveAbsolute:=FALSE,MoveAdditive:=FALSE); (*ACOPOS P3 drive axis function block*)
-	MpAxisBasicParameters_P3 : MpAxisBasicParType := (Velocity:=200,Acceleration:=250,Deceleration:=250,Direction:=mcDIR_POSITIVE); (*ACOPOS P3 drive parameters structure*)
+	MpAxisBasicParameters_P3 : MpAxisBasicParType := (Velocity:=100,Acceleration:=250,Deceleration:=250,Direction:=mcDIR_POSITIVE); (*ACOPOS P3 drive parameters structure*)
 	F_TRIG_2 : F_TRIG; (*Edge detection function*)
 	MixerSecondaryVelocity : REAL := 0; (*Mixer 2 velocity (to visualization)*)
 	MixerP3Velocity : REAL := 0; (*ACOPOS P3 drive velocity (to visualization)*)
 	MpAxisBasic_Primary : MpAxisBasic; (*Mixer 1 axis function block*)
 	MpAxisBasicParameters_Primary : MpAxisBasicParType := (Velocity:=100,Acceleration:=250,Deceleration:=250,Direction:=mcDIR_POSITIVE); (*Mixer 1 axis parameters structure*)
 	MC_ReadStatus_0 : MC_ReadStatus;
+	Mixer1ReadyToMove : BOOL;
 END_VAR

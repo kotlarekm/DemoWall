@@ -56,7 +56,7 @@ VAR_CONFIG
 	::gMixer1Inputs.MoveAdditive AT %QX."epl_icn".DP_iNC_Master_Motion_5;
 	::gMixer1Inputs.MoveVelocity AT %QX."epl_icn".DP_iNC_Master_Motion_6;
 	::Motion:MpAxisBasic_Primary.ErrorReset AT %QX."epl_icn".DP_iNC_Master_Motion_7;
-	::Motion:MpAxisBasic_Primary.Update AT %QX."epl_icn".DP_iNC_Master_Motion_8;
+	::gMixer1Inputs.Update AT %QX."epl_icn".DP_iNC_Master_Motion_8;
 	::gMixer1Parameters.Velocity AT %QD."epl_icn".DP_iNC_Master_Motion_9;
 	::gMixer1Outputs.PowerOn AT %IX."epl_icn".DP_iNC_Slave_Motion_1;
 	::gMixer1Outputs.MoveActive AT %IX."epl_icn".DP_iNC_Slave_Motion_2;
@@ -72,4 +72,6 @@ VAR_CONFIG
 	::gMixer1Parameters.Position AT %QD."epl_icn".DP_iNC_Master_Motion_11;
 	::gMixer1Parameters.Acceleration AT %QD."epl_icn".DP_iNC_Master_Motion_12;
 	::gMixer1Parameters.Deceleration AT %QD."epl_icn".DP_iNC_Master_Motion_13;
+	::gMixer1Parameters.Direction AT %QW."epl_icn".DP_iNC_Master_Motion_14;
+	::gMixer1Parameters.Stop_Deceleration AT %QD."epl_icn".DP_iNC_Master_Motion_15;
 END_VAR

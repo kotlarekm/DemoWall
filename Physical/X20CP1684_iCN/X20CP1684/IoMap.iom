@@ -68,4 +68,6 @@ VAR_CONFIG
 	::gMixer1Parameters.Acceleration AT %ID."X20CP1684".IF3.DP_iNC_Master_Motion_12;
 	::gMixer1Parameters.Deceleration AT %ID."X20CP1684".IF3.DP_iNC_Master_Motion_13;
 	::gMixer1Outputs.Position AT %QD."X20CP1684".IF3.DP_iNC_Slave_Motion_10;
+	::gMixer1Parameters.Direction AT %IW."X20CP1684".IF3.DP_iNC_Master_Motion_14;
+	::gMixer1Parameters.Stop_Deceleration AT %ID."X20CP1684".IF3.DP_iNC_Master_Motion_15;
 END_VAR

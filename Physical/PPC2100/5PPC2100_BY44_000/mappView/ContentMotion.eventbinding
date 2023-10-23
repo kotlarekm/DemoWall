@@ -134,11 +134,22 @@
     <EventBinding id="EventBindingMotion6">
       <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_Secondary.Error" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
-        <Action>
-          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse9">
-            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Green" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse9">
+                <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Green" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_Secondary.Power">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
       <EventHandler condition="newValue = FALSE">
         <Action>
@@ -151,11 +162,22 @@
     <EventBinding id="EventBinding_240">
       <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_P3.Error" event="ValueChanged" />
       <EventHandler condition="newValue = TRUE">
-        <Action>
-          <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse10">
-            <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Green" />
-          </Target>
-        </Action>
+        <Sequence>
+          <Step order="0">
+            <Action>
+              <Target xsi:type="widgets.brease.Ellipse.Action" contentRefId="ContentMotion" widgetRefId="Ellipse10">
+                <Method xsi:type="widgets.brease.Ellipse.Action.SetStyle" value="Green" />
+              </Target>
+            </Action>
+          </Step>
+          <Step order="1">
+            <Action>
+              <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_P3.Power">
+                <Method xsi:type="opcUa.NodeAction.SetValueBool" value="false" />
+              </Target>
+            </Action>
+          </Step>
+        </Sequence>
       </EventHandler>
       <EventHandler condition="newValue = FALSE">
         <Action>
@@ -450,21 +472,21 @@
       <Source xsi:type="widgets.brease.DropDownBox.Event" contentRefId="ContentMotion" widgetRefId="DropDownBoxDirSelect" event="SelectedIndexChanged" />
       <EventHandler condition="selectedIndex = 0">
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasicParameters_Primary.Direction">
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gMixer1Parameters.Direction">
             <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="0" />
           </Target>
         </Action>
       </EventHandler>
       <EventHandler condition="selectedIndex = 1">
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasicParameters_Primary.Direction">
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gMixer1Parameters.Direction">
             <Method xsi:type="opcUa.NodeAction.SetValueNumber" value="1" />
           </Target>
         </Action>
       </EventHandler>
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_Primary.Update">
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gMixer1Inputs.Update">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
@@ -541,12 +563,12 @@
     <EventBinding id="EventBindingMotion8">
       <Source xsi:type="opcUa.Event" refId="::Motion:GearCoupling" event="ValueChanged" />
       <Operand datatype="ANY_INT" name="direction">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisBasicParameters_Primary.Direction">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisBasicParameters_P3.Direction">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="BOOL" name="moveActive">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gMixer1Outputs.MoveActive">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisBasic_P3.MoveActive">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
@@ -580,12 +602,12 @@
         </ReadTarget>
       </Operand>
       <Operand datatype="ANY_INT" name="direction">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisBasicParameters_Primary.Direction">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisBasicParameters_P3.Direction">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="BOOL" name="moveActive">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gMixer1Outputs.MoveActive">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisBasic_Primary.MoveActive">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
@@ -637,12 +659,12 @@
         </ReadTarget>
       </Operand>
       <Operand datatype="ANY_INT" name="direction">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisBasicParameters_Primary.Direction">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisBasicParameters_P3.Direction">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
       <Operand datatype="BOOL" name="moveActive">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::AsGlobalPV:gMixer1Outputs.MoveActive">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisBasic_P3.MoveActive">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
@@ -734,9 +756,9 @@
       </EventHandler>
     </EventBinding>
     <EventBinding id="EventBindingMotion11">
-      <Source xsi:type="opcUa.Event" refId="::AsGlobalPV:gMixer1Outputs.MoveActive" event="ValueChanged" />
+      <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasic_Primary.MoveActive" event="ValueChanged" />
       <Operand datatype="ANY_INT" name="direction">
-        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisBasicParameters_Primary.Direction">
+        <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisBasicParameters_P3.Direction">
           <Method xsi:type="opcUa.NodeAction.GetValue" />
         </ReadTarget>
       </Operand>
@@ -786,7 +808,7 @@
       <Source xsi:type="widgets.brease.NumericInput.Event" contentRefId="ContentMotion" widgetRefId="NumericInputSetVelocity1" event="ValueChanged" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_Primary.Update">
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gMixer1Inputs.Update">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
@@ -802,11 +824,21 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="ContentMotion.NumericInputSetVelocity3.ValueChanged">
+      <Source xsi:type="widgets.brease.NumericInput.Event" contentRefId="ContentMotion" widgetRefId="NumericInputSetVelocity3" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_P3.Update">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
     <EventBinding id="ContentMotion.NumericInputSetAcceleration1.ValueChanged">
       <Source xsi:type="widgets.brease.NumericInput.Event" contentRefId="ContentMotion" widgetRefId="NumericInputSetAcceleration1" event="ValueChanged" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_Primary.Update">
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gMixer1Inputs.Update">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
@@ -822,11 +854,21 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="ContentMotion.NumericInputSetAcceleration3.ValueChanged">
+      <Source xsi:type="widgets.brease.NumericInput.Event" contentRefId="ContentMotion" widgetRefId="NumericInputSetAcceleration3" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_P3.Update">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
     <EventBinding id="ContentMotion.NumericInputSetDeceleration1.ValueChanged">
       <Source xsi:type="widgets.brease.NumericInput.Event" contentRefId="ContentMotion" widgetRefId="NumericInputSetDeceleration1" event="ValueChanged" />
       <EventHandler>
         <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_Primary.Update">
+          <Target xsi:type="opcUa.NodeAction" refId="::AsGlobalPV:gMixer1Inputs.Update">
             <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
           </Target>
         </Action>
@@ -842,8 +884,18 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="ContentMotion.NumericInputSetDeceleration3.ValueChanged">
+      <Source xsi:type="widgets.brease.NumericInput.Event" contentRefId="ContentMotion" widgetRefId="NumericInputSetDeceleration3" event="ValueChanged" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::Motion:MpAxisBasic_P3.Update">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
     <EventBinding id="EventBindingMotion12">
-      <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasicParameters_Primary.Direction" event="ValueChanged" />
+      <Source xsi:type="opcUa.Event" refId="::Motion:MpAxisBasicParameters_P3.Direction" event="ValueChanged" />
       <Operand datatype="BOOL" name="inSync">
         <ReadTarget xsi:type="opcUa.NodeAction.Read" refId="::Motion:MpAxisCoupling_0.InSync">
           <Method xsi:type="opcUa.NodeAction.GetValue" />

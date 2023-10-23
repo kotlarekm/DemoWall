@@ -171,11 +171,11 @@
           <Variable Name="Position" />
         </Variable>
         <Variable Name="gMixer1Parameters">
-          <Variable Name="Velocity" />
-          <Variable Name="Distance" />
-          <Variable Name="Position" />
-          <Variable Name="Acceleration" />
-          <Variable Name="Deceleration" />
+          <Variable Name="Velocity" EURangesId="15" />
+          <Variable Name="Distance" EURangesId="21" />
+          <Variable Name="Position" EURangesId="10" />
+          <Variable Name="Acceleration" EURangesId="20" />
+          <Variable Name="Deceleration" EURangesId="20" />
           <Variable Name="Direction" />
           <Variable Name="Stop_Deceleration" />
         </Variable>
@@ -183,6 +183,7 @@
           <Variable Name="MoveVelocity" />
           <Variable Name="MoveAdditive" />
           <Variable Name="MoveAbsolute" />
+          <Variable Name="Update" />
         </Variable>
       </GlobalVariables>
       <Task Name="Simulation">
@@ -382,7 +383,7 @@
           <Variable Name="Direction" />
         </Variable>
         <Variable Name="Manual" />
-        <Variable Name="RatioDenominatorReal" />
+        <Variable Name="RatioDenominatorReal" EURangesId="23" />
         <Variable Name="RatioNumeratorReal" EURangesId="23" />
         <Variable Name="MpAxisBasic_P3">
           <Variable Name="Error" />

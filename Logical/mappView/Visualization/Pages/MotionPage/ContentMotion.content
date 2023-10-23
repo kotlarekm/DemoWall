@@ -7,44 +7,7 @@
       <Widgets>
         <Widget xsi:type="widgets.brease.TabItem" id="TabSetValuesItem" left="0" width="250" height="40" zIndex="0" text="$IAT/MixerDrives" imageHeight="25" imageWidth="25" mouseDownImageColor="rgba(255, 255, 255, 1)" borderWidth="0px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" backColor="rgba(255, 255, 255, 1)" textColor="rgba(0, 0, 0, 1)" activeBorderWidth="8px" activeCornerRadius="0px" fontSize="16px" fontName="ABBvoiceMedium">
           <Widgets>
-            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxMixer1" top="10" left="14" width="440" height="510" zIndex="0" text="$IAT/MixerPrimary" borderWidth="2px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" fontSize="18px">
-              <Widgets>
-                <Widget xsi:type="widgets.brease.Label" id="LabelControls1" top="3" left="153" width="126" zIndex="0" text="$IAT/LabelControls" textColor="rgba(0, 0, 0, 1)" textAlign="center" fontName="ABBvoiceMedium" fontSize="16px" />
-                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse1" top="358" left="141" width="27" height="27" zIndex="1" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
-                <Widget xsi:type="widgets.brease.Label" id="LabelStatus2" top="356" left="14" width="116" zIndex="2" text="$IAT/LabelPowerON" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" />
-                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse3" top="393" left="141" width="27" height="27" zIndex="3" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
-                <Widget xsi:type="widgets.brease.Label" id="LabelStatus4" top="391" left="14" width="116" zIndex="4" text="$IAT/LabelRunning" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" />
-                <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputActualVelocity1" top="353" left="329" width="90" height="35" zIndex="5" unit="{'metric':'E96','imperial':'E96','imperial-us':'E96'}" unitAlign="right" textColor="rgba(0, 0, 0, 1)" textAlign="left" fontName="ABBvoiceMedium" fontSize="15px" padding="0px 20px 0px 0px" />
-                <Widget xsi:type="widgets.brease.Label" id="LabelStatus5" top="356" left="204" width="116" zIndex="6" text="$IAT/LabelVelocity" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" />
-                <Widget xsi:type="widgets.brease.Label" id="LabelStatus6" top="392" left="204" width="116" zIndex="7" text="$IAT/LabelPosition" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" />
-                <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputActualVelocity2" top="389" left="329" width="90" height="35" zIndex="8" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" textColor="rgba(0, 0, 0, 1)" textAlign="left" fontName="ABBvoiceMedium" fontSize="15px" padding="0px 20px 0px 0px" />
-                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse8" top="429" left="141" width="27" height="27" zIndex="9" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
-                <Widget xsi:type="widgets.brease.Label" id="LabelStatus13" top="427" left="14" width="116" zIndex="10" text="$IAT/LabelError" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" />
-                <Widget xsi:type="widgets.brease.Button" id="ButtonErrorReset" top="429" left="204" width="148" zIndex="11" text="$IAT/BtnErrorReset" borderWidth="3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="14px" fontName="ABBvoiceLight" />
-                <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxManual" top="30" left="-2" width="436" height="325" zIndex="12" borderWidth="0px" headerGradient="linear-gradient(to bottom,#FFFFFF 0%,#FFFFFF 100%)" borderStyle="none" shadow="0px 0px rgba(62, 79, 92, 0.75)">
-                  <Widgets>
-                    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButtonPower" top="5" left="74" width="135" height="50" zIndex="0" image="Media/SymbolLib/Symbols/Energy.svg" text="$IAT/BtnPower" borderWidth="3px 3px 3px 3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="15px" fontName="ABBvoiceMedium" />
-                    <Widget xsi:type="widgets.brease.Button" id="ButtonStop" top="5" left="222" width="135" height="50" zIndex="1" text="$IAT/BtnStop" borderWidth="3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="15px" fontName="ABBvoiceMedium" />
-                    <Widget xsi:type="widgets.brease.Button" id="ButtonMoveVelocity" top="75" left="5" width="135" height="50" zIndex="2" multiLine="true" text="$IAT/BtnMoveVelocity" wordWrap="true" borderWidth="3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="15px" fontName="ABBvoiceMedium" />
-                    <Widget xsi:type="widgets.brease.Button" id="ButtonMoveAbsolute" top="75" left="295" width="135" height="50" zIndex="3" multiLine="true" text="$IAT/BtnMoveAbsolute" wordWrap="true" borderWidth="3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="15px" fontName="ABBvoiceMedium" />
-                    <Widget xsi:type="widgets.brease.Button" id="ButtonMoveAdditive" top="75" left="150" width="135" height="50" zIndex="4" multiLine="true" text="$IAT/BtnMoveAdditive" wordWrap="true" borderWidth="3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="15px" fontName="ABBvoiceMedium" />
-                    <Widget xsi:type="widgets.brease.Label" id="LabelVelocity1" top="155" left="-8" width="170" zIndex="5" text="$IAT/LabelSetVelocity" textAlign="center" fontName="ABBvoiceMedium" />
-                    <Widget xsi:type="widgets.brease.Label" id="LabelDistance" top="155" left="134" width="170" zIndex="6" text="$IAT/LabelSetDistance" textAlign="center" fontName="ABBvoiceMedium" />
-                    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetVelocity1" top="190" left="20" width="113" zIndex="7" unit="{'metric':'E96','imperial':'E96','imperial-us':'E96'}" unitAlign="right" unitTextAlign="right" disabledBorderWidth="2px 2px 1px 1px" cornerRadius="8px" disabledBorderColor="rgba(255, 136, 0, 1)" fontName="ABBvoiceMedium" />
-                    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetDistance" top="190" left="162" width="113" zIndex="8" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" unitTextAlign="right" disabledBorderWidth="2px 2px 1px 1px" cornerRadius="8px" disabledBorderColor="rgba(255, 136, 0, 1)" fontName="ABBvoiceMedium" />
-                    <Widget xsi:type="widgets.brease.Label" id="LabelPosition" top="155" left="277" width="170" zIndex="9" text="$IAT/LabelSetPosition" textAlign="center" fontName="ABBvoiceMedium" />
-                    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetPosition" top="190" left="305" width="113" zIndex="10" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" unitTextAlign="right" disabledBorderWidth="2px 2px 1px 1px" cornerRadius="8px" disabledBorderColor="rgba(255, 136, 0, 1)" fontName="ABBvoiceMedium" />
-                    <Widget xsi:type="widgets.brease.Label" id="LabelAcceleration1" top="210" left="-10" width="170" height="62" zIndex="11" multiLine="true" text="$IAT/LabelSetAcceleration" wordWrap="true" textAlign="center bottom" fontName="ABBvoiceMedium" />
-                    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetAcceleration1" top="275" left="21" width="113" zIndex="12" unit="{'metric':'M45','imperial':'M45','imperial-us':'M45'}" unitAlign="right" unitTextAlign="right" disabledBorderWidth="2px 2px 1px 1px" cornerRadius="8px" disabledBorderColor="rgba(255, 136, 0, 1)" fontName="ABBvoiceMedium" padding="0px 15px 0px 15px" />
-                    <Widget xsi:type="widgets.brease.Label" id="LabelDeceleration1" top="210" left="135" width="170" height="62" zIndex="13" text="$IAT/LabelSetDeceleration" textAlign="center bottom" fontName="ABBvoiceMedium" />
-                    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetDeceleration1" top="275" left="163" width="113" zIndex="14" unit="{'metric':'M45','imperial':'M45','imperial-us':'M45'}" unitAlign="right" unitTextAlign="right" disabledBorderWidth="2px 2px 1px 1px" cornerRadius="8px" disabledBorderColor="rgba(255, 136, 0, 1)" fontName="ABBvoiceMedium" padding="0px 15px 0px 15px" />
-                    <Widget xsi:type="widgets.brease.Label" id="LabelSetDirection" top="210" left="278" width="170" height="62" zIndex="15" text="$IAT/LabelSetDirection" textAlign="center bottom" fontName="ABBvoiceMedium" />
-                    <Widget xsi:type="widgets.brease.DropDownBox" id="DropDownBoxDirSelect" top="275" left="306" width="113" zIndex="16" dataProvider="[{'value':'0','text':'$IAT/Right'},{'value':'1','text':'$IAT/Left'}]" selectedValue="0" cornerRadius="8px" shadow="4px 1px 3px rgba(255, 113, 0, 0.75)" borderWidth="2px 2px 1px 1px" borderColor="rgba(255, 136, 0, 1)" disabledBorderColor="rgba(255, 136, 0, 1)" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontName="ABBvoiceMedium" />
-                  </Widgets>
-                </Widget>
-              </Widgets>
-            </Widget>
-            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxMixer2" top="10" left="469" width="440" height="510" zIndex="1" text="$IAT/MixerSecondary" borderWidth="2px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" fontSize="18px">
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxMixer2" top="10" left="469" width="440" height="510" zIndex="0" text="$IAT/MixerSecondary" borderWidth="2px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" fontSize="18px">
               <Widgets>
                 <Widget xsi:type="widgets.brease.Label" id="LabelControls2" top="3" left="153" width="126" zIndex="0" text="$IAT/LabelControls" textColor="rgba(0, 0, 0, 1)" textAlign="center" fontName="ABBvoiceMedium" fontSize="16px" />
                 <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse4" top="358" left="141" width="27" height="27" zIndex="1" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
@@ -82,7 +45,7 @@
                 <Widget xsi:type="widgets.brease.Image" id="Image2" top="424" left="380" width="40" height="40" zIndex="13" image="Media/SymbolLib/Symbols/Graph.svg" />
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxCoupling" top="10" left="924" width="265" height="510" zIndex="2" text="$IAT/LabelCoupling" borderWidth="2px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" fontSize="18px">
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxCoupling" top="10" left="924" width="265" height="510" zIndex="1" text="$IAT/LabelCoupling" borderWidth="2px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" fontSize="18px">
               <Widgets>
                 <Widget xsi:type="widgets.brease.Image" id="Image1" top="424" left="205" width="40" height="40" zIndex="0" image="Media/SymbolLib/Edit/Help.svg" imageColor="rgba(255, 136, 0, 1)" />
                 <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxCouplingControl" top="15" left="-12" width="285" height="405" zIndex="1" borderWidth="0px" headerGradient="linear-gradient(to bottom,#FFFFFF 0%,#FFFFFF 100%)" borderStyle="none" shadow="0px 0px rgba(62, 79, 92, 0.75)">
@@ -106,11 +69,7 @@
                 </Widget>
               </Widgets>
             </Widget>
-          </Widgets>
-        </Widget>
-        <Widget xsi:type="widgets.brease.TabItem" id="TabCriticalValuesItem" left="0" width="250" height="40" zIndex="1" ellipsis="true" text="$IAT/AdditionalDrives" imageHeight="25" imageWidth="25" mouseDownImageColor="rgba(255, 255, 255, 1)" borderWidth="0px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" backColor="rgba(255, 255, 255, 1)" textColor="rgba(0, 0, 0, 1)" activeBorderWidth="8px" activeCornerRadius="0px" fontSize="16px" fontName="ABBvoiceMedium">
-          <Widgets>
-            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxMixer3" top="10" left="14" width="440" height="510" zIndex="0" text="$IAT/AcoposP3" borderWidth="2px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" fontSize="18px">
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxMixer3" top="10" left="14" width="440" height="510" zIndex="2" text="$IAT/MixerPrimary" borderWidth="2px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" fontSize="18px">
               <Widgets>
                 <Widget xsi:type="widgets.brease.Label" id="LabelControls3" top="3" left="153" width="126" zIndex="0" text="$IAT/LabelControls" textColor="rgba(0, 0, 0, 1)" textAlign="center" fontName="ABBvoiceMedium" fontSize="16px" />
                 <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse2" top="358" left="141" width="27" height="27" zIndex="1" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
@@ -147,7 +106,11 @@
                 </Widget>
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.OnlineChartHDA" id="OnlineChartHDA1" top="60" left="513" width="630" height="410" zIndex="1" updateChartTime="50" borderWidth="3px" borderColor="rgba(0, 0, 0, 1)">
+          </Widgets>
+        </Widget>
+        <Widget xsi:type="widgets.brease.TabItem" id="TabCriticalValuesItem" left="0" width="250" height="40" zIndex="1" ellipsis="true" text="$IAT/AdditionalDrives" imageHeight="25" imageWidth="25" mouseDownImageColor="rgba(255, 255, 255, 1)" borderWidth="0px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" backColor="rgba(255, 255, 255, 1)" textColor="rgba(0, 0, 0, 1)" activeBorderWidth="8px" activeCornerRadius="0px" fontSize="16px" fontName="ABBvoiceMedium">
+          <Widgets>
+            <Widget xsi:type="widgets.brease.OnlineChartHDA" id="OnlineChartHDA1" top="60" left="520" width="630" height="410" zIndex="0" updateChartTime="50" borderWidth="3px" borderColor="rgba(0, 0, 0, 1)">
               <Properties>
                 <yAxis>
                   <Element id="yAxis1" title="$IAT/LabelVelocity" unit="{'metric':'E96','imperial':'E96','imperial-us':'E96'}" titleFontSize="14px" textColor="rgba(0, 0, 0, 1)" color="rgba(0, 0, 0, 1)" fontSize="16px" fontName="ABBvoiceMedium" titleTextColor="rgba(0, 0, 0, 1)" titleFontName="ABBvoiceMedium" />
@@ -162,6 +125,43 @@
                   <Element id="cursor1" />
                 </cursor>
               </Properties>
+            </Widget>
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxMixer1" top="10" left="14" width="440" height="510" zIndex="1" text="$IAT/StepperDrive" borderWidth="2px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" fontSize="18px">
+              <Widgets>
+                <Widget xsi:type="widgets.brease.Label" id="LabelControls1" top="3" left="153" width="126" zIndex="0" text="$IAT/LabelControls" textColor="rgba(0, 0, 0, 1)" textAlign="center" fontName="ABBvoiceMedium" fontSize="16px" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse1" top="358" left="141" width="27" height="27" zIndex="1" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
+                <Widget xsi:type="widgets.brease.Label" id="LabelStatus2" top="356" left="14" width="116" zIndex="2" text="$IAT/LabelPowerON" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse3" top="393" left="141" width="27" height="27" zIndex="3" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
+                <Widget xsi:type="widgets.brease.Label" id="LabelStatus4" top="391" left="14" width="116" zIndex="4" text="$IAT/LabelRunning" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" />
+                <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputActualVelocity1" top="353" left="329" width="90" height="35" zIndex="5" unit="{'metric':'E96','imperial':'E96','imperial-us':'E96'}" unitAlign="right" textColor="rgba(0, 0, 0, 1)" textAlign="left" fontName="ABBvoiceMedium" fontSize="15px" padding="0px 20px 0px 0px" />
+                <Widget xsi:type="widgets.brease.Label" id="LabelStatus5" top="356" left="204" width="116" zIndex="6" text="$IAT/LabelVelocity" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" />
+                <Widget xsi:type="widgets.brease.Label" id="LabelStatus6" top="392" left="204" width="116" zIndex="7" text="$IAT/LabelPosition" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" />
+                <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutputActualVelocity2" top="389" left="329" width="90" height="35" zIndex="8" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" textColor="rgba(0, 0, 0, 1)" textAlign="left" fontName="ABBvoiceMedium" fontSize="15px" padding="0px 20px 0px 0px" />
+                <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse8" top="429" left="141" width="27" height="27" zIndex="9" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
+                <Widget xsi:type="widgets.brease.Label" id="LabelStatus13" top="427" left="14" width="116" zIndex="10" text="$IAT/LabelError" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" />
+                <Widget xsi:type="widgets.brease.Button" id="ButtonErrorReset" top="429" left="204" width="148" zIndex="11" text="$IAT/BtnErrorReset" borderWidth="3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="14px" fontName="ABBvoiceLight" />
+                <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxManual" top="30" left="-2" width="436" height="325" zIndex="12" borderWidth="0px" headerGradient="linear-gradient(to bottom,#FFFFFF 0%,#FFFFFF 100%)" borderStyle="none" shadow="0px 0px rgba(62, 79, 92, 0.75)">
+                  <Widgets>
+                    <Widget xsi:type="widgets.brease.ToggleButton" id="ToggleButtonPower" top="5" left="74" width="135" height="50" zIndex="0" image="Media/SymbolLib/Symbols/Energy.svg" text="$IAT/BtnPower" borderWidth="3px 3px 3px 3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="15px" fontName="ABBvoiceMedium" />
+                    <Widget xsi:type="widgets.brease.Button" id="ButtonStop" top="5" left="222" width="135" height="50" zIndex="1" text="$IAT/BtnStop" borderWidth="3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="15px" fontName="ABBvoiceMedium" />
+                    <Widget xsi:type="widgets.brease.Button" id="ButtonMoveVelocity" top="75" left="5" width="135" height="50" zIndex="2" multiLine="true" text="$IAT/BtnMoveVelocity" wordWrap="true" borderWidth="3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="15px" fontName="ABBvoiceMedium" />
+                    <Widget xsi:type="widgets.brease.Button" id="ButtonMoveAbsolute" top="75" left="295" width="135" height="50" zIndex="3" multiLine="true" text="$IAT/BtnMoveAbsolute" wordWrap="true" borderWidth="3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="15px" fontName="ABBvoiceMedium" />
+                    <Widget xsi:type="widgets.brease.Button" id="ButtonMoveAdditive" top="75" left="150" width="135" height="50" zIndex="4" multiLine="true" text="$IAT/BtnMoveAdditive" wordWrap="true" borderWidth="3px" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontSize="15px" fontName="ABBvoiceMedium" />
+                    <Widget xsi:type="widgets.brease.Label" id="LabelVelocity1" top="155" left="-8" width="170" zIndex="5" text="$IAT/LabelSetVelocity" textAlign="center" fontName="ABBvoiceMedium" />
+                    <Widget xsi:type="widgets.brease.Label" id="LabelDistance" top="155" left="134" width="170" zIndex="6" text="$IAT/LabelSetDistance" textAlign="center" fontName="ABBvoiceMedium" />
+                    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetVelocity1" top="190" left="20" width="113" zIndex="7" unit="{'metric':'E96','imperial':'E96','imperial-us':'E96'}" unitAlign="right" unitTextAlign="right" disabledBorderWidth="2px 2px 1px 1px" cornerRadius="8px" disabledBorderColor="rgba(255, 136, 0, 1)" fontName="ABBvoiceMedium" />
+                    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetDistance" top="190" left="162" width="113" zIndex="8" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" unitTextAlign="right" disabledBorderWidth="2px 2px 1px 1px" cornerRadius="8px" disabledBorderColor="rgba(255, 136, 0, 1)" fontName="ABBvoiceMedium" />
+                    <Widget xsi:type="widgets.brease.Label" id="LabelPosition" top="155" left="277" width="170" zIndex="9" text="$IAT/LabelSetPosition" textAlign="center" fontName="ABBvoiceMedium" />
+                    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetPosition" top="190" left="305" width="113" zIndex="10" unit="{'metric':'DD','imperial':'DD','imperial-us':'DD'}" unitAlign="right" unitTextAlign="right" disabledBorderWidth="2px 2px 1px 1px" cornerRadius="8px" disabledBorderColor="rgba(255, 136, 0, 1)" fontName="ABBvoiceMedium" />
+                    <Widget xsi:type="widgets.brease.Label" id="LabelAcceleration1" top="210" left="-10" width="170" height="62" zIndex="11" multiLine="true" text="$IAT/LabelSetAcceleration" wordWrap="true" textAlign="center bottom" fontName="ABBvoiceMedium" />
+                    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetAcceleration1" top="275" left="21" width="113" zIndex="12" unit="{'metric':'M45','imperial':'M45','imperial-us':'M45'}" unitAlign="right" unitTextAlign="right" disabledBorderWidth="2px 2px 1px 1px" cornerRadius="8px" disabledBorderColor="rgba(255, 136, 0, 1)" fontName="ABBvoiceMedium" padding="0px 15px 0px 15px" />
+                    <Widget xsi:type="widgets.brease.Label" id="LabelDeceleration1" top="210" left="135" width="170" height="62" zIndex="13" text="$IAT/LabelSetDeceleration" textAlign="center bottom" fontName="ABBvoiceMedium" />
+                    <Widget xsi:type="widgets.brease.NumericInput" id="NumericInputSetDeceleration1" top="275" left="163" width="113" zIndex="14" unit="{'metric':'M45','imperial':'M45','imperial-us':'M45'}" unitAlign="right" unitTextAlign="right" disabledBorderWidth="2px 2px 1px 1px" cornerRadius="8px" disabledBorderColor="rgba(255, 136, 0, 1)" fontName="ABBvoiceMedium" padding="0px 15px 0px 15px" />
+                    <Widget xsi:type="widgets.brease.Label" id="LabelSetDirection" top="210" left="278" width="170" height="62" zIndex="15" text="$IAT/LabelSetDirection" textAlign="center bottom" fontName="ABBvoiceMedium" />
+                    <Widget xsi:type="widgets.brease.DropDownBox" id="DropDownBoxDirSelect" top="275" left="306" width="113" zIndex="16" dataProvider="[{'value':'0','text':'$IAT/Right'},{'value':'1','text':'$IAT/Left'}]" selectedValue="0" cornerRadius="8px" shadow="4px 1px 3px rgba(255, 113, 0, 0.75)" borderWidth="2px 2px 1px 1px" borderColor="rgba(255, 136, 0, 1)" disabledBorderColor="rgba(255, 136, 0, 1)" textColor="rgba(0, 0, 0, 1)" textAlign="right" fontName="ABBvoiceMedium" />
+                  </Widgets>
+                </Widget>
+              </Widgets>
             </Widget>
           </Widgets>
         </Widget>

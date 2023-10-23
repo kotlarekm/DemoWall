@@ -16,18 +16,17 @@ PROGRAM _INIT
 	MpAxisBasic_Secondary.MpLink := ADR(gMixer_2);
 	MpAxisBasic_Secondary.Parameters := ADR(MpAxisBasicParameters_Secondary);
 	MpAxisBasic_Secondary();
-	// Axis coupling init
-	MpAxisCoupling_0.Enable := TRUE;
-	MpAxisCoupling_0.MpLink := ADR(gMixer_2);
-	MpAxisCoupling_0.MpLinkMaster := ADR(gMixer_1);
-	MpAxisCoupling_0.Parameters := ADR(MpAxisCouplingParameters);
-	MpAxisCoupling_0();
 	// MpAxisBasic_P3
 	MpAxisBasic_P3.Enable := TRUE;
 	MpAxisBasic_P3.MpLink := ADR(gAxis_P3);
 	MpAxisBasic_P3.Parameters := ADR(MpAxisBasicParameters_P3);
 	MpAxisBasic_P3();
-	
+	// Axis coupling init
+	MpAxisCoupling_0.Enable := TRUE;
+	MpAxisCoupling_0.MpLink := ADR(gMixer_2);
+	MpAxisCoupling_0.MpLinkMaster := ADR(gAxis_P3);
+	MpAxisCoupling_0.Parameters := ADR(MpAxisCouplingParameters);
+	MpAxisCoupling_0();
 	//
 	MC_ReadStatus_0.Enable := TRUE;
 	MC_ReadStatus_0.Axis := ADR(gMixer_1);
@@ -69,7 +68,7 @@ PROGRAM _CYCLIC
 	
 	// Assigning deceleration from axis parameters to stop deceleration
 	MpAxisBasicParameters_Secondary.Stop.Deceleration := MpAxisBasicParameters_Secondary.Deceleration;
-	MpAxisBasicParameters_Primary.Stop.Deceleration := MpAxisBasicParameters_Primary.Deceleration;
+	MpAxisBasicParameters_Primary.Stop.Deceleration := gMixer1Parameters.Deceleration;
 	
 	// Power_on negative edge detection
 	F_TRIG_0(CLK:=gMixer1Outputs.PowerOn);
@@ -81,7 +80,7 @@ PROGRAM _CYCLIC
 		MpAxisCoupling_0.Update := FALSE;
 	END_IF;
 	IF gMixer1Outputs.UpdateDone THEN
-		MpAxisBasic_Primary.Update := FALSE;
+		gMixer1Inputs.Update := FALSE;
 	END_IF
 	IF MpAxisBasic_Secondary.UpdateDone THEN
 		MpAxisBasic_Secondary.Update := FALSE;
@@ -109,12 +108,18 @@ PROGRAM _CYCLIC
 		MixerP3Velocity := 0;
 	END_IF
 	
-	//
+	// 
 	MpAxisBasicParameters_Primary.Velocity := gMixer1Parameters.Velocity;
 	MpAxisBasicParameters_Primary.Distance := REAL_TO_LREAL(gMixer1Parameters.Distance);
 	MpAxisBasicParameters_Primary.Position := REAL_TO_LREAL(gMixer1Parameters.Position);
 	MpAxisBasicParameters_Primary.Acceleration := gMixer1Parameters.Acceleration;
 	MpAxisBasicParameters_Primary.Deceleration := gMixer1Parameters.Deceleration;
+	CASE gMixer1Parameters.Direction OF
+		0:
+			MpAxisBasicParameters_Primary.Direction := mcDIR_POSITIVE;
+		1:
+			MpAxisBasicParameters_Primary.Direction := mcDIR_NEGATIVE;
+	END_CASE
 	gMixer1Outputs.Position := LREAL_TO_REAL(MpAxisBasic_Primary.Position);
 	
 	// E-STOP
@@ -239,17 +244,23 @@ PROGRAM _CYCLIC
 		gTanks.Commands.TurnOnMixer1 := FALSE;
 		gTanks.Commands.TurnOnMixer2 := FALSE;
 		// Manual mode MixerPrimary
-		IF gMixer1Outputs.InPosition THEN
+//		IF gMixer1Outputs.InPosition THEN
+//			Mixer1ReadyToMove := TRUE;
+//		END_IF
+		IF gMixer1Outputs.MoveDone THEN//Mixer1ReadyToMove THEN
 			gMixer1Inputs.MoveAdditive := FALSE;
 			gMixer1Inputs.MoveAbsolute := FALSE;
 			gMixer1Inputs.MoveVelocity := FALSE;
+			//IF NOT(gMixer1Outputs.MoveActive) THEN
+			//	Mixer1ReadyToMove := FALSE;
+			//END_IF
 		END_IF
 		IF NOT gMixer1Outputs.Error THEN
 			MpAxisBasic_Primary.ErrorReset := FALSE;
 		END_IF;
 		
 		// Manual mode MixerSecondary
-		IF MpAxisBasic_Secondary.InPosition THEN
+		IF MpAxisBasic_Secondary.MoveDone THEN
 			MpAxisBasic_Secondary.MoveAdditive := FALSE;
 			MpAxisBasic_Secondary.MoveAbsolute := FALSE;
 			MpAxisBasic_Secondary.MoveVelocity := FALSE;
@@ -260,7 +271,7 @@ PROGRAM _CYCLIC
 		END_IF;
 		
 		// Manual mode P3 Mixer
-		IF MpAxisBasic_P3.InPosition THEN
+		IF MpAxisBasic_P3.MoveDone THEN
 			MpAxisBasic_P3.MoveAdditive := FALSE;
 			MpAxisBasic_P3.MoveAbsolute := FALSE;
 			MpAxisBasic_P3.MoveVelocity := FALSE;

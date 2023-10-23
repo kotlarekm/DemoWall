@@ -16,6 +16,7 @@ TYPE
 		MoveVelocity : BOOL;
 		MoveAdditive : BOOL;
 		MoveAbsolute : BOOL;
+		Update : BOOL;
 	END_STRUCT;
 	Mixer1ParametersType : 	STRUCT 
 		Velocity : REAL;
@@ -23,7 +24,7 @@ TYPE
 		Position : REAL;
 		Acceleration : REAL;
 		Deceleration : REAL;
-		Direction : USINT;
-		Stop_Deceleration : USINT;
+		Direction : INT;
+		Stop_Deceleration : REAL;
 	END_STRUCT;
 END_TYPE

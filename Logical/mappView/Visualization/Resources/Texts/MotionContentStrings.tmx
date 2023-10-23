@@ -291,5 +291,13 @@
         <seg>ACOPOS P3 - drive</seg>
       </tuv>
     </tu>
+    <tu tuid="StepperDrive">
+      <tuv xml:lang="pl">
+        <seg>Napęd krokowy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Stepper drive</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>
