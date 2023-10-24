@@ -48,7 +48,7 @@ PROGRAM _CYCLIC
 	aoValueToDisplay1 := aiKnob1 * DisplayMaxValue / KnobMaxValue;
 	aoValueToDisplay2 := aiKnob2 * DisplayMaxValue / KnobMaxValue;
 	
-	// Initialization of the edge detecting block //
+	// Round buttons lighting up after clicking in teh visualization and device
 	IF RoundButton1Vis THEN
 		TON_RoundButton1Vis.IN := TRUE;
 	END_IF

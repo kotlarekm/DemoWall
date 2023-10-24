@@ -4,7 +4,7 @@
     <GeneratorDescription Name="AutomationStudio" Version="4.12.4.107" LanguageID="1">
       <Info Name="ARVersion" Value="48307" />
       <Info Name="SafetyRelease" Value="5.23.0" />
-      <Info Name="Communication" Value="/IF=tcpip /LOPO=11159 /SA=1 /COMT=2500 /RT=1000 /AM=* /SDT=5 /DAIP=10.48.50.201 /REPO=11169 /ANSL=1 /PT=11169 /PORT=50000" />
+      <Info Name="Communication" Value="/IF=tcpip /LOPO=11159 /SA=1 /COMT=2500 /RT=1000 /AM=* /SDT=5 /DAIP=10.48.10.201 /REPO=11169 /ANSL=1 /PT=11169 /PORT=50000" />
       <Info Name="mappSafetyPath" Value="C:\BRAutomation\AS412\AS\TechnologyPackages\mappSafety\5.23.0" />
     </GeneratorDescription>
     <SafetyConfigurationManager TransportSAddr="1">
