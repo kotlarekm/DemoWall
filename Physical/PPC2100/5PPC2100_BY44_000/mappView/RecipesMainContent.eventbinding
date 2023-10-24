@@ -48,25 +48,15 @@
         </Action>
       </EventHandler>
     </EventBinding>
-    <EventBinding id="RecipesMainContent.SelectDeviceRadioGroup.SelectedIndexChanged">
-      <Source xsi:type="widgets.brease.RadioButtonGroup.Event" contentRefId="RecipesMainContent" widgetRefId="SelectDeviceRadioGroup" event="SelectedIndexChanged" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="opcUa.NodeAction" refId="::Recipes:DeviceChenged">
-            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
-          </Target>
-        </Action>
-      </EventHandler>
-    </EventBinding>
-    <EventBinding id="RecipesMainContent.ApplyRecipeBtn.Click">
-      <Source xsi:type="widgets.brease.Button.Event" contentRefId="RecipesMainContent" widgetRefId="ApplyRecipeBtn" event="Click" />
-      <EventHandler>
-        <Action>
-          <Target xsi:type="clientSystem.Action">
-            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="ApplyRecipeDialog" />
-          </Target>
-        </Action>
-      </EventHandler>
+	<EventBinding id="RecipesMainContent.ApplyRecipeBtn.Click">
+		<Source xsi:type="widgets.brease.Button.Event" contentRefId="RecipesMainContent" widgetRefId="ApplyRecipeBtn" event="Click" />
+		<EventHandler>
+			<Action>
+				<Target xsi:type="clientSystem.Action">
+					<Method xsi:type="clientSystem.Action.OpenDialog" dialogId="ApplyRecipeDialog" />
+				</Target>
+			</Action>
+		</EventHandler>
     </EventBinding>
     <EventBinding id="RecipesMainContent.DefaultParametersBtn.Click">
       <Source xsi:type="widgets.brease.Button.Event" contentRefId="RecipesMainContent" widgetRefId="DefaultParametersBtn" event="Click" />

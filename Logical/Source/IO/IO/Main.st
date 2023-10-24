@@ -6,7 +6,12 @@
 //***********************************************************************
 
 PROGRAM _INIT
-	
+	TON_RoundButton1Vis.PT := TON_PT;
+	TON_RoundButton2Vis.PT := TON_PT;
+	TON_RoundButton3Vis.PT := TON_PT;
+	TON_RoundButton4Vis.PT := TON_PT;
+	TON_RoundButton5Vis.PT := TON_PT;
+	TON_ResetButtonVis.PT := TON_PT_ResetButton;
 END_PROGRAM
 
 PROGRAM _CYCLIC
@@ -43,8 +48,63 @@ PROGRAM _CYCLIC
 	aoValueToDisplay1 := aiKnob1 * DisplayMaxValue / KnobMaxValue;
 	aoValueToDisplay2 := aiKnob2 * DisplayMaxValue / KnobMaxValue;
 	
+	// Initialization of the edge detecting block //
+	IF RoundButton1Vis THEN
+		TON_RoundButton1Vis.IN := TRUE;
+	END_IF
+	IF TON_RoundButton1Vis.Q THEN
+		TON_RoundButton1Vis.IN := FALSE;
+		RoundButton1Vis := FALSE;
+	END_IF
+	IF RoundButton2Vis THEN
+		TON_RoundButton2Vis.IN := TRUE;
+	END_IF
+	IF TON_RoundButton2Vis.Q THEN
+		TON_RoundButton2Vis.IN := FALSE;
+		RoundButton2Vis := FALSE;
+	END_IF
+	IF RoundButton3Vis THEN
+		TON_RoundButton3Vis.IN := TRUE;
+	END_IF
+	IF TON_RoundButton3Vis.Q THEN
+		TON_RoundButton3Vis.IN := FALSE;
+		RoundButton3Vis := FALSE;
+	END_IF
+	IF RoundButton4Vis THEN
+		TON_RoundButton4Vis.IN := TRUE;
+	END_IF
+	IF TON_RoundButton4Vis.Q THEN
+		TON_RoundButton4Vis.IN := FALSE;
+		RoundButton4Vis := FALSE;
+	END_IF
+	IF RoundButton5Vis THEN
+		TON_RoundButton5Vis.IN := TRUE;
+	END_IF
+	IF TON_RoundButton5Vis.Q THEN
+		TON_RoundButton5Vis.IN := FALSE;
+		RoundButton5Vis := FALSE;
+	END_IF
+	IF ResetButtonVis THEN
+		TON_ResetButtonVis.IN := TRUE;
+	END_IF
+	IF TON_ResetButtonVis.Q THEN
+		TON_ResetButtonVis.IN := FALSE;
+		ResetButtonVis := FALSE;
+	END_IF
 	
-	// Initialization of the edge detecting block
+	TON_RoundButton1Vis();
+	TON_RoundButton2Vis();
+	TON_RoundButton3Vis();
+	TON_RoundButton4Vis();
+	TON_RoundButton5Vis();
+	TON_ResetButtonVis();
+	
+	R_TRIG_RoundButton1Vis(CLK := RoundButton1Vis);
+	R_TRIG_RoundButton2Vis(CLK := RoundButton2Vis);
+	R_TRIG_RoundButton3Vis(CLK := RoundButton3Vis);
+	R_TRIG_RoundButton4Vis(CLK := RoundButton4Vis);
+	R_TRIG_RoundButton5Vis(CLK := RoundButton5Vis);
+	
 	R_TRIG_RoundButton1(CLK := diRoundButton1);
 	R_TRIG_RoundButton2(CLK := diRoundButton2);
 	R_TRIG_RoundButton3(CLK := diRoundButton3);
@@ -52,18 +112,17 @@ PROGRAM _CYCLIC
 	R_TRIG_RoundButton5(CLK := diRoundButton5);
 	
 	// Activation of the function block depending on the pressed button
-	IF R_TRIG_RoundButton1.Q THEN
+	IF R_TRIG_RoundButton1.Q OR R_TRIG_RoundButton1Vis.Q THEN
 		ChangeButtonColor_0(ButtonNumber := 1);
-	ELSIF R_TRIG_RoundButton2.Q THEN
+	ELSIF R_TRIG_RoundButton2.Q OR R_TRIG_RoundButton2Vis.Q THEN
 		ChangeButtonColor_0(ButtonNumber := 2);
-	ELSIF R_TRIG_RoundButton3.Q THEN
+	ELSIF R_TRIG_RoundButton3.Q OR R_TRIG_RoundButton3Vis.Q THEN
 		ChangeButtonColor_0(ButtonNumber := 3);
-	ELSIF R_TRIG_RoundButton4.Q THEN
+	ELSIF R_TRIG_RoundButton4.Q OR R_TRIG_RoundButton4Vis.Q THEN
 		ChangeButtonColor_0(ButtonNumber := 4);
-	ELSIF R_TRIG_RoundButton5.Q THEN
+	ELSIF R_TRIG_RoundButton5.Q OR R_TRIG_RoundButton5Vis.Q THEN
 		ChangeButtonColor_0(ButtonNumber := 5);
 	END_IF
-	
 END_PROGRAM
 
 PROGRAM _EXIT

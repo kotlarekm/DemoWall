@@ -299,5 +299,37 @@
         <seg>Stepper drive</seg>
       </tuv>
     </tu>
+    <tu tuid="Servo">
+      <tuv xml:lang="pl">
+        <seg>Serwo</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Servo</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ServoPrimary">
+      <tuv xml:lang="pl">
+        <seg>Serwo główne</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Servo primary</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ServoSecondary">
+      <tuv xml:lang="pl">
+        <seg>Serwo poboczne</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Servo secondary</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Stepper">
+      <tuv xml:lang="pl">
+        <seg>Napęd krokowy</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Stepper</seg>
+      </tuv>
+    </tu>
   </body>
 </tmx>

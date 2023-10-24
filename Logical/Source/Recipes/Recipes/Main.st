@@ -21,7 +21,7 @@ PROGRAM _INIT
 	MpFileManagerUI_0.MpLink := ADR(gFileManagerUI);
 	MpFileManagerUI_0.UISetup := MpFileManagerUISetup_0;
 	
-	MpFileManagerUIConnect_0.DeviceList.DeviceNames[0] := 'PLC';
+	MpFileManagerUIConnect_0.DeviceList.DeviceNames[0] := 'USER';
 	MpFileManagerUIConnect_0.DeviceList.DeviceNames[1] := 'USB1';
 	MpFileManagerUIConnect_0.DeviceList.DeviceNames[2] := 'USB2';
 	MpFileManagerUIConnect_0.DeviceList.SelectedIndex := 1;

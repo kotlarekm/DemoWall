@@ -45,3 +45,28 @@ VAR CONSTANT
 	DisplayMaxValue : REAL := 9.8; (*Maximum display value*)
 	KnobMaxValue : INT := 32767; (*Maximum knob value *)
 END_VAR
+VAR
+	RoundButton1Vis : BOOL; (*Digital input RoundButton1*)
+	RoundButton2Vis : BOOL; (*Digital input RoundButton2*)
+	RoundButton3Vis : BOOL; (*Digital input RoundButton3*)
+	RoundButton4Vis : BOOL; (*Digital input RoundButton4*)
+	RoundButton5Vis : BOOL; (*Digital input RoundButton5*)
+	ResetButtonVis : BOOL; (*Digital input RoundButton5*)
+	TON_RoundButton1Vis : TON;
+	TON_RoundButton2Vis : TON;
+	TON_RoundButton3Vis : TON;
+	TON_RoundButton4Vis : TON;
+	TON_RoundButton5Vis : TON;
+	TON_ResetButtonVis : TON;
+END_VAR
+VAR CONSTANT
+	TON_PT : TIME := T#5ms;
+	TON_PT_ResetButton : TIME := T#200ms;
+END_VAR
+VAR
+	R_TRIG_RoundButton1Vis : R_TRIG; (*Function block used to detect rising edge when button1 is clicked*)
+	R_TRIG_RoundButton2Vis : R_TRIG; (*Function block used to detect rising edge when button1 is clicked*)
+	R_TRIG_RoundButton3Vis : R_TRIG; (*Function block used to detect rising edge when button1 is clicked*)
+	R_TRIG_RoundButton4Vis : R_TRIG; (*Function block used to detect rising edge when button1 is clicked*)
+	R_TRIG_RoundButton5Vis : R_TRIG; (*Function block used to detect rising edge when button1 is clicked*)
+END_VAR

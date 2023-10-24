@@ -5,9 +5,9 @@
     <Widget xsi:type="widgets.brease.Label" id="Label6" top="7" left="90" width="200" zIndex="1" text="$IAT/LabelManualMode" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" fontSize="24px" bold="true" />
     <Widget xsi:type="widgets.brease.TabControl" id="MotionTabControl" top="40" left="0" width="1220" height="560" zIndex="2" headerBackColor="rgba(220, 220, 220, 1)" borderStyle="solid" borderWidth="0px" cornerRadius="3px" borderColor="rgba(0, 0, 0, 1)">
       <Widgets>
-        <Widget xsi:type="widgets.brease.TabItem" id="TabSetValuesItem" left="0" width="250" height="40" zIndex="0" text="$IAT/MixerDrives" imageHeight="25" imageWidth="25" mouseDownImageColor="rgba(255, 255, 255, 1)" borderWidth="0px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" backColor="rgba(255, 255, 255, 1)" textColor="rgba(0, 0, 0, 1)" activeBorderWidth="8px" activeCornerRadius="0px" fontSize="16px" fontName="ABBvoiceMedium">
+        <Widget xsi:type="widgets.brease.TabItem" id="TabSetValuesItem" left="0" width="200" height="40" zIndex="0" text="$IAT/Servo" imageHeight="25" imageWidth="25" mouseDownImageColor="rgba(255, 255, 255, 1)" borderWidth="0px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" backColor="rgba(255, 255, 255, 1)" textColor="rgba(0, 0, 0, 1)" activeBorderWidth="8px" activeCornerRadius="0px" fontSize="16px" fontName="ABBvoiceMedium">
           <Widgets>
-            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxMixer2" top="10" left="469" width="440" height="510" zIndex="0" text="$IAT/MixerSecondary" borderWidth="2px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" fontSize="18px">
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxMixer2" top="10" left="469" width="440" height="510" zIndex="0" text="$IAT/ServoSecondary" borderWidth="2px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" fontSize="18px">
               <Widgets>
                 <Widget xsi:type="widgets.brease.Label" id="LabelControls2" top="3" left="153" width="126" zIndex="0" text="$IAT/LabelControls" textColor="rgba(0, 0, 0, 1)" textAlign="center" fontName="ABBvoiceMedium" fontSize="16px" />
                 <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse4" top="358" left="141" width="27" height="27" zIndex="1" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
@@ -69,7 +69,7 @@
                 </Widget>
               </Widgets>
             </Widget>
-            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxMixer3" top="10" left="14" width="440" height="510" zIndex="2" text="$IAT/MixerPrimary" borderWidth="2px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" fontSize="18px">
+            <Widget xsi:type="widgets.brease.GroupBox" id="GroupBoxMixer3" top="10" left="14" width="440" height="510" zIndex="2" text="$IAT/ServoPrimary" borderWidth="2px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" fontSize="18px">
               <Widgets>
                 <Widget xsi:type="widgets.brease.Label" id="LabelControls3" top="3" left="153" width="126" zIndex="0" text="$IAT/LabelControls" textColor="rgba(0, 0, 0, 1)" textAlign="center" fontName="ABBvoiceMedium" fontSize="16px" />
                 <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse2" top="358" left="141" width="27" height="27" zIndex="1" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
@@ -108,7 +108,7 @@
             </Widget>
           </Widgets>
         </Widget>
-        <Widget xsi:type="widgets.brease.TabItem" id="TabCriticalValuesItem" left="0" width="250" height="40" zIndex="1" ellipsis="true" text="$IAT/AdditionalDrives" imageHeight="25" imageWidth="25" mouseDownImageColor="rgba(255, 255, 255, 1)" borderWidth="0px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" backColor="rgba(255, 255, 255, 1)" textColor="rgba(0, 0, 0, 1)" activeBorderWidth="8px" activeCornerRadius="0px" fontSize="16px" fontName="ABBvoiceMedium">
+        <Widget xsi:type="widgets.brease.TabItem" id="TabCriticalValuesItem" left="0" width="200" height="40" zIndex="1" ellipsis="true" text="$IAT/Stepper" imageHeight="25" imageWidth="25" mouseDownImageColor="rgba(255, 255, 255, 1)" borderWidth="0px" cornerRadius="0px" borderColor="rgba(0, 0, 0, 1)" backColor="rgba(255, 255, 255, 1)" textColor="rgba(0, 0, 0, 1)" activeBorderWidth="8px" activeCornerRadius="0px" fontSize="16px" fontName="ABBvoiceMedium">
           <Widgets>
             <Widget xsi:type="widgets.brease.OnlineChartHDA" id="OnlineChartHDA1" top="60" left="520" width="630" height="410" zIndex="0" updateChartTime="50" borderWidth="3px" borderColor="rgba(0, 0, 0, 1)">
               <Properties>

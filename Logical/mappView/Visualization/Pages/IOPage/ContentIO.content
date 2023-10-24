@@ -49,8 +49,11 @@
     <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse18" top="440" left="820" width="80" height="80" zIndex="45" backColor="rgba(255, 255, 255, 1)" />
     <Widget xsi:type="widgets.brease.Ellipse" id="EllipseRoundButton5" top="420" left="960" width="120" height="120" zIndex="46" backColor="rgba(211, 211, 211, 1)" shadow="4px 4px 14px rgba(62, 79, 92, 0.75)" />
     <Widget xsi:type="widgets.brease.Ellipse" id="Ellipse20" top="440" left="980" width="80" height="80" zIndex="47" backColor="rgba(255, 255, 255, 1)" />
-    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle1" top="60" left="40" width="1120" height="500" zIndex="48" borderWidth="2px" backColor="rgba(255, 255, 255, 0)" />
-    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle2" top="60" left="560" width="600" height="200" zIndex="49" borderWidth="2px" backColor="rgba(255, 255, 255, 0)" />
-    <Widget xsi:type="widgets.brease.Rectangle" id="Rectangle3" top="60" left="560" width="600" height="500" zIndex="50" borderWidth="2px" backColor="rgba(255, 255, 255, 0)" />
+    <Widget xsi:type="widgets.brease.Line" id="Line1" zIndex="48" x1="41" x2="41" y1="60" y2="560" lineWidth="2px" />
+    <Widget xsi:type="widgets.brease.Line" id="Line2" zIndex="49" x1="561" x2="561" y1="60" y2="560" lineWidth="2px" />
+    <Widget xsi:type="widgets.brease.Line" id="Line3" zIndex="50" x1="1159" x2="1159" y1="60" y2="560" lineWidth="2px" />
+    <Widget xsi:type="widgets.brease.Line" id="Line4" zIndex="51" x1="1160" x2="40" y1="559" y2="559" lineWidth="2px" />
+    <Widget xsi:type="widgets.brease.Line" id="Line5" zIndex="52" x1="1160" x2="40" y1="61" y2="61" lineWidth="2px" />
+    <Widget xsi:type="widgets.brease.Line" id="Line6" zIndex="53" x1="1160" x2="560" y1="259" y2="259" lineWidth="2px" />
   </Widgets>
 </Content>

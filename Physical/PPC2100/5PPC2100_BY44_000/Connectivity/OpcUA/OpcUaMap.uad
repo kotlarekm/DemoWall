@@ -446,6 +446,18 @@
         <Variable Name="doLamp6" />
         <Variable Name="doLamp7" />
         <Variable Name="doLamp8" />
+        <Variable Name="diRoundButton1" />
+        <Variable Name="diRoundButton2" />
+        <Variable Name="diRoundButton3" />
+        <Variable Name="diRoundButton4" />
+        <Variable Name="diRoundButton5" />
+        <Variable Name="DisplayMaxValue" />
+        <Variable Name="RoundButton1Vis" />
+        <Variable Name="RoundButton2Vis" />
+        <Variable Name="RoundButton3Vis" />
+        <Variable Name="RoundButton4Vis" />
+        <Variable Name="RoundButton5Vis" />
+        <Variable Name="ResetButtonVis" />
       </Task>
     </Module>
   </DefaultView>

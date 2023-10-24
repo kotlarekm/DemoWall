@@ -488,5 +488,80 @@
         </Action>
       </EventHandler>
     </EventBinding>
+    <EventBinding id="EventBinding_28">
+      <Source xsi:type="opcUa.Event" refId="::IO:ResetButtonVis" event="ValueChanged" />
+      <Operand datatype="ANY_STRING" name="CurrentPage">
+        <ReadTarget xsi:type="session.VariableAction.Read" refId="::SYSTEM:clientInfo.currentPageId">
+          <Method xsi:type="session.VariableAction.GetValue" />
+        </ReadTarget>
+      </Operand>
+      <EventHandler condition="CurrentPage = &quot;IOPage&quot;">
+        <Action>
+          <Target xsi:type="clientSystem.Action">
+            <Method xsi:type="clientSystem.Action.OpenDialog" dialogId="ResetButtonDialog" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_22">
+      <Source xsi:type="widgets.brease.Ellipse.Event" contentRefId="ContentIO" widgetRefId="Ellipse10" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::IO:RoundButton1Vis">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_23">
+      <Source xsi:type="widgets.brease.Ellipse.Event" contentRefId="ContentIO" widgetRefId="Ellipse12" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::IO:RoundButton2Vis">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_25">
+      <Source xsi:type="widgets.brease.Ellipse.Event" contentRefId="ContentIO" widgetRefId="Ellipse16" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::IO:RoundButton3Vis">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_26">
+      <Source xsi:type="widgets.brease.Ellipse.Event" contentRefId="ContentIO" widgetRefId="Ellipse18" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::IO:RoundButton4Vis">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_27">
+      <Source xsi:type="widgets.brease.Ellipse.Event" contentRefId="ContentIO" widgetRefId="Ellipse20" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::IO:RoundButton5Vis">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
+    <EventBinding id="EventBinding_29">
+      <Source xsi:type="widgets.brease.Ellipse.Event" contentRefId="ContentIO" widgetRefId="Ellipse14" event="Click" />
+      <EventHandler>
+        <Action>
+          <Target xsi:type="opcUa.NodeAction" refId="::IO:ResetButtonVis">
+            <Method xsi:type="opcUa.NodeAction.SetValueBool" value="true" />
+          </Target>
+        </Action>
+      </EventHandler>
+    </EventBinding>
   </Bindings>
 </EventBindingSet>
