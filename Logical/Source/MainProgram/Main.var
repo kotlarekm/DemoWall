@@ -1,3 +1,6 @@
-VAR
+VAR RETAIN
 	gTanks : TanksType := (Parameters:=(Tank3TargetTemp:=40));
+END_VAR
+VAR
+	gSimulationMode : UDINT;
 END_VAR

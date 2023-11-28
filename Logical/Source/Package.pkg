@@ -10,5 +10,6 @@
     <Object Type="Package">TempControl</Object>
     <Object Type="Package">IO</Object>
     <Object Type="Package">PressureControl</Object>
+    <Object Type="Package">ProgramiNC</Object>
   </Objects>
 </Package>

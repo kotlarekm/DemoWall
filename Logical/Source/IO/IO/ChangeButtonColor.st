@@ -15,10 +15,14 @@ FUNCTION_BLOCK ChangeButtonColor
 		RoundButton[ButtonNumber].doGreenLED := 0;
 	ELSIF RoundButton[ButtonNumber].Counter = 1 THEN
 		RoundButton[ButtonNumber].doRedLED := 1;
+		RoundButton[ButtonNumber].doYellowLED := 0;
+		RoundButton[ButtonNumber].doGreenLED := 0;
 	ELSIF RoundButton[ButtonNumber].Counter = 2 THEN
 		RoundButton[ButtonNumber].doRedLED := 0;
 		RoundButton[ButtonNumber].doYellowLED := 1;
+		RoundButton[ButtonNumber].doGreenLED := 0;
 	ELSIF RoundButton[ButtonNumber].Counter = 3 THEN
+		RoundButton[ButtonNumber].doRedLED := 0;
 		RoundButton[ButtonNumber].doYellowLED := 0;
 		RoundButton[ButtonNumber].doGreenLED := 1;
 	END_IF

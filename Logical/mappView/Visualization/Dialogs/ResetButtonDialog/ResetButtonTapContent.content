@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="ResetButtonTapContent" height="80" width="600" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Label" id="EmergencyDialogHeaderLabel" top="20" left="100" width="320" height="40" zIndex="0" text="$IAT/Warning" textColor="rgba(0, 0, 0, 1)" fontName="ABBvoiceMedium" fontSize="32px" />
+    <Widget xsi:type="widgets.brease.Image" id="Image1" top="10" left="10" width="60" height="60" zIndex="1" image="Media/SymbolLib/Symbols/Reset.svg" imageColor="rgba(0, 0, 0, 1)" />
+    <Widget xsi:type="widgets.brease.Button" id="LoginDialogExitBtn" top="5" left="520" width="70" height="70" zIndex="2" image="Media/SymbolLib/Edit/Close.svg" mouseDownImageColor="rgba(0, 0, 0, 1)" borderWidth="3px 3px 3px 3px" cornerRadius="200px" backGroundGradient="linear-gradient(to bottom, rgba(247,247,247,1) 0%,rgba(229,229,229,1) 100%)" borderColor="rgba(168, 153, 160, 1) rgba(95, 95, 95, 1) rgba(95, 95, 95, 1) rgba(168, 153, 160, 1)" textColor="rgba(0, 0, 0, 1)" fontName="Arial Unicode" />
+  </Widgets>
+</Content>

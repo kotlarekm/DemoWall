@@ -1,0 +1,5 @@
+VAR
+	ConfirmingHeatCoolOrHeat : BOOL;
+	TurnOnHeater : BOOL; (*Variable that switches the fan on (not retain)*)
+	TurnOnFan : BOOL; (*Variable that switches the heater on (not retain)*)
+END_VAR

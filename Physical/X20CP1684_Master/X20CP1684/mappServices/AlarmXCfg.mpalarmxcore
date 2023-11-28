@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="gAlarmXCore" Type="mpalarmxcore">
+    <Group ID="mapp.AlarmX.Core.Configuration">
+      <Group ID="[0]">
+        <Property ID="Name" Value="Tank3PressureHigh" />
+        <Property ID="Message" Value="{$AlarmsMessages/Tank3PressureHigh}" />
+        <Property ID="Code" Value="10" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gTanks.Status.Tank3Pressure" />
+            <Selector ID="HighLimitEnable" Value="Dynamic">
+              <Property ID="LimitPV" Value="::gTanks.Parameters.Tank3MaxAllowedPressure" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[1]">
+        <Property ID="Name" Value="Tank3TempHigh" />
+        <Property ID="Message" Value="{$AlarmsMessages/Tank3TempHigh}" />
+        <Property ID="Code" Value="11" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::TempContro:TempInReal" />
+            <Selector ID="HighLimitEnable" Value="Dynamic">
+              <Property ID="LimitPV" Value="::gTanks.Parameters.Tank3MaxAllowedTemp" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[2]">
+        <Property ID="Name" Value="E-stop" />
+        <Property ID="Message" Value="{$AlarmsMessages/E-stop}" />
+        <Property ID="Code" Value="12" />
+        <Selector ID="Behavior" Value="PersistentAlarm" />
+      </Group>
+      <Group ID="[3]">
+        <Property ID="Name" Value="Tank1FluidLvlHigh" />
+        <Property ID="Message" Value="{$AlarmsMessages/Tank1FluidLvlHigh}" />
+        <Property ID="Code" Value="13" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gTanks.Status.Tank1FluidLvl" />
+            <Selector ID="HighLimitEnable" Value="Dynamic">
+              <Property ID="LimitPV" Value="::gTanks.Parameters.Tank1MaxAllowedFluidLvl" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[4]">
+        <Property ID="Name" Value="Tank2FluidLvlHigh" />
+        <Property ID="Message" Value="{$AlarmsMessages/Tank2FluidLvlHigh}" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gTanks.Status.Tank2FluidLvl" />
+            <Selector ID="HighLimitEnable" Value="Dynamic">
+              <Property ID="LimitPV" Value="::gTanks.Parameters.Tank2MaxAllowedFluidLvl" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[5]">
+        <Property ID="Name" Value="Tank3FluidLvlHigh" />
+        <Property ID="Message" Value="{$AlarmsMessages/Tank3FluidLvlHigh}" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::gTanks.Status.Tank3FluidLvl" />
+            <Selector ID="HighLimitEnable" Value="Dynamic">
+              <Property ID="LimitPV" Value="::gTanks.Parameters.Tank3MaxAllowedFluidLvl" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[6]">
+        <Property ID="Name" Value="Mixer1VelocityHigh" />
+        <Property ID="Message" Value="{$AlarmsMessages/Mixer1VelocityHigh}" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::Motion:MpAxisBasicParameters_0.Velocity" />
+            <Selector ID="HighLimitEnable" Value="Dynamic">
+              <Property ID="LimitPV" Value="::gTanks.Parameters.Mixer1MaxAllowedVelocity" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+      <Group ID="[7]">
+        <Property ID="Name" Value="Mixer2VelocityHigh" />
+        <Property ID="Message" Value="{$AlarmsMessages/Mixer2VelocityHigh}" />
+        <Selector ID="Behavior" Value="LevelMonitoring">
+          <Group ID="Monitoring">
+            <Property ID="MonitoredPV" Value="::Motion:MpAxisBasicParameters_1.Velocity" />
+            <Selector ID="HighLimitEnable" Value="Dynamic">
+              <Property ID="LimitPV" Value="::gTanks.Parameters.Mixer2MaxAllowedVelocity" />
+            </Selector>
+          </Group>
+        </Selector>
+      </Group>
+    </Group>
+  </Element>
+</Configuration>

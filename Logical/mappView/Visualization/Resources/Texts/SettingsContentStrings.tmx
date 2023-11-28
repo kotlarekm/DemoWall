@@ -40,7 +40,7 @@
         <seg>Nazwa użytkownika</seg>
       </tuv>
       <tuv xml:lang="en">
-        <seg>Username</seg>
+        <seg>User name</seg>
       </tuv>
     </tu>
     <tu tuid="Roles">
@@ -81,6 +81,68 @@
       </tuv>
       <tuv xml:lang="en">
         <seg>Hardware</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AddUser">
+      <tuv xml:lang="pl">
+        <seg>Dodaj użytkownika</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Add user</seg>
+      </tuv>
+    </tu>
+    <tu tuid="DeleteUser">
+      <tuv xml:lang="pl">
+        <seg>Usuń użytkownika</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Delete user</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ModifyUser">
+      <tuv xml:lang="pl">
+        <seg>Modyfikuj użytkownika</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Modify user</seg>
+      </tuv>
+    </tu>
+    <tu tuid="UserList">
+      <tuv xml:lang="pl">
+        <seg>Lista użytkowników</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>User list</seg>
+      </tuv>
+    </tu>
+    <tu tuid="IsAdmin">
+      <tuv xml:lang="pl">
+        <seg>Admin</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Admin</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ResetButton">
+      <tuv xml:lang="pl">
+        <seg>Ten przycisk służy do resetowania systemu bezpieczeństwa!</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>This button is used to reset the security system!</seg>
+      </tuv>
+      <tuv xml:lang="de">
+        <seg>Servus Welt!</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="DeleteUserMessage">
+      <tuv xml:lang="pl">
+        <seg>Czy na pewno chcesz usunąć tego użytkownika?</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Are you sure you want to delete this user?</seg>
       </tuv>
     </tu>
   </body>

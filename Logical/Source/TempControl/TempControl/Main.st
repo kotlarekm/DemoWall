@@ -9,6 +9,12 @@ PROGRAM _INIT
 	
 	gTanks;
 	
+	// MpTempControllerConfig init
+	MpTempControllerConfig_0.MpLink := ADR(gTempController_0);
+	MpTempControllerConfig_0.Configuration := ADR(MpTempControllerConfigType_0);
+	MpTempControllerConfig_0.Enable := TRUE;
+	MpTempControllerConfig_0();
+	
 	// Controller init
 	MpTempController_0.MpLink := ADR(gTempController_0);
 	MpTempController_0.Parameters := ADR(MpTempControllerParType_0);
@@ -20,11 +26,16 @@ PROGRAM _INIT
 	MTBasicsPWMFan.Enable := TRUE;
 	MTBasicsPWMFan.Period := 0.005;
 	MTBasicsPWMFan.MinPulseWidth := 0.002;
+	//MTBasicsPWMFan.Period := 0.05;
+	//MTBasicsPWMFan.MinPulseWidth := 0.01;
 	MTBasicsPWMFan();
 	
 	MTBasicsPWMHeater.DutyCycle := 0;
 	MTBasicsPWMHeater.Enable := TRUE;
 	MTBasicsPWMHeater.Period := 0.005;
+	MTBasicsPWMHeater.MinPulseWidth := 0.002;
+	//MTBasicsPWMHeater.Period := 0.05;
+	//MTBasicsPWMHeater.MinPulseWidth := 0.01;
 	MTBasicsPWMHeater();
 	
 	// Displayed parameters init using parameters from regulator
@@ -33,6 +44,125 @@ PROGRAM _INIT
 END_PROGRAM
 
 PROGRAM _CYCLIC
+	
+	// Loading system parameters, pid parameters and profile parameters
+	// Only heating
+	IF NOT(gTanks.Parameters.HeatCool) THEN	
+		MpTempControllerConfigType_0.Type := mpTEMP_ZONE_TYPE_HEAT;
+		MpTempControllerConfigType_0.SystemParameters.Heat.Gain := 1.97903;
+		MpTempControllerConfigType_0.SystemParameters.Heat.TimeConstant1 := 415.2267;
+		MpTempControllerConfigType_0.SystemParameters.Heat.TimeConstant2 := 15.1164656;
+		MpTempControllerConfigType_0.SystemParameters.Heat.DelayTime := 7;
+		MpTempControllerConfigType_0.SystemParameters.Cool.Gain := 0;
+		MpTempControllerConfigType_0.SystemParameters.Cool.TimeConstant1 := 0;
+		MpTempControllerConfigType_0.SystemParameters.Cool.TimeConstant2 := 0;
+		MpTempControllerConfigType_0.SystemParameters.Cool.DelayTime := 0;
+		 
+		CASE StepHeat OF
+			STEP_WAIT:
+				IF ConfirmingHeatCoolOrHeat OR NOT(FirstUpload) THEN
+					MpTempControllerParType_0.PID.Heat.ProportionalGain := 15.23996;
+					MpTempControllerParType_0.PID.Heat.IntegrationTime := 74.8946152;
+					MpTempControllerParType_0.PID.Heat.DerivativeTime := 7.86393452;
+					MpTempControllerParType_0.PID.Heat.FilterTime := 0.786393464;
+					MpTempControllerParType_0.PID.Cool.ProportionalGain := 0;
+					MpTempControllerParType_0.PID.Cool.IntegrationTime := 0;
+					MpTempControllerParType_0.PID.Cool.DerivativeTime := 0;
+					MpTempControllerParType_0.PID.Cool.FilterTime := 0;
+					MpTempControllerParType_0.PID.IntegratorPreloading := 0;
+					MpTempControllerParType_0.Profile.Heat.SlewRate := 0.185037389;
+					MpTempControllerParType_0.Profile.Heat.FilterTime := 77.42902;
+					MpTempControllerParType_0.Profile.Heat.DelayTime := 7;
+					MpTempControllerParType_0.Profile.Heat.QuickStart :=  FALSE;
+					MpTempControllerParType_0.Profile.Cool.SlewRate := 0.03187467;
+					MpTempControllerParType_0.Profile.Cool.FilterTime := 15.1164656;
+					MpTempControllerParType_0.Profile.Cool.DelayTime := 7;
+					MpTempControllerParType_0.Profile.Cool.QuickStart := FALSE;
+					StepHeat := STEP_SAVE;
+				END_IF
+			
+			STEP_SAVE:
+				ConfirmingHeatCoolOrHeat := FALSE;
+				FirstUpload := TRUE;
+				MpTempControllerConfig_0.Save := TRUE;
+				MpTempControllerParType_1 := MpTempControllerParType_0;
+				IF MpTempControllerConfig_0.CommandDone THEN
+					MpTempControllerConfig_0.Save := FALSE;
+					StepHeat := STEP_UPDATE;
+				END_IF
+			
+			STEP_UPDATE:
+				MpTempController_0.Update := TRUE;
+				IF MpTempController_0.UpdateDone THEN
+					MpTempController_0.Update := FALSE;
+					StepHeat := STEP_WAIT;
+				END_IF
+		END_CASE
+		MpTempTuningType_0.Mode := mpTEMP_TUNING_MODE_HEAT;
+		NameOfMode := 'Step Heat';
+	
+	// Heating and cooling
+	ELSIF gTanks.Parameters.HeatCool THEN 
+		MpTempControllerConfigType_0.Type := mpTEMP_ZONE_TYPE_HEAT_COOL;
+		MpTempControllerConfigType_0.SystemParameters.Heat.Gain := 1.95778942;
+		MpTempControllerConfigType_0.SystemParameters.Heat.TimeConstant1 := 396.665375;
+		MpTempControllerConfigType_0.SystemParameters.Heat.TimeConstant2 := 16.8905449;
+		MpTempControllerConfigType_0.SystemParameters.Heat.DelayTime := 5;
+		MpTempControllerConfigType_0.SystemParameters.Cool.Gain := 0.00042889435;
+		MpTempControllerConfigType_0.SystemParameters.Cool.TimeConstant1 := 1.86782444;
+		MpTempControllerConfigType_0.SystemParameters.Cool.TimeConstant2 := 0;
+		MpTempControllerConfigType_0.SystemParameters.Cool.DelayTime := 13;
+		
+		CASE StepHeatCool OF
+			STEP_WAIT:
+				IF ConfirmingHeatCoolOrHeat OR NOT(FirstUpload) THEN
+					MpTempControllerParType_0.PID.Heat.ProportionalGain := 40;
+					MpTempControllerParType_0.PID.Heat.IntegrationTime := 250;
+					MpTempControllerParType_0.PID.Heat.DerivativeTime := 25;
+					MpTempControllerParType_0.PID.Heat.FilterTime := 2.5;
+					MpTempControllerParType_0.PID.Cool.ProportionalGain :=  40;
+					MpTempControllerParType_0.PID.Cool.IntegrationTime :=  250;
+					MpTempControllerParType_0.PID.Cool.DerivativeTime := 25;
+					MpTempControllerParType_0.PID.Cool.FilterTime := 2.5;
+					MpTempControllerParType_0.PID.IntegratorPreloading := -0.117142811;
+					MpTempControllerParType_0.Profile.Heat.SlewRate := 0.180146277;
+					MpTempControllerParType_0.Profile.Heat.FilterTime := 80.4640656;
+					MpTempControllerParType_0.Profile.Heat.DelayTime := 6;
+					MpTempControllerParType_0.Profile.Heat.QuickStart :=  FALSE;
+					MpTempControllerParType_0.Profile.Cool.SlewRate := 0.1221704;
+					MpTempControllerParType_0.Profile.Cool.FilterTime := 81.8528748;
+					MpTempControllerParType_0.Profile.Cool.DelayTime := 15;
+					MpTempControllerParType_0.Profile.Cool.QuickStart := FALSE;
+					StepHeatCool := STEP_SAVE;
+				END_IF
+						
+			STEP_SAVE:
+					ConfirmingHeatCoolOrHeat := FALSE;
+					FirstUpload := TRUE;
+					MpTempControllerConfig_0.Save := TRUE;
+					MpTempControllerParType_1 := MpTempControllerParType_0;
+					IF MpTempControllerConfig_0.CommandDone THEN
+						MpTempControllerConfig_0.Save := FALSE;
+						StepHeatCool := STEP_UPDATE;
+					END_IF
+		
+			STEP_UPDATE:
+				MpTempController_0.Update := TRUE;
+				IF MpTempController_0.UpdateDone THEN
+					MpTempController_0.Update := FALSE;
+					StepHeatCool := STEP_WAIT;
+				END_IF
+		END_CASE
+		MpTempTuningType_0.Mode := mpTEMP_TUNING_MODE_HEAT_COOL;
+		NameOfMode := 'Oscilation Heat and Cool';
+	END_IF;
+	
+	MpTempControllerParType_0.Tuning := MpTempTuningType_0;
+	
+	// Value assignment
+	TurnOnHeater := gTanks.Commands.TurnOnHeater;
+	TurnOnFan := gTanks.Commands.TurnOnFan;
+	gTanks.Status.Tank3Temp := Tank3Temp;
 	
 	// Temp measurement
 	TempInReal := INT_TO_REAL(gTanks.Status.Tank3Temp) / IntToRealScaller;
@@ -65,7 +195,7 @@ PROGRAM _CYCLIC
 				// Applying parameters to controller
 				CASE MpTempControllerParType_0.Tuning.Mode OF
 					mpTEMP_TUNING_MODE_HEAT:
-						
+			
 						MpTempControllerParType_0.PID.Heat := MpTempController_0.Info.Tuning.PIDParameters.Heat;
 						MpTempControllerParType_0.Profile.Heat := MpTempController_0.Info.Tuning.ProfileParameters.Heat;
 						
@@ -111,19 +241,31 @@ PROGRAM _CYCLIC
 			// Heater PWM
 			MTBasicsPWMHeater.DutyCycle := HeaterPWMDuty;
 	
+			
+			//gTanks.Commands.TurnOnFan := MTBasicsPWMFan.Out;
+			//gTanks.Commands.TurnOnHeater := MTBasicsPWMHeater.Out;
+			
+			
+			
 			// Auto mode
 		ELSE
 		
 			MpTempController_0.Control := TRUE;
 			MpTempController_0.Tune := FALSE;
-			InfoLabelIndex := 0;
-		
+			IF gTanks.Parameters.HeatCool THEN
+				InfoLabelIndex := 0;
+			END_IF
+			IF NOT(gTanks.Parameters.HeatCool) THEN
+				InfoLabelIndex := 4;
+			END_IF
 			// Prameters and outputs update
 			MpTempController_0.ActualTemperature := TempInReal;
 			MpTempController_0.SetTemperature := gTanks.Parameters.Tank3TargetTemp;
 			MTBasicsPWMHeater.DutyCycle := MpTempController_0.HeatValue;
 			MTBasicsPWMFan.DutyCycle := MpTempController_0.CoolValue;
-		
+			//Outputs.DO11 := MpTempControllerTest.Heat;
+			//gTanks.Commands.TurnOnFan := MpTempController_0.Cool;
+			//gTanks.Commands.TurnOnHeater := MpTempController_0.Heat;
 		END_IF;
 		
 	// Emergency button pressed
@@ -193,6 +335,7 @@ PROGRAM _CYCLIC
 	gTanks.Commands.TurnOnHeater := MTBasicsPWMHeater.Out;
 	
 	// FB updates
+	MpTempControllerConfig_0();
 	MpTempController_0();
 	MTBasicsPWMFan();
 	MTBasicsPWMHeater();
@@ -202,6 +345,9 @@ END_PROGRAM
 PROGRAM _EXIT
 	
 	// FB exit actions
+	MpTempControllerConfig_0.Enable := FALSE;
+	MpTempControllerConfig_0();
+	
 	MpTempController_0.Enable := FALSE;
 	MpTempController_0();
 	

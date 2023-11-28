@@ -39,6 +39,12 @@ PROGRAM _CYCLIC
 	// Reset button
 	doReset := diReset;
 	
+	IF gSimulationMode = 0 THEN
+		gDriveStop := TRUE;
+	ELSE
+		gDriveStop := diDriveStopESystem;
+	END_IF
+	
 	// Reset LED
 	IF NOT(gDriveStop) AND NOT(diEStopNotPressed) THEN
 		doResetRedLED := TRUE;
@@ -73,12 +79,15 @@ PROGRAM _CYCLIC
 	
 	
 	// Alarm E-stop
-	IF NOT(diEStopNotPressed) THEN
-		MpAlarmXSet(gAlarmXCore, 'E-stop');
+	IF gSimulationMode <> 0 THEN
+		IF NOT(diEStopNotPressed) THEN
+			MpAlarmXSet(gAlarmXCore, 'E-stop');
+		END_IF
 	END_IF
-	
-	IF diEStopNotPressed AND doReset THEN
-		MpAlarmXReset(gAlarmXCore, 'E-stop');
+	IF gSimulationMode <> 0 THEN
+		IF diEStopNotPressed AND doReset THEN
+			MpAlarmXReset(gAlarmXCore, 'E-stop');
+		END_IF
 	END_IF
 	
 	// Set style to navigation button in top content
